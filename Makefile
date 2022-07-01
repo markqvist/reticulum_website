@@ -17,8 +17,4 @@ upload:
 	. ./build.env; \
 	rsync -rv build/ "$$DEPLOY_TARGET" --delete
 
-pt:
-	. ./build.env; \
-	echo "$$DEPLOY_TARGET"
-
 deploy: clean website upload
