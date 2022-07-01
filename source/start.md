@@ -27,7 +27,7 @@ Reticulum includes a range of useful utilities for managing your networks, viewi
 - An interface status utility called `rnstatus`, that displays information about interfaces
 - The path lookup and and management tool `rnpath` letting you view and modify path tables
 - A diagnostics tool called `rnprobe` for checking connectivity to destinations
-- A simple file transfer program called `rncp` making easy to copy files to remote systems
+- A simple file transfer program called `rncp` making it easy to copy files to remote systems
 - The remote command execution program `rnx` that let's you run commands and programs and retrieve output from remote systems
 
 All tools, including `rnx` and `rncp`, work reliably and well even over very low-bandwidth links like LoRa or Packet Radio.
