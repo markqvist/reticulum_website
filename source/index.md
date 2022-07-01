@@ -21,6 +21,5 @@ While Reticulum solves the same problem that any network stack does, namely to g
 - It is not possible to establish unencrypted links in Reticulum networks.
 - It is not possible to send unencrypted packets to any destinations in the network.
 - Destinations receiving unencrypted packets will reject them as invalid.
-- The routing layer is not able to route unencrypted packets, and such packets will be dropped.
 
 <p align="right"><a href="start.html">Next Topic: Get Started</a></p>
