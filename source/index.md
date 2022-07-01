@@ -17,7 +17,7 @@ While Reticulum solves the same problem that any network stack does, namely to g
 - Reticulum ensures end-to-end connectivity. Newly generated addresses become globally reachable in a matter of seconds to a few minutes.
 - Addresses are *self-sovereign* and *portable*. Once an address has been created, it can be moved physically to another place in the network, and continue to be reachable.
 - All communication is secured with [strong, modern encryption](crypto.html) by default.
-- All encryption keys are ephemeral, and all communication offers forward secrecy.
+- All encryption keys are ephemeral, and communication offers forward secrecy by default.
 - It is not possible to establish unencrypted links in Reticulum networks.
 - It is not possible to send unencrypted packets to any destinations in the network.
 - Destinations receiving unencrypted packets will reject them as invalid.
