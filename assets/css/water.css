@@ -138,6 +138,11 @@ body {
   }
 }
 
+li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 button {
   transition:
     background-color 0.1s linear,

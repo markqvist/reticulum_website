@@ -10,7 +10,7 @@ document_start = """
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="css/water.css">
+<link rel="stylesheet" href="css/water.css?v=1">
 <meta charset="utf-8"/>
 <title>Reticulum Network</title>
 <![endif]-->
