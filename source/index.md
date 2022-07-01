@@ -6,7 +6,7 @@ The vision of Reticulum is to allow anyone to operate their own sovereign commun
 
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
 
-Reticulum **is not** *one* network. It is **a tool** for building *thousands of networks*. Networks without kill-switches, surveillance, censorship and control. Networks that can freely interoperate, associate and disassociate with each other. Reticulum is Networks for Human Beings. Reticulum is Unstoppable Networks for The People.
+Reticulum is not *one* network. It is a tool for building *thousands of networks*. Networks without kill-switches, surveillance, censorship and control. Networks that can freely interoperate, associate and disassociate with each other. Reticulum is Networks for Human Beings. Reticulum is Unstoppable Networks for The People.
 
 
 ## Notable Characteristics
