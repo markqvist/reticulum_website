@@ -20,6 +20,6 @@ While Reticulum solves the same problem that any network stack does, namely to g
 - All encryption keys are ephemeral, and communication offers forward secrecy by default.
 - It is not possible to establish unencrypted links in Reticulum networks.
 - It is not possible to send unencrypted packets to any destinations in the network.
-- Destinations receiving unencrypted packets will reject them as invalid.
+- Destinations receiving unencrypted packets will drop them as invalid.
 
 <p align="right"><a href="start.html">Next Topic: Get Started</a></p>
