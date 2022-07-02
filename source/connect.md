@@ -6,21 +6,21 @@ The testnet runs the very latest version of Reticulum (often even a short while 
 Just add one of the following interfaces to your Reticulum configuration file:
 
 ```
-# TCP/IP interface to the Dublin hub
+# TCP/IP interface to the Dublin Hub
   [[RNS Testnet Dublin]]
     type = TCPClientInterface
     enabled = yes
     target_host = dublin.connect.reticulum.network
     target_port = 4965
 
-# TCP/IP interface to the Frankfurt hub
+# TCP/IP interface to the Frankfurt Hub
   [[RNS Testnet Dublin]]
     type = TCPClientInterface
     enabled = yes
     target_host = frankfurt.connect.reticulum.network
     target_port = 5377
 
-# Interface to I2P hub A
+# Interface to I2P Hub A
   [[RNS Testnet I2P Hub A]]
     type = I2PInterface
     enabled = yes
