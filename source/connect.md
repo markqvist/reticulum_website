@@ -25,6 +25,12 @@ Just add one of the following interfaces to your Reticulum configuration file:
     type = I2PInterface
     enabled = yes
     peers = uxg5kubabakh3jtnvsipingbr5574dle7bubvip7llfvwx2tgrua.b32.i2p
+
+# Interface to I2P hub B
+  [[RNS Testnet I2P Hub B]]
+    type = I2PInterface
+    enabled = yes
+    peers = po5r3v33cgzyftpfej22bmt4goiybqwqidbskqslwhzmokmo7wua.b32.i2p
 ```
 
 The testnet also contains a number of [Nomad Network](https://github.com/markqvist/nomadnet) nodes, and [LXMF](https://github.com/markqvist/lxmf) propagation nodes.
