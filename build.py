@@ -14,7 +14,6 @@ document_start = """
 <meta charset="utf-8"/>
 <title>Reticulum Network</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<![endif]-->
 </head>
 <body>
 """
