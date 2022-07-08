@@ -32,6 +32,13 @@ Reticulum includes a range of useful utilities for managing your networks, viewi
 
 All tools, including `rnx` and `rncp`, work reliably and well even over very low-bandwidth links like LoRa or Packet Radio.
 
+## Programs Using Reticulum
+If you want to quickly get an idea of what Reticulum can do, take a look at the following resources.
+
+- For an off-grid, encrypted and resilient mesh communications platform, see [Nomad Network](https://github.com/markqvist/NomadNet)
+- The Android, Linux and macOS app [Sideband](https://github.com/markqvist/sideband) has a graphical interface and focuses on ease of use.
+- [LXMF](https://github.com/markqvist/lxmf) is a distributed, delay and disruption tolerant message transfer protocol built on Reticulum
+
 ## Dependencies
 The installation of the default `rns` package requires the dependencies listed below. Almost all systems and distributions have readily available packages for these dependencies, and when the `rns` package is installed with `pip`, they will be downloaded and installed as well.
 
