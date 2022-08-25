@@ -7,15 +7,17 @@ you want to do. For full details and examples, have a look at the [Getting Start
 
 
 ## Installation
-To simply install Reticulum and related utilities on your system, the easiest way is via pip:
+To install Reticulum and related utilities on your system, the easiest way is via pip:
 
 ```bash
-pip3 install rns
+pip install rns
 ```
 
 You can then start any program that uses Reticulum, or start Reticulum as a system service with [the rnsd utility](manual/using.html#the-rnsd-utility).
 
-When first started, Reticulum will create a default configuration file, providing basic connectivity to other Reticulum peers that might be locally reachable. The default config file contains a few examples, and references for creating a more complex configuration.
+If `pip` is not available on your system, install the `python3` and `python3-pip` packages for your OS first.
+
+When first started, Reticulum will create a default configuration file, providing basic connectivity to other Reticulum peers that might be locally reachable. If any of those local peers are Transport Instances, these might connect you to wider networks. The default config file contains a few examples, and references for creating a more complex configuration.
 
 For more detailed examples on how to expand communication over many mediums such as packet radio or LoRa, serial ports, or over fast IP links and the Internet using the UDP and TCP interfaces, take a look at the [Supported Interfaces](manual/interfaces.html) section of the [Reticulum Manual](manual/index.html).
 
