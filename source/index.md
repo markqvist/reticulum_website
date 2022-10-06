@@ -1,13 +1,16 @@
 
 # Reticulum
-Reticulum is the cryptography-based networking protocol for both local and wide-area networks built on readily available hardware. Reticulum can operate even with very high latency and extremely low bandwidth.
+Reticulum is the cryptography-based networking stack for building local and wide-area networks with readily available hardware. Reticulum can continue to operate even in adverse conditions with very high latency and extremely low bandwidth.
 
-The vision of Reticulum is to allow anyone to operate their own sovereign communication networks, and to make it cheap and easy to cover vast areas with a myriad of independent, interconnectable and autonomous networks.
+The vision of Reticulum is to allow anyone to operate their own sovereign communication networks, and to make it cheap and easy to cover vast areas with a myriad of independent, interconnectable and autonomous networks. Reticulum is Unstoppable Networks for The People.
 
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
 
-Reticulum is not *one* network. It is a tool for building *thousands of networks*. Networks without kill-switches, surveillance, censorship and control. Networks that can freely interoperate, associate and disassociate with each other. Reticulum is Networks for Human Beings. Reticulum is Unstoppable Networks for The People.
+Reticulum is not *one* network. It is a tool for building *thousands of networks*. Networks without kill-switches, surveillance, censorship and control. Networks that can freely interoperate, associate and disassociate with each other. Reticulum is Networks for Human Beings.
 
+From a users perspective, Reticulum allows the creation of applications that respect and empower the autonomy and sovereignity of communities and individuals. Reticulum enables secure digital communication that cannot be subjected to outside control, manipulation or censorship.
+
+Furthermore, Reticulum enables the construction of planetary-scale networks, without the need for hierarchichal or beaureucratical structures to control or manage them, while still allowing individuals and communities full sovereignity over their own network segments.
 
 ## Notable Characteristics
 While Reticulum solves the same problem that any network stack does, namely to get data reliably from one point to another over a number of intermediaries, it does so in a way that is very different from other networking technologies.
