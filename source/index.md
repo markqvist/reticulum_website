@@ -8,9 +8,9 @@ The vision of Reticulum is to allow anyone to operate their own sovereign commun
 
 Reticulum is not *one* network. It is a tool for building *thousands of networks*. Networks without kill-switches, surveillance, censorship and control. Networks that can freely interoperate, associate and disassociate with each other. Reticulum is Networks for Human Beings.
 
-From a users perspective, Reticulum allows the creation of applications that respect and empower the autonomy and sovereignity of communities and individuals. Reticulum enables secure digital communication that cannot be subjected to outside control, manipulation or censorship.
+From a users perspective, Reticulum allows the creation of applications that respect and empower the autonomy and sovereignty of communities and individuals. Reticulum enables secure digital communication that cannot be subjected to outside control, manipulation or censorship.
 
-Furthermore, Reticulum enables the construction of planetary-scale networks, without the need for hierarchichal or beaureucratical structures to control or manage them, while still allowing individuals and communities full sovereignity over their own network segments.
+Furthermore, Reticulum enables the construction of planetary-scale networks, without the need for hierarchichal or beaureucratical structures to control or manage them, while still allowing individuals and communities full sovereignty over their own network segments.
 
 ## Notable Characteristics
 While Reticulum solves the same problem that any network stack does, namely to get data reliably from one point to another over a number of intermediaries, it does so in a way that is very different from other networking technologies.
