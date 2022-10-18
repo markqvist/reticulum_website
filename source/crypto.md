@@ -1,5 +1,5 @@
 # Cryptographic Primitives
-Reticulum has been uses a simple suite of efficient, strong and modern cryptographic primitives, with widely available implementations that can be used both on general-purpose CPUs and on microcontrollers. The necessary primitives are:
+Reticulum uses a simple suite of efficient, strong and modern cryptographic primitives, with widely available implementations that can be used both on general-purpose CPUs and on microcontrollers. The necessary primitives are:
 
 - Ed25519 for signatures
 - X22519 for ECDH key exchanges
