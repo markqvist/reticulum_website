@@ -89,10 +89,10 @@ def get_languages_md(page):
             lang_ext_str = ""
 
         link_target = page_base_name+lang_ext_str+".html"
-        link_md = "["+lang+"]("+link_target+") |"
+        link_md = "["+lang+"]("+link_target+") | "
         lang_list += link_md
 
-    return langs_md.replace("{LANGS}", lang_list[:-2])
+    return langs_md.replace("{LANGS}", lang_list[:-3])
 
 
 def get_menu_md(lang):
