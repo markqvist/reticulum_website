@@ -10,8 +10,8 @@ website:
 	python ./build.py
 	cp assets/css/* build/css/
 	cp assets/gfx/* build/gfx/
-	cp -rv ../../Reticulum/docs/manual/* build/manual/
-	cp -rv ../../Reticulum/docs/Reticulum\ Manual.pdf build/manual/
+	cp -r ../../Reticulum/docs/manual/* build/manual/
+	cp -r ../../Reticulum/docs/Reticulum\ Manual.pdf build/manual/
 
 upload:
 	. ./build.env; \

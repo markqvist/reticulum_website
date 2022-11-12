@@ -23,9 +23,84 @@ document_end = """
 </html>
 """
 
-menu_md = """
-<center>[Reticulum](index.html) | [Start](start.html) | [Hardware](hardware.html) | [Testnet](connect.html) | [Manual](docs.html) | [Crypto](crypto.html) | [Credits](credits.html) | [Source](https://github.com/markqvist/reticulum) | [Donate](donate.html)</center> 
+langs_md = """
+<center>{LANGS}</center>
 """
+
+menu_md = """
+<center>[{RETICULUM}](index{LANG_EXT}.html) | [{START}](start{LANG_EXT}.html) | [{HARDWARE}](hardware{LANG_EXT}.html) | [{TESTNET}](connect{LANG_EXT}.html) | [{MANUAL}](docs{LANG_EXT}.html) | [{CRYPTO}](crypto{LANG_EXT}.html) | [{CREDITS}](credits{LANG_EXT}.html) | [{SOURCE}](https://github.com/markqvist/reticulum) | [{DONATE}](donate{LANG_EXT}.html)</center> 
+"""
+
+primary_lang = "en"
+langs = [
+    {"name": "English", "ext": "en"},
+    {"name": "Português", "ext": "pt-br"},
+]
+
+menu_translations = {
+    "en": {
+        "RETICULUM": "Reticulum",
+        "START": "Start",
+        "HARDWARE": "Hardware",
+        "TESTNET": "Testnet",
+        "MANUAL": "Manual",
+        "CRYPTO": "Crypto",
+        "CREDITS": "Credits",
+        "SOURCE": "Source",
+        "DONATE": "Donate",
+    },
+    "pt-br": {
+        "RETICULUM": "Reticulum",
+        "START": "Começar",
+        "HARDWARE": "Hardware",
+        "TESTNET": "Rede de Teste",
+        "MANUAL": "Manual",
+        "CRYPTO": "Cripto",
+        "CREDITS": "Créditos",
+        "SOURCE": "Código",
+        "DONATE": "Ajude",
+    }
+}
+
+def get_page_lang(page):
+    page_lang = primary_lang
+    for lang in langs:
+        base_name = mdf.replace(".md", "")
+        if lang["ext"] != primary_lang:
+            if base_name.endswith(lang["ext"]):
+                page_lang = lang["ext"]
+    return page_lang
+
+def get_languages_md(page):
+    page = page.replace(SOURCES_PATH, ".")
+    current_page_lang = get_page_lang(page)
+    if current_page_lang != primary_lang:
+        page_base_name = page.replace("_"+current_page_lang+".md", "")
+    else:
+        page_base_name = page.replace(".md", "")
+
+    lang_list = ""
+    for lang_entry in langs:
+        lang = lang_entry["name"]
+        lang_ext = lang_entry["ext"]
+        if lang_ext != primary_lang:
+            lang_ext_str = "_"+lang_ext
+        else:
+            lang_ext_str = ""
+
+        link_target = page_base_name+lang_ext_str+".html"
+        link_md = "["+lang+"]("+link_target+") |"
+        lang_list += link_md
+
+    return langs_md.replace("{LANGS}", lang_list[:-2])
+
+
+def get_menu_md(lang):
+    local_menu_md = menu_md
+    for entry in menu_translations[lang]:
+        local_menu_md = local_menu_md.replace("{"+entry+"}", menu_translations[lang][entry])
+
+    return local_menu_md
 
 def scan_pages(base_path):
     files = [file for file in os.listdir(base_path) if os.path.isfile(os.path.join(base_path, file)) and file[:1] != "."]
@@ -46,8 +121,16 @@ source_files = scan_pages(SOURCES_PATH)
 
 for mdf in source_files:
     with open(mdf, "rb") as f:
+        page_lang = get_page_lang(mdf)
+
+        if page_lang != primary_lang:
+            page_lang_ext = "_"+page_lang
+        else:
+            page_lang_ext = ""
+
         md = f.read().decode(INPUT_ENCODING)
-        html = markdown.markdown(menu_md + md, extensions=["markdown.extensions.fenced_code"])
+        page_md = get_languages_md(mdf)+get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + md
+        html = markdown.markdown(page_md, extensions=["markdown.extensions.fenced_code"])
         html = document_start + html + document_end
 
         of = BUILD_PATH+mdf.replace(SOURCES_PATH, "").replace(".md", ".html")
