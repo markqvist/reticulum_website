@@ -10,7 +10,7 @@ document_start = """
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="css/water.css?v=1">
+<link rel="stylesheet" href="css/water.css?v=3">
 <meta charset="utf-8"/>
 <title>Reticulum Network</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +23,8 @@ document_end = """
 </html>
 """
 
-langs_md = """
-<center>{LANGS}</center>
-"""
-
-menu_md = """
-<center>[{RETICULUM}](index{LANG_EXT}.html) | [{START}](start{LANG_EXT}.html) | [{HARDWARE}](hardware{LANG_EXT}.html) | [{TESTNET}](connect{LANG_EXT}.html) | [{MANUAL}](docs{LANG_EXT}.html) | [{CRYPTO}](crypto{LANG_EXT}.html) | [{CREDITS}](credits{LANG_EXT}.html) | [{SOURCE}](https://github.com/markqvist/reticulum) | [{DONATE}](donate{LANG_EXT}.html)</center> 
-"""
+langs_md = """<div class="top_menu lang_menu">{LANGS}</div>"""
+menu_md = """<div class="top_menu">[{RETICULUM}](index{LANG_EXT}.html) | [{START}](start{LANG_EXT}.html) | [{HARDWARE}](hardware{LANG_EXT}.html) | [{TESTNET}](connect{LANG_EXT}.html) | [{MANUAL}](docs{LANG_EXT}.html) | [{CRYPTO}](crypto{LANG_EXT}.html) | [{CREDITS}](credits{LANG_EXT}.html) | [{SOURCE}](https://github.com/markqvist/reticulum) | [{DONATE}](donate{LANG_EXT}.html)</div>"""
 
 primary_lang = "en"
 langs = [
@@ -129,7 +124,7 @@ for mdf in source_files:
             page_lang_ext = ""
 
         md = f.read().decode(INPUT_ENCODING)
-        page_md = get_languages_md(mdf)+get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + md
+        page_md = "<center>"+get_languages_md(mdf)+""+get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + "</center>\n\n" + md
         html = markdown.markdown(page_md, extensions=["markdown.extensions.fenced_code"])
         html = document_start + html + document_end
 
