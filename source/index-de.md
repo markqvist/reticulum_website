@@ -4,7 +4,9 @@ Reticulum ist der kryptografiebasierte Netzwerkstack für den Aufbau von lokalen
 
 Die Vision von Reticulum ist es, jedem die Möglichkeit zu geben, seine eigenen souveränen Kommunikationsnetze zu betreiben, und es billig und einfach zu machen, große Gebiete mit einer Vielzahl von unabhängigen, zusammenschaltbaren und autonomen Netzen abzudecken. Reticulum ist unaufhaltsame Netzwerke für die Menschen.
 
+
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
+
 
 Reticulum ist nicht *ein* Netzwerk. Es ist ein Werkzeug zum Aufbau *tausender* Netzwerke. Netze ohne Kill-Switches, Überwachung, Zensur und Kontrolle. Netzwerke, die frei miteinander interagieren, sich verbinden und trennen können. Reticulum ist ein Netzwerk für Menschen.
 
@@ -19,10 +21,10 @@ Reticulum löst zwar das gleiche Problem wie jeder andere Netzwerkstack, nämlic
 - Es gibt keine zentrale Kontrolle über den Adressraum in Reticulum. Jeder kann so viele Adressen zuweisen, wie er braucht und wann er sie braucht.
 - Reticulum gewährleistet eine durchgängige Konnektivität. Neu generierte Adressen werden innerhalb von Sekunden bis wenigen Minuten global erreichbar.
 - Adressen sind *selbstständig* und *portabel*. Sobald eine Adresse erstellt wurde, kann sie physisch an einen anderen Ort im Netz verschoben werden und ist weiterhin erreichbar.
-- Die gesamte Kommunikation ist standardmäßig mit [starker, moderner Verschlüsselung](crypto.html) gesichert.
+- Die gesamte Kommunikation ist standardmäßig mit [starker, moderner Verschlüsselung](crypto-de.html) gesichert.
 - Alle Verschlüsselungsschlüssel sind kurzlebig, und die Kommunikation bietet standardmäßig ein Vorwärtsgeheimnis.
 - Es ist nicht möglich, unverschlüsselte Verbindungen in Reticulum-Netzen herzustellen.
 - Es ist nicht möglich, unverschlüsselte Pakete an beliebige Ziele im Netz zu senden.
 - Ziele, die unverschlüsselte Pakete empfangen, verwerfen diese als ungültig.
 
-<p align="right"><a href="start.html">Nächstes Thema: Los geht's</a></p>
+<p align="right"><a href="start-de.html">Nächstes Thema: Los geht's</a></p>
