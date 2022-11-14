@@ -1,7 +1,8 @@
 # Öffentliches Testnetz
 Wenn Sie einfach nur experimentieren wollen, ohne ein physisches Netzwerk aufzubauen, können Sie sich gerne dem öffentlichen Reticulum Testnet anschließen. Das Testnetz ist genau das: ein informelles Netzwerk zum Testen und Experimentieren. Es wird die meiste Zeit verfügbar sein, und jeder kann mitmachen, aber das bedeutet auch, dass es keine Garantien für die Verfügbarkeit der Dienste gibt.
 
-Auf dem Testnetz läuft die allerneueste Version von Reticulum (oft sogar kurz vor der öffentlichen Freigabe). Manchmal werden experimentelle Versionen von Reticulum auf Knoten im Testnetz eingesetzt, was bedeutet, dass seltsames Verhalten auftreten kann. Wenn Sie das alles nicht abschreckt, können Sie dem Testnetz über eihter TCP oder I2P beitreten.
+Auf dem Testnetz läuft die allerneueste Version von Reticulum (oft sogar kurz vor der öffentlichen Freigabe). Manchmal werden experimentelle Versionen von Reticulum auf Knoten im Testnetz eingesetzt, was bedeutet, dass seltsames Verhalten auftreten kann. 
+Wenn Sie das alles nicht abschreckt, können Sie dem Testnetz über TCP oder I2P beitreten.
 
 Fügen Sie einfach eine der folgenden Schnittstellen in Ihre Reticulum-Konfigurationsdatei ein:
 
@@ -33,6 +34,6 @@ Fügen Sie einfach eine der folgenden Schnittstellen in Ihre Reticulum-Konfigura
     peers = iwoqtz22dsr73aemwpw7guocplsjjoamyl7sogj33qtcd6ds4mza.b32.i2p
 ```
 
-Das Testnetz enthält auch eine Reihe von [Nomad Network](https://github.com/markqvist/nomadnet)-Knoten und [LXMF](https://github.com/markqvist/lxmf)-Propagationsknoten.
+Das Testnetz enthält auch eine Reihe von [Nomad Network](https://github.com/markqvist/nomadnet)-Knoten und [LXMF](https://github.com/markqvist/lxmf)-Propagationsknoten, Sowie [Sideband](https://github.com/markqvist/Sideband) Peers, welche untereinander erreichbar sind.
 
-<p align="right"><a href="docs.html">Nächstes Thema: Lies das Handbuch</a></p>
+<p align="right"><a href="docs-de.html">Nächstes Thema: Lesen Sie das Handbuch</a></p>
