@@ -36,4 +36,4 @@ Fügen Sie einfach eine der folgenden Schnittstellen in Ihre Reticulum-Konfigura
 
 Das Testnetz enthält auch eine Reihe von [Nomad Network](https://github.com/markqvist/nomadnet)-Knoten und [LXMF](https://github.com/markqvist/lxmf)-Propagationsknoten, Sowie [Sideband](https://github.com/markqvist/Sideband) Peers, welche untereinander erreichbar sind.
 
-<p align="right"><a href="docs-de.html">Nächstes Thema: Lesen Sie das Handbuch</a></p>
+<p align="right"><a href="docs_de.html">Nächstes Thema: Lesen Sie das Handbuch</a></p>

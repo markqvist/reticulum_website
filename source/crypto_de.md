@@ -23,4 +23,4 @@ Wenn Sie die internen reinen Python-Primitive verwenden wollen, ist es **sehr ra
 
 Reticulum ist eine relativ junge Software, die als solche betrachtet werden sollte. Obwohl es unter Berücksichtigung der besten Kryptographie-Praktiken entwickelt wurde, ist es _nicht_ extern sicherheitsgeprüft worden, und es könnte sehr wohl Fehler enthalten, die den Datenschutz oder die Sicherheit verletzen. Wenn Sie mithelfen oder ein Audit sponsern wollen, nehmen Sie bitte Kontakt auf.
 
-<p align="right"><a href="credits-de.html">Nächstes Thema: Danksagungen & Credits</a></p>
+<p align="right"><a href="credits_de.html">Nächstes Thema: Danksagungen & Credits</a></p>

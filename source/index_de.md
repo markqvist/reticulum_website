@@ -21,10 +21,10 @@ Reticulum löst zwar das gleiche Problem wie jeder andere Netzwerkstack, nämlic
 - Es gibt keine zentrale Kontrolle über den Adressraum in Reticulum. Jeder kann so viele Adressen zuweisen, wie er braucht und wann er sie braucht.
 - Reticulum gewährleistet eine durchgängige Konnektivität. Neu generierte Adressen werden innerhalb von Sekunden bis wenigen Minuten global erreichbar.
 - Adressen sind *selbstständig* und *portabel*. Sobald eine Adresse erstellt wurde, kann sie physisch an einen anderen Ort im Netz verschoben werden und ist weiterhin erreichbar.
-- Die gesamte Kommunikation ist standardmäßig mit [starker, moderner Verschlüsselung](crypto-de.html) gesichert.
+- Die gesamte Kommunikation ist standardmäßig mit [starker, moderner Verschlüsselung](crypto_de.html) gesichert.
 - Alle Verschlüsselungsschlüssel sind kurzlebig, und die Kommunikation bietet standardmäßig ein Vorwärtsgeheimnis.
 - Es ist nicht möglich, unverschlüsselte Verbindungen in Reticulum-Netzen herzustellen.
 - Es ist nicht möglich, unverschlüsselte Pakete an beliebige Ziele im Netz zu senden.
 - Ziele, die unverschlüsselte Pakete empfangen, verwerfen diese als ungültig.
 
-<p align="right"><a href="start-de.html">Nächstes Thema: Los geht's</a></p>
+<p align="right"><a href="start_de.html">Nächstes Thema: Los geht's</a></p>

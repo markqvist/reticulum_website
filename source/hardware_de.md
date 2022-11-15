@@ -13,10 +13,10 @@ Reticulum kann über praktisch jedes Medium verwendet werden, das mindestens ein
 - Externe Programme über stdio oder Pipes
 - Kundenspezifische Hardware über stdio oder Pipes
 
-Ausführlichere Informationen und eine vollständige Liste der unterstützten Schnittstellentypen finden Sie in den Kapiteln [Kommunikationshardware](manual/hardware-de.html) und [Unterstützte Schnittstellen](manual/interfaces-de.html) des Handbuchs.
+Ausführlichere Informationen und eine vollständige Liste der unterstützten Schnittstellentypen finden Sie in den Kapiteln [Kommunikationshardware](manual/hardware.html) und [Unterstützte Schnittstellen](manual/interfaces.html) des Handbuchs.
 
 Reticulum kann auch über bestehende IP-Netzwerke gekapselt werden, so dass dem Einsatz über ein kabelgebundenes Ethernet, Ihr lokales WiFi-Netzwerk oder das Internet nichts im Wege steht, wo es genauso gut funktioniert. Eine der Stärken von Reticulum besteht darin, dass Sie verschiedene Medien ganz einfach zu einem selbstkonfigurierenden, robusten und verschlüsselten Mesh verbinden können, wobei jede verfügbare Infrastruktur genutzt werden kann.
 
 So ist es beispielsweise möglich, einen Raspberry Pi sowohl mit einem LoRa-Funkgerät als auch mit einem Paketfunk-TNC und einem WiFi-Netzwerk zu verbinden. Sobald die Schnittstellen konfiguriert sind, kümmert sich Reticulum um den Rest, und jedes Gerät im WiFi-Netzwerk kann mit Knoten auf der LoRa- und Paketfunkseite des Netzwerks kommunizieren und umgekehrt.
 
-<p align="right"><a href="connect-de.html">Nächstes Thema: Öffentliches Testnetz</a></p>
+<p align="right"><a href="connect_de.html">Nächstes Thema: Öffentliches Testnetz</a></p>

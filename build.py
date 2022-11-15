@@ -28,6 +28,7 @@ menu_md = """<div class="top_menu">[{RETICULUM}](index{LANG_EXT}.html) | [{START
 
 primary_lang = "en"
 langs = [
+    {"name": "Deutsch", "ext": "de"},
     {"name": "English", "ext": "en"},
     {"name": "Português", "ext": "pt-br"},
 ]
@@ -43,6 +44,17 @@ menu_translations = {
         "CREDITS": "Credits",
         "SOURCE": "Source",
         "DONATE": "Donate",
+    },
+    "de": {
+        "RETICULUM": "Reticulum",
+        "START": "Los Geht's",
+        "HARDWARE": "Hardware",
+        "TESTNET": "Testnetz",
+        "MANUAL": "Handbuch",
+        "CRYPTO": "Krypto",
+        "CREDITS": "Credits",
+        "SOURCE": "Quellcode",
+        "DONATE": "Unterstützen",
     },
     "pt-br": {
         "RETICULUM": "Reticulum",
