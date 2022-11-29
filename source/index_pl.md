@@ -19,7 +19,7 @@ Podczas gdy Reticulum rozwiązuje ten sam problem, co każdy stos sieciowy, a mi
 - W Reticulum nie ma centralnej kontroli nad przestrzenią adresową. Każdy może przydzielić tyle adresów ile potrzebuje i kiedy potrzebuje.
 - Reticulum zapewnia łączność end-to-end. Nowo wygenerowane adresy stają się globalnie osiągalne w czasie kilku sekund do kilku minut.
 - Adresy są *samostanowiące* i *przenośne*. Po utworzeniu adresu można go przenieść fizycznie w inne miejsce w sieci i nadal być osiągalnym.
-- Cała komunikacja jest domyślnie zabezpieczona [silnym, nowoczesnym szyfrowaniem](crypto.html).
+- Cała komunikacja jest domyślnie zabezpieczona [silnym, nowoczesnym szyfrowaniem](crypto_pl.html).
 - Wszystkie klucze szyfrujące są efemeryczne, a komunikacja domyślnie oferuje utajnianie z wyprzedzeniem (forward secrecy).
 - W sieciach Reticulum nie ma możliwości tworzenia nieszyfrowanych połączeń.
 - Nie jest możliwe wysyłanie niezaszyfrowanych pakietów do jakichkolwiek miejsc docelowych w sieci.
