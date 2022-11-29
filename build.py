@@ -30,6 +30,7 @@ primary_lang = "en"
 langs = [
     {"name": "Deutsch", "ext": "de"},
     {"name": "English", "ext": "en"},
+    {"name": "Polski", "ext": "pl"},
     {"name": "Português", "ext": "pt-br"},
 ]
 
@@ -55,6 +56,16 @@ menu_translations = {
         "CREDITS": "Credits",
         "SOURCE": "Quellcode",
         "DONATE": "Unterstützen",
+    },"pl": {
+        "RETICULUM": "Reticulum",
+        "START": "Start",
+        "HARDWARE": "Hardware",
+        "TESTNET": "Testnet",
+        "MANUAL": "Manual",
+        "CRYPTO": "Crypto",
+        "CREDITS": "Credits",
+        "SOURCE": "Source",
+        "DONATE": "Darowiznę",
     },
     "pt-br": {
         "RETICULUM": "Reticulum",
