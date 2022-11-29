@@ -58,13 +58,13 @@ menu_translations = {
         "DONATE": "Unterstützen",
     },"pl": {
         "RETICULUM": "Reticulum",
-        "START": "Start",
+        "START": "Zacząć",
         "HARDWARE": "Hardware",
         "TESTNET": "Testnet",
-        "MANUAL": "Manual",
-        "CRYPTO": "Crypto",
-        "CREDITS": "Credits",
-        "SOURCE": "Source",
+        "MANUAL": "Podręcznik",
+        "CRYPTO": "Krypto",
+        "CREDITS": "Zasługi",
+        "SOURCE": "Źródło",
         "DONATE": "Darowiznę",
     },
     "pt-br": {
