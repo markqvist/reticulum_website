@@ -12,7 +12,7 @@ Utilize o Reticulum se estiver confortpavel em relação a isso e entenda suas i
 Se você estiver com problemas ou se algo não estiver funcionando, aqui estão alguns ótimos lugares para pedir ajuda:
 
 - O [fórum de discussão](https://github.com/markqvist/Reticulum/discussions) no GitHub
-- O canal da [Matrix do Retículum](#reticulum:matrix.org) em `#reticulum:matrix.org`
+- O canal da [Matrix do Retículum](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org) em `#reticulum:matrix.org`
 - O [subreddit Reticulum](https://reddit.com/r/reticulum)
 
 ## Instalação
