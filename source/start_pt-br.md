@@ -7,6 +7,14 @@ A melhor forma de começar com o framework Reticulum depende do que você quer f
 *Atenção!* Reticulum ainda está em beta, Isso significa que ele atualmente executa bem, muito estável, mesmo assim ainda pode ter bugs críticos e falhas no funcionamento, privacidade ou a segurança do sistema como um todo.
 Utilize o Reticulum se estiver confortpavel em relação a isso e entenda suas implicações.
 
+## Comunidade e Ajuda
+
+Se você estiver com problemas ou se algo não estiver funcionando, aqui estão alguns ótimos lugares para pedir ajuda:
+
+- O fórum de discussão no GitHub
+- O canal da [Matrix do Retículum](#reticulum:matrix.org) em `#reticulum:matrix.org`
+- O [subreddit Reticulum](https://reddit.com/r/reticulum)
+
 ## Instalação
 
 Para instalar o Reticulum e utilitários relacionados no seu sistema, a forma mais fácil é via pip:

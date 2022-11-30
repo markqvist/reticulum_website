@@ -5,6 +5,12 @@ Sie durchführen möchten. Ausführliche Informationen und Beispiele finden Sie 
 ## Experimentelle Software
 *Bitte beachten Sie!* Reticulum befindet sich noch im Beta-Stadium. Das bedeutet, dass es zwar bereits sehr gut funktioniert und sehr stabil ist, es aber durchaus noch kritische Fehler oder Schwachstellen im Verhalten, im Datenschutz oder in der Sicherheit des gesamten Systems geben kann. Verwenden Sie Reticulum nur, wenn Sie damit einverstanden sind und die Auswirkungen verstehen.
 
+## Gemeinschaft & Unterstützung
+Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gute Stellen, an denen Sie um Hilfe bitten können:
+
+- Das [Diskussionsforum](https://github.com/markqvist/Reticulum/discussions) auf GitHub
+- Der [Retikulum-Matrixkanal](#reticulum:matrix.org) bei `#reticulum:matrix.org`
+- Der [Reticulum-Subreddit](https://reddit.com/r/reticulum)
 
 ## Installation
 Der einfachste Weg, Reticulum und zugehörige Dienstprogramme auf Ihrem System zu installieren, ist über pip:

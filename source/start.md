@@ -13,7 +13,6 @@ If you are having trouble, or if something is not working, here are some great p
 - The [Reticulum Matrix Channel](#reticulum:matrix.org) at `#reticulum:matrix.org`
 - The [Reticulum subreddit](https://reddit.com/r/reticulum)
 
-
 ## Installation
 To install Reticulum and related utilities on your system, the easiest way is via pip:
 
