@@ -1,5 +1,6 @@
 ## Wesprzyj Reticulum
 Możesz wspomóc dalszy rozwój otwartych, wolnych, prywatnych systemów komunikacji przez przekazanie darowizny za pośrednictwem jednego z następujących kanałów:
+
 - Monero<br/>
   ```
   84FpY1QbxHcgdseePYNmhTHcrgMX4nFfBYtz2GKYToqHVVhJp8Eaw1Z1EedRnKD19b3B8NiLCGVxzKV17UMmmeEsCrPyA5w
