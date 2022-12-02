@@ -1,17 +1,17 @@
 
 # Reticulum
-Reticulum é um framework de redes baseada em criptografia para desenvolver redes locais e distantes, utilizando o hardware disponível. Reticulum pode operar em condições adversas como alta latência e velocidade de rede extremamente baixa.
+Reticulum é uma framework de redes baseada em criptografia para desenvolver redes locais e distantes, utilizando o hardware disponível. Reticulum pode operar em condições adversas como alta latência e velocidade de rede extremamente baixa.
 
-A visão do Reticulum é permitir que qualquer um possa operar sua própria rede de comunicação, sendo barato e fácil de cobrir vastas áreas com uma míriade de redes independentes, interconectáveis e autônomas.
+A visão do Reticulum é permitir que qualquer um possa operar sua própria rede de comunicação, sendo barato e fácil de cobrir vastas áreas com uma miríade de redes independentes, interconectáveis e autônomas.
 Reticulum é "Redes Imparáveis Para o Povo".
 
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
 
 O Reticulum não é *uma* rede. é uma ferramenta para construir milhares de redes. Redes sem interruptores, espionagem, censura ou controle. Redes que podem livremente interoperar, se associar e disassociar com cada uma. Reticulum é "Redes para Seres Humanos".
 
-Pela perspectiva do usuário, Reticulum permite a criação de aplicações que respeitam e empoderam a autônomia e soberânia de comunidades e indíviduos. Reticulum provê comunicação digital segura que não pode ser submetida ao controle, manipulação e censura.
+Pela perspectiva do usuário, Reticulum permite a criação de aplicações que respeitam e empoderam a autonomia e soberania de comunidades e indivíduos. Reticulum provê comunicação digital segura que não pode ser submetida ao controle, manipulação e censura.
 
-Reticulum permite a construção de redes pequenas ou de escala planetária, sem a necessidade de estruturas hierarquicas ou burocráticas que controlem elas, enquanto garante que indíviduos e comunidades tenham total soberância sobre suas próprias redes.
+Reticulum permite a construção de redes pequenas ou de escala planetária, sem a necessidade de estruturas hierárquicas ou burocráticas que controlem elas, enquanto garante que indivíduos e comunidades tenham total soberania sobre suas próprias redes.
 
 ## Caracteristicas Notáveis
 Enquanto o Reticulum resolve o mesmo problema que todo framework de rede, isto é, para obter dados de forma confiável de um ponto para outro por um número de intermediários, faz de uma forma muito diferente de outras tecnologias de rede.

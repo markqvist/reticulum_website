@@ -1,5 +1,5 @@
 # Reconhecimentos e Créditos
-Reticulum só foi possível graças a montanha de trabalho Código Aberto parao projeto, as contribuições de todos envolvidos e todos que apoiaram o projeto por esses anos. Para todos que ajudaram, muito obrigado.
+Reticulum só foi possível graças a montanha de trabalho Código Aberto para o projeto, as contribuições de todos envolvidos e todos que apoiaram o projeto por esses anos. Para todos que ajudaram, muito obrigado.
 
 Uma lista de outros modelos e projetos são parte disso ou utilizado no Reticulum, Agradecimentos sinceros para os autores e contribuidores dos seguinte projetos:
 

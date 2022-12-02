@@ -3,4 +3,4 @@ Você navegar por toda documentação do Reticulum [neste site](https://reticulu
 
 Você também pode baixar o [manual do Reticulum como PDF](https://reticulum.network/manual/Reticulum%20Manual.pdf)
 
-<p align="right"><a href="crypto_pt-br.html">Próxima Página: Primitivos Criptográficos</a></p>
+<p align="right"><a href="crypto_pt-br.html">Próxima Página: Criptografia</a></p>
