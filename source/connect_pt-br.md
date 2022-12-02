@@ -1,7 +1,7 @@
 # Rede de Teste Pública
 Se você quiser experimentar sem criar nenhuma rede física, você é bem-vindo para entrar na Rede de Teste Pública Reticulum. A rede de teste é apenas isso, uma rede informal para teste e experimentação. Estará online na maior parte do tempo e qualquer um pode entrar, mas isso também significa que não há garantia da disponibilidade do serviço.
 
-A rede de teste executa a última versão do Reticulum (muitas vezes antes da versão ser publicamente lançacada).
+A rede de teste executa a última versão do Reticulum (muitas vezes antes da versão ser publicamente lançada).
 Algumas vezes versões experimentais do Reticulum podem ser utilizada em nós da rede de teste, que pode causar instabilidade. Se nada disso importa para você, você pode entrar na rede de teste via TCP ou I2P.
 
 Adicione uma das seguintes interfaces no arquivo de configuração do seu Reticulum:

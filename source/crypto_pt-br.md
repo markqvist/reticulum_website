@@ -17,7 +17,7 @@ Na configuração de instalação padrão, os primitivos `X25519`, `Ed25519` e `
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 
-Reticulum também incluí a implemntação completa de todos os primitivos necessários em Python puro. Se o OpenSSL & PyCA não estão disponíveis no sistema que o Reticulum é iniciado, Reticulum vai utilizar os primitivos internos. A consequência trivial disso é o desempenho, com a biblioteca OpenSSL sendo mais rápida. A consequência mais importante no entanto, é a portencial perda de segurança por utilizar primitivos que não possuem o mesmo nível de suporte, teste e revisão que o OpenSSL.
+Reticulum também incluí a implementação completa de todos os primitivos necessários em Python puro. Se o OpenSSL & PyCA não estão disponíveis no sistema que o Reticulum é iniciado, Reticulum vai utilizar os primitivos internos. A consequência trivial disso é o desempenho, com a biblioteca OpenSSL sendo mais rápida. A consequência mais importante no entanto, é a potencial perda de segurança por utilizar primitivos que não possuem o mesmo nível de suporte, teste e revisão que o OpenSSL.
 
 Se você quer utilizar primitivos internos em Python, é aconselhável que você entenda os riscos envolvidos, e tome uma decisão informada conforme os ricos são aceitáveis para você.
 
