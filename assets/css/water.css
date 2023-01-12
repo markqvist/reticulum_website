@@ -29,7 +29,7 @@
 }
 
 div.top_menu {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 div.lang_menu {
@@ -66,6 +66,10 @@ html {
   scrollbar-color: rgb(170, 170, 170) #fff;
   scrollbar-color: var(--scrollbar-thumb) var(--background-body);
   scrollbar-width: thin;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -251,7 +255,7 @@ textarea {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 1.85em;
   margin-top: 0;
 }
 
