@@ -4,7 +4,7 @@ Reticulum kann über praktisch jedes Medium verwendet werden, das mindestens ein
 
 - Jedes Ethernet-Gerät
 - Fast alle WiFi-basierte Hardware
-- LoRa mit [RNode](https://unsigned.io/projects/rnode/)
+- LoRa mit [RNode](https://unsigned.io/rnode/)
 - Packet Radio TNCs (mit oder ohne AX.25)
 - KISS-kompatible Hardware- und Software-Modems
 - Jedes Gerät mit einer seriellen Schnittstelle

@@ -3,7 +3,7 @@ Reticulum może być używane praktycznie przez każde medium, które wspiera pr
 
 - Każde urządzenie ethernet
 - Prawie wszystkie urządzenia z WiFi
-- LoRa używające [RNode](https://unsigned.io/projects/rnode/)
+- LoRa używające [RNode](https://unsigned.io/rnode/)
 - Packet Radio TNC (z lub bez AX.25)
 - Hardware kompatybilny z KISS i modemy programowe
 - Każde urządzenie z portem szeregowym

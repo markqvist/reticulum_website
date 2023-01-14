@@ -3,7 +3,7 @@ Reticulum pode ser usado sobre praticamente qualquer dispositivo que suporte pel
 
 - Qualquer dispositivo Ethernet
 - Praticamente todo hardware com Wi-Fi
-- LoRa utilizando [RNode](https://unsigned.io/projects/rnode/)
+- LoRa utilizando [RNode](https://unsigned.io/rnode/)
 - Hardware/roteadores de software com filosofia KISS
 - Qualquer dispositivo com uma porta serial
 - TCP sobre redes IP
