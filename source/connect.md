@@ -13,24 +13,18 @@ Just add one of the following interfaces to your Reticulum configuration file:
     target_host = dublin.connect.reticulum.network
     target_port = 4965
 
-# TCP/IP interface to the Frankfurt Hub
-  [[RNS Testnet Frankfurt]]
+# TCP/IP interface to the BetweenTheBorders Hub (community-provided)
+  [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
-    target_host = frankfurt.connect.reticulum.network
-    target_port = 5377
+    target_host = betweentheborders.com
+    target_port = 4242
 
 # Interface to I2P Hub A
   [[RNS Testnet I2P Hub A]]
     type = I2PInterface
     enabled = yes
     peers = mrwqlsioq4hoo2lmeeud7dkfscnm7yxak7dmiyvsrnpfag3z5tsq.b32.i2p
-
-# Interface to I2P Hub B
-  [[RNS Testnet I2P Hub B]]
-    type = I2PInterface
-    enabled = yes
-    peers = iwoqtz22dsr73aemwpw7guocplsjjoamyl7sogj33qtcd6ds4mza.b32.i2p
 ```
 
 The testnet also contains a number of [Nomad Network](https://github.com/markqvist/nomadnet) nodes, and [LXMF](https://github.com/markqvist/lxmf) propagation nodes.

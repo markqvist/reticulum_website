@@ -14,24 +14,18 @@ Adicione uma das seguintes interfaces no arquivo de configuração do seu Reticu
     target_host = dublin.connect.reticulum.network
     target_port = 4965
 
-# Interface TCP/IP para o Frankfurt Hub
-  [[RNS Testnet Frankfurt]]
+# Interface TCP/IP para o BetweenTheBorders Hub
+  [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
-    target_host = frankfurt.connect.reticulum.network
-    target_port = 5377
+    target_host = betweentheborders.com
+    target_port = 4242
 
 # Interface para o I2P Hub A
   [[RNS Testnet I2P Hub A]]
     type = I2PInterface
     enabled = yes
     peers = mrwqlsioq4hoo2lmeeud7dkfscnm7yxak7dmiyvsrnpfag3z5tsq.b32.i2p
-
-# Interface para o I2P Hub B
-  [[RNS Testnet I2P Hub B]]
-    type = I2PInterface
-    enabled = yes
-    peers = iwoqtz22dsr73aemwpw7guocplsjjoamyl7sogj33qtcd6ds4mza.b32.i2p
 ```
 
 A rede de teste também contém o número de nós da [Nomad Network](https://github.com/markqvist/nomadnet) e nós de propagação [LXMF](https://github.com/markqvist/lxmf).
