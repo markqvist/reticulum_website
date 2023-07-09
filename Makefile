@@ -13,6 +13,12 @@ website:
 	cp -r ../../Reticulum/docs/manual/* build/manual/
 	cp -r ../../Reticulum/docs/Reticulum\ Manual.pdf build/manual/
 
+docsfolder:
+	@mkdir -p ./docs
+	cp -rv ./build/* ./docs/
+
+github:	website docsfolder
+
 upload:
 	. ./build.env; \
 	rsync -rv build/ "$$DEPLOY_TARGET" --delete

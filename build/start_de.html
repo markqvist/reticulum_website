@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./start_de.html">Deutsch</a> | <a href="./start.html">English</a> | <a href="./start_pl.html">Polski</a> | <a href="./start_pt-br.html">Português</a></div><div class="top_menu"><a href="index_de.html">Reticulum</a> | <a href="start_de.html">Los Geht's</a> | <a href="hardware_de.html">Hardware</a> | <a href="connect_de.html">Testnetz</a> | <a href="docs_de.html">Handbuch</a> | <a href="crypto_de.html">Krypto</a> | <a href="credits_de.html">Credits</a> | <a href="https://github.com/markqvist/reticulum">Quellcode</a> | <a href="donate_de.html">Unterstützen</a></div></center></p>
+<h1>Los geht's</h1>
+<p>Wie Sie am besten mit dem Reticulum Network Stack beginnen, hängt davon ab, was
+Sie durchführen möchten. Ausführliche Informationen und Beispiele finden Sie im Abschnitt <a href="manual/gettingstartedfast.html">Schneller Einstieg</a> des <a href="manual/index.html">Reticulum-Handbuchs</a>.</p>
+<h2>Experimentelle Software</h2>
+<p><em>Bitte beachten Sie!</em> Reticulum befindet sich noch im Beta-Stadium. Das bedeutet, dass es zwar bereits sehr gut funktioniert und sehr stabil ist, es aber durchaus noch kritische Fehler oder Schwachstellen im Verhalten, im Datenschutz oder in der Sicherheit des gesamten Systems geben kann. Verwenden Sie Reticulum nur, wenn Sie damit einverstanden sind und die Auswirkungen verstehen.</p>
+<h2>Gemeinschaft &amp; Unterstützung</h2>
+<p>Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gute Stellen, an denen Sie um Hilfe bitten können:</p>
+<ul>
+<li>Das <a href="https://github.com/markqvist/Reticulum/discussions">Diskussionsforum</a> auf GitHub</li>
+<li>Der <a href="element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org">Reticulum-Matrixkanal</a> bei <code>#reticulum:matrix.org</code></li>
+<li>Der <a href="https://reddit.com/r/reticulum">Reticulum-Subreddit</a></li>
+</ul>
+<h2>Installation</h2>
+<p>Der einfachste Weg, Reticulum und zugehörige Dienstprogramme auf Ihrem System zu installieren, ist über pip:</p>
+<pre><code class="language-bash">pip install rns
+</code></pre>
+<p>Sie können dann jedes Programm starten, das Reticulum verwendet, oder Reticulum als Systemdienst starten mit [dem Dienstprogramm rnsd] .(manual/using.html#the-rnsd-utility).</p>
+<p>Wenn <code>pip</code> auf Ihrem System nicht verfügbar ist, installieren Sie zuerst die Pakete <code>python3</code> und <code>python3-pip</code> für Ihr Betriebssystem.</p>
+<p>Beim ersten Start erstellt Reticulum eine Standardkonfigurationsdatei, die eine grundlegende Konnektivität zu anderen Reticulum-Peers herstellt, die lokal erreichbar sein könnten. Wenn es sich bei einem dieser lokalen Peers um eine Transportinstanz handelt, können Sie über diese eine Verbindung zu einem größeren Netzwerk herstellen. Die Standardkonfigurationsdatei enthält einige Beispiele und Referenzen für die Erstellung einer komplexeren Konfiguration.</p>
+<p>Ausführlichere Beispiele für die Erweiterung der Kommunikation über verschiedene Medien wie Packet Radio oder LoRa, serielle Schnittstellen oder über schnelle IP-Verbindungen und das Internet unter Verwendung der UDP- und TCP-Schnittstellen finden Sie im Abschnitt <a href="manual/interfaces.html">Unterstützte Schnittstellen</a> im <a href="manual/index.html">Reticulum Handbuch</a>.</p>
+<h2>Enthaltene Dienstprogramme</h2>
+<p>Reticulum enthält eine Reihe nützlicher Hilfsprogramme zur Verwaltung Ihrer Netzwerke, zur Anzeige von Status und Informationen und für andere Aufgaben. Weitere Informationen zu diesen Programmen finden Sie im Abschnitt <a href="manual/using.html#included-utility-programs">Enthaltene Dienstprogramme</a> im <a href="manual/index.html">Reticulum Handbuch</a>.</p>
+<ul>
+<li>Der System-Daemon <code>rnsd</code> für den Betrieb von Reticulum als immer verfügbarer Dienst</li>
+<li>Ein Dienstprogramm für den Schnittstellenstatus namens <code>rnstatus</code>, das Informationen über Schnittstellen anzeigt</li>
+<li>Das Werkzeug <code>rnpath</code> zum Nachschlagen und Verwalten von Pfaden, mit dem Sie Pfad-Tabellen anzeigen und ändern können</li>
+<li>Ein Diagnosewerkzeug namens <code>rnprobe</code> zur Überprüfung der Konnektivität zu Zielen</li>
+<li>Ein einfaches Dateiübertragungsprogramm namens <code>rncp</code>, das das Kopieren von Dateien auf entfernte Systeme erleichtert</li>
+<li>Das Programm <code>rnx</code> zur Ausführung von Fernbefehlen, mit dem Sie Befehle und Programme ausführen und Ausgaben von entfernten Systemen abrufen können</li>
+</ul>
+<p>Alle Tools, einschließlich <code>rnx</code> und <code>rncp</code>, arbeiten zuverlässig und gut auch über Verbindungen mit sehr geringer Bandbreite wie LoRa oder Packet Radio.</p>
+<h2>Programme welche Reticulum verwenden</h2>
+<p>Wenn Sie sich schnell einen Überblick über die Möglichkeiten von Reticulum verschaffen möchten, werfen Sie einen Blick auf die folgenden Ressourcen.</p>
+<ul>
+<li>Eine netzunabhängige, verschlüsselte und widerstandsfähige Mesh-Kommunikationsplattform finden Sie unter <a href="https://github.com/markqvist/NomadNet">Nomad Network</a></li>
+<li>Die Android-, Linux- und macOS-Anwendung <a href="https://github.com/markqvist/sideband">Sideband</a> verfügt über eine grafische Oberfläche und legt den Schwerpunkt auf Benutzerfreundlichkeit.</li>
+<li><a href="https://github.com/markqvist/lxmf">LXMF</a> ist ein verteiltes, verzögerungs- und unterbrechungstolerantes Nachrichtenübertragungsprotokoll, das auf Reticulum aufbaut.</li>
+</ul>
+<h2>Abhängigkeiten</h2>
+<p>Die Installation des Standardpakets <code>rns</code> erfordert die unten aufgeführten Abhängigkeiten. Fast alle Systeme und Distributionen haben leicht verfügbare Pakete für diese Abhängigkeiten, und wenn das <code>rns</code>-Paket mit <code>pip</code> installiert wird, werden sie ebenfalls heruntergeladen und installiert.</p>
+<ul>
+<li><a href="https://github.com/pyca/cryptography">PyCA/cryptography</a></li>
+<li><a href="https://github.com/al45tair/netifaces">netifaces</a></li>
+<li><a href="https://github.com/pyserial/pyserial">pyserial</a></li>
+</ul>
+<p>Auf ungewöhnlicheren Systemen und in einigen seltenen Fällen ist es möglicherweise nicht möglich, eines oder mehrere der oben genannten Module zu installieren oder gar zu kompilieren. In solchen Situationen können Sie stattdessen das Paket <code>rnspure</code> verwenden, das keine externen Abhängigkeiten für die Installation benötigt. Bitte beachten Sie, dass der Inhalt der Pakete <code>rns</code> und <code>rnspure</code> <em>identisch</em> ist. Der einzige Unterschied besteht darin, dass das Paket <code>rnspure</code> keine Abhängigkeiten auflistet, die für die Installation erforderlich sind.</p>
+<p>Unabhängig davon, wie Reticulum installiert und gestartet wird, lädt es externe Abhängigkeiten nur, wenn sie <em>benötigt</em> und <em>verfügbar</em> sind. Wenn Sie Reticulum beispielsweise auf einem System verwenden möchten, das <a href="https://github.com/pyserial/pyserial">pyserial</a> nicht unterstützt, ist es durchaus möglich, das Paket <code>rnspure</code> zu verwenden, aber Reticulum kann dann keine seriell basierten Schnittstellen nutzen. Alle anderen verfügbaren Module werden bei Bedarf weiterhin geladen.</p>
+<p><strong>Bitte beachten Sie!</strong> Wenn Sie das Paket <code>rnspure</code> verwenden, um Reticulum auf Systemen zu betreiben, die <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> nicht unterstützen, ist es wichtig, dass Sie den Abschnitt <a href="crypto_de.html">Kryptographische Primitiven</a> auf dieser Website lesen und verstehen.</p>
+<h2>Leistung</h2>
+<p>Reticulum zielt auf einen <em>sehr</em> großen nutzbaren Leistungsbereich ab, gibt aber der Funktionalität und Leistung Vorrang auf Medien mit geringer Bandbreite. Ziel ist es, einen dynamischen Leistungsbereich von 250 Bit pro Sekunde bis zu 1 Gigabit pro Sekunde auf normaler Hardware bereitzustellen.</p>
+<p>Derzeit liegt der nutzbare Leistungsbereich bei etwa 500 Bit pro Sekunde bis 20 Megabit pro Sekunde, wobei schnellere physische Medien nicht gesättigt sind. Eine über das derzeitige Niveau hinausgehende Leistung ist für künftige Upgrades vorgesehen, hat aber keine hohe Priorität, solange das Leitungsformat und die API noch nicht festgelegt sind.</p>
+<p align="right"><a href="hardware_de.html">Nächstes Thema: Unterstützte Hardware</a></p>
+</body>
+</html>

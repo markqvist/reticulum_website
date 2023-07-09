@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./hardware_de.html">Deutsch</a> | <a href="./hardware.html">English</a> | <a href="./hardware_pl.html">Polski</a> | <a href="./hardware_pt-br.html">Português</a></div><div class="top_menu"><a href="index.html">Reticulum</a> | <a href="start.html">Start</a> | <a href="hardware.html">Hardware</a> | <a href="connect.html">Testnet</a> | <a href="docs.html">Manual</a> | <a href="crypto.html">Crypto</a> | <a href="credits.html">Credits</a> | <a href="https://github.com/markqvist/reticulum">Source</a> | <a href="donate.html">Donate</a></div></center></p>
+<h1>Supported Hardware</h1>
+<p>Reticulum can be used over practically any medium that can support at least a half-duplex channel with 500 bits per second throughput, and an MTU of 500 bytes. Data radios, modems, LoRa radios, serial lines, AX.25 TNCs, amateur radio digital modes, WiFi and Ethernet devices, free-space optical links, and similar systems are all examples of the types of physical devices Reticulum can use. The supported interface types include:</p>
+<ul>
+<li>Any ethernet device</li>
+<li>Almost all WiFi-based hardware</li>
+<li>LoRa using <a href="https://unsigned.io/rnode/">RNode</a></li>
+<li>Packet Radio TNCs (with or without AX.25)</li>
+<li>KISS-compatible hardware and software modems</li>
+<li>Any device with a serial port</li>
+<li>TCP over IP networks</li>
+<li>UDP over IP networks</li>
+<li>External programs via stdio or pipes</li>
+<li>Custom hardware via stdio or pipes</li>
+</ul>
+<p>For a more detailed info, and a full list of supported interface types, please read the <a href="manual/hardware.html">Communications Hardware</a> and <a href="manual/interfaces.html">Supported Interfaces</a> chapters of the manual.</p>
+<p>Reticulum can also be encapsulated over existing IP networks, so there's nothing stopping you from using it over wired ethernet, your local WiFi network or the Internet, where it'll work just as well. In fact, one of the strengths of Reticulum is how easily it allows you to connect different mediums into a self-configuring, resilient and encrypted mesh, using any available mixture of available infrastructure.</p>
+<p>As an example, it's possible to set up a Raspberry Pi connected to both a LoRa radio, a packet radio TNC and a WiFi network. Once the interfaces are configured, Reticulum will take care of the rest, and any device on the WiFi network can communicate with nodes on the LoRa and packet radio sides of the network, and vice versa.</p>
+<p align="right"><a href="connect.html">Next Topic: Public Testnet</a></p>
+</body>
+</html>
