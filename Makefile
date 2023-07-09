@@ -16,6 +16,9 @@ website:
 docsfolder:
 	@mkdir -p ./docs
 	cp -rv ./build/* ./docs/
+	touch ./docs/manual/_images/.nojekyll
+	touch ./docs/manual/_sources/.nojekyll
+	touch ./docs/manual/_static/.nojekyll
 
 github:	website docsfolder
 
