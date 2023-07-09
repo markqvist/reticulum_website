@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./start_de.html">Deutsch</a> | <a href="./start.html">English</a> | <a href="./start_pl.html">Polski</a> | <a href="./start_pt-br.html">Português</a></div><div class="top_menu"><a href="index_pl.html">Reticulum</a> | <a href="start_pl.html">Jak Zacząć</a> | <a href="hardware_pl.html">Hardware</a> | <a href="connect_pl.html">Testnet</a> | <a href="docs_pl.html">Podręcznik</a> | <a href="crypto_pl.html">Krypto</a> | <a href="credits_pl.html">Zasługi</a> | <a href="https://github.com/markqvist/reticulum">Kod Źródłowy</a> | <a href="donate_pl.html">Darowizna</a></div></center></p>
+<h1>Jak zacząć</h1>
+<p>Najlepszy sposób na rozpoczęcie pracy z Reticulum Network Stack zależy od tego, co
+co chcesz zrobić. Aby uzyskać pełne szczegóły i przykłady, sprawdź rodział <a href="manual/gettingstartedfast.html">Jak szybko zacząć</a> w <a href="manual/index.html">Podręczniku Reticulum</a>.</p>
+<h2>Eksperymentalne Oprogramowanie</h2>
+<p><em>Proszę Pamiętaj!</em> Reticulum jest wciąż w fazie beta. Oznacza to, że choć działa bardzo dobrze i jest bardzo stabilne, to nadal mogą istnieć krytyczne błędy lub wady w zachowaniu, prywatności lub bezpieczeństwie całego systemu. Używaj Reticulum, jeśli czujesz się z tym komfortowo i rozumiesz konsekwencje.</p>
+<h2>Społeczność &amp; Wsparcie</h2>
+<p>Jeśli masz problemy lub coś nie działa, oto kilka świetnych miejsc, w których możesz poprosić o pomoc:</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/discussions">Forum dyskusyjne</a> na GitHubie</li>
+<li>Kanał <a href="element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org">Matrix Reticulum</a> pod <code>#reticulum:matrix.org</code></li>
+<li><a href="https://reddit.com/r/reticulum">Subreddit Reticulum</a></li>
+</ul>
+<h2>Instalacja</h2>
+<p>Najprostszym sposobem, żeby zainstalować Reticulum i powiązane narzędzia jest przy wykorzystanie pip:</p>
+<pre><code class="language-bash">pip install rns
+</code></pre>
+<p>Możesz wtedy uruchomić każdy program, który używa Reticulum, lub uruchomić Reticulum jako usługę systemową za pomocą <a href="manual/using.html#the-rnsd-utility">narzędzia rnsd</a>.</p>
+<p>Jeśli <code>pip</code> nie jest dostępny na twoim systemie, zainstaluj najpierw pakiety <code>python3</code> i <code>python3-pip</code> dla swojego systemu operacyjnego.</p>
+<p>Przy pierwszym uruchomieniu Reticulum tworzy domyślny plik konfiguracyjny, zapewniający podstawową łączność z innymi serwerami Reticulum, które mogą być osiągalne lokalnie. Jeśli któryś z tych lokalnych peerów jest Instancją Transportową, może on połączyć Ciebie z większymi sieciami. Domyślny plik konfiguracyjny zawiera kilka przykładów oraz referencje do tworzenia bardziej złożonych konfiguracji.</p>
+<p>W celu uzyskania bardziej szczegółowych przykładów dotyczących rozszerzenia komunikacji za pomocą wielu mediów, takich jak packet radio lub LoRa, porty szeregowe lub za pomocą szybkich łączy IP i Internetu przy użyciu interfejsów UDP i TCP, sprawdź sekcję <a href="manual/interfaces.html">Wspierane Interfejsy</a> w <a href="manual/index.html">Podręczniku Reticulum</a>.</p>
+<h2>Zawarte Narzędzia</h2>
+<p>Reticulum zawiera szereg przydatnych narzędzi do zarządzania sieciami, przeglądania stanu i informacji oraz innych zadań. You can read more about these programs in the Możesz przeczytać więcej o tych programach w sekcji <a href="manual/using.html#included-utility-programs">Zawarte Programy Użytkowe</a> w <a href="manual/index.html">Podręczniku Reticulum</a>.</p>
+<ul>
+<li>Demon systemowy <code>rnsd</code> do uruchamiania Reticulum jako zawsze dostępnej usługi</li>
+<li>Narzędzie statusu interfejsu o nazwie <code>rnstatus</code>, które wyświetla informacje o interfejsach</li>
+<li>Narzędzie do wyszukiwania i zarządzania ścieżkami <code>rnpath</code> pozwalające na przeglądanie i modyfikowanie tablic ścieżek</li>
+<li>Narzędzie diagnostyczne o nazwie <code>rnprobe</code> do sprawdzania łączności z miejscami docelowymi</li>
+<li>Prosty program do transferu plików o nazwie <code>rncp</code> ułatwiający kopiowanie plików na zdalne systemy</li>
+<li>Program do zdalnego wykonywania poleceń <code>rnx</code>, który pozwala uruchamiać polecenia i programy oraz pobierać dane wyjściowe ze zdalnych systemów</li>
+</ul>
+<p>Wszystkie narzędzia, w tym <code>rnx</code> i <code>rncp</code>, działają niezawodnie i dobrze nawet na łączach o bardzo niskiej przepustowości, takich jak LoRa czy Packet Radio.</p>
+<h2>Programy Używające Reticulum</h2>
+<p>Jeśli chcesz szybko zorientować się, co potrafi Reticulum, zapoznaj się z poniższymi materiałami.</p>
+<ul>
+<li>Dla pozasieciowej, szyfrowanej i odpornej platformy komunikacyjnej typu mesh, zobacz <a href="https://github.com/markqvist/NomadNet">Nomad Network</a></li>
+<li>Aplikacja <a href="https://github.com/markqvist/sideband">Sideband</a> na Androida, Linuxa i macOS posiada interfejs graficzny i koncentruje się na łatwości użytkowania.</li>
+<li><a href="https://github.com/markqvist/lxmf">LXMF</a> jest rozproszonym, odpornym na opóźnienia i zakłócenia protokołem wysyłania wiadomości zbudowanym na Reticulum</li>
+</ul>
+<h2>Zależności</h2>
+<p>Instalacja domyślnego pakietu <code>rns</code> wymaga zależności wymienionych poniżej. Prawie wszystkie systemy i dystrybucje mają łatwo dostępne pakiety dla tych zależności, a kiedy pakiet <code>rns</code> jest instalowany z <code>pip</code>, zostaną one pobrane i zainstalowane również.</p>
+<ul>
+<li><a href="https://github.com/pyca/cryptography">PyCA/cryptography</a></li>
+<li><a href="https://github.com/al45tair/netifaces">netifaces</a></li>
+<li><a href="https://github.com/pyserial/pyserial">pyserial</a></li>
+</ul>
+<p>Na bardziej nietypowych systemach, w niektórych rzadkich przypadkach, może nie być możliwe zainstalowanie lub nawet skompilowanie jednego lub więcej z powyższych modułów. W takich sytuacjach można użyć pakietu <code>rnspure</code>, który nie wymaga zewnętrznych zależności do instalacji. Proszę zauważyć, że zawartość pakietów <code>rns</code> i <code>rnspure</code> jest <em>identyczna</em>. Jedyną różnicą jest to, że pakiet <code>rnspure</code> nie zawiera żadnych zależności wymaganych do instalacji.</p>
+<p>Bez względu na to, jak Reticulum jest zainstalowane i uruchomione, załaduje zewnętrzne zależności tylko wtedy, gdy są one <em>potrzebne</em> i <em>dostępne</em>. Jeśli na przykład chcesz używać Reticulum na systemie, który nie może obsługiwać <a href="https://github.com/pyserial/pyserial">pyserial</a>, jest to całkowicie możliwe przy użyciu pakietu rnspure, ale Reticulum nie będzie w stanie korzystać z interfejsów opartych na portach szeregowych. Wszystkie inne dostępne moduły będą nadal ładowane w razie potrzeby.</p>
+<p><strong>Uwaga!</strong> Jeśli używasz pakietu rnspure do uruchomienia Reticulum na systemach, które nie wspierają <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>, ważne jest, abyś przeczytał i zrozumiał sekcję <a href="crypto.html">Prymitywy Kryptograficzne</a> na tej stronie.</p>
+<h2>Wydajność</h2>
+<p>Reticulum celuje w <em>bardzo</em> szeroki zakres wydajności użytkowej, ale priorytetowo traktuje funkcjonalność i wydajność w stosunku do mediów o niskiej przepustowości. Celem jest zapewnienie dynamicznej wydajności od 250 bitów na sekundę do 1 gigabita na sekundę na normalnym sprzęcie.</p>
+<p>Obecnie użyteczna wydajność wynosi około 500 bitów na sekundę do 20 megabitów na sekundę, z nośnikami fizycznymi szybszymi niż te które nie są nienasycone. Wydajność wykraczająca poza obecny poziom jest przeznaczona do przyszłych aktualizacji, ale nie ma wysokiego priorytetu do czasu zablokowania formatu przewodów i API.</p>
+<p align="right"><a href="hardware_pl.html">Następny Temat: Wspierany Hardware</a></p>
+</body>
+</html>
