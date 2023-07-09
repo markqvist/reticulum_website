@@ -12,14 +12,12 @@ website:
 	cp assets/gfx/* build/gfx/
 	cp -r ../../Reticulum/docs/manual/* build/manual/
 	cp -r ../../Reticulum/docs/Reticulum\ Manual.pdf build/manual/
+	cp -r ../../Reticulum/docs/Reticulum\ Manual.epub build/manual/
 
 docsfolder:
 	@mkdir -p ./docs
 	cp -rv ./build/* ./docs/
 	touch ./docs/.nojekyll
-	touch ./docs/manual/_images/.nojekyll
-	touch ./docs/manual/_sources/.nojekyll
-	touch ./docs/manual/_static/.nojekyll
 
 github:	website docsfolder
 
