@@ -23,6 +23,6 @@ github:	website docsfolder
 
 upload:
 	. ./build.env; \
-	rsync -rv build/ "$$DEPLOY_TARGET" --delete
+	rsync -rv -e "ssh -p $${DEPLOY_PORT}" build/ $${DEPLOY_TARGET} --delete;
 
 deploy: clean website upload

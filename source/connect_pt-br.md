@@ -25,7 +25,7 @@ Adicione uma das seguintes interfaces no arquivo de configuração do seu Reticu
   [[RNS Testnet I2P Hub A]]
     type = I2PInterface
     enabled = yes
-    peers = mrwqlsioq4hoo2lmeeud7dkfscnm7yxak7dmiyvsrnpfag3z5tsq.b32.i2p
+    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
 ```
 
 A rede de teste também contém o número de nós da [Nomad Network](https://github.com/markqvist/nomadnet) e nós de propagação [LXMF](https://github.com/markqvist/lxmf).

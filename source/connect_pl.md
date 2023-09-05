@@ -24,7 +24,7 @@ Dodaj jeden z następujących interfejsów do pliku konfiguracyjnego Reticulum:
   [[RNS Testnet I2P Hub A]]
     type = I2PInterface
     enabled = yes
-    peers = mrwqlsioq4hoo2lmeeud7dkfscnm7yxak7dmiyvsrnpfag3z5tsq.b32.i2p
+    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
 ```
 
 Testnet zawiera również liczne węzły [Nomad Network](https://github.com/markqvist/nomadnet), i węzły propagacyjne [LXMF](https://github.com/markqvist/lxmf).
