@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Understanding Reticulum" href="understanding.html" /><link rel="prev" title="Getting Started Fast" href="gettingstartedfast.html" />
 
     <meta name="generator" content="sphinx-7.1.2, furo 2022.09.29.dev1"/>
-        <title>Using Reticulum on Your System - Reticulum Network Stack 0.6.1 beta documentation</title>
+        <title>Using Reticulum on Your System - Reticulum Network Stack 0.6.2 beta documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=189ec851f9bb375a2509b67be1f64f0cf212b702" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -141,7 +141,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 0.6.1 beta documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 0.6.2 beta documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -167,7 +167,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 0.6.1 beta documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 0.6.2 beta documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -305,6 +305,17 @@ configuration file is created. The default configuration looks like this:</p>
 
 <span class="n">shared_instance_port</span> <span class="o">=</span> <span class="mi">37428</span>
 <span class="n">instance_control_port</span> <span class="o">=</span> <span class="mi">37429</span>
+
+
+<span class="c1"># On systems where running instances may not have access</span>
+<span class="c1"># to the same shared Reticulum configuration directory,</span>
+<span class="c1"># it is still possible to allow full interactivity for</span>
+<span class="c1"># running instances, by manually specifying a shared RPC</span>
+<span class="c1"># key. In almost all cases, this option is not needed, but</span>
+<span class="c1"># it can be useful on operating systems such as Android.</span>
+<span class="c1"># The key must be specified as bytes in hexadecimal.</span>
+
+<span class="c1"># rpc_key = e5c032d3ec4e64a6aca9927ba8ab73336780f6d71790</span>
 
 
 <span class="c1"># You can configure Reticulum to panic and forcibly close</span>
@@ -1003,7 +1014,7 @@ WantedBy=multi-user.target
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=56280ba4"></script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2c9eb04b"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/scripts/furo.js?v=2c7c1115"></script>
