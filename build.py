@@ -57,7 +57,7 @@ menu_translations = {
         "CRYPTO": "Şifreleme",
         "CREDITS": "Hakkında",
         "SOURCE": "Kaynak",
-        "DONATE": "Bağış Yap",
+        "DONATE": "Destekle",
     },
     "jp": {
         "RETICULUM": "レチキュラム",
