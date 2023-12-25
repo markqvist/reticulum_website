@@ -30,10 +30,10 @@ primary_lang = "en"
 langs = [
     {"name": "Deutsch", "ext": "de"},
     {"name": "English", "ext": "en"},
-    {"name": "Turkish", "ext": "tr"},
-    {"name": "Japanese", "ext": "jp"},
     {"name": "Polski", "ext": "pl"},
     {"name": "Português", "ext": "pt-br"},
+    {"name": "Türkçe", "ext": "tr"},
+    {"name": "日本語", "ext": "jp"},
 ]
 
 menu_translations = {
