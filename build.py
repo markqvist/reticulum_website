@@ -30,6 +30,8 @@ primary_lang = "en"
 langs = [
     {"name": "Deutsch", "ext": "de"},
     {"name": "English", "ext": "en"},
+    {"name": "Turkish", "ext": "tr"},
+    {"name": "Japanese", "ext": "jp"},
     {"name": "Polski", "ext": "pl"},
     {"name": "Português", "ext": "pt-br"},
 ]
@@ -45,6 +47,28 @@ menu_translations = {
         "CREDITS": "Credits",
         "SOURCE": "Source",
         "DONATE": "Donate",
+    },
+    "tr": {
+        "RETICULUM": "Reticulum",
+        "START": "Başlat",
+        "HARDWARE": "Donanım",
+        "TESTNET": "Test Ağı",
+        "MANUAL": "Kılavuz",
+        "CRYPTO": "Şifreleme",
+        "CREDITS": "Hakkında",
+        "SOURCE": "Kaynak",
+        "DONATE": "Bağış Yap",
+    },
+    "jp": {
+        "RETICULUM": "レチキュラム",
+        "START": "開始",
+        "HARDWARE": "ハードウェア",
+        "TESTNET": "テストネット",
+        "MANUAL": "マニュアル",
+        "CRYPTO": "暗号",
+        "CREDITS": "クレジット",
+        "SOURCE": "ソース",
+        "DONATE": "寄付",
     },
     "de": {
         "RETICULUM": "Reticulum",
