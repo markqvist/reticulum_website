@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_tr.html">Turkish</a> | <a href="./connect_jp.html">Japanese</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a></div><div class="top_menu"><a href="index_tr.html">Reticulum</a> | <a href="start_tr.html">Başlat</a> | <a href="hardware_tr.html">Donanım</a> | <a href="connect_tr.html">Test Ağı</a> | <a href="docs_tr.html">Kılavuz</a> | <a href="crypto_tr.html">Şifreleme</a> | <a href="credits_tr.html">Hakkında</a> | <a href="https://github.com/markqvist/reticulum">Kaynak</a> | <a href="donate_tr.html">Destekle</a></div></center></p>
+<h1>Genel Test Ağı</h1>
+<p>Eğer fiziksel ağlar oluşturmadan sadece denemelere başlamak istiyorsanız, Genel Reticulum Test Ağı'na katılmaktan hoş geldiniz. Test ağı tam olarak bunun için, test etmek ve denemeler yapmak için gayri resmi bir ağdır. Çoğu zaman aktif olacak ve herkes katılabilir, ancak bu aynı zamanda hizmetin sürekli kullanılabilirliği için garanti olmadığı anlamına gelir.</p>
+<p>Test ağı, Reticulum'un en güncel sürümünü çalıştırır (çoğu zaman genel olarak yayınlanmadan kısa bir süre önce). Ara sıra Reticulum'un deneysel sürümleri, test ağındaki düğümlere dağıtılabilir, bu da tuhaf davranışlara neden olabilir. Eğer hiçbiri sizi korkutmuyorsa, test ağına TCP veya I2P aracılığıyla katılabilirsiniz.</p>
+<p>Reticulum yapılandırma dosyanıza aşağıdaki arayüzlerden birini ekleyin:</p>
+<pre><code># Dublin Hub için TCP/IP arabirimi
+  [[RNS Testnet Dublin]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = dublin.connect.reticulum.network
+    target_port = 4965
+
+# BetweenTheBorders Hub için TCP/IP arabirimi (topluluk tarafından sağlanmış)
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = betweentheborders.com
+    target_port = 4242
+
+# I2P Hub A için arabirim
+  [[RNS Testnet I2P Hub A]]
+    type = I2PInterface
+    enabled = yes
+    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
+</code></pre>
+<p>Test ayrıca bir dizi <a href="https://github.com/markqvist/nomadnet">Nomad Network</a> düğümü ve <a href="https://github.com/markqvist/lxmf">LXMF</a> yayılma düğümü içerir.</p>
+<p align="right"><a href="docs.html">Sonraki Konu: Kılavuzu Okuyun</a></p>
+</body>
+</html>

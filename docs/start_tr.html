@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./start_de.html">Deutsch</a> | <a href="./start.html">English</a> | <a href="./start_tr.html">Turkish</a> | <a href="./start_jp.html">Japanese</a> | <a href="./start_pl.html">Polski</a> | <a href="./start_pt-br.html">Português</a></div><div class="top_menu"><a href="index_tr.html">Reticulum</a> | <a href="start_tr.html">Başlat</a> | <a href="hardware_tr.html">Donanım</a> | <a href="connect_tr.html">Test Ağı</a> | <a href="docs_tr.html">Kılavuz</a> | <a href="crypto_tr.html">Şifreleme</a> | <a href="credits_tr.html">Hakkında</a> | <a href="https://github.com/markqvist/reticulum">Kaynak</a> | <a href="donate_tr.html">Destekle</a></div></center></p>
+<h1>Hoş Geldiniz</h1>
+<p>Reticulum Ağı ile başlamanın en iyi yolu, ne yapmak istediğinize bağlıdır. Tam detaylar ve örnekler için <a href="manual/gettingstartedfast.html">Hızlı Başlangıç</a> bölümüne <a href="manual/index.html">Reticulum Kılavuzu</a>'nda göz atın.</p>
+<h2>Deneysel Yazılım</h2>
+<p><em>Dikkat!</em> Reticulum hala beta aşamasındadır. Şu an çok iyi çalışsa ve çok stabil olsa da, sistemde genel olarak kritik hatalar veya eksiklikler olabilir. Reticulum'u kullanıyorsanız buna rahatlıkla uyum sağlıyorsanız ve sonuçların ne anlama geldiğini anlıyorsanız kullanın.</p>
+<h2>Topluluk ve Destek</h2>
+<p>Eğer sorun yaşarsanız veya bir şey çalışmıyorsa, yardım istemek için harika yerler şunlar:</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/discussions">GitHub'daki tartışma forumu</a></li>
+<li><code>#reticulum:matrix.org</code> üzerinden <a href="element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org">Reticulum Matrix Kanalı</a></li>
+<li><a href="https://reddit.com/r/reticulum">Reticulum subreddit'i</a></li>
+</ul>
+<h2>Kurulum</h2>
+<p>Sisteminize Reticulum'u ve ilgili araçları kurmanın en kolay yolu <code>pip</code> kullanmaktır:</p>
+<pre><code class="language-bash">pip install rns
+</code></pre>
+<p>Daha sonra Reticulum kullanan herhangi bir programı başlatabilir veya <a href="manual/using.html#the-rnsd-utility">rnsd aracı</a> ile Reticulum'u bir sistem servisi olarak başlatabilirsiniz.</p>
+<p>Eğer sisteminizde <code>pip</code> mevcut değilse, önce işletim sisteminiz için <code>python3</code> ve <code>python3-pip</code> paketlerini kurun.</p>
+<p>İlk başlatıldığında Reticulum, yerel olarak erişilebilen diğer Reticulum eşlerine temel bağlantı sağlayan varsayılan bir yapılandırma dosyası oluşturacaktır. Bu yerel eşlerin herhangi biri Taşıma Örnekleri ise, sizi daha geniş ağlara bağlayabilirler. Varsayılan yapılandırma dosyası birkaç örnek ve daha karmaşık bir yapılandırma oluşturma referansları içerir.</p>
+<p>Daha ayrıntılı örnekler için paket radyo veya LoRa, seri portlar veya hızlı IP bağlantıları ve UDP ve TCP arabirimlerini kullanarak İnternet üzerinden iletişimi genişletme konusunda <a href="manual/interfaces.html">Desteklenen Arabirimler</a> bölümüne <a href="manual/index.html">Reticulum Kılavuzu</a>'nda göz atın.</p>
+<h2>Dahil Edilen Araçlar</h2>
+<p>Reticulum, ağlarınızı yönetmek, durum ve bilgi görüntülemek ve diğer görevler için bir dizi kullanışlı araç içerir. Bu programlar hakkında daha fazla bilgiyi <a href="manual/using.html#included-utility-programs">Dahil Edilen Yardımcı Programlar</a> bölümünde <a href="manual/index.html">Reticulum Kılavuzu</a>'nda bulabilirsiniz.</p>
+<ul>
+<li>Reticulum'u her zaman kullanılabilir bir servis olarak çalıştırmak için sistem arka plan uygulaması <code>rnsd</code></li>
+<li>Arayüz durumu için bilgi gösteren <code>rnstatus</code> adlı bir araç</li>
+<li>Yol tablolarını görüntülemenizi ve değiştirmenizi sağlayan <code>rnpath</code> adlı bir yol arama ve yönetim aracı</li>
+<li>Bağlantıları kontrol etmek için <code>rnprobe</code> adlı bir teşhis aracı</li>
+<li>Uzak sistemlere dosya kopyalamayı kolaylaştıran basit bir dosya transfer programı olan <code>rncp</code></li>
+<li>Uzak sistemlerden komutları ve programları çalıştırmanıza ve çıktıları almanıza izin veren uzaktan komut yürütme programı <code>rnx</code></li>
+</ul>
+<p>Tüm araçlar, <code>rnx</code> ve <code>rncp</code> dahil, düşük bant genişliği bağlantıları üzerinde bile güvenilir bir şekilde çalışır.</p>
+<h2>Reticulum Kullanan Programlar</h2>
+<p>Reticulum'un ne yapabileceğine hızlı bir şekilde bir fikir edinmek istiyorsanız, aşağıdaki kaynaklara göz atın.</p>
+<ul>
+<li>Off-grid, şifreli ve dayanıklı bir ağ iletişim platformu için <a href="https://github.com/markqvist/NomadNet">Nomad Network</a></li>
+<li>Android, Linux ve macOS uygulaması <a href="https://github.com/markqvist/sideband">Sideband</a> grafik arayüze sahiptir ve kullanım kolaylığına odaklanır.</li>
+<li><a href="https://github.com/markqvist/lxmf">LXMF</a>, Reticulum üzerine inşa edilmiş dağıtılmış, gecikmeli ve kesintiye uğramış bir ileti transfer protokolüdür.</li>
+</ul>
+<h2>Gereksinimler</h2>
+<p>Varsayılan <code>rns</code> paketinin kurulumu aşağıda listelenen gereksinimleri ister. Hemen hemen tüm sistemler ve dağıtımlar, bu bağımlılıklar için gereken hazır paketlere sahiptir ve <code>pip</code> ile <code>rns</code> paketi kurulduğunda indirilip kurulacaktır.</p>
+<ul>
+<li><a href="https://github.com/pyca/cryptography">PyCA/cryptography</a></li>
+<li><a href="https://github.com/al45tair/netifaces">netifaces</a></li>
+<li><a href="https://github.com/pyserial/pyserial">pyserial</a></li>
+</ul>
+<p>Daha sıra dışı sistemlerde ve bazı nadir durumlarda yukarıdaki modüllerden bir veya daha fazlasını kurmak veya hatta derlemek mümkün olmayabilir. Bu durumlarda <code>rnspure</code> paketini kullanabilirsiniz, bu kurulum için harici bağımlılıklar gerektirmez. Lütfen unutmayın ki <code>rns</code> ve</p>
+<p><code>rnspure</code> paketlerinin içerikleri <em>aynıdır</em>. Tek fark, <code>rnspure</code> paketinin kurulum için gerekli bağımlılıkları listelememesidir.</p>
+<p>Reticulum nasıl kurulup başlatılırsa başlatsın, dış bağımlılıkları sadece <em>gerektiğinde</em> ve <em>uygunsa</em> yükler. Örneğin, <a href="https://github.com/pyserial/pyserial">pyserial</a> desteklemeyen bir sistemde Reticulum'u kullanmak istiyorsanız, bunu <code>rnspure</code> paketi kullanarak yapabilirsiniz, ancak Reticulum seri tabanlı arayüzleri kullanamayacaktır. Diğer tüm kullanılabilir modüller, ihtiyaç duyulduğunda yine yüklenecektir.</p>
+<p><strong>Lütfen Dikkat Edin!</strong> <code>rnspure</code> paketini <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>'yi desteklemeyen sistemlerde Reticulum'u çalıştırmak istiyorsanız, bu sitenin <a href="crypto.html">Şifreleme Temelleri</a> bölümünü okumanız gerekmektedir.</p>
+<h2>Performans</h2>
+<p>Reticulum, çok geniş bir kullanılabilir performans aralığına yönelik olup, düşük bant genişliği ortamlarında işlevselliği ve performansı önceliklendirir. Hedef, normal donanımda 250 bit/s'den 1 gigabit/s'ye dinamik bir performans aralığı sağlamaktır.</p>
+<p>Şu anda kullanılabilir performans aralığı yaklaşık olarak 500 bit/s ile 20 megabit/s arasındadır ve bu hızların üzerindeki fiziksel ortamlar doyurulmamaktadır. Mevcut seviyenin ötesinde performans, gelecekteki güncellemeler için ama wire formatı ve API kilitlendikten sonra öncelikli olarak düşünülmüyor.</p>
+<p align="right"><a href="hardware.html">Sonraki Konu: Desteklenen Donanım</a></p>
+</body>
+</html>

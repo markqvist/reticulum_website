@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./crypto_de.html">Deutsch</a> | <a href="./crypto.html">English</a> | <a href="./crypto_tr.html">Turkish</a> | <a href="./crypto_jp.html">Japanese</a> | <a href="./crypto_pl.html">Polski</a> | <a href="./crypto_pt-br.html">Português</a></div><div class="top_menu"><a href="index_tr.html">Reticulum</a> | <a href="start_tr.html">Başlat</a> | <a href="hardware_tr.html">Donanım</a> | <a href="connect_tr.html">Test Ağı</a> | <a href="docs_tr.html">Kılavuz</a> | <a href="crypto_tr.html">Şifreleme</a> | <a href="credits_tr.html">Hakkında</a> | <a href="https://github.com/markqvist/reticulum">Kaynak</a> | <a href="donate_tr.html">Destekle</a></div></center></p>
+<h1>Şifreleme Temelleri</h1>
+<p>Reticulum, genel amaçlı CPU'lerde ve mikrodenetleyicilerde kullanılabilen yaygın olarak bulunan uygulamalara sahip, etkili, güçlü ve modern bir şifreleme temel paketi kullanır. Gerekli temel öğeler şunlardır:</p>
+<ul>
+<li>Dijital İmzalar için Ed25519</li>
+<li>ECDH anahtar değişimleri için X22519</li>
+<li>Anahtar oluşturmak için HKDF</li>
+<li>CBC modunda AES-128</li>
+<li>Mesaj doğrulama için HMAC-SHA256</li>
+<li>SHA-256</li>
+<li>SHA-512</li>
+</ul>
+<p>Varsayılan kurulum yapılandırmasında, <code>X25519</code>, <code>Ed25519</code> ve <code>AES-128-CBC</code> temel öğeleri, <a href="https://www.openssl.org/">OpenSSL</a> (aracılığıyla <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> paketi üzerinden) tarafından sağlanır. Karma fonksiyonları <code>SHA-256</code> ve <code>SHA-512</code>, standart Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> tarafından sağlanır. <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> temel öğeleri ve <code>PKCS7</code> dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
+</ul>
+<p>Reticulum ayrıca tüm gerekli temel öğelerin saf Python'da tam bir uygulamasını içerir. Reticulum başlatıldığında sistemde OpenSSL ve PyCA kullanılamıyorsa, Reticulum bunun yerine içsel saf Python temel öğelerini kullanacaktır. Bu durumun basit bir sonucu performanstır, çünkü OpenSSL <em>çok</em> daha hızlıdır. Ancak, en önemli sonuç, OpenSSL'den daha az inceleme, test ve gözden geçirme görmemiş temellerin kullanılmasıyla güvenlik kaybının potansiyelidir.</p>
+<p>Eğer içsel saf Python temel öğelerini kullanmak istiyorsanız, bunun getirdiği riskleri iyi anlamanız ve bu risklerin sizin için kabul edilebilir olup olmadığına dair bilinçli bir karar vermeniz <strong>son derece tavsiye edilir</strong>.</p>
+<p>Reticulum nispeten genç bir yazılımdır ve buna göre değerlendirilmelidir. Kriptografi en iyi uygulamaları gözetilerek inşa edilmiş olmasına rağmen, dış güvenlik denetimi yapılmamıştır ve gizlilik veya güvenlik ihlali yapabilecek hatalar olabilir. Yardımcı olmak veya maddi açıdan bir güvenlik denetimi yapılmasını desteklemek istiyorsanız, lütfen iletişime geçin.</p>
+<p align="right"><a href="credits.html">Sonraki Konu: Teşekkürler ve Saygılar</a></p>
+</body>
+</html>

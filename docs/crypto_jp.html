@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=5">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./crypto_de.html">Deutsch</a> | <a href="./crypto.html">English</a> | <a href="./crypto_tr.html">Turkish</a> | <a href="./crypto_jp.html">Japanese</a> | <a href="./crypto_pl.html">Polski</a> | <a href="./crypto_pt-br.html">Português</a></div><div class="top_menu"><a href="index_jp.html">レチキュラム</a> | <a href="start_jp.html">開始</a> | <a href="hardware_jp.html">ハードウェア</a> | <a href="connect_jp.html">テストネット</a> | <a href="docs_jp.html">マニュアル</a> | <a href="crypto_jp.html">暗号</a> | <a href="credits_jp.html">クレジット</a> | <a href="https://github.com/markqvist/reticulum">ソース</a> | <a href="donate_jp.html">寄付</a></div></center></p>
+<h1>暗号プリミティブ</h1>
+<p>Reticulumは、効率的で強力かつ現代的な暗号プリミティブのシンプルなスイートを使用しています。これらは、一般的な用途のCPUおよびマイクロコントローラーの両方で使用できる広く利用可能な実装を備えています。必要なプリミティブには以下が含まれます：</p>
+<ul>
+<li>署名用のEd25519</li>
+<li>ECDH鍵交換用のX22519</li>
+<li>鍵導出用のHKDF</li>
+<li>CBCモードでのAES-128</li>
+<li>メッセージ認証用のHMAC-SHA256</li>
+<li>SHA-256</li>
+<li>SHA-512</li>
+</ul>
+<p>デフォルトのインストール構成では、<code>X25519</code>、<code>Ed25519</code>、および<code>AES-128-CBC</code>のプリミティブは<a href="https://www.openssl.org/">OpenSSL</a>（<a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>パッケージを介して）によって提供されます。ハッシュ関数<code>SHA-256</code>および<code>SHA-512</code>は、標準のPython <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>によって提供されています。<code>HKDF</code>、<code>HMAC</code>、<code>Fernet</code>プリミティブ、および<code>PKCS7</code>パディング関数は、常に次の内部実装によって提供されます：</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
+</ul>
+<p>Reticulumには、すべての必要なプリミティブの純粋なPythonによる完全な実装も含まれています。Reticulumが開始されるときにシステムにOpenSSL＆PyCAが利用できない場合、Reticulumは代わりに内部の純粋なPythonプリミティブを使用します。これの取り決めの一因はパフォーマンスであり、OpenSSLバックエンドが非常に速いことです。しかし、最も重要な結果は、OpenSSLと同じくらいの精査、テスト、およびレビューを受けていないプリミティブを使用することによるセキュリティの潜在的な損失です。</p>
+<p>内部の純粋なPythonプリミティブを使用したい場合は、このリスクが許容できるかどうかを検討し、よく理解した上で情報を得ることが<strong>強くお勧め</strong>されます。</p>
+<p>Reticulumは比較的新しいソフトウェアであり、それに準じて考えるべきです。暗号化のベストプラクティスを非常に重視して構築されていますが、外部からのセキュリティ監査はまだ行われておらず、プライバシーやセキュリティを崩壊させる可能性があります。協力したり、監査をスポンサーしたりしたい場合は、どうぞお知らせください。</p>
+<p align="right"><a href="credits.html">次のトピック: 謝辞とクレジット</a></p>
+</body>
+</html>
