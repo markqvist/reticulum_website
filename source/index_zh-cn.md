@@ -2,7 +2,7 @@
 # Reticulum
 Reticulum 是一个基于密码学的网络栈。人们可以用现有的硬件设备基于 Reticulum 搭建本地乃至广域的网络。Reticulum 就算是在极高延迟与极低带宽的情况下仍旧可以运行。
 
-Reticulum 的愿景是让任何人都能够搭建自己的通讯网络——让独立、互联、自治的网络覆盖广阔地域从未如此简单而廉价。Reticulum 是为了人民的、势不可挡的网络。
+Reticulum 的愿景是让任何人都能够搭建自己的通讯网络——用独立、互联、自治的网络覆盖广阔地域从未如此简单而廉价。Reticulum 是为了人民的、势不可挡的网络。
 
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
 
