@@ -65,4 +65,4 @@ Reticulum, çok geniş bir kullanılabilir performans aralığına yönelik olup
 
 Şu anda kullanılabilir performans aralığı yaklaşık olarak 500 bit/s ile 20 megabit/s arasındadır ve bu hızların üzerindeki fiziksel ortamlar doyurulmamaktadır. Mevcut seviyenin ötesinde performans, gelecekteki güncellemeler için ama wire formatı ve API kilitlendikten sonra öncelikli olarak düşünülmüyor.
 
-<p align="right"><a href="hardware.html">Sonraki Konu: Desteklenen Donanım</a></p>
+<p align="right"><a href="hardware_tr.html">Sonraki Konu: Desteklenen Donanım</a></p>

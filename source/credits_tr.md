@@ -18,7 +18,7 @@ Reticulum'a ait birçok diğer modül ve proje ya Reticulum'un bir parçasıdır
 
 Reticulum'un protokol tasarımı ve referans uygulaması, 2014 ile 2022 yılları arasında Mark Qvist tarafından gerçekleştirildi.
 
-[Reticulum'un Python referans uygulaması](https://github.com/markqvist/reticulum) ve bu web sitesi [MIT Lisansı](license.html) altında lisanslanmıştır. Lütfen devam eden geliştirmeyi desteklemek için <a href="donate.html">bağış</a> yapın.
+[Reticulum'un Python referans uygulaması](https://github.com/markqvist/reticulum) ve bu web sitesi [MIT Lisansı](license.html) altında lisanslanmıştır. Lütfen devam eden geliştirmeyi desteklemek için <a href="donate_tr.html">bağış</a> yapın.
 
 ----------------
 

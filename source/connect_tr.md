@@ -29,4 +29,4 @@ Reticulum yapılandırma dosyanıza aşağıdaki arayüzlerden birini ekleyin:
 
 Test ayrıca bir dizi [Nomad Network](https://github.com/markqvist/nomadnet) düğümü ve [LXMF](https://github.com/markqvist/lxmf) yayılma düğümü içerir.
 
-<p align="right"><a href="docs.html">Sonraki Konu: Kılavuzu Okuyun</a></p>
+<p align="right"><a href="docs_tr.html">Sonraki Konu: Kılavuzu Okuyun</a></p>

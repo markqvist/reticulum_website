@@ -29,4 +29,4 @@
 
 テストネットには[Nomad Network](https://github.com/markqvist/nomadnet)ノードおよび[LXMF](https://github.com/markqvist/lxmf)伝播ノードも含まれています。
 
-<p align="right"><a href="docs.html">次のトピック：マニュアルを読む</a></p>
+<p align="right"><a href="docs_jp.html">次のトピック：マニュアルを読む</a></p>

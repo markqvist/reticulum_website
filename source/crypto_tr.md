@@ -22,4 +22,4 @@ Eğer içsel saf Python temel öğelerini kullanmak istiyorsanız, bunun getirdi
 
 Reticulum nispeten genç bir yazılımdır ve buna göre değerlendirilmelidir. Kriptografi en iyi uygulamaları gözetilerek inşa edilmiş olmasına rağmen, dış güvenlik denetimi yapılmamıştır ve gizlilik veya güvenlik ihlali yapabilecek hatalar olabilir. Yardımcı olmak veya maddi açıdan bir güvenlik denetimi yapılmasını desteklemek istiyorsanız, lütfen iletişime geçin.
 
-<p align="right"><a href="credits.html">Sonraki Konu: Teşekkürler ve Saygılar</a></p>
+<p align="right"><a href="credits_tr.html">Sonraki Konu: Teşekkürler ve Saygılar</a></p>

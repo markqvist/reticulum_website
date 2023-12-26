@@ -24,4 +24,4 @@ Reticulum, herhangi bir ağ yığınının çözdüğü aynı problemleri çöze
 - Ağın herhangi bir hedefine şifresiz paket göndermek mümkün değildir.
 - Şifresiz paketler alan konumlar, bunları geçersiz olarak görecektir.
 
-<p align="right"><a href="start.html">Sonraki Konu: Başlangıç</a></p>
+<p align="right"><a href="start_tr.html">Sonraki Konu: Başlangıç</a></p>

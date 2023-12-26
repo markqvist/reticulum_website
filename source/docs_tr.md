@@ -3,4 +3,4 @@ Reticulum için tam belgelendirmeyi bu site üzerinden [inceleyebilirsiniz](manu
 
 Ayrıca Reticulum kılavuzunu [PDF olarak indirebilirsiniz](manual/Reticulum%20Manual.pdf) veya [EPUB formatında](manual/Reticulum%20Manual.epub).
 
-<p align="right"><a href="crypto.html">Sonraki Konu: Şifreleme Temelleri</a></p>
+<p align="right"><a href="crypto_tr.html">Sonraki Konu: Şifreleme Temelleri</a></p>

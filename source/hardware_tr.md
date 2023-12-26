@@ -18,4 +18,4 @@ Reticulum ayrıca mevcut IP ağları üzerinde de kapsülleyebilir, bu nedenle o
 
 Örneğin, bir Raspberry Pi'nin hem bir LoRa radyosuna, bir paket radyo TNC'sine ve bir WiFi ağına bağlı olduğu bir yapı kurmak mümkündür. Arayüzler yapılandırıldığında, Reticulum gerisini halledecek ve WiFi ağındaki herhangi bir cihaz, ağın LoRa ve paket radyo taraflarındaki düğümlerle iletişim kurabilir, ve tam tersi.
 
-<p align="right"><a href="connect.html">Sonraki Konu: Genel Test Ağı</a></p>
+<p align="right"><a href="connect_tr.html">Sonraki Konu: Genel Test Ağı</a></p>
