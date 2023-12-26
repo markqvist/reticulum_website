@@ -9,8 +9,8 @@
 </head>
 <body>
 <p><center><div class="top_menu lang_menu"><a href="./crypto_de.html">Deutsch</a> | <a href="./crypto.html">English</a> | <a href="./crypto_pl.html">Polski</a> | <a href="./crypto_pt-br.html">Português</a> | <a href="./crypto_tr.html">Türkçe</a> | <a href="./crypto_jp.html">日本語</a> | <a href="./crypto_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_zh-cn.html">Reticulum</a> | <a href="start_zh-cn.html">开始使用</a> | <a href="hardware_zh-cn.html">硬件要求</a> | <a href="connect_zh-cn.html">测试网络</a> | <a href="docs_zh-cn.html">阅读手册</a> | <a href="crypto_zh-cn.html">密码学</a> | <a href="credits_zh-cn.html">致谢</a> | <a href="https://github.com/markqvist/reticulum">源代码</a> | <a href="donate_zh-cn.html">支持开发</a></div></center></p>
-<h1>密码学原语（Cryptographic Primitives）</h1>
-<p>Reticulum 使用了一系列高效、健壮、现代的密码学原语（cryptographic primitives）。它们都有着被广泛使用的现成的实现，在一般的 CPU 或是微控制器上都可以运行。这些必要的原语是：</p>
+<h1>密码学原语</h1>
+<p>Reticulum 使用了一系列高效、健壮、现代的密码学原语(cryptographic primitives)。它们都有着被广泛使用的现成的实现，且在一般的 CPU 或是微控制器上都可以运行。这些必要的原语是：</p>
 <ul>
 <li>Ed25519 用于签名</li>
 <li>X22519 用于 ECDH 密钥交换</li>
@@ -20,16 +20,16 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>在默认安装下，<code>X25519</code>、<code>Ed25519</code> 和 <code>AES-128-CBC</code> 都由 <a href="https://www.openssl.org/">OpenSSL</a> 提供（通过<a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>）。散列函数 <code>SHA-256</code> 和 <code>SHA-512</code> 由 Python 标准库 <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> 提供。<code>HKDF</code>、<code>HMAC</code>、<code>Fernet</code> 原语与 <code>PKCS7</code> 填充函数总是由以下内部实现提供：</p>
+<p>在默认安装下，<code>X25519</code>、<code>Ed25519</code> 和 <code>AES-128-CBC</code> 都由 <a href="https://www.openssl.org/">OpenSSL</a> 提供(通过 <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>)。散列函数 <code>SHA-256</code> 和 <code>SHA-512</code> 由 Python 标准库 <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> 提供。<code>HKDF</code>、<code>HMAC</code>、<code>Fernet</code> 原语与 <code>PKCS7</code> 填充函数总是由以下内部实现提供：</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
-<p>Reticulum 还包含了所有所需密码学原语的纯 Python 实现。如果 OpenSSL 和 PyCA 在系统上不可用的话，Reticulum 会使用自带的纯Python实现。这时，最明显的影响是速度——OpenSSL作为后端会<em>快的多</em>。然而最严重的影响，则可能是使用这些没有经受过与 OpenSSL 同级别安全审查、测试与评估的实现所带来的安全性问题。</p>
-<p>如果你想使用自带的纯 Python 实现，我非常建议你充分了解可能的风险，并仔细思考这些风险是否适用在你身上。</p>
-<p>Reticulum 目前还十分年轻，这一点必须牢记于心。虽说在构建时，开发者尽量遵守了密码学的最佳实践，但它<em>还没有</em>受过外部的安全审计，而且很可能会有破坏隐私或是安全性的 Bug。如果你愿意帮忙，或是愿意赞助进行安全审计，请联系开发者。</p>
+<p>Reticulum 还包含了所有所需密码学原语的纯 Python 实现。如果 OpenSSL 和 PyCA 在系统上不可用的话，Reticulum 会使用自带的纯 Python 实现。这时，最明显的影响是速度——OpenSSL作为后端会<em>快的多</em>。然而最严重的后果可能是使用这些实现带来的安全性问题，毕竟它们没有经受过与 OpenSSL 同级别的安全审查、测试与评估。</p>
+<p>如果你想使用自带的纯 Python 实现，我十分建议你先充分了解可能的风险，并仔细思考这些风险是否适用于你。</p>
+<p>Reticulum 目前还十分年轻，这一点必须牢记于心。虽说 Reticulum 的开发尽量遵守了密码学的最佳实践，但它<em>还没有</em>受过外部的安全审计，而且很可能会有破坏隐私或是安全性的 Bug。如果你愿意帮忙，或是愿意赞助进行安全审计，欢迎联系开发者。</p>
 <p align="right"><a href="credits_zh-cn.html">下一个主题: 致谢与署名</a></p>
 </body>
 </html>

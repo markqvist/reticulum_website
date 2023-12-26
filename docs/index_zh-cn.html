@@ -10,25 +10,25 @@
 <body>
 <p><center><div class="top_menu lang_menu"><a href="./index_de.html">Deutsch</a> | <a href="./index.html">English</a> | <a href="./index_pl.html">Polski</a> | <a href="./index_pt-br.html">Português</a> | <a href="./index_tr.html">Türkçe</a> | <a href="./index_jp.html">日本語</a> | <a href="./index_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_zh-cn.html">Reticulum</a> | <a href="start_zh-cn.html">开始使用</a> | <a href="hardware_zh-cn.html">硬件要求</a> | <a href="connect_zh-cn.html">测试网络</a> | <a href="docs_zh-cn.html">阅读手册</a> | <a href="crypto_zh-cn.html">密码学</a> | <a href="credits_zh-cn.html">致谢</a> | <a href="https://github.com/markqvist/reticulum">源代码</a> | <a href="donate_zh-cn.html">支持开发</a></div></center></p>
 <h1>Reticulum</h1>
-<p>Reticulum 是一个基于密码学的网络栈。人们可以用现有的硬件设备基于 Reticulum 搭建本地乃至广域的网络。它甚至可以在极高延迟与极低带宽的情况下运行。</p>
-<p>目前的 Reticulum 能够让任何人运行自己的通讯网络。用独立、互联、自治的网络覆盖大片地域从未如此简单与低价。Reticulum 是为了人民、势不可挡的网络。</p>
+<p>Reticulum 是一个基于密码学的网络栈。人们可以用现有的硬件设备基于 Reticulum 搭建本地或是广域的网络。Reticulum 就算是在极高延迟与极低带宽的情况下仍旧可以运行。</p>
+<p>Reticulum 的愿景是让任何人都能够搭建自己的通讯网络——用独立、互联、自治的网络覆盖广阔地域从未如此简单而廉价。Reticulum 是为了人民的、势不可挡的网络。</p>
 <p align="center"><img width="30%" src="gfx/reticulum_logo_512.png"></p>
 
-<p>Reticulum 不是<em>一个</em>网络，而是用于搭建<em>成千上万</em>网络的工具——成千上万个没有停止按钮（kill-switches）、没有监控、没有审查与控制，但却协调运作、有机结合、为了人类的网络。</p>
-<p>在用户看来，Reticulum 能够用来创造尊重社区与个人的自治型与独立性的应用。它提供了无法被外部操纵、篡改、审查的安全数字通信。</p>
-<p>Reticulum 可以构建下至小规模，大至全星球的网络体系，而无需任何层级或是官僚化的结构来控制与管理，同时还能保证社区与个人在自己那部分网络的完全自主权。</p>
-<h2>值得注意的特质（Notable Characteristics）</h2>
-<p>虽然 Reticulum 解决的是任何一个网络栈都会试着去解决的问题（把数据通过数个中间节点可靠地从一方传输到另一方），但是解决问题的方式却与其他网络技术相当不同。</p>
+<p>Reticulum 不单单是<em>一个</em>网络。它是用来搭建<em>成千上万</em>网络的工具——成千上万个没有停止按钮(kill-switches)、没有监控、没有审查与控制，但却能协调运作、有机结合的网络。Reticulum 是为了人类的网络。</p>
+<p>在用户看来，Reticulum 可以用来构建尊重社区与个人的自治性和独立性的应用。它提供了无法被外部操纵、篡改或是审查的安全数字通信。</p>
+<p>Reticulum 可以用于搭建小型乃至覆盖全星球的网络体系，而无需任何层级或是官僚化的控制管理结构。Reticulum 同时还能保证社区与个人对自己那部分网络的主权。</p>
+<h2>值得注意的特质</h2>
+<p>虽然 Reticulum 处理的是任何一个网络栈都在尝试解决的问题，即让数据通过数个中间节点，可靠地从一方传输到另一方，但其处理这一问题的方式与其他网络技术却有着很大差异。</p>
 <ul>
-<li>Reticulum 不使用源地址（source addresses）。发出包不会包含源地址、发送位置、机器与操作者之类的信息。</li>
+<li>Reticulum 不使用源地址。数据包中不会包含源地址、发送位置、机器与操作者相关的信息。</li>
 <li>Reticulum 中没有对于地址空间的中央控制。任何人都可以在需要的时候分配任意多的地址。</li>
-<li>Reticulum 保证端到端连接性。新生的地址会在几秒到数分钟之内全局可及。</li>
-<li>地址是<em><a href="https://zh.wikipedia.org/zh-cn/%E8%BA%AB%E4%BB%BD%E8%87%AA%E4%B8%BB%E6%9D%83">自主</a>（<a href="https://en.wikipedia.org/wiki/Self-sovereign_identity">self-sovereign</a>）</em>且<em>便携（portable）</em>的。它们可以在物理上被移动到网络的另一位置并仍旧保持可及。</li>
-<li>所有通信都默认是由<a href="crypto.html">现代、健壮的加密</a>保护的。</li>
-<li>所有的加密密钥都是临时（ephemeral）的。通信默认自带前向保密（forward secrecy）。</li>
-<li>不可能在 Reticulum 网络中建立未加密连接。</li>
-<li>不可能在 Reticulum 网络中向任何目标发送未加密的数据包。</li>
-<li>收到未加密数据包的目标会将数据包视为无效并丢弃。</li>
+<li>Reticulum 保证端到端连接性。新生的地址会在数秒到数分钟之内全局可及。</li>
+<li>地址是<em><a href="https://zh.wikipedia.org/zh-cn/%E8%BA%AB%E4%BB%BD%E8%87%AA%E4%B8%BB%E6%9D%83">自主</a></em>且<em>便携</em>的。它们可以在物理上被移动到网络的另一位置并仍旧保持可及。</li>
+<li>所有通信都默认由<a href="crypto_zh-cn.html">现代而健壮的加密</a>保护。</li>
+<li>所有的密钥都是临时密钥，且通信自带前向保密。</li>
+<li>无法在 Reticulum 网络中建立未加密连接。</li>
+<li>无法在 Reticulum 网络中向任何目标发送未加密的数据包。</li>
+<li>收到未加密数据包的目标会将其视为无效数据包并丢弃。</li>
 </ul>
 <p align="right"><a href="start_zh-cn.html">下一个主题: 开始使用</a></p>
 </body>
