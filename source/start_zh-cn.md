@@ -57,7 +57,7 @@ Reticulum 附带了用于管理网络、查看状态与信息等用途的一系�
 
 不论安装 Reticulum 的手段为何，Reticulum 都会在*需要*且*可用*的情况下加载外部依赖。如果你想在一个不支持 [pyserial](https://github.com/pyserial/pyserial) 的系统上运行 Reticulum，使用 `rnspure` 包即可。但是此时 Reticulum 将无法使用基于串口的界面。所有其他模块仍旧会在需要时被 Reticulum 载入。
 
-**注意！** 如果你在不支持 [PyCA/cryptography](https://github.com/pyca/cryptography) 的系统上使用 `rnspure` 包，请一定确保自己阅读并理解了[密码学原语](crypto.html)的相关内容。
+**注意！** 如果你在不支持 [PyCA/cryptography](https://github.com/pyca/cryptography) 的系统上使用 `rnspure` 包，请一定确保自己阅读并理解了[密码学原语](crypto_zh-cn.html)的相关内容。
 
 ## 性能
 Reticulum 的可用性能范围*非常广*，但是会优先保证低带宽媒介的可用性与性能。Reticulum 的目标是提供一个 250 bps 到 1 Gbps(普通硬件条件下)的性能区间。
