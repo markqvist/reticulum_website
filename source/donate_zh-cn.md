@@ -1,4 +1,4 @@
-## 支持 Reticulum（Support Reticulum）
+## 支持 Reticulum
 你可以通过以下途径来支持这一开放、自由、私密的通信系统的开发。
 
 - Monero<br/>
