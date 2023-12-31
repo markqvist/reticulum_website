@@ -10,7 +10,7 @@ co chcesz zrobić. Aby uzyskać pełne szczegóły i przykłady, sprawdź rodzia
 Jeśli masz problemy lub coś nie działa, oto kilka świetnych miejsc, w których możesz poprosić o pomoc:
 
 - [Forum dyskusyjne](https://github.com/markqvist/Reticulum/discussions) na GitHubie
-- Kanał [Matrix Reticulum](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org) pod `#reticulum:matrix.org`
+- Kanał [Matrix Reticulum](https://matrix.to/#/#reticulum:matrix.org) pod `#reticulum:matrix.org`
 - [Subreddit Reticulum](https://reddit.com/r/reticulum)
 
 ## Instalacja

@@ -8,7 +8,7 @@ Reticulum Ağı ile başlamanın en iyi yolu, ne yapmak istediğinize bağlıdı
 Eğer sorun yaşarsanız veya bir şey çalışmıyorsa, yardım istemek için harika yerler şunlar:
 
 - [GitHub'daki tartışma forumu](https://github.com/markqvist/Reticulum/discussions)
-- `#reticulum:matrix.org` üzerinden [Reticulum Matrix Kanalı](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org)
+- `#reticulum:matrix.org` üzerinden [Reticulum Matrix Kanalı](https://matrix.to/#/#reticulum:matrix.org)
 - [Reticulum subreddit'i](https://reddit.com/r/reticulum)
 
 ## Kurulum
