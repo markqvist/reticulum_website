@@ -9,7 +9,7 @@
 如果你遇到了问题，又或是有些东西不工作，以下是一些寻求帮助的好地方：
 
 - [Reticulum Github 讨论区](https://github.com/markqvist/Reticulum/discussions)
-- [Reticulum Matrix 群组](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org)（`#reticulum:matrix.org`）
+- [Reticulum Matrix 群组](https://matrix.to/#/#reticulum:matrix.org)（`#reticulum:matrix.org`）
 - [Reticulum Reddit 讨论版](https://reddit.com/r/reticulum)
 
 ## 安装

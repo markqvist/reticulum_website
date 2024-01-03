@@ -8,7 +8,7 @@ Reticulum Network Stackを始める最良の方法は、行いたいことによ
 問題が発生したり、何かがうまく動作しない場合は、助けを求めるための優れた場所がいくつかあります：
 
 - GitHubの[discussion forum](https://github.com/markqvist/Reticulum/discussions)
-- [Reticulum Matrix Channel](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org)の`#reticulum:matrix.org`
+- [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org)の`#reticulum:matrix.org`
 - [Reticulum subreddit](https://reddit.com/r/reticulum)
 
 ## インストール

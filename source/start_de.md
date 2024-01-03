@@ -9,7 +9,7 @@ Sie durchführen möchten. Ausführliche Informationen und Beispiele finden Sie 
 Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gute Stellen, an denen Sie um Hilfe bitten können:
 
 - Das [Diskussionsforum](https://github.com/markqvist/Reticulum/discussions) auf GitHub
-- Der [Reticulum-Matrixkanal](element://room/!TRaVWNnQhAbvuiSnEK%3Amatrix.org?via=matrix.org) bei `#reticulum:matrix.org`
+- Der [Reticulum-Matrixkanal](https://matrix.to/#/#reticulum:matrix.org) bei `#reticulum:matrix.org`
 - Der [Reticulum-Subreddit](https://reddit.com/r/reticulum)
 
 ## Installation
