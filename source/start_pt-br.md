@@ -68,6 +68,6 @@ Não importa como o Reticulum é instalado ou iniciado, ele vai carregar as depe
 
 Reticulum possuí um grande potencial de desempenho, mas prioriza  a funcionalidade e desempenho em dispositivos de baixa largura de rede. O objetivo é fornecer desempenho dinâmico de 250 bits por segundo para 1 gigabit por segundo em hardware normal.
 
-Atualmente o desempenho usual é aproximadamente 500 bits por segundo até 20 megabits por segundo, com dispositivos físicos mais rápidos que isso não sendo saturados. O desempenho além do nível atual é esperado para as próximas atualizações, mas não com prioridade alta até que o formato de cabo e API estejam maduros.
+Atualmente o desempenho usual é aproximadamente 150 bits por segundo até 40 megabits por segundo, com dispositivos físicos mais rápidos que isso não sendo saturados. O desempenho além do nível atual é esperado para as próximas atualizações, mas não com prioridade alta até que o formato de cabo e API estejam maduros.
 
 <p align="right"><a href="hardware_pt-br.html">Próxima Página: Hardware Compátivel</a></p>

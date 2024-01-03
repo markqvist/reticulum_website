@@ -64,6 +64,6 @@ Bez względu na to, jak Reticulum jest zainstalowane i uruchomione, załaduje ze
 ## Wydajność
 Reticulum celuje w *bardzo* szeroki zakres wydajności użytkowej, ale priorytetowo traktuje funkcjonalność i wydajność w stosunku do mediów o niskiej przepustowości. Celem jest zapewnienie dynamicznej wydajności od 250 bitów na sekundę do 1 gigabita na sekundę na normalnym sprzęcie.
 
-Obecnie użyteczna wydajność wynosi około 500 bitów na sekundę do 20 megabitów na sekundę, z nośnikami fizycznymi szybszymi niż te które nie są nienasycone. Wydajność wykraczająca poza obecny poziom jest przeznaczona do przyszłych aktualizacji, ale nie ma wysokiego priorytetu do czasu zablokowania formatu przewodów i API.
+Obecnie użyteczna wydajność wynosi około 150 bitów na sekundę do 40 megabitów na sekundę, z nośnikami fizycznymi szybszymi niż te które nie są nienasycone. Wydajność wykraczająca poza obecny poziom jest przeznaczona do przyszłych aktualizacji, ale nie ma wysokiego priorytetu do czasu zablokowania formatu przewodów i API.
 
 <p align="right"><a href="hardware_pl.html">Następny Temat: Wspierany Hardware</a></p>
