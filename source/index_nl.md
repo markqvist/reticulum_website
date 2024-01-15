@@ -25,4 +25,4 @@ Hoewel Reticulum hetzelfde probleem oplost als elke netwerkstack, namelijk gegev
 - Het is niet mogelijk om ongecodeerde pakketten naar bestemmingen in het netwerk te verzenden.
 - Bestemmingen die niet-versleutelde pakketten ontvangen, zullen deze als ongeldig verwijderen.
 
-<p align="right"><a href="start.html">Volgend onderwerp: aan de slag</a></p>
+<p align="right"><a href="start_nl.html">Volgend onderwerp: aan de slag</a></p>

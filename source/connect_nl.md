@@ -29,4 +29,4 @@ Voeg gewoon een van de volgende interfaces toe aan uw Reticulum-configuratiebest
 
 Het testnet bevat ook een aantal [Nomad Network](https://github.com/markqvist/nomadnet) knooppunten en [LXMF](https://github.com/markqvist/lxmf) propagatieknooppunten.
 
-<p align="right"><a href="docs.html">Volgend onderwerp: lees de handleiding</a></p>
+<p align="right"><a href="docs_nl.html">Volgend onderwerp: lees de handleiding</a></p>

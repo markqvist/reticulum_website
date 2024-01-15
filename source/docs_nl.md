@@ -3,4 +3,4 @@ YU kunt door de volledige documentatie voor Reticulum bladeren [op deze site](ma
 
 U kunt ook [de Reticulum-handleiding downloaden als PDF](manual/Reticulum%20Manual.pdf) of in [EPUB format](manual/Reticulum%20Manual.epub).
 
-<p align="right"><a href="crypto.html">Volgend onderwerp: cryptografische primitieven</a></p>
+<p align="right"><a href="crypto_nl.html">Volgend onderwerp: cryptografische primitieven</a></p>

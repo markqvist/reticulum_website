@@ -18,4 +18,4 @@ Reticulum kan ook worden ingekapseld over bestaande IP-netwerken, dus niets houd
 
 Het is bijvoorbeeld mogelijk om een Raspberry Pi op te zetten die is aangesloten op zowel een LoRa-radio, een packet-radio-TNC als een WiFi-netwerk. Zodra de interfaces zijn geconfigureerd, zorgt Reticulum voor de rest, en elk apparaat op het WiFi-netwerk kan communiceren met knooppunten aan de LoRa- en pakketradiozijde van het netwerk, en vice versa.
 
-<p align="right"><a href="connect.html">Volgend onderwerp: openbaar testnet</a></p>
+<p align="right"><a href="connect_nl.html">Volgend onderwerp: openbaar testnet</a></p>

@@ -1,7 +1,7 @@
 ```
 MIT Lizenz
 
-Copyright (c) 2016-2022 Mark Qvist / unsigned.io
+Copyright (c) 2016-2024 Mark Qvist / unsigned.io
 
 Hiermit wird jeder Person, die eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erwirbt, die kostenlose Erlaubnis erteilt
 dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erhält, das Recht

@@ -18,7 +18,7 @@ Een aantal andere modules en projecten maken deel uit van of worden gebruikt doo
 
 Het protocolontwerp en de referentie-implementatie voor Reticulum werden tussen 2014 en 2022 uitgevoerd door Mark Qvist.
 
-De [Python-referentie-implementatie van Reticulum](https://github.com/markqvist/reticulum) en deze website zijn gelicentieerd onder de [MIT License](license.html). <a href="donate.html">Doneer</a>  om de voortdurende ontwikkeling te ondersteunen.
+De [Python-referentie-implementatie van Reticulum](https://github.com/markqvist/reticulum) en deze website zijn gelicentieerd onder de [MIT License](license.html). <a href="donate_nl.html">Doneer</a>  om de voortdurende ontwikkeling te ondersteunen.
 
 ----------------
 
