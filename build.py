@@ -70,7 +70,7 @@ menu_translations = {
         "CRYPTO": "Crypto",
         "CREDITS": "Dankwoord",
         "SOURCE": "Broncode",
-        "DONATE": "Doeren",
+        "DONATE": "Doneren",
     },
     "jp": {
         "RETICULUM": "レチキュラム",
