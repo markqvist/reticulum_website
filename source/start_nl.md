@@ -58,7 +58,7 @@ Op meer ongebruikelijke systemen, en in sommige zeldzame gevallen, is het missch
 
 Ongeacht hoe Reticulum is geïnstalleerd en gestart, het zal alleen externe afhankelijkheden laden als deze *nodig* en *beschikbaar* zijn. Als u bijvoorbeeld Reticulum wilt gebruiken op een systeem dat [pyserial](https://github.com/pyserial/pyserial) niet kan ondersteunen, is het perfect mogelijk om dit te doen met het `rnspure`-pakket, maar Reticulum zal dan niet in staat zijn om seriële interfaces te gebruiken. Alle andere beschikbare modules worden nog steeds geladen wanneer dat nodig is.
 
-**Let op!** Als u het `rnspure`-pakket gebruikt om Reticulum uit te voeren op systemen die [PyCA/cryptography](https://github.com/pyca/cryptography) niet ondersteunen, is het belangrijk dat u eerst het [Cryptographic Primitives](crypto.html) hoofdstuk van deze site leest en begrijpt.
+**Let op!** Als u het `rnspure`-pakket gebruikt om Reticulum uit te voeren op systemen die [PyCA/cryptography](https://github.com/pyca/cryptography) niet ondersteunen, is het belangrijk dat u eerst het [Cryptografische Primitieven](crypto_nl.html) hoofdstuk van deze site leest en begrijpt.
 
 ## Prestatie
 Reticulum streeft naar een *zeer* breed bruikbaar prestatiebereik, maar geeft prioriteit aan functionaliteit en prestaties boven mediums met een lage bandbreedte. Het doel is om een dynamisch prestatiebereik te bieden van 250 bits per seconde tot 1 gigabit per seconde op normale hardware.

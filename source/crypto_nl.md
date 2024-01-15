@@ -23,4 +23,4 @@ Als u de interne pure Python-primitieven wilt gebruiken, is het **zeer aan te ra
 
 Reticulum is relatief jonge software en moet als zodanig worden beschouwd. Hoewel het is gebouwd met de best practices op het gebied van cryptografie in het achterhoofd, is er geen externe beveiligingsaudit uitgevoerd en kunnen er bugs in zitten die de privacy of de beveiliging schenden. Als u wilt helpen of een audit wilt sponsoren, neem dan contact met ons op.
 
-<p align="right"><a href="credits_nl.html">Volgend onderwerp: dankbetuigingen en credits</a></p>
+<p align="right"><a href="credits_nl.html">Volgend onderwerp: dankbetuigingen en referenties</a></p>

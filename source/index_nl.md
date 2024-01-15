@@ -19,7 +19,7 @@ Hoewel Reticulum hetzelfde probleem oplost als elke netwerkstack, namelijk gegev
 - Er is geen centrale controle over de adresruimte in Reticulum. Iedereen kan zoveel adressen toewijzen als hij nodig heeft, wanneer hij die nodig heeft..
 - Reticulum zorgt voor end-to-end connectiviteit. Nieuw gegenereerde adressen worden binnen enkele seconden tot enkele minuten wereldwijd bereikbaar.
 - Adressen zijn *zelf-soeverein* en *draagbaar*. Zodra een adres is aangemaakt, kan het fysiek naar een andere plek in het netwerk worden verplaatst en bereikbaar blijven.
-- Alle communicatie is standaard beveiligd met [sterke, moderne encryptie](crypto.html).
+- Alle communicatie is standaard beveiligd met [sterke, moderne encryptie](crypto_nl.html).
 - Alle encryptiesleutels zijn kortstondig en communicatie biedt standaard voorwaartse geheimhouding.
 - Het is niet mogelijk om ongecodeerde links tot stand te brengen in Reticulum-netwerken.
 - Het is niet mogelijk om ongecodeerde pakketten naar bestemmingen in het netwerk te verzenden.
