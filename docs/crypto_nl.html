@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./crypto_de.html">Deutsch</a> | <a href="./crypto.html">English</a> | <a href="./crypto_nl.html">Nederlands</a> | <a href="./crypto_pl.html">Polski</a> | <a href="./crypto_pt-br.html">Português</a> | <a href="./crypto_tr.html">Türkçe</a> | <a href="./crypto_jp.html">日本語</a> | <a href="./crypto_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_nl.html">Reticulum</a> | <a href="start_nl.html">Start</a> | <a href="hardware_nl.html">Hardware</a> | <a href="connect_nl.html">Testnet</a> | <a href="docs_nl.html">Handleiding</a> | <a href="crypto_nl.html">Crypto</a> | <a href="credits_nl.html">Dankwoord</a> | <a href="https://github.com/markqvist/reticulum">Broncode</a> | <a href="donate_nl.html">Doeren</a></div></center></p>
+<h1>Cryptografische primitieven</h1>
+<p>Reticulum maakt gebruik van een eenvoudige reeks efficiënte, sterke en moderne cryptografische primitieven, met algemeen beschikbare implementaties die zowel op CPU's voor algemene doeleinden als op microcontrollers kunnen worden gebruikt. De noodzakelijke primitieven zijn:</p>
+<ul>
+<li>Ed25519 voor handtekeningen</li>
+<li>X22519 voor ECDH-sleuteluitwisselingen</li>
+<li>HKDF voor sleutelafleiding</li>
+<li>AES-128 in CBC-modus</li>
+<li>HMAC-SHA256 voor berichtauthenticatie</li>
+<li>SHA-256</li>
+<li>SHA-512</li>
+</ul>
+<p>In de standaard installatieconfiguratie worden de primitieven <code>X25519</code>, <code>Ed25519</code> en <code>AES-128-CBC</code> geleverd door <a href="https://www.openssl.org/">OpenSSL</a> (via het <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> pakket). De hashfuncties <code>SHA-256</code> and <code>SHA-512</code> worden geleverd door de standaard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. De <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> primitieven en de <code>PKCS7</code> opvullingsfunctie worden altijd geleverd door de volgende interne implementaties:</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
+</ul>
+<p>Reticulum bevat ook een volledige implementatie van alle benodigde primitieven in pure Python. Als OpenSSL en PyCA niet beschikbaar zijn op het systeem wanneer Reticulum wordt gestart, zal Reticulum in plaats daarvan de interne pure-python-primitieven gebruiken. Een triviaal gevolg hiervan zijn de prestaties, waarbij de OpenSSL-backend <em>veel</em> sneller is. Het belangrijkste gevolg is echter het potentiële verlies aan veiligheid door het gebruik van primitieven die niet dezelfde hoeveelheid onderzoek, testen en beoordeling hebben ondergaan als die van OpenSSL.</p>
+<p>Als u de interne pure Python-primitieven wilt gebruiken, is het <strong>zeer aan te raden</strong> dat u een goed inzicht heeft in de risico's die dit met zich meebrengt, en een weloverwogen beslissing neemt of deze risico's voor u acceptabel zijn.</p>
+<p>Reticulum is relatief jonge software en moet als zodanig worden beschouwd. Hoewel het is gebouwd met de best practices op het gebied van cryptografie in het achterhoofd, is er geen externe beveiligingsaudit uitgevoerd en kunnen er bugs in zitten die de privacy of de beveiliging schenden. Als u wilt helpen of een audit wilt sponsoren, neem dan contact met ons op.</p>
+<p align="right"><a href="credits_nl.html">Volgend onderwerp: dankbetuigingen en credits</a></p>
+</body>
+</html>

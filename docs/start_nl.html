@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./start_de.html">Deutsch</a> | <a href="./start.html">English</a> | <a href="./start_nl.html">Nederlands</a> | <a href="./start_pl.html">Polski</a> | <a href="./start_pt-br.html">Português</a> | <a href="./start_tr.html">Türkçe</a> | <a href="./start_jp.html">日本語</a> | <a href="./start_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_nl.html">Reticulum</a> | <a href="start_nl.html">Start</a> | <a href="hardware_nl.html">Hardware</a> | <a href="connect_nl.html">Testnet</a> | <a href="docs_nl.html">Handleiding</a> | <a href="crypto_nl.html">Crypto</a> | <a href="credits_nl.html">Dankwoord</a> | <a href="https://github.com/markqvist/reticulum">Broncode</a> | <a href="donate_nl.html">Doeren</a></div></center></p>
+<h1>Begin</h1>
+<p>De beste manier om aan de slag te gaan met de Reticulum Network Stack hangt af van wat jij wilt doen. Voor volledige details en voorbeelden, kijk eens naar de sectie <a href="manual/gettingstartedfast.html">Snel aan de slag</a> van de <a href="manual/index.html">Reticulum Manual</a>.</p>
+<h2>Experimentele software</h2>
+<p><em>Let op!</em> Reticulum is nog steeds in bèta. Dit betekent dat, hoewel het al heel goed werkt en zeer stabiel is, er nog steeds kritieke bugs of tekortkomingen kunnen zijn in het gedrag, de privacy of de veiligheid van het systeem als geheel. Gebruik Reticulum als u zich hier prettig bij voelt en de implicaties begrijpt.</p>
+<h2>Hulp van de gemeenschap</h2>
+<p>Als u problemen ondervindt of als iets niet werkt, zijn hier enkele goede plaatsen waar u om hulp kunt vragen:</p>
+<ul>
+<li>Het <a href="https://github.com/markqvist/Reticulum/discussions">discussieforum</a> op GitHub</li>
+<li>Het <a href="https://matrix.to/#/#reticulum:matrix.org">Reticulum Matrix Channel</a> op <code>#reticulum:matrix.org</code></li>
+<li>De <a href="https://reddit.com/r/reticulum">Reticulum-subreddit</a></li>
+</ul>
+<h2>Installatie</h2>
+<p>Om Reticulum en gerelateerde hulpprogramma's op uw systeem te installeren, is de eenvoudigste manier via pip:</p>
+<pre><code class="language-bash">pip install rns
+</code></pre>
+<p>U kunt vervolgens elk programma starten dat Reticulum gebruikt, of Reticulum starten als een systeemservice met [het rnsd-hulpprogramma] (manual/using.html#the-rnsd-utility).</p>
+<p>Als <code>pip</code> niet beschikbaar is op uw systeem, installeer dan eerst de pakketten <code>python3</code> en <code>python3-pip</code> voor uw besturingssysteem.</p>
+<p>Wanneer Reticulum voor het eerst wordt gestart, zal het een standaardconfiguratiebestand maken, dat basisconnectiviteit biedt met andere Reticulum-peers die mogelijk lokaal bereikbaar zijn. Als een van deze lokale peers een Transport Instantie is, kunnen deze u verbinden met bredere netwerken. Het standaardconfiguratiebestand bevat enkele voorbeelden en referenties voor het maken van een complexere configuratie.</p>
+<p>Voor meer gedetailleerde voorbeelden over hoe u de communicatie kunt uitbreiden via vele media, zoals packet radio of LoRa, seriële poorten, of via snelle IP-verbindingen en internet met behulp van de UDP- en TCP-interfaces, kunt u de [Ondersteunde interfaces] (handleiding/interfaces) raadplegen. .html) sectie van de <a href="manual/index.html">Reticulum Manual</a>.</p>
+<h2>Inbegrepen hulpprogramma's</h2>
+<p>Reticulum bevat een reeks handige hulpprogramma's voor het beheren van uw netwerken, het bekijken van status en informatie en andere taken. U kunt meer over deze programma's lezen in het hoofdstuk <a href="manual/using.html#included-utility-programs">Included Utility Programs</a> van de <a href="manual/index.html">Reticulum Manual</a>.</p>
+<ul>
+<li>De systeemdaemon <code>rnsd</code> voor het uitvoeren van Reticulum als een altijd beschikbare service</li>
+<li>Een interfacestatushulpprogramma genaamd <code>rnstatus</code>, dat informatie over interfaces weergeeft</li>
+<li>Het hulpmiddel voor het opzoeken en beheren van paden <code>rnpath</code> waarmee u padtabellen kunt bekijken en wijzigen</li>
+<li>Een diagnostisch hulpmiddel genaamd <code>rnprobe</code> voor het controleren van de connectiviteit met bestemmingen</li>
+<li>Een eenvoudig programma voor bestandsoverdracht genaamd <code>rncp</code>, waarmee u eenvoudig bestanden naar externe systemen kunt kopiëren</li>
+<li>Het programma voor het uitvoeren van opdrachten op afstand <code>rnx</code> waarmee u opdrachten en programma's kunt uitvoeren en uitvoer van externe systemen kunt ophalen</li>
+</ul>
+<p>Alle tools, inclusief <code>rnx</code> en <code>rncp</code>, werken betrouwbaar en goed, zelfs via verbindingen met een zeer lage bandbreedte, zoals LoRa of Packet Radio.</p>
+<h2>Programma's die Reticulum gebruiken</h2>
+<p>Als je snel een idee wilt krijgen van wat Reticulum kan doen, bekijk dan de volgende bronnen.</p>
+<ul>
+<li>Voor een off-grid, gecodeerd en veerkrachtig mesh-communicatieplatform, zie <a href="https://github.com/markqvist/NomadNet">Nomad Network</a></li>
+<li>De Android-, Linux- en macOS-app <a href="https://github.com/markqvist/sideband">Sideband</a> heeft een grafische interface en is gericht op gebruiksgemak.</li>
+<li><a href="https://github.com/markqvist/lxmf">LXMF</a> is een gedistribueerd, vertragings- en verstoringstolerant protocol voor berichtoverdracht, gebouwd op Reticulum</li>
+</ul>
+<h2>Afhankelijkheden</h2>
+<p>Voor de installatie van het standaard <code>rns</code>-pakket zijn de onderstaande afhankelijkheden vereist. Bijna alle systemen en distributies hebben pakketten beschikbaar voor deze afhankelijkheden, en wanneer het <code>rns</code>-pakket met <code>pip</code> wordt geïnstalleerd, zullen deze ook worden gedownload en geïnstalleerd.</p>
+<ul>
+<li><a href="https://github.com/pyca/cryptografie">PyCA/cryptografie</a></li>
+<li><a href="https://github.com/al45tair/netifaces">netifaces</a></li>
+<li><a href="https://github.com/pyserial/pyserial">pyserial</a></li>
+</ul>
+<p>Op meer ongebruikelijke systemen, en in sommige zeldzame gevallen, is het misschien niet mogelijk om een of meer van de bovenstaande modules te installeren of zelfs te compileren. In dergelijke situaties kunt u in plaats daarvan het pakket <code>rnspure</code> gebruiken, waarvoor geen externe afhankelijkheden nodig zijn voor de installatie. Houd er rekening mee dat de inhoud van de pakketten <code>rns</code> en <code>rnspure</code> <em>identiek</em> is. Het enige verschil is dat het <code>rnspure</code>-pakket geen afhankelijkheden vermeldt die vereist zijn voor de installatie.</p>
+<p>Ongeacht hoe Reticulum is geïnstalleerd en gestart, het zal alleen externe afhankelijkheden laden als deze <em>nodig</em> en <em>beschikbaar</em> zijn. Als u bijvoorbeeld Reticulum wilt gebruiken op een systeem dat <a href="https://github.com/pyserial/pyserial">pyserial</a> niet kan ondersteunen, is het perfect mogelijk om dit te doen met het <code>rnspure</code>-pakket, maar Reticulum zal dan niet in staat zijn om seriële interfaces te gebruiken. Alle andere beschikbare modules worden nog steeds geladen wanneer dat nodig is.</p>
+<p><strong>Let op!</strong> Als u het <code>rnspure</code>-pakket gebruikt om Reticulum uit te voeren op systemen die <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> niet ondersteunen, is het belangrijk dat u eerst het <a href="crypto.html">Cryptographic Primitives</a> hoofdstuk van deze site leest en begrijpt.</p>
+<h2>Prestatie</h2>
+<p>Reticulum streeft naar een <em>zeer</em> breed bruikbaar prestatiebereik, maar geeft prioriteit aan functionaliteit en prestaties boven mediums met een lage bandbreedte. Het doel is om een dynamisch prestatiebereik te bieden van 250 bits per seconde tot 1 gigabit per seconde op normale hardware.</p>
+<p>Momenteel bedraagt het bruikbare prestatiebereik ongeveer 150 bits per seconde tot 40 megabits per seconde, waarbij fysieke media sneller dan dat niet verzadigd zijn. Prestaties boven het huidige niveau zijn bedoeld voor toekomstige upgrades, maar krijgen geen hoge prioriteit totdat het draadformaat en de API zijn vergrendeld.</p>
+<p align="right"><a href="hardware_nl.html">Volgend onderwerp: ondersteunde hardware</a></p>
+</body>
+</html>
