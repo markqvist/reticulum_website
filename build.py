@@ -30,10 +30,10 @@ primary_lang = "en"
 langs = [
     {"name": "Deutsch", "ext": "de"},
     {"name": "English", "ext": "en"},
+    {"name": "Nederlands", "ext": "nl"},
     {"name": "Polski", "ext": "pl"},
     {"name": "Português", "ext": "pt-br"},
     {"name": "Türkçe", "ext": "tr"},
-    {"name": "Nederlands", "ext": "nl"},
     {"name": "日本語", "ext": "jp"},
     {"name": "简体中文", "ext": "zh-cn"},
 ]
