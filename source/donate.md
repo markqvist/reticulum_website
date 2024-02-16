@@ -13,7 +13,7 @@ You can help support the continued development of open, free and private communi
   <br/><br/>
 - Bitcoin<br/>
   ```
-  3CPmacGm34qYvR6XWLVEJmi2aNe3PZqUuq
+  35G9uWVzrpJJibzUwpNUQGQNFzLirhrYAH
   ```
   <br/><br/>
 - Ko-Fi<br/>
