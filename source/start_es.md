@@ -68,7 +68,7 @@ En sistemas más inusuales, y en algunos casos raros, puede que no sea posible i
 
 Independientemente de cómo se instale e inicie Reticulum, cargará las dependencias externas sólo si son *necesarias* y están *disponibles*. Si, por ejemplo, desea utilizar Reticulum en un sistema que no admite [pyserial](https://github.com/pyserial/pyserial), es perfectamente posible hacerlo utilizando el paquete `rnspure`, pero Reticulum no podrá utilizar interfaces basadas en serial. Todos los demás módulos disponibles seguirán cargándose cuando sea necesario.
 
-**Atenti!** Si utiliza el paquete `rnspure` para ejecutar Reticulum en sistemas que no soportan [PyCA/cryptography](https://github.com/pyca/cryptography), es importante que lea y comprenda la sección [Cryptographic Primitives](crypto_es.html) de este sitio.
+**Atenti!** Si utiliza el paquete `rnspure` para ejecutar Reticulum en sistemas que no soportan [PyCA/cryptography](https://github.com/pyca/cryptography), es importante que lea y comprenda la sección [Primitivas Criptográficas](crypto_es.html) de este sitio.
 
  ## Desempeño
 Reticulum busca cubrir un amplio rango de desempeño utilizable, pero prioriza la funcionalidad y el desempeño sobre medios de baja capacidad de ancho de banda. El objetivo es ofrecer un entorno de desempeño dinámico que va desde 250 bit por segundo hasta 1 gigabit por segundo en hardware normal.
