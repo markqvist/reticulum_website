@@ -1,10 +1,10 @@
 import markdown
 import os
 
-SOURCES_PATH="./source"
-BUILD_PATH="./build"
-INPUT_ENCODING="utf-8"
-OUTPUT_ENCODING="utf-8"
+SOURCES_PATH = "./source"
+BUILD_PATH = "./build"
+INPUT_ENCODING = "utf-8"
+OUTPUT_ENCODING = "utf-8"
 
 document_start = """
 <!doctype html>
@@ -94,7 +94,8 @@ menu_translations = {
         "CREDITS": "Credits",
         "SOURCE": "Quellcode",
         "DONATE": "Unterstützen",
-    },"pl": {
+    },
+    "pl": {
         "RETICULUM": "Reticulum",
         "START": "Jak Zacząć",
         "HARDWARE": "Hardware",
@@ -137,8 +138,9 @@ menu_translations = {
         "CREDITS": "致谢",
         "SOURCE": "源代码",
         "DONATE": "支持开发",
-    }
+    },
 }
+
 
 def get_page_lang(page):
     page_lang = primary_lang
@@ -149,11 +151,12 @@ def get_page_lang(page):
                 page_lang = lang["ext"]
     return page_lang
 
+
 def get_languages_md(page):
     page = page.replace(SOURCES_PATH, ".")
     current_page_lang = get_page_lang(page)
     if current_page_lang != primary_lang:
-        page_base_name = page.replace("_"+current_page_lang+".md", "")
+        page_base_name = page.replace("_" + current_page_lang + ".md", "")
     else:
         page_base_name = page.replace(".md", "")
 
@@ -162,12 +165,12 @@ def get_languages_md(page):
         lang = lang_entry["name"]
         lang_ext = lang_entry["ext"]
         if lang_ext != primary_lang:
-            lang_ext_str = "_"+lang_ext
+            lang_ext_str = "_" + lang_ext
         else:
             lang_ext_str = ""
 
-        link_target = page_base_name+lang_ext_str+".html"
-        link_md = "["+lang+"]("+link_target+") | "
+        link_target = page_base_name + lang_ext_str + ".html"
+        link_md = "[" + lang + "](" + link_target + ") | "
         lang_list += link_md
 
     return langs_md.replace("{LANGS}", lang_list[:-3])
@@ -176,24 +179,36 @@ def get_languages_md(page):
 def get_menu_md(lang):
     local_menu_md = menu_md
     for entry in menu_translations[lang]:
-        local_menu_md = local_menu_md.replace("{"+entry+"}", menu_translations[lang][entry])
+        local_menu_md = local_menu_md.replace(
+            "{" + entry + "}", menu_translations[lang][entry]
+        )
 
     return local_menu_md
 
+
 def scan_pages(base_path):
-    files = [file for file in os.listdir(base_path) if os.path.isfile(os.path.join(base_path, file)) and file[:1] != "."]
-    directories = [file for file in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, file)) and file[:1] != "."]
+    files = [
+        file
+        for file in os.listdir(base_path)
+        if os.path.isfile(os.path.join(base_path, file)) and file[:1] != "."
+    ]
+    directories = [
+        file
+        for file in os.listdir(base_path)
+        if os.path.isdir(os.path.join(base_path, file)) and file[:1] != "."
+    ]
 
     page_sources = []
 
     for file in files:
         if file.endswith(".md"):
-            page_sources.append(base_path+"/"+file)
+            page_sources.append(base_path + "/" + file)
 
     for directory in directories:
-        page_sources.append(scan_pages(base_path+"/"+directory))
+        page_sources.append(scan_pages(base_path + "/" + directory))
 
     return page_sources
+
 
 source_files = scan_pages(SOURCES_PATH)
 
@@ -202,15 +217,17 @@ for mdf in source_files:
         page_lang = get_page_lang(mdf)
 
         if page_lang != primary_lang:
-            page_lang_ext = "_"+page_lang
+            page_lang_ext = "_" + page_lang
         else:
             page_lang_ext = ""
 
         md = f.read().decode(INPUT_ENCODING)
-        page_md = "<center>"+get_languages_md(mdf)+""+get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + "</center>\n\n" + md
-        html = markdown.markdown(page_md, extensions=["markdown.extensions.fenced_code"])
+        page_md = "<center>" + get_languages_md(mdf) + "" + get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + "</center>\n\n" + md
+        html = markdown.markdown(
+            page_md, extensions=["markdown.extensions.fenced_code"]
+        )
         html = document_start + html + document_end
 
-        of = BUILD_PATH+mdf.replace(SOURCES_PATH, "").replace(".md", ".html")
+        of = BUILD_PATH + mdf.replace(SOURCES_PATH, "").replace(".md", ".html")
         with open(of, "wb") as wf:
             wf.write(html.encode(OUTPUT_ENCODING))
