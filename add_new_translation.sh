@@ -30,4 +30,4 @@ for file in "$origin_directory"/*; do
 	fi
 done
 
-echo -e "Done, happy translation!"
+echo -e "Done, happy translation!\n"
