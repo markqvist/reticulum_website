@@ -1,7 +1,7 @@
 # Testnet publica
 
 
-Si sólo quiere empezar a experimentar sin construir ninguna red física, le invitamos a unirse a la red pública de pruebas de Reticulum.
+Si sólo quiere empezar a experimentar sin construir ninguna red física, le invitamos a unirse a la red pública de pruebas de Reticulum (Testnet).
 La red de pruebas es precisamente eso, una red informal para probar y experimentar. Estará activa la mayor parte del tiempo y cualquiera puede unirse a ella, pero esto también significa que no hay garantías de disponibilidad del servicio.
 
 La red de pruebas ejecuta la últimisima versión de Reticulum (a menudo incluso un poco antes de su lanzamiento público). A veces pueden desplegarse versiones experimentales de Reticulum en nodos de la red de pruebas, lo que significa que pueden producirse comportamientos extraños. Si nada de esto le asusta, puede unirse a la red de prueba a través de TCP o I2P.

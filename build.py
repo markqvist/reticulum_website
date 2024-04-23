@@ -119,7 +119,7 @@ menu_translations = {
     },
     "es": {
         "RETICULUM": "Reticulum",
-        "START": "Empezas",
+        "START": "Empezar",
         "HARDWARE": "Hardware",
         "TESTNET": "Testnet",
         "MANUAL": "Manual",
