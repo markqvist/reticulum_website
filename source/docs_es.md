@@ -4,6 +4,6 @@ Puede consultar la documentación completa de Reticulum [en este sitio](manual/i
 
 También puede [descargar el manual de Reticulum en formato PDF](manual/Reticulum%20Manual.pdf) o en [formato EPUB](manual/Reticulum%20Manual.epub).
 
-Por el momento solo esta disponible en Ingles.
+Por el momento sólo está disponible en Inglés.
 
 <p align="right"><a href="crypto_es.html">Ooootro tema: Primitivas criptográficas</a></p>

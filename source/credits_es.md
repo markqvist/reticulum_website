@@ -1,6 +1,6 @@
 # Agradecimientos y créditos
 
-Reticulum sólo puede existir gracias a la montaña de trabajo de código abierto sobre la que se construyó, a las contribuciones de todos los implicados y a todos los que han apoyado el proyecto a lo largo de los años. A todos los que han ayudado, muchas gracias.
+Reticulum sólo puede existir gracias a la montaña de código abierto sobre la que se construyó, a las contribuciones de todos los implicados y a todos los que han apoyado el proyecto a lo largo de los años. A todos los que han ayudado, muchas gracias.
 
 Otros módulos y proyectos forman parte o son utilizados por Reticulum. Nuestro más sincero agradecimiento a los autores y colaboradores de los siguientes proyectos:
 
@@ -19,7 +19,7 @@ Otros módulos y proyectos forman parte o son utilizados por Reticulum. Nuestro 
 
 El diseño del protocolo y la implementación de referencia para Reticulum se llevaron a cabo entre 2014 y 2024 por Mark Qvist.
 
-La [referencia de la implementación de Reticulum en Python](https://github.com/markqvist/reticulum) y este sitio estan licenciados bajo la [Licencia MIT](license_es.html). Por favor <a href="donate_es.html">dona</a> para apoyar el desarrollo.
+La [referencia de la implementación de Reticulum en Python](https://github.com/markqvist/reticulum) y este sitio están licenciados bajo la [Licencia MIT](license_es.html). Por favor, <a href="donate_es.html">dona</a> para apoyar el desarrollo.
 
 ----------------
 

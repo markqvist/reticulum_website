@@ -18,8 +18,8 @@ En la configuración de la instalación por defecto, las primitivas `X25519`, `E
 
 Reticulum también incluye una implementación completa de todas las primitivas necesarias en Python puro. Si OpenSSL y PyCA no están disponibles en el sistema cuando se inicia Reticulum, éste utilizará en su lugar las primitivas internas de Python puro. Una consecuencia trivial de esto es el rendimiento, ya que el backend de OpenSSL es *mucho* más rápido. Sin embargo, la consecuencia más importante es la pérdida potencial de seguridad al utilizar primitivas que no han sido sometidas a la misma cantidad de escrutinio, pruebas y revisiones que las de OpenSSL.
 
-Si desea utilizar las primitivas internas de Python puro, es **altamente recomendable** que usted tenga una buena comprensión de los riesgos que esto plantea, y tomar una decisión informada sobre si esos riesgos son aceptables para usted.
+Si desea utilizar las primitivas internas de Python puro, es **altamente recomendable** que usted tenga una buena comprensión de los riesgos que esto plantea, y tome una decisión informada sobre si esos riesgos son aceptables para usted.
 
-Reticulum es un software relativamente joven y debe ser considerado como tal. Aunque se ha construido teniendo muy presentes las mejores prácticas criptográficas, _no_ ha sido auditado externamente en materia de seguridad, y es muy posible que haya errores que rompan la privacidad o la seguridad. Si queres ayudar o patrocinar una auditoría, ponete en contacto con nosotros.
+Reticulum es un software relativamente joven y debe ser considerado como tal. Aunque se ha construido teniendo muy presentes las mejores prácticas criptográficas, _no_ ha sido auditado externamente en materia de seguridad y es muy posible que haya errores que rompan la privacidad o la seguridad. Si queres ayudar o patrocinar una auditoría, ponete en contacto con nosotros.
 
 <p align="right"><a href="credits_es.html">Siguiente tema: Agradecimientos y créditos</a></p>
