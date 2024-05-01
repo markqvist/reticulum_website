@@ -1,5 +1,5 @@
 # Hardware soportado
-Reticulum puede utilizarse en prácticamente cualquier medio que admita al menos un canal semidúplex con un rendimiento de 500 bits por segundo y una MTU de 500 bytes. Radios de datos, módems, radios LoRa, líneas seriales, TNC AX.25, modos digitales de radioaficionados, dispositivos WiFi y Ethernet, enlaces ópticos de espacio libre y sistemas similares son ejemplos de los tipos de dispositivos físicos que puede utilizar Reticulum. Los tipos de interfaz admitidos incluyen:
+Reticulum puede utilizarse en prácticamente cualquier medio que admita al menos un canal semidúplex con un rendimiento de 500 bits por segundo y una MTU de 500 bytes. Radios de datos, módems, radios LoRa, líneas seriales, TNC AX.25, modos digitales de radio-aficionados, dispositivos WiFi y Ethernet, enlaces ópticos de espacio libre y sistemas similares son ejemplos de los tipos de dispositivos físicos que puede utilizar Reticulum. Los tipos de interfaz admitidos incluyen:
 
 - Cualquier dispositivo Ethernet
 - Casi todo el hardware basado en WiFi
@@ -16,6 +16,6 @@ Para obtener información más detallada y una lista completa de los tipos de in
 
 Reticulum también puede encapsularse sobre redes IP existentes, por lo que nada le impide utilizarlo a través de Ethernet por cable, su red WiFi local o Internet, donde funcionará igual de bien. De hecho, uno de los puntos fuertes de Reticulum es la facilidad con la que permite conectar diferentes medios en una malla autoconfigurable, resistente y encriptada, utilizando cualquier mezcla de infraestructura disponible.
 
-Como ejemplo, se puede setear una Raspberry Pi conectada a un dispositivo LoRa, una radio en paquetes TNC y una red WiFi. Cuando las interfaces esten configuradas, Reticulum se hace cargo del resto, y cualquier dispositivo en la red se va a poder comunitar con nodos en los lados de LoRa y radio en paquetes de la red y viceversa.
+Como ejemplo, se puede setear una Raspberry Pi conectada a un dispositivo LoRa, una radio en paquetes TNC y una red WiFi. Cuando las interfaces estén configuradas, Reticulum se hace cargo del resto, y cualquier dispositivo en la red se va a poder comunicar con nodos que estén en LoRa y/o radio en paquetes de la red y viceversa.
 
 <p align="right"><a href="connect_es.html">Siguiente tema: Testnet publica</a></p>

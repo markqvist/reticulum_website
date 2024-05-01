@@ -1,5 +1,6 @@
 ## Apoya Reticulum
-Puede contribuir al desarrollo continuado de sistemas de comunicaciones abiertos, libres y privados haciendo una donación a través de uno de los siguientes canales:
+
+Podes contribuir al desarrollo de sistemas de comunicaciones abiertas, libres y privadas haciendo una donación a través de uno de los siguientes canales:
 
 - Monero<br/>
   ```
