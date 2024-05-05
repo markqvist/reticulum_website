@@ -33,9 +33,20 @@ system, which should be enabled by default in almost all OSes.
 
 .. code::
 
-  # This example demonstrates a TCP server interface.
-  # It will listen for incoming connections on the
-  # specified IP address and port number.
+  # This example demonstrates a bare-minimum setup
+  # of an Auto Interface. It will allow communica-
+  # tion with all other reachable devices on all
+  # usable physical ethernet-based devices that
+  # are available on the system.
+
+  [[Default Interface]]
+    type = AutoInterface
+    interface_enabled = True
+
+  # This example demonstrates an more specifically
+  # configured Auto Interface, that only uses spe-
+  # cific physical interfaces, and has a number of
+  # other configuration options set.
   
   [[Default Interface]]
     type = AutoInterface
@@ -46,6 +57,12 @@ system, which should be enabled by default in almost all OSes.
     # specifying different Group IDs.
 
     group_id = reticulum
+
+    # You can also choose the multicast address type:
+    # temporary (default, Temporary Multicast Address)
+    # or permanent (Permanent Multicast Address)
+
+    multicast_address_type = permanent
 
     # You can also select specifically which
     # kernel networking devices to use.

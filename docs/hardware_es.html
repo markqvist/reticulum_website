@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./hardware_de.html">Deutsch</a> | <a href="./hardware.html">English</a> | <a href="./hardware_nl.html">Nederlands</a> | <a href="./hardware_pl.html">Polski</a> | <a href="./hardware_es.html">Español</a> | <a href="./hardware_pt-br.html">Português</a> | <a href="./hardware_tr.html">Türkçe</a> | <a href="./hardware_jp.html">日本語</a> | <a href="./hardware_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_es.html">Reticulum</a> | <a href="start_es.html">Empezar</a> | <a href="hardware_es.html">Hardware</a> | <a href="connect_es.html">Testnet</a> | <a href="docs_es.html">Manual</a> | <a href="crypto_es.html">Crypto</a> | <a href="credits_es.html">Creditos</a> | <a href="https://github.com/markqvist/reticulum">Código fuente</a> | <a href="donate_es.html">Donar</a></div></center></p>
+<h1>Hardware soportado</h1>
+<p>Reticulum puede utilizarse en prácticamente cualquier medio que admita al menos un canal semidúplex con un rendimiento de 500 bits por segundo y una MTU de 500 bytes. Radios de datos, módems, radios LoRa, líneas seriales, TNC AX.25, modos digitales de radio-aficionados, dispositivos WiFi y Ethernet, enlaces ópticos de espacio libre y sistemas similares son ejemplos de los tipos de dispositivos físicos que puede utilizar Reticulum. Los tipos de interfaz admitidos incluyen:</p>
+<ul>
+<li>Cualquier dispositivo Ethernet</li>
+<li>Casi todo el hardware basado en WiFi</li>
+<li>LoRa utilizando <a href="https://unsigned.io/rnode/">RNode</a></li>
+<li>TNCs de Radio en paquetes (con o sin AX.25)</li>
+<li>Módems de hardware y software compatibles con KISS</li>
+<li>Cualquier dispositivo con puerto serial</li>
+<li>TCP sobre redes IP</li>
+<li>UDP sobre redes IP</li>
+<li>Programas externos a través de stdio o pipes</li>
+<li>Hardware personalizado a través de stdio o pipes</li>
+</ul>
+<p>Para obtener información más detallada y una lista completa de los tipos de interfaz compatibles, lea los capítulos <a href="manual/hardware.html">Hardware de comunicaciones</a> e <a href="manual/interfaces.html">Interfaces compatibles</a> del manual.</p>
+<p>Reticulum también puede encapsularse sobre redes IP existentes, por lo que nada le impide utilizarlo a través de Ethernet por cable, su red WiFi local o Internet, donde funcionará igual de bien. De hecho, uno de los puntos fuertes de Reticulum es la facilidad con la que permite conectar diferentes medios en una malla autoconfigurable, resistente y encriptada, utilizando cualquier mezcla de infraestructura disponible.</p>
+<p>Como ejemplo, se puede setear una Raspberry Pi conectada a un dispositivo LoRa, una radio en paquetes TNC y una red WiFi. Cuando las interfaces estén configuradas, Reticulum se hace cargo del resto, y cualquier dispositivo en la red se va a poder comunicar con nodos que estén en LoRa y/o radio en paquetes de la red y viceversa.</p>
+<p align="right"><a href="connect_es.html">Siguiente tema: Testnet publica</a></p>
+</body>
+</html>

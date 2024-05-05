@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./start_de.html">Deutsch</a> | <a href="./start.html">English</a> | <a href="./start_nl.html">Nederlands</a> | <a href="./start_pl.html">Polski</a> | <a href="./start_es.html">Español</a> | <a href="./start_pt-br.html">Português</a> | <a href="./start_tr.html">Türkçe</a> | <a href="./start_jp.html">日本語</a> | <a href="./start_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_es.html">Reticulum</a> | <a href="start_es.html">Empezar</a> | <a href="hardware_es.html">Hardware</a> | <a href="connect_es.html">Testnet</a> | <a href="docs_es.html">Manual</a> | <a href="crypto_es.html">Crypto</a> | <a href="credits_es.html">Creditos</a> | <a href="https://github.com/markqvist/reticulum">Código fuente</a> | <a href="donate_es.html">Donar</a></div></center></p>
+<h1>Empezar</h1>
+<p>La mejor manera de empezar a usar el protocolo Reticulum depende de qué
+quieras hacer. Para más detalles y ejemplos, consulte la sección <a href="manual/gettingstartedfast.html">Empezar rapidito</a> del <a href="manual/index.html">Manual de Reticulum</a>.</p>
+<h2>Software experimental</h2>
+<p><strong>¡A saber!</strong> Reticulum todavía está en fase beta. Esto significa que, aunque ya funciona muy bien y es muy estable, es muy
+posible que todavía haya errores o fallos críticos en el comportamiento, la privacidad o la seguridad del sistema en su conjunto.
+Utilice Reticulum si se siente cómodo con esto y comprende las implicaciones.</p>
+<h2>Comunidad y Soporte</h2>
+<p>Si estás teniendo algún problema o algo no está funcionando, estos son algunos excelentes lugares para pedir ayuda:</p>
+<ul>
+<li>El <a href="https://github.com/markqvist/Reticulum/discussions">foro de discusión</a> en Github</li>
+<li>El <a href="https://matrix.to/#/#reticulum:matrix.org">Canal de Reticulum en Matrix</a> en <code>#reticulum:matrix.org</code></li>
+<li>El <a href="https://reddit.com/r/reticulum">Subreddit de Reticulum</a></li>
+</ul>
+<h2>Instalación</h2>
+<p>Para instalar reticulum y utilidades relacionadas, la forma más fácil es usando pip:</p>
+<pre><code class="language-bash">pip install rns
+</code></pre>
+<p>Podes ejecutar entonces cualquier programa que use Reticulum o iniciar Reticulum como un servicio del sistema con <a href="manual/using.html#the-rnsd-utility">la utilidad rnsd</a>.</p>
+<p>Si <code>pip</code> no es disponible en tu sistema, instala primero <code>python3</code> y <code>python3-pip</code> para tu sistema operativo.</p>
+<p>La primera vez que inicia, Reticulum crea un archivo de configuración por defecto, proporcionando conectividad básica con pares
+de Reticulum que puedan ser localmente <em>ubicables</em>. Si cualquiera de esos pares locales son instancias de transporte, puede que
+te conecten con redes más grandes. El archivo de configuración contiene algunos ejemplos y referencias para crear configuraciones
+más complejas.</p>
+<p>Para ejemplos más detallados sobre cómo expandir la comunicación a más medios, como paquetes de radio o Lora, puertos seriales,
+o a través de enlaces rápidos de IP e Internet utilizando las interfaces UDP y TCP, péguele una mirada a la sección
+<a href="manual/interfaces.html">Interfaces soportadas</a> del <a href="manual/index.html">Manual de Reticulum</a>.</p>
+<h2>Utilidades Incluidas</h2>
+<p>Reticulum incluye una serie de utilidades para gestionar sus redes, ver el estado, la información y otras tareas. Puede leer
+más sobre estos programas en la sección <a href="manual/using.html#utilidades-incluidas">Utilidades Incluidas</a> del <a href="manual/index.html">Manual de Reticulum</a>.</p>
+<ul>
+<li>El servicio/daemon <code>rnsd</code> para correr Reticulum como un servicio siempre disponible.</li>
+<li>Una utilidad de estado de la interfaz llamada <code>rnstatus</code>, para mostrar info sobre interfaces.</li>
+<li>La herramienta de búsqueda y gestión de rutas <code>rnpath</code> le permite ver y modificar tablas de rutas.</li>
+<li>Una herramienta de diagnóstico llamada <code>rnprobe</code> para comprobar la conectividad con los destinos, similar a <code>ping</code>.</li>
+<li>Un sencillo programa de transferencia de archivos llamado <code>rncp</code> que facilita la copia de archivos a sistemas remotos.</li>
+<li>El programa de ejecución remota de comandos <code>rnx</code> que le permite ejecutar comandos, programas y recuperar output de sistemas remotos.</li>
+</ul>
+<p>Todas las herramientas, incluidas <code>rnx</code> y <code>rncp</code>, funcionan bien y con fiabilidad incluso en enlaces de muy bajo ancho de banda como LoRa o radio por paquetes.</p>
+<h2>Programas que usan Reticulum</h2>
+<p>Si quiere rápidamente hacerse una idea de lo que puede hacer Reticulum, peguele una mirada a los siguientes recursos:</p>
+<ul>
+<li>Para una plataforma de comunicaciones <em>mesh</em> sin conexión a la red, encriptada y resiliente, consulte <a href="https://github.com/markqvist/NomadNet">Nomad Network</a>.</li>
+<li>La aplicación para Android, Linux y macOS <a href="https://github.com/markqvist/sideband">Sideband</a> tiene una interfaz gráfica y se centra en facilidad de uso.</li>
+<li><a href="https://github.com/markqvist/lxmf">LXMF</a> es un protocolo de transferencia de mensajes distribuido, tolerante a retrasos e interrupciones y basado en Reticulum.</li>
+</ul>
+<h2>Dependencias</h2>
+<p>La instalación del paquete <code>rns</code> requiere las dependencias que se enumeran a continuación. Casi todos los sistemas y distribuciones tienen paquetes disponibles para estas dependencias, y cuando se instala el paquete <code>rns</code> con <code>pip</code>, también se descargan e instalan.</p>
+<ul>
+<li><a href="https://github.com/pyca/cryptography">PyCA/cryptography</a></li>
+<li><a href="https://github.com/al45tair/netifaces">netifaces</a></li>
+<li><a href="https://github.com/pyserial/pyserial">pyserial</a></li>
+</ul>
+<p>En sistemas más inusuales, y en algunos casos raros, puede que no sea posible instalar o incluso compilar uno o más de los módulos anteriores. En tales situaciones, puede utilizar en su lugar el paquete <code>rnspure</code>, que no requiere dependencias externas para su instalación. Tenga en cuenta que el contenido de los paquetes <code>rns</code> y <code>rnspure</code> es <em>idéntico</em>. La única diferencia es que el paquete <code>rnspure</code> no necesita dependencias externas para su instalación.</p>
+<p>Independientemente de cómo se instale e inicie Reticulum, éste cargará las dependencias externas sólo si son <em>necesarias</em> y están <em>disponibles</em>. Si, por ejemplo, desea utilizar Reticulum en un sistema que no admite <a href="https://github.com/pyserial/pyserial">pyserial</a>, es perfectamente posible hacerlo utilizando el paquete <code>rnspure</code>, pero Reticulum no podrá utilizar interfaces basadas en serial. Todos los demás módulos disponibles seguirán cargándose cuando sea necesario.</p>
+<p><strong>Atenti!</strong> Si utiliza el paquete <code>rnspure</code> para ejecutar Reticulum en sistemas que no soportan <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>, es importante que lea y comprenda la sección <a href="crypto_es.html">Primitivas Criptográficas</a> de este sitio.</p>
+<h2>Desempeño</h2>
+<p>Reticulum busca cubrir un amplio rango de desempeño utilizable pero prioriza la funcionalidad y el desempeño sobre medios de baja capacidad de ancho de banda. El objetivo es ofrecer un entorno de desempeño dinámico que va desde 250 bit por segundo hasta 1 giga bit por segundo en hardware normal.</p>
+<p>Actualmente, el rango de desempeño utilizable está aproximadamente en 150 bit por segundo a 40 mega bits por segundo, mientras que los medios físicos más rápidos no están saturados. El desempeño superior a este nivel se reserva para actualizaciones futuras, pero no es prioritario hasta que los formatos de cable y API hayan sido establecidos.</p>
+<p align="right"><a href="hardware_es.html">Próximo Tema: Hardware soportado</a></p>
+</body>
+</html>
