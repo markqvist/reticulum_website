@@ -46,7 +46,7 @@ menu_translations = {
         "HARDWARE": "Hardware",
         "TESTNET": "Testnet",
         "MANUAL": "Manual",
-        "CRYPTO": "Crypto",
+        "CRYPTO": "Cryptography",
         "CREDITS": "Credits",
         "SOURCE": "Source",
         "DONATE": "Donate",
