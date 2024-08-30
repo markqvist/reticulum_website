@@ -17,7 +17,7 @@ Reticulum yapılandırma dosyanıza aşağıdaki arayüzlerden birini ekleyin:
   [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
-    target_host = betweentheborders.com
+    target_host = reticulum.betweentheborders.com
     target_port = 4242
 
 # I2P Hub A için arabirim

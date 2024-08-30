@@ -18,7 +18,7 @@ Fügen Sie einfach eine der folgenden Schnittstellen in Ihre Reticulum-Konfigura
   [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
-    target_host = betweentheborders.com
+    target_host = reticulum.betweentheborders.com
     target_port = 4242
 
 # Interface to I2P Hub A
