@@ -53,15 +53,17 @@ What does Reticulum Offer?
 
 * Forward Secrecy by using ephemeral Elliptic Curve Diffie-Hellman keys on Curve25519
 
-* Reticulum uses the `Fernet <https://github.com/fernet/spec/blob/master/Spec.md>`_ specification for on-the-wire / over-the-air encryption
+* Reticulum uses a modified version of the `Fernet <https://github.com/fernet/spec/blob/master/Spec.md>`_ specification for on-the-wire / over-the-air encryption
 
-  * All keys are ephemeral and derived from an ECDH key exchange on Curve25519
+  * Keys are ephemeral and derived from an ECDH key exchange on Curve25519
 
   * AES-128 in CBC mode with PKCS7 padding
 
   * HMAC using SHA256 for authentication
 
   * IVs are generated through os.urandom()
+
+  * No Version and Timestamp metadata included
 
 * Unforgeable packet delivery confirmations
 
@@ -99,7 +101,8 @@ of the types of interfaces Reticulum was designed for.
 An open-source LoRa-based interface called `RNode <https://unsigned.io/rnode>`_
 has been designed as an example transceiver that is very suitable for
 Reticulum. It is possible to build it yourself, to transform a common LoRa
-development board into one, or it can be purchased as a complete transceiver.
+development board into one, or it can be purchased as a complete transceiver
+from various vendors.
 
 Reticulum can also be encapsulated over existing IP networks, so there's
 nothing stopping you from using it over wired Ethernet or your local WiFi

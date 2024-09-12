@@ -134,10 +134,11 @@ be sufficient, even far into the future.
 By default Reticulum encrypts all data using elliptic curve cryptography and AES. Any packet sent to a
 destination is encrypted with a per-packet derived key. Reticulum can also set up an encrypted
 channel to a destination, called a *Link*. Both data sent over Links and single packets offer
-*Initiator Anonymity*, and links additionally offer *Forward Secrecy* by using an Elliptic Curve
-Diffie Hellman key exchange on Curve25519 to derive per-link ephemeral keys. The multi-hop transport,
-coordination, verification and reliability layers are fully autonomous and also based on elliptic
-curve cryptography.
+*Initiator Anonymity*. Links additionally offer *Forward Secrecy* by default, employing an Elliptic Curve
+Diffie Hellman key exchange on Curve25519 to derive per-link ephemeral keys. Asymmetric, link-less
+packet communication can also provide forward secrecy, with automatic key ratcheting, by enabling
+ratchets on a per-destination basis. The multi-hop transport, coordination, verification and reliability
+layers are fully autonomous and also based on elliptic curve cryptography.
 
 Reticulum also offers symmetric key encryption for group-oriented communications, as well as
 unencrypted packets for local broadcast purposes.
@@ -431,7 +432,7 @@ For exchanges of small amounts of information, Reticulum offers the *Packet* API
 
 * | A packet is always created with an associated destination and some payload data. When the packet is sent
     to a *single* destination type, Reticulum will automatically create an ephemeral encryption key, perform
-    an ECDH key exchange with the destination's public key, and encrypt the information.
+    an ECDH key exchange with the destination's public key (or ratchet key, if available), and encrypt the information.
 
 * | It is important to note that this key exchange does not require any network traffic. The sender already
     knows the public key of the destination from an earlier received *announce*, and can thus perform the ECDH
@@ -693,7 +694,8 @@ Wire Format
     [HEADER 2 bytes] [ADDRESSES 16/32 bytes] [CONTEXT 1 byte] [DATA 0-465 bytes]
 
     * The HEADER field is 2 bytes long.
-      * Byte 1: [IFAC Flag], [Header Type], [Propagation Type], [Destination Type] and [Packet Type]
+      * Byte 1: [IFAC Flag], [Header Type], [Context Flag], [Propagation Type],
+                [Destination Type] and [Packet Type]
       * Byte 2: Number of hops
 
     * Interface Access Code field if the IFAC flag was set.
@@ -725,12 +727,16 @@ Wire Format
     type 2           1  Two byte header, two 16 byte address fields
 
 
+    Context Flag
+    -----------------
+    unset            0  The context flag is used for various types
+    set              1  of signalling, depending on packet context
+
+
     Propagation Types
     -----------------
-    broadcast       00
-    transport       01
-    reserved        10
-    reserved        11
+    broadcast        0
+    transport        1
 
 
     Destination Types
@@ -862,11 +868,13 @@ both on general-purpose CPUs and on microcontrollers. The necessary primitives a
 
 * HKDF for key derivation
 
-* Fernet for encrypted tokens
+* Modified Fernet for encrypted tokens
 
   * AES-128 in CBC mode
 
   * HMAC for message authentication
+
+  * No Version and Timestamp metadata included
 
 * SHA-256
 
