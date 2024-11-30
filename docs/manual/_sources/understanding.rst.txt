@@ -868,13 +868,17 @@ both on general-purpose CPUs and on microcontrollers. The necessary primitives a
 
 * HKDF for key derivation
 
-* Modified Fernet for encrypted tokens
+* Encrypted tokens are based on the Fernet spec
 
-  * AES-128 in CBC mode
+  * Ephemeral keys derived from an ECDH key exchange on Curve25519
 
-  * HMAC for message authentication
+  * AES-128 in CBC mode with PKCS7 padding
 
-  * No Version and Timestamp metadata included
+  * HMAC using SHA256 for message authentication
+
+  * IVs are generated through os.urandom()
+
+  * No Fernet version and timestamp metadata fields
 
 * SHA-256
 
@@ -884,12 +888,12 @@ In the default installation configuration, the ``X25519``, ``Ed25519`` and ``AES
 primitives are provided by `OpenSSL <https://www.openssl.org/>`_ (via the `PyCA/cryptography <https://github.com/pyca/cryptography>`_
 package). The hashing functions ``SHA-256`` and ``SHA-512`` are provided by the standard
 Python `hashlib <https://docs.python.org/3/library/hashlib.html>`_. The ``HKDF``, ``HMAC``,
-``Fernet`` primitives, and the ``PKCS7`` padding function are always provided by the
+``Token`` primitives, and the ``PKCS7`` padding function are always provided by the
 following internal implementations:
 
 - ``RNS/Cryptography/HKDF.py``
 - ``RNS/Cryptography/HMAC.py``
-- ``RNS/Cryptography/Fernet.py``
+- ``RNS/Cryptography/Token.py``
 - ``RNS/Cryptography/PKCS7.py``
 
 
@@ -900,6 +904,7 @@ with the OpenSSL backend being *much* faster. The most important consequence how
 potential loss of security by using primitives that has not seen the same amount of scrutiny,
 testing and review as those from OpenSSL.
 
-If you want to use the internal pure-python primitives, it is **highly advisable** that you
-have a good understanding of the risks that this pose, and make an informed decision on whether
-those risks are acceptable to you.
+.. warning::
+   If you want to use the internal pure-python primitives, it is **highly advisable** that you
+   have a good understanding of the risks that this pose, and make an informed decision on whether
+   those risks are acceptable to you.

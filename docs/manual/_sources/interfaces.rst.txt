@@ -19,6 +19,16 @@ types, have a look at the :ref:`Building Networks<networks-main>` chapter of thi
 manual.
 
 
+.. _interfaces-custom:
+
+Custom Interfaces
+=================
+
+In addition to the built-in interface types, Reticulum is **fully extensible** with
+custom, user- or community-supplied interfaces, and creating custom interface
+modules is straightforward. Please see the :ref:`custom interface<example-custominterface>`
+example for basic interface code to build upon.
+
 .. _interfaces-auto:
 
 Auto Interface
@@ -152,11 +162,12 @@ It can take anywhere from a few seconds to a few minutes to establish
 I2P connections to the desired peers, so Reticulum handles the process
 in the background, and will output relevant events to the log.
 
-**Please Note!** While the I2P interface is the simplest way to use
-Reticulum over I2P, it is also possible to tunnel the TCP server and
-client interfaces over I2P manually. This can be useful in situations
-where more control is needed, but requires manual tunnel setup through
-the I2P daemon configuration.
+.. note::
+   While the I2P interface is the simplest way to use
+   Reticulum over I2P, it is also possible to tunnel the TCP server and
+   client interfaces over I2P manually. This can be useful in situations
+   where more control is needed, but requires manual tunnel setup through
+   the I2P daemon configuration.
 
 It is important to note that the two methods are *interchangably compatible*.
 You can use the I2PInterface to connect to a TCPServerInterface that
@@ -171,7 +182,7 @@ TCP Server Interface
 ====================
 
 The TCP Server interface is suitable for allowing other peers to connect over
-the Internet or private IP networks. When a TCP server interface has been
+the Internet or private IPv4 and IPv6 networks. When a TCP server interface has been
 configured, other Reticulum peers can connect to it with a TCP Client interface.
 
 .. code::
@@ -200,8 +211,37 @@ configured, other Reticulum peers can connect to it with a TCP Client interface.
     # device = eth0
     # port = 4242
 
-**Please Note!** The TCP interfaces support tunneling over I2P, but to do so reliably,
-you must use the i2p_tunneled option:
+If you are using the interface on a device which has both IPv4 and IPv6 addresses available,
+you can use the ``prefer_ipv6`` option to bind to the IPv6 address:
+
+.. code::
+
+  # This example demonstrates a TCP server interface.
+  # It will listen for incoming connections on the
+  # specified IP address and port number.
+  
+  [[TCP Server Interface]]
+    type = TCPServerInterface
+    interface_enabled = True
+
+    device = eth0
+    port = 4242
+    prefer_ipv6 = True
+
+To use the TCP Server Interface over `Yggdrasil <https://yggdrasil-network.github.io/>`_, you
+can simply specify the Yggdrasil ``tun`` device and a listening port, like so:
+
+.. code::
+
+  [[Yggdrasil TCP Server Interface]]
+      type = TCPServerInterface
+      interface_enabled = yes
+      device = tun0
+      listen_port = 4343
+
+.. note::
+   The TCP interfaces support tunneling over I2P, but to do so reliably,
+   you must use the i2p_tunneled option:
 
 .. code::
 
@@ -231,13 +271,24 @@ and restore connectivity after a failure, once the other end of a TCP interface 
 .. code::
 
   # Here's an example of a TCP Client interface. The
-  # target_host can either be an IP address or a hostname.
+  # target_host can be a hostname or an IPv4 or IPv6 address.
 
   [[TCP Client Interface]]
     type = TCPClientInterface
     interface_enabled = True
     target_host = 127.0.0.1
     target_port = 4242
+
+To use the TCP Client Interface over `Yggdrasil <https://yggdrasil-network.github.io/>`_, simply
+specify the target Yggdrasil IPv6 address and port, like so:
+
+.. code::
+
+  [[Yggdrasil TCP Client Interface]]
+      type = TCPClientInterface
+      interface_enabled = yes
+      target_host = 201:5d78:af73:5caf:a4de:a79f:3278:71e5
+      target_port = 4343
 
 It is also possible to use this interface type to connect via other programs
 or hardware devices that expose a KISS interface on a TCP port, for example
@@ -262,8 +313,9 @@ never enable ``kiss_framing``, since this will disable internal reliability and
 recovery mechanisms that greatly improves performance over unreliable and
 intermittent TCP links.
 
-**Please Note!** The TCP interfaces support tunneling over I2P, but to do so reliably,
-you must use the i2p_tunneled option:
+.. note::
+   The TCP interfaces support tunneling over I2P, but to do so reliably,
+   you must use the i2p_tunneled option:
 
 .. code::
 
@@ -285,11 +337,12 @@ private and the internet. It can also allow broadcast communication
 over IP networks, so it can provide an easy way to enable connectivity
 with all other peers on a local area network.
 
-*Please Note!* Using broadcast UDP traffic has performance implications,
-especially on WiFi. If your goal is simply to enable easy communication
-with all peers in your local Ethernet broadcast domain, the
-:ref:`Auto Interface<interfaces-auto>` performs better, and is even
-easier to use.
+.. warning::
+   Using broadcast UDP traffic has performance implications,
+   especially on WiFi. If your goal is simply to enable easy communication
+   with all peers in your local Ethernet broadcast domain, the
+   :ref:`Auto Interface<interfaces-auto>` performs better, and is even
+   easier to use.
 
 .. code::
 
@@ -343,6 +396,11 @@ RNode LoRa Interface
 
 To use Reticulum over LoRa, the `RNode <https://unsigned.io/rnode/>`_ interface
 can be used, and offers full control over LoRa parameters.
+
+.. warning::
+   Radio frequency spectrum is a legally controlled resource, and legislation
+   varies widely around the world. It is your responsibility to be aware of any
+   relevant regulation for your location, and to make decisions accordingly.
 
 .. code::
 
@@ -431,6 +489,11 @@ RNode Multi Interface
 For RNodes that support multiple LoRa transceivers, the RNode
 Multi interface can be used to configure sub-interfaces individually.
 
+.. warning::
+   Radio frequency spectrum is a legally controlled resource, and legislation
+   varies widely around the world. It is your responsibility to be aware of any
+   relevant regulation for your location, and to make decisions accordingly.
+
 .. code::
 
   # Here's an example of how to add an RNode Multi interface
@@ -454,89 +517,89 @@ Multi interface can be used to configure sub-interfaces individually.
   # id_interval = 600
 
     # A subinterface
-    [[[HIGHDATARATE]]]
-    # Subinterfaces can be enabled and disabled in of themselves
-    interface_enabled = True
+    [[[High Datarate]]]
+      # Subinterfaces can be enabled and disabled in of themselves
+      interface_enabled = True
 
-    # Set frequency to 2.4GHz
-    frequency = 2400000000
+      # Set frequency to 2.4GHz
+      frequency = 2400000000
 
-    # Set LoRa bandwidth to 1625 KHz
-    bandwidth = 1625000
+      # Set LoRa bandwidth to 1625 KHz
+      bandwidth = 1625000
 
-    # Set TX power to 0 dBm (0.12 mW)
-    txpower = 0
+      # Set TX power to 0 dBm (0.12 mW)
+      txpower = 0
 
-    # The virtual port, only the manufacturer
-    # or the person who wrote the board config
-    # can tell you what it will be for which
-    # physical hardware interface
-    vport = 1
+      # The virtual port, only the manufacturer
+      # or the person who wrote the board config
+      # can tell you what it will be for which
+      # physical hardware interface
+      vport = 1
 
-    # Select spreading factor 5. Valid
-    # range is 5 through 12, with 5 
-    # being the fastest and 12 having
-    # the longest range.
-    spreadingfactor = 5
+      # Select spreading factor 5. Valid
+      # range is 5 through 12, with 5 
+      # being the fastest and 12 having
+      # the longest range.
+      spreadingfactor = 5
 
-    # Select coding rate 5. Valid range
-    # is 5 throough 8, with 5 being the
-    # fastest, and 8 the longest range.
-    codingrate = 5
+      # Select coding rate 5. Valid range
+      # is 5 throough 8, with 5 being the
+      # fastest, and 8 the longest range.
+      codingrate = 5
 
-    # It is possible to limit the airtime
-    # utilisation of an RNode by using the
-    # following two configuration options.
-    # The short-term limit is applied in a
-    # window of approximately 15 seconds,
-    # and the long-term limit is enforced
-    # over a rolling 60 minute window. Both
-    # options are specified in percent.
+      # It is possible to limit the airtime
+      # utilisation of an RNode by using the
+      # following two configuration options.
+      # The short-term limit is applied in a
+      # window of approximately 15 seconds,
+      # and the long-term limit is enforced
+      # over a rolling 60 minute window. Both
+      # options are specified in percent.
 
-    # airtime_limit_long = 100
-    # airtime_limit_short = 100
+      # airtime_limit_long = 100
+      # airtime_limit_short = 100
 
-    [[[LOWDATARATE]]]
-    # Subinterfaces can be enabled and disabled in of themselves
-    interface_enabled = True
+    [[[Low Datarate]]]
+      # Subinterfaces can be enabled and disabled in of themselves
+      interface_enabled = True
 
-    # Set frequency to 865.6 MHz
-    frequency = 865600000
+      # Set frequency to 865.6 MHz
+      frequency = 865600000
 
-    # The virtual port, only the manufacturer
-    # or the person who wrote the board config
-    # can tell you what it will be for which
-    # physical hardware interface
-    vport = 0
+      # The virtual port, only the manufacturer
+      # or the person who wrote the board config
+      # can tell you what it will be for which
+      # physical hardware interface
+      vport = 0
 
-    # Set LoRa bandwidth to 125 KHz
-    bandwidth = 125000
+      # Set LoRa bandwidth to 125 KHz
+      bandwidth = 125000
 
-    # Set TX power to 0 dBm (0.12 mW)
-    txpower = 0
+      # Set TX power to 0 dBm (0.12 mW)
+      txpower = 0
 
-    # Select spreading factor 7. Valid
-    # range is 5 through 12, with 5 
-    # being the fastest and 12 having
-    # the longest range.
-    spreadingfactor = 7
+      # Select spreading factor 7. Valid
+      # range is 5 through 12, with 5 
+      # being the fastest and 12 having
+      # the longest range.
+      spreadingfactor = 7
 
-    # Select coding rate 5. Valid range
-    # is 5 throough 8, with 5 being the
-    # fastest, and 8 the longest range.
-    codingrate = 5
+      # Select coding rate 5. Valid range
+      # is 5 throough 8, with 5 being the
+      # fastest, and 8 the longest range.
+      codingrate = 5
 
-    # It is possible to limit the airtime
-    # utilisation of an RNode by using the
-    # following two configuration options.
-    # The short-term limit is applied in a
-    # window of approximately 15 seconds,
-    # and the long-term limit is enforced
-    # over a rolling 60 minute window. Both
-    # options are specified in percent.
+      # It is possible to limit the airtime
+      # utilisation of an RNode by using the
+      # following two configuration options.
+      # The short-term limit is applied in a
+      # window of approximately 15 seconds,
+      # and the long-term limit is enforced
+      # over a rolling 60 minute window. Both
+      # options are specified in percent.
 
-    # airtime_limit_long = 100
-    # airtime_limit_short = 100
+      # airtime_limit_long = 100
+      # airtime_limit_short = 100
 
 .. _interfaces-serial:
 
@@ -597,6 +660,11 @@ With the KISS interface, you can use Reticulum over a variety of packet
 radio modems and TNCs, including `OpenModem <https://unsigned.io/openmodem/>`_.
 KISS interfaces can also be configured to periodically send out beacons
 for station identification purposes.
+
+.. warning::
+   Radio frequency spectrum is a legally controlled resource, and legislation
+   varies widely around the world. It is your responsibility to be aware of any
+   relevant regulation for your location, and to make decisions accordingly.
 
 .. code::
 
@@ -660,6 +728,11 @@ encapsulate in AX.25.
 
 A more efficient way is to use the plain KISS interface with the
 beaconing functionality described above.
+
+.. warning::
+   Radio frequency spectrum is a legally controlled resource, and legislation
+   varies widely around the world. It is your responsibility to be aware of any
+   relevant regulation for your location, and to make decisions accordingly.
 
 .. code::
 
