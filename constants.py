@@ -8,6 +8,18 @@ PUBLIC_ENTRYPOINTS = """```
     target_host = reticulum.betweentheborders.com
     target_port = 4242
 
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[ChaosNet]]
+    type = TCPClientInterface
+    interface_enabled = True
+    target_host = rns.c3.jitter.eu
+    target_port = 4242
+
   [[dismails TCP Interface]]
     type = TCPClientInterface
     interface_enabled = true
@@ -60,12 +72,6 @@ PUBLIC_ENTRYPOINTS = """```
     type = TCPClientInterface
     enabled = yes
     target_host = 80.78.23.249
-    target_port = 4242
-
-  [[quad4net tcp]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
     target_port = 4242
 
   [[R-Net TCP]]
