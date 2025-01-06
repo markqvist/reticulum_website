@@ -1,6 +1,8 @@
 # Public Testnet
 If you just want to get started experimenting without building any physical networks, you are welcome to join the Public Reticulum Testnet. The testnet is just that, an informal network for testing and experimenting. It will be up most of the time, and anyone can join, but it also means that there's no guarantees for service availability.
 
+**Please note!** For everyday use of Reticulum, such as for messaging and other communications, it is much better to use one or more of the community-provided public entrypoints. Please 
+
 The testnet runs the very latest version of Reticulum (often even a short while before it is publicly released). Sometimes experimental versions of Reticulum might be deployed to nodes on the testnet, which means strange behaviour can occur. If none of that scares you, you can join the testnet via either TCP or I2P.
 
 Just add one of the following interfaces to your Reticulum configuration file:
@@ -28,5 +30,126 @@ Just add one of the following interfaces to your Reticulum configuration file:
 ```
 
 The testnet also contains a number of [Nomad Network](https://github.com/markqvist/nomadnet) nodes, and [LXMF](https://github.com/markqvist/lxmf) propagation nodes.
+
+# Community-provided Interfaces
+A number of publicly available entrypoints to Reticulum networks have been provided by the community. For everyday use, it is recommended to use these instead of the testnet.
+
+You can connect your devices or instances to one or more of these to gain access to any Reticulum networks they are physically connected to.
+
+Ideally, set up a Reticulum Transport Node that your own devices can reach locally, and then connect that TN to a couple of public entrypoints. This will provide efficient connections and redundancy in case any of them go down.
+
+```
+# These are community-provided public Reticulum entrypoints
+# served over TCP, and available over the public Internet.
+
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
+  [[dismails TCP Interface]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
+
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+
+  [[The Outpost]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = theoutpost.life
+    target_port = 4242
+
+  [[Beleth RNS Hub]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.beleth.net
+    target_port = 4242
+
+  [[SparkN0de]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+
+  [[nisa-node]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = nisa.cat
+    target_port = 4242
+
+  [[acehoss]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.acehoss.net
+    target_port = 4242
+
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.stoppedcold.com
+    target_port = 4242
+
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 80.78.23.249
+    target_port = 4242
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = istanbul.reserve.network
+    target_port = 9034
+
+  [[RNS TCP Node Germany 001]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+
+  [[RNS TCP Node Germany 002]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+
+  [[g00n.cloud Hub]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = dfw.us.g00n.cloud
+    target_port = 6969
+
+  [[RNS_Transport_US-East]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 45.77.109.86
+    target_port = 4965
+
+```
 
 <p align="right"><a href="docs.html">Next Topic: Read The Manual</a></p>

@@ -44,7 +44,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Start",
         "HARDWARE": "Hardware",
-        "TESTNET": "Testnet",
+        "TESTNET": "Connect",
         "MANUAL": "Manual",
         "CRYPTO": "Cryptography",
         "CREDITS": "Credits",
