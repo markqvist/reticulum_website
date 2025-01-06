@@ -31,7 +31,7 @@ Just add one of the following interfaces to your Reticulum configuration file:
 
 The testnet also contains a number of [Nomad Network](https://github.com/markqvist/nomadnet) nodes, and [LXMF](https://github.com/markqvist/lxmf) propagation nodes.
 
-# Community-provided Interfaces
+# Community Entrypoints
 A number of publicly available entrypoints to Reticulum networks have been provided by the community. For everyday use, it is recommended to use these instead of the testnet.
 
 You can connect your devices or instances to one or more of these to gain access to any Reticulum networks they are physically connected to.
