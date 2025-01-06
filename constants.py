@@ -116,5 +116,11 @@ PUBLIC_ENTRYPOINTS = """```
     target_host = 45.77.109.86
     target_port = 4965
 
+  [[Tidudanka.com]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 164.90.180.40
+    target_port = 37500
+
 ```
 """
