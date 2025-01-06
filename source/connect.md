@@ -1,7 +1,7 @@
 # Public Testnet
 If you just want to get started experimenting without building any physical networks, you are welcome to join the Public Reticulum Testnet. The testnet is just that, an informal network for testing and experimenting. It will be up most of the time, and anyone can join, but it also means that there's no guarantees for service availability.
 
-**Please note!** For everyday use of Reticulum, such as for messaging and other communications, it is much better to use one or more of the community-provided public entrypoints. Please 
+**Please note!** For everyday use of Reticulum, such as for messaging and other communications, it is much better to use one or more of the community-provided public entrypoints. Please see the next section for details. 
 
 The testnet runs the very latest version of Reticulum (often even a short while before it is publicly released). Sometimes experimental versions of Reticulum might be deployed to nodes on the testnet, which means strange behaviour can occur. If none of that scares you, you can join the testnet via either TCP or I2P.
 
@@ -36,7 +36,7 @@ A number of publicly available entrypoints to Reticulum networks have been provi
 
 You can connect your devices or instances to one or more of these to gain access to any Reticulum networks they are physically connected to.
 
-Ideally, set up a Reticulum Transport Node that your own devices can reach locally, and then connect that TN to a couple of public entrypoints. This will provide efficient connections and redundancy in case any of them go down.
+Ideally, set up a Reticulum Transport Node that your own devices can reach locally, and then connect that transport node to a couple of public entrypoints. This will provide efficient connections and redundancy in case any of them go down.
 
 ```
 # These are community-provided public Reticulum entrypoints
