@@ -8,9 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_zh-cn.html">Reticulum</a> | <a href="start_zh-cn.html">开始使用</a> | <a href="hardware_zh-cn.html">硬件要求</a> | <a href="connect_zh-cn.html">测试网络</a> | <a href="docs_zh-cn.html">阅读手册</a> | <a href="crypto_zh-cn.html">密码学</a> | <a href="credits_zh-cn.html">致谢</a> | <a href="https://github.com/markqvist/reticulum">源代码</a> | <a href="donate_zh-cn.html">支持开发</a></div></center></p>
+<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_zh-cn.html">Reticulum</a> | <a href="start_zh-cn.html">开始使用</a> | <a href="hardware_zh-cn.html">硬件要求</a> | <a href="connect_zh-cn.html">连接</a> | <a href="docs_zh-cn.html">阅读手册</a> | <a href="crypto_zh-cn.html">密码学</a> | <a href="credits_zh-cn.html">致谢</a> | <a href="https://github.com/markqvist/reticulum">源代码</a> | <a href="donate_zh-cn.html">支持开发</a></div></center></p>
 <h1>公共测试网络</h1>
 <p>如果你只是想立刻上手使用，而不想搭建物理意义上的网络的话，你可以加入公开的 Reticulum 测试网络。这是一个非正式的用于测试与实验的网络。大部分时间它都会在线，所有人都可以加入。同时，“测试”也意味着没有可用性保障。</p>
+<p><strong>请注意！</strong>对于 Reticulum 的日常使用，例如消息传递和其他通信，最好使用社区提供的一个或多个公共入口点。请参阅下一节了解详细信息。</p>
 <p>测试网络运行的是最新版的 Reticulum（甚至会在正式发布之前更新）。有时实验版的 Reticulum 会被部署到测试网络的节点之上，这可能会产生奇怪的行为。如果这些都没让你感到害怕，欢迎通过 TCP 或是 I2P 加入测试网络。</p>
 <p>你仅需在 Reticulum 的配置文件中加入以下任意一个界面：</p>
 <pre><code># Dublin Hub 的 TCP/IP 界面
@@ -34,6 +35,122 @@
     peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
 </code></pre>
 <p>测试网络中还有几个 <a href="https://github.com/markqvist/nomadnet">Nomad Network</a> 节点和 <a href="https://github.com/markqvist/lxmf">LXMF</a> 传播节点（propagation nodes）。</p>
+<h1>社区入口点</h1>
+<p>社区提供了许多可公开访问的 Reticulum 网络入口点。对于日常使用，建议使用这些入口点而不是测试网。</p>
+<p>您可以将设备或实例连接到其中一个或多个入口点，以访问它们物理连接的任何 Reticulum 网络。</p>
+<p>理想情况下，设置一个您自己的设备可以在本地访问的 Reticulum 传输节点，然后将该传输节点连接到几个公共入口点。这将提供有效的连接和冗余，以防其中任何一个出现故障。</p>
+<pre><code># These are community-provided public Reticulum entrypoints
+# served over TCP, and available over the public Internet.
+
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
+  [[dismails TCP Interface]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
+
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+
+  [[The Outpost]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = theoutpost.life
+    target_port = 4242
+
+  [[Beleth RNS Hub]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.beleth.net
+    target_port = 4242
+
+  [[SparkN0de]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+
+  [[nisa-node]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = nisa.cat
+    target_port = 4242
+
+  [[acehoss]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.acehoss.net
+    target_port = 4242
+
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.stoppedcold.com
+    target_port = 4242
+
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 80.78.23.249
+    target_port = 4242
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = istanbul.reserve.network
+    target_port = 9034
+
+  [[RNS TCP Node Germany 001]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+
+  [[RNS TCP Node Germany 002]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+
+  [[g00n.cloud Hub]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = dfw.us.g00n.cloud
+    target_port = 6969
+
+  [[RNS_Transport_US-East]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 45.77.109.86
+    target_port = 4965
+
+</code></pre>
 <p align="right"><a href="docs_zh-cn.html">下一个主题：阅读手册</a></p>
 </body>
 </html>

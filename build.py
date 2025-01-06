@@ -1,6 +1,8 @@
 import markdown
 import os
 
+from constants import PUBLIC_ENTRYPOINTS
+
 SOURCES_PATH = "./source"
 BUILD_PATH = "./build"
 INPUT_ENCODING = "utf-8"
@@ -55,7 +57,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Başlat",
         "HARDWARE": "Donanım",
-        "TESTNET": "Test Ağı",
+        "TESTNET": "Bağlan",
         "MANUAL": "Kılavuz",
         "CRYPTO": "Şifreleme",
         "CREDITS": "Hakkında",
@@ -66,7 +68,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Start",
         "HARDWARE": "Hardware",
-        "TESTNET": "Testnet",
+        "TESTNET": "Sluit aan",
         "MANUAL": "Handleiding",
         "CRYPTO": "Kryptografie",
         "CREDITS": "Dankwoord",
@@ -77,7 +79,7 @@ menu_translations = {
         "RETICULUM": "レチキュラム",
         "START": "開始",
         "HARDWARE": "ハードウェア",
-        "TESTNET": "テストネット",
+        "TESTNET": "接続する",
         "MANUAL": "マニュアル",
         "CRYPTO": "暗号",
         "CREDITS": "クレジット",
@@ -88,7 +90,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Los Geht's",
         "HARDWARE": "Hardware",
-        "TESTNET": "Testnetz",
+        "TESTNET": "Verbinden",
         "MANUAL": "Handbuch",
         "CRYPTO": "Kryptographie",
         "CREDITS": "Credits",
@@ -99,7 +101,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Jak Zacząć",
         "HARDWARE": "Hardware",
-        "TESTNET": "Testnet",
+        "TESTNET": "Podłączać",
         "MANUAL": "Podręcznik",
         "CRYPTO": "Kryptografia",
         "CREDITS": "Zasługi",
@@ -110,7 +112,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Começar",
         "HARDWARE": "Hardware",
-        "TESTNET": "Rede de Teste",
+        "TESTNET": "Conectar",
         "MANUAL": "Manual",
         "CRYPTO": "Criptografia",
         "CREDITS": "Créditos",
@@ -121,7 +123,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "Empezar",
         "HARDWARE": "Hardware",
-        "TESTNET": "Testnet",
+        "TESTNET": "Conectar",
         "MANUAL": "Manual",
         "CRYPTO": "Criptografía",
         "CREDITS": "Creditos",
@@ -132,7 +134,7 @@ menu_translations = {
         "RETICULUM": "Reticulum",
         "START": "开始使用",
         "HARDWARE": "硬件要求",
-        "TESTNET": "测试网络",
+        "TESTNET": "连接",
         "MANUAL": "阅读手册",
         "CRYPTO": "密码学",
         "CREDITS": "致谢",
@@ -221,7 +223,7 @@ for mdf in source_files:
         else:
             page_lang_ext = ""
 
-        md = f.read().decode(INPUT_ENCODING)
+        md = f.read().decode(INPUT_ENCODING).replace("{PUBLIC_ENTRYPOINTS}", PUBLIC_ENTRYPOINTS)
         page_md = "<center>" + get_languages_md(mdf) + "" + get_menu_md(page_lang).replace("{LANG_EXT}", page_lang_ext) + "</center>\n\n" + md
         html = markdown.markdown(
             page_md, extensions=["markdown.extensions.fenced_code"]

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_de.html">Reticulum</a> | <a href="start_de.html">Los Geht's</a> | <a href="hardware_de.html">Hardware</a> | <a href="connect_de.html">Testnetz</a> | <a href="docs_de.html">Handbuch</a> | <a href="crypto_de.html">Kryptographie</a> | <a href="credits_de.html">Credits</a> | <a href="https://github.com/markqvist/reticulum">Quellcode</a> | <a href="donate_de.html">Unterstützen</a></div></center></p>
+<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_de.html">Reticulum</a> | <a href="start_de.html">Los Geht's</a> | <a href="hardware_de.html">Hardware</a> | <a href="connect_de.html">Verbinden</a> | <a href="docs_de.html">Handbuch</a> | <a href="crypto_de.html">Kryptographie</a> | <a href="credits_de.html">Credits</a> | <a href="https://github.com/markqvist/reticulum">Quellcode</a> | <a href="donate_de.html">Unterstützen</a></div></center></p>
 <h1>Öffentliches Testnetz</h1>
 <p>Wenn Sie einfach nur experimentieren wollen, ohne ein physisches Netzwerk aufzubauen, können Sie sich gerne dem öffentlichen Reticulum Testnet anschließen. Das Testnetz ist genau das: ein informelles Netzwerk zum Testen und Experimentieren. Es wird die meiste Zeit verfügbar sein, und jeder kann mitmachen, aber das bedeutet auch, dass es keine Garantien für die Verfügbarkeit der Dienste gibt.</p>
 <p>Auf dem Testnetz läuft die allerneueste Version von Reticulum (oft sogar kurz vor der öffentlichen Freigabe). Manchmal werden experimentelle Versionen von Reticulum auf Knoten im Testnetz eingesetzt, was bedeutet, dass seltsames Verhalten auftreten kann. 
@@ -35,6 +35,122 @@ Wenn Sie das alles nicht abschreckt, können Sie dem Testnetz über TCP oder I2P
     peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
 </code></pre>
 <p>Das Testnetz enthält auch eine Reihe von <a href="https://github.com/markqvist/nomadnet">Nomad Network</a>-Knoten und <a href="https://github.com/markqvist/lxmf">LXMF</a>-Propagationsknoten, Sowie <a href="https://github.com/markqvist/Sideband">Sideband</a> Peers, welche untereinander erreichbar sind.</p>
+<h1>Community-Einstiegspunkte</h1>
+<p>Die Community hat eine Reihe öffentlich verfügbarer Einstiegspunkte zu Reticulum-Netzwerken bereitgestellt. Für den alltäglichen Gebrauch wird empfohlen, diese anstelle des Testnetzes zu verwenden.</p>
+<p>Sie können Ihre Geräte oder Instanzen mit einem oder mehreren dieser Punkte verbinden, um Zugriff auf alle Reticulum-Netzwerke zu erhalten, mit denen sie physisch verbunden sind.</p>
+<p>Richten Sie im Idealfall einen Reticulum-Transportknoten ein, den Ihre eigenen Geräte lokal erreichen können, und verbinden Sie diesen Transportknoten dann mit einigen öffentlichen Einstiegspunkten. Dies sorgt für effiziente Verbindungen und Redundanz, falls einer von ihnen ausfällt.</p>
+<pre><code># These are community-provided public Reticulum entrypoints
+# served over TCP, and available over the public Internet.
+
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
+  [[dismails TCP Interface]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
+
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+
+  [[The Outpost]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = theoutpost.life
+    target_port = 4242
+
+  [[Beleth RNS Hub]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.beleth.net
+    target_port = 4242
+
+  [[SparkN0de]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+
+  [[nisa-node]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = nisa.cat
+    target_port = 4242
+
+  [[acehoss]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.acehoss.net
+    target_port = 4242
+
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.stoppedcold.com
+    target_port = 4242
+
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 80.78.23.249
+    target_port = 4242
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = istanbul.reserve.network
+    target_port = 9034
+
+  [[RNS TCP Node Germany 001]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+
+  [[RNS TCP Node Germany 002]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+
+  [[g00n.cloud Hub]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = dfw.us.g00n.cloud
+    target_port = 6969
+
+  [[RNS_Transport_US-East]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 45.77.109.86
+    target_port = 4965
+
+</code></pre>
 <p align="right"><a href="docs_de.html">Nächstes Thema: Lesen Sie das Handbuch</a></p>
 </body>
 </html>

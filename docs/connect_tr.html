@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_tr.html">Reticulum</a> | <a href="start_tr.html">Başlat</a> | <a href="hardware_tr.html">Donanım</a> | <a href="connect_tr.html">Test Ağı</a> | <a href="docs_tr.html">Kılavuz</a> | <a href="crypto_tr.html">Şifreleme</a> | <a href="credits_tr.html">Hakkında</a> | <a href="https://github.com/markqvist/reticulum">Kaynak</a> | <a href="donate_tr.html">Destekle</a></div></center></p>
+<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_tr.html">Reticulum</a> | <a href="start_tr.html">Başlat</a> | <a href="hardware_tr.html">Donanım</a> | <a href="connect_tr.html">Bağlan</a> | <a href="docs_tr.html">Kılavuz</a> | <a href="crypto_tr.html">Şifreleme</a> | <a href="credits_tr.html">Hakkında</a> | <a href="https://github.com/markqvist/reticulum">Kaynak</a> | <a href="donate_tr.html">Destekle</a></div></center></p>
 <h1>Genel Test Ağı</h1>
 <p>Eğer fiziksel ağlar oluşturmadan sadece denemelere başlamak istiyorsanız, Genel Reticulum Test Ağı'na katılmaktan hoş geldiniz. Test ağı tam olarak bunun için, test etmek ve denemeler yapmak için gayri resmi bir ağdır. Çoğu zaman aktif olacak ve herkes katılabilir, ancak bu aynı zamanda hizmetin sürekli kullanılabilirliği için garanti olmadığı anlamına gelir.</p>
 <p>Test ağı, Reticulum'un en güncel sürümünü çalıştırır (çoğu zaman genel olarak yayınlanmadan kısa bir süre önce). Ara sıra Reticulum'un deneysel sürümleri, test ağındaki düğümlere dağıtılabilir, bu da tuhaf davranışlara neden olabilir. Eğer hiçbiri sizi korkutmuyorsa, test ağına TCP veya I2P aracılığıyla katılabilirsiniz.</p>
@@ -34,6 +34,122 @@
     peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
 </code></pre>
 <p>Test ayrıca bir dizi <a href="https://github.com/markqvist/nomadnet">Nomad Network</a> düğümü ve <a href="https://github.com/markqvist/lxmf">LXMF</a> yayılma düğümü içerir.</p>
+<h1>Topluluk Giriş Noktaları</h1>
+<p>Topluluk tarafından Reticulum ağlarına bir dizi genel erişime açık giriş noktası sağlanmıştır. Günlük kullanım için, testnet yerine bunları kullanmanız önerilir.</p>
+<p>Cihazlarınızı veya örneklerinizi fiziksel olarak bağlı oldukları herhangi bir Reticulum ağına erişim sağlamak için bunlardan birine veya daha fazlasına bağlayabilirsiniz.</p>
+<p>İdeal olarak, kendi cihazlarınızın yerel olarak ulaşabileceği bir Reticulum Taşıma Düğümü kurun ve ardından bu taşıma düğümünü birkaç genel giriş noktasına bağlayın. Bu, bunlardan herhangi biri çökerse verimli bağlantılar ve yedeklilik sağlayacaktır.</p>
+<pre><code># These are community-provided public Reticulum entrypoints
+# served over TCP, and available over the public Internet.
+
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
+  [[dismails TCP Interface]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
+
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+
+  [[The Outpost]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = theoutpost.life
+    target_port = 4242
+
+  [[Beleth RNS Hub]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.beleth.net
+    target_port = 4242
+
+  [[SparkN0de]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+
+  [[nisa-node]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = nisa.cat
+    target_port = 4242
+
+  [[acehoss]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.acehoss.net
+    target_port = 4242
+
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.stoppedcold.com
+    target_port = 4242
+
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 80.78.23.249
+    target_port = 4242
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = istanbul.reserve.network
+    target_port = 9034
+
+  [[RNS TCP Node Germany 001]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+
+  [[RNS TCP Node Germany 002]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+
+  [[g00n.cloud Hub]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = dfw.us.g00n.cloud
+    target_port = 6969
+
+  [[RNS_Transport_US-East]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 45.77.109.86
+    target_port = 4965
+
+</code></pre>
 <p align="right"><a href="docs_tr.html">Sonraki Konu: Kılavuzu Okuyun</a></p>
 </body>
 </html>
