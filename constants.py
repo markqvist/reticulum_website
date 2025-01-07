@@ -2,12 +2,6 @@ PUBLIC_ENTRYPOINTS = """```
 # These are community-provided public Reticulum entrypoints
 # served over TCP, and available over the public Internet.
 
-  [[RNS Testnet BetweenTheBorders]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = reticulum.betweentheborders.com
-    target_port = 4242
-
   [[quad4net tcp]]
     type = TCPClientInterface
     enabled = yes
