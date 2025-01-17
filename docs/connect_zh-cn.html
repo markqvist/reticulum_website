@@ -42,23 +42,17 @@
 <pre><code># These are community-provided public Reticulum entrypoints
 # served over TCP, and available over the public Internet.
 
-  [[quad4net tcp]]
+  [[dismails TCP Interface]]
     type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
-    target_port = 4242
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
 
   [[ChaosNet]]
     type = TCPClientInterface
     interface_enabled = True
     target_host = rns.c3.jitter.eu
     target_port = 4242
-
-  [[dismails TCP Interface]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.dismail.de
-    target_port = 7822
 
   [[interloper node]]
     type = TCPClientInterface
@@ -78,11 +72,29 @@
     target_host = rns.beleth.net
     target_port = 4242
 
+  [[Rocket Tech Hub]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.rocket-tech.net
+    target_port = 443
+
   [[SparkN0de]]
     type = TCPClientInterface
     interface_enabled = true
     target_host = aspark.uber.space
     target_port = 44860
+
+  [[Tidudanka.com]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.tidudanka.com
+    target_port = 37500
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
 
   [[nisa-node]]
     type = TCPClientInterface
@@ -149,18 +161,6 @@
     interface_enabled = true
     target_host = 45.77.109.86
     target_port = 4965
-
-  [[Tidudanka.com]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.tidudanka.com
-    target_port = 37500
-
-  [[Rocket Tech Hub]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.rocket-tech.net
-    target_port = 443
 </code></pre>
 <p align="right"><a href="docs_zh-cn.html">下一个主题：阅读手册</a></p>
 </body>
