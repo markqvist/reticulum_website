@@ -113,8 +113,13 @@ PUBLIC_ENTRYPOINTS = """```
   [[Tidudanka.com]]
     type = TCPClientInterface
     enabled = yes
-    target_host = 164.90.180.40
+    target_host = reticulum.tidudanka.com
     target_port = 37500
 
+  [[Rocket Tech Hub]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.rocket-tech.net
+    target_port = 443
 ```
 """
