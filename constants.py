@@ -8,12 +8,6 @@ PUBLIC_ENTRYPOINTS = """```
     target_host = rns.dismail.de
     target_port = 7822
 
-  [[ChaosNet]]
-    type = TCPClientInterface
-    interface_enabled = True
-    target_host = rns.c3.jitter.eu
-    target_port = 4242
-
   [[interloper node]]
     type = TCPClientInterface
     interface_enabled = true
