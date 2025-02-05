@@ -121,5 +121,22 @@ PUBLIC_ENTRYPOINTS = """```
     interface_enabled = true
     target_host = 45.77.109.86
     target_port = 4965
+
+  [[rothbard_RNS_transport_ZA]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = rothbard.lab.networks.deavmi.assigned.network
+    target_port = 4242
+
+  [[rothbard_RNS_transport_ZA_ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
+    target_port = 4242
+
+  [[rothbard_RNS_transport_ZA_i2p]]
+    type = I2PInterface
+    enabled = true
+    peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
 ```
 """
