@@ -37,9 +37,9 @@ langs = [
     {"name": "Polski", "ext": "pl"},
     {"name": "Português", "ext": "pt-br"},
     {"name": "Türkçe", "ext": "tr"},
+    {"name": "Українська", "ext": "uk"},
     {"name": "日本語", "ext": "jp"},
     {"name": "简体中文", "ext": "zh-cn"},
-    {"name": "Українська", "ext": "uk"},
 ]
 
 menu_translations = {
