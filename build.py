@@ -39,6 +39,7 @@ langs = [
     {"name": "Türkçe", "ext": "tr"},
     {"name": "日本語", "ext": "jp"},
     {"name": "简体中文", "ext": "zh-cn"},
+    {"name": "Українська", "ext": "uk"},
 ]
 
 menu_translations = {
@@ -140,6 +141,17 @@ menu_translations = {
         "CREDITS": "致谢",
         "SOURCE": "源代码",
         "DONATE": "支持开发",
+    },
+    "uk": {
+        "RETICULUM": "Reticulum",
+        "START": "Початок",
+        "HARDWARE": "Обладнання",
+        "TESTNET": "Тестова мережа",
+        "MANUAL": "Довідник",
+        "CRYPTO": "Крипто",
+        "CREDITS": "Кредит",
+        "SOURCE": "Вихідний код",
+        "DONATE": "Донати",
     },
 }
 
