@@ -132,5 +132,11 @@ PUBLIC_ENTRYPOINTS = """```
     type = I2PInterface
     enabled = true
     peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
+
+  [[Sydney RNS]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = sydney.reticulum.au
+    target_port = 4242    
 ```
 """
