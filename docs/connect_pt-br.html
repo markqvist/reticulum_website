@@ -42,6 +42,12 @@ Algumas vezes versões experimentais do Reticulum podem ser utilizada em nós da
 <pre><code># These are community-provided public Reticulum entrypoints
 # served over TCP, and available over the public Internet.
 
+  [[Sydney RNS]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = sydney.reticulum.au
+    target_port = 4242    
+
   [[dismails TCP Interface]]
     type = TCPClientInterface
     interface_enabled = true
