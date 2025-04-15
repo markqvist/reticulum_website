@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./crypto_de.html">Deutsch</a> | <a href="./crypto.html">English</a> | <a href="./crypto_es.html">Español</a> | <a href="./crypto_nl.html">Nederlands</a> | <a href="./crypto_pl.html">Polski</a> | <a href="./crypto_pt-br.html">Português</a> | <a href="./crypto_tr.html">Türkçe</a> | <a href="./crypto_uk.html">Українська</a> | <a href="./crypto_jp.html">日本語</a> | <a href="./crypto_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_uk.html">Reticulum</a> | <a href="start_uk.html">Початок</a> | <a href="hardware_uk.html">Обладнання</a> | <a href="connect_uk.html">Тестова мережа</a> | <a href="docs_uk.html">Довідник</a> | <a href="crypto_uk.html">Крипто</a> | <a href="credits_uk.html">Кредит</a> | <a href="https://github.com/markqvist/reticulum">Вихідний код</a> | <a href="donate_uk.html">Донати</a></div></center></p>
+<h1>Криптографічні примітиви</h1>
+<p>Reticulum використовує простий набір ефективних, надійних і сучасних криптографічних примітивів, з широко доступними імплементаціями, які можна використовувати як на загальновживаних процесорах, так і на мікроконтролерах. Необхідні примітиви:</p>
+<ul>
+<li>Ed25519 для підписів</li>
+<li>X22519 для ECDH обміну ключами</li>
+<li>HKDF для виведення ключів</li>
+<li>AES-128 у режимі CBC</li>
+<li>HMAC-SHA256 для аутентифікації повідомлень</li>
+<li>SHA-256</li>
+<li>SHA-512</li>
+</ul>
+<p>У стандартній конфігурації установки примітиви <code>X25519</code>, <code>Ed25519</code> і <code>AES-128-CBC</code> надаються <a href="https://www.openssl.org/">OpenSSL</a> (через пакет <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Функції хешування <code>SHA-256</code> і <code>SHA-512</code> надаються стандартною бібліотекою Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Примітиви <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code>, а також функція паддінгу <code>PKCS7</code> завжди надаються наступними внутрішніми імплементаціями:</p>
+<ul>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
+</ul>
+<p>Reticulum також включає повну імплементацію всіх необхідних примітивів на чистому Python. Якщо OpenSSL і PyCA недоступні на системі під час запуску Reticulum, то замість них будуть використані внутрішні чисто-python примітиви. Легким наслідком цього є продуктивність, причому бекенд OpenSSL працює <em>набагато</em> швидше. Однак найважливіший наслідок полягає в потенційній втраті безпеки через використання примітивів, які не були піддані такій самій перевірці, тестуванню та огляду, як ті, що надаються OpenSSL.</p>
+<p>Якщо ви хочете використовувати внутрішні чисто-python примітиви, <strong>вкрай рекомендується</strong> добре розуміти ризики, які вони несуть, і приймати обґрунтоване рішення щодо того, чи є ці ризики для вас прийнятними.</p>
+<p>Reticulum — це відносно молода програма, і її слід розглядати саме як таку. Хоча вона була створена з урахуванням найкращих практик криптографії, вона <em>не проходила</em> зовнішнього аудиту безпеки, і цілком ймовірно, що існують помилки, які можуть зламати конфіденційність або безпеку. Якщо ви хочете допомогти або спонсорувати аудит, будь ласка, зв'яжіться з нами.</p>
+<p align="right"><a href="credits.html">Наступна тема: Подяки та кредити</a></p>
+</body>
+</html>

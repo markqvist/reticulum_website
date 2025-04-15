@@ -1,0 +1,184 @@
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/water.css?v=6">
+<meta charset="utf-8"/>
+<title>Reticulum Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_uk.html">Reticulum</a> | <a href="start_uk.html">Початок</a> | <a href="hardware_uk.html">Обладнання</a> | <a href="connect_uk.html">Тестова мережа</a> | <a href="docs_uk.html">Довідник</a> | <a href="crypto_uk.html">Крипто</a> | <a href="credits_uk.html">Кредит</a> | <a href="https://github.com/markqvist/reticulum">Вихідний код</a> | <a href="donate_uk.html">Донати</a></div></center></p>
+<h1>Публічний Testnet</h1>
+<p>Якщо ви просто хочете почати експериментувати без створення фізичних мереж, ви можете приєднатися до публічного тестнету Reticulum. Тестнет саме такий, неформальна мережа для тестування та експериментів. Він буде доступний більшість часу, і кожен може приєднатися, але це також означає, що немає гарантій щодо доступності сервісу.</p>
+<p><strong>Зверніть увагу!</strong> Для повсякденного використання Reticulum, наприклад, для обміну повідомленнями та інших комунікацій, набагато краще використовувати один або кілька з публічних точок входу, наданих спільнотою. Деталі дивіться в наступному розділі.</p>
+<p>Тестнет працює на найновішій версії Reticulum (зазвичай навіть до її офіційного випуску). Іноді на тестнеті можуть бути розгорнуті експериментальні версії Reticulum, що може призвести до дивної поведінки. Якщо вас це не лякає, ви можете приєднатися до тестнету через TCP або I2P.</p>
+<p>Просто додайте один із наступних інтерфейсів до вашого конфігураційного файлу Reticulum:</p>
+<pre><code># TCP/IP interface to the Dublin Hub
+  [[RNS Testnet Dublin]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = dublin.connect.reticulum.network
+    target_port = 4965
+
+# TCP/IP interface to the BetweenTheBorders Hub (community-provided)
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
+# Interface to I2P Hub A
+  [[RNS Testnet I2P Hub A]]
+    type = I2PInterface
+    enabled = yes
+    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
+</code></pre>
+<p>Тестнет також містить кілька вузлів Nomad Network та вузлів поширення LXMF.
+Точки входу спільноти</p>
+<p>Спільнота надала кілька публічно доступних точок входу до мереж Reticulum. Для повсякденного використання рекомендується використовувати ці точки замість тестнету.</p>
+<p>Ви можете приєднати свої пристрої або інстанси до однієї або кількох таких точок входу, щоб отримати доступ до будь-яких мереж Reticulum, до яких вони фізично підключені.</p>
+<p>Ідеально, якщо ви налаштуєте вузол транспорту Reticulum, до якого ваші пристрої зможуть підключатися локально, а потім з’єднаєте цей транспортний вузол з кількома публічними точками входу. Це забезпечить ефективні з’єднання та надійність у випадку, якщо одна з точок входу вийде з ладу.</p>
+<pre><code># These are community-provided public Reticulum entrypoints
+# served over TCP, and available over the public Internet.
+
+  [[Sydney RNS]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = sydney.reticulum.au
+    target_port = 4242    
+
+  [[dismails TCP Interface]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.dismail.de
+    target_port = 7822
+
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+
+  [[The Outpost]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = theoutpost.life
+    target_port = 4242
+
+  [[Beleth RNS Hub]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.beleth.net
+    target_port = 4242
+
+  [[Rocket Tech Hub]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.rocket-tech.net
+    target_port = 443
+
+  [[SparkN0de]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+
+  [[Tidudanka.com]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.tidudanka.com
+    target_port = 37500
+
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.quad4.io
+    target_port = 4242
+
+  [[nisa-node]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = nisa.cat
+    target_port = 4242
+
+  [[acehoss]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.acehoss.net
+    target_port = 4242
+
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = rns.stoppedcold.com
+    target_port = 4242
+
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 80.78.23.249
+    target_port = 4242
+
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = istanbul.reserve.network
+    target_port = 9034
+
+  [[RNS TCP Node Germany 001]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+
+  [[RNS TCP Node Germany 002]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+
+  [[g00n.cloud Hub]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = dfw.us.g00n.cloud
+    target_port = 6969
+
+  [[RNS_Transport_US-East]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 45.77.109.86
+    target_port = 4965
+
+  [[rothbard_RNS_transport_ZA]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = rothbard.lab.networks.deavmi.assigned.network
+    target_port = 4242
+
+  [[rothbard_RNS_transport_ZA_ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
+    target_port = 4242
+
+  [[rothbard_RNS_transport_ZA_i2p]]
+    type = I2PInterface
+    enabled = true
+    peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
+</code></pre>
+<p align="right"><a href="docs.html">Наступна тема: Читати мануал</a></p>
+</body>
+</html>
