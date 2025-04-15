@@ -10,11 +10,11 @@ Reticulum verwendet eine einfache Reihe von effizienten, starken und modernen kr
 - SHA-256
 - SHA-512
 
-In der Standard-Installationskonfiguration werden die Primitive `X25519`, `Ed25519`, `AES-128-CBC` und `AES-256-CBC` von [OpenSSL](https://www.openssl.org/) (mit dem [PyCA/cryptography](https://github.com/pyca/cryptography) Packet mitgebracht). Die Hashing-Funktionen `SHA-256` und `SHA-512` werden vom Standard-Python bereitgestellt [hashlib](https://docs.python.org/3/library/hashlib.html). Die `HKDF`, `HMAC`, `Fernet` Primitive, und die `PKCS7` Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:
+In der Standard-Installationskonfiguration werden die Primitive `X25519`, `Ed25519`, `AES-128-CBC` und `AES-256-CBC` von [OpenSSL](https://www.openssl.org/) (mit dem [PyCA/cryptography](https://github.com/pyca/cryptography) Packet mitgebracht). Die Hashing-Funktionen `SHA-256` und `SHA-512` werden vom Standard-Python bereitgestellt [hashlib](https://docs.python.org/3/library/hashlib.html). Die `HKDF`, `HMAC`, `Token` Primitive, und die `PKCS7` Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
-- [Fernet.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py)
+- [Token.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py)
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 

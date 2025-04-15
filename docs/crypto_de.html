@@ -21,11 +21,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>In der Standard-Installationskonfiguration werden die Primitive <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> und <code>AES-256-CBC</code> von <a href="https://www.openssl.org/">OpenSSL</a> (mit dem <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> Packet mitgebracht). Die Hashing-Funktionen <code>SHA-256</code> und <code>SHA-512</code> werden vom Standard-Python bereitgestellt <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Die <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> Primitive, und die <code>PKCS7</code> Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:</p>
+<p>In der Standard-Installationskonfiguration werden die Primitive <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> und <code>AES-256-CBC</code> von <a href="https://www.openssl.org/">OpenSSL</a> (mit dem <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> Packet mitgebracht). Die Hashing-Funktionen <code>SHA-256</code> und <code>SHA-512</code> werden vom Standard-Python bereitgestellt <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Die <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> Primitive, und die <code>PKCS7</code> Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulum enthält außerdem eine vollständige Implementierung aller erforderlichen Primitive in reinem Python. Wenn OpenSSL und PyCA beim Start von Reticulum nicht auf dem System verfügbar sind, verwendet Reticulum stattdessen die internen reinen Python-Primitive. Eine triviale Folge hiervon ist die Leistung, da das OpenSSL-Backend <em>viel</em> schneller ist. Die wichtigste Konsequenz ist jedoch der potenzielle Verlust an Sicherheit durch die Verwendung von Primitiven, die nicht in gleichem Maße wie die von OpenSSL untersucht, getestet und geprüft wurden.</p>
