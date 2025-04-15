@@ -5,11 +5,12 @@ Reticulum, genel amaçlı CPU'lerde ve mikrodenetleyicilerde kullanılabilen yay
 - ECDH anahtar değişimleri için X22519
 - Anahtar oluşturmak için HKDF
 - CBC modunda AES-128
+- CBC modunda AES-256
 - Mesaj doğrulama için HMAC-SHA256
 - SHA-256
 - SHA-512
 
-Varsayılan kurulum yapılandırmasında, `X25519`, `Ed25519` ve `AES-128-CBC` temel öğeleri, [OpenSSL](https://www.openssl.org/) (aracılığıyla [PyCA/cryptography](https://github.com/pyca/cryptography) paketi üzerinden) tarafından sağlanır. Karma fonksiyonları `SHA-256` ve `SHA-512`, standart Python [hashlib](https://docs.python.org/3/library/hashlib.html) tarafından sağlanır. `HKDF`, `HMAC`, `Fernet` temel öğeleri ve `PKCS7` dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:
+Varsayılan kurulum yapılandırmasında, `X25519`, `Ed25519`, `AES-128-CBC` ve `AES-256-CBC` temel öğeleri, [OpenSSL](https://www.openssl.org/) (aracılığıyla [PyCA/cryptography](https://github.com/pyca/cryptography) paketi üzerinden) tarafından sağlanır. Karma fonksiyonları `SHA-256` ve `SHA-512`, standart Python [hashlib](https://docs.python.org/3/library/hashlib.html) tarafından sağlanır. `HKDF`, `HMAC`, `Fernet` temel öğeleri ve `PKCS7` dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)

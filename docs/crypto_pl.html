@@ -16,11 +16,12 @@
 <li>X22519 dla wymiany kluczy ECDH</li>
 <li>HKDF dla wyodrębnienia klucza</li>
 <li>AES-128 w trybie CBC</li>
+<li>AES-256 w trybie CBC</li>
 <li>HMAC-SHA256 dla uwierzytelnienia wiadomości</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>W domyślnej konfiguracji instalacji, prymitywy <code>X25519</code>, <code>Ed25519</code> i <code>AES-128-CBC</code> są dostarczone przez <a href="https://www.openssl.org/">OpenSSL</a> (przez pakiet <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Funkcja hashu <code>SHA-256</code> i <code>SHA-512</code> są dostarczone przez standard Pythona <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Prymitywy <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> i funkcja padding <code>PKCS7</code> są zawsze dostarczane przez następujące wewnętrzne implementacje:</p>
+<p>W domyślnej konfiguracji instalacji, prymitywy <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> i <code>AES-256-CBC</code> są dostarczone przez <a href="https://www.openssl.org/">OpenSSL</a> (przez pakiet <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Funkcja hashu <code>SHA-256</code> i <code>SHA-512</code> są dostarczone przez standard Pythona <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Prymitywy <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> i funkcja padding <code>PKCS7</code> są zawsze dostarczane przez następujące wewnętrzne implementacje:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

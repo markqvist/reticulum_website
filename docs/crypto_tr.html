@@ -16,11 +16,12 @@
 <li>ECDH anahtar değişimleri için X22519</li>
 <li>Anahtar oluşturmak için HKDF</li>
 <li>CBC modunda AES-128</li>
+<li>CBC modunda AES-256</li>
 <li>Mesaj doğrulama için HMAC-SHA256</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>Varsayılan kurulum yapılandırmasında, <code>X25519</code>, <code>Ed25519</code> ve <code>AES-128-CBC</code> temel öğeleri, <a href="https://www.openssl.org/">OpenSSL</a> (aracılığıyla <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> paketi üzerinden) tarafından sağlanır. Karma fonksiyonları <code>SHA-256</code> ve <code>SHA-512</code>, standart Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> tarafından sağlanır. <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> temel öğeleri ve <code>PKCS7</code> dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:</p>
+<p>Varsayılan kurulum yapılandırmasında, <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> ve <code>AES-256-CBC</code> temel öğeleri, <a href="https://www.openssl.org/">OpenSSL</a> (aracılığıyla <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> paketi üzerinden) tarafından sağlanır. Karma fonksiyonları <code>SHA-256</code> ve <code>SHA-512</code>, standart Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> tarafından sağlanır. <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> temel öğeleri ve <code>PKCS7</code> dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

@@ -1,10 +1,15 @@
 # Cryptographic Primitives
-Reticulum uses a simple suite of efficient, strong and modern cryptographic primitives, with widely available implementations that can be used both on general-purpose CPUs and on microcontrollers. The necessary primitives are:
+Reticulum uses a simple suite of efficient, strong and well-tested cryptographic primitives, with widely available implementations that can be used both on general-purpose CPUs and on microcontrollers.
+
+One of the primary considerations for choosing this particular set of primitives is that they can be implemented *safely* with relatively few pitfalls, on practically all current computing platforms.
+
+The primitives listed here **are authoritative**. Anything claiming to be Reticulum, but not using these exact primitives **is not** Reticulum, and possibly an intentionally compromised or weakened clone. The utilised primitives are:
 
 - Ed25519 for signatures
 - X22519 for ECDH key exchanges
 - HKDF for key derivation
 - AES-128 in CBC mode
+- AES-256 in CBC mode
 - HMAC-SHA256 for message authentication
 - SHA-256
 - SHA-512

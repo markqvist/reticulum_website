@@ -16,11 +16,12 @@
 <li>X22519 für ECDH Schlüsselaustausch</li>
 <li>HKDF für die Schlüsselableitung</li>
 <li>AES-128 im CBC modus</li>
+<li>AES-256 im CBC modus</li>
 <li>HMAC-SHA256 für die Nachrichtenauthentifizierung</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>In der Standard-Installationskonfiguration werden die Primitive <code>X25519</code>, <code>Ed25519</code> und <code>AES-128-CBC</code> von <a href="https://www.openssl.org/">OpenSSL</a> (mit dem <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> Packet mitgebracht). Die Hashing-Funktionen <code>SHA-256</code> und <code>SHA-512</code> werden vom Standard-Python bereitgestellt <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Die <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> Primitive, und die <code>PKCS7</code> Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:</p>
+<p>In der Standard-Installationskonfiguration werden die Primitive <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> und <code>AES-256-CBC</code> von <a href="https://www.openssl.org/">OpenSSL</a> (mit dem <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> Packet mitgebracht). Die Hashing-Funktionen <code>SHA-256</code> und <code>SHA-512</code> werden vom Standard-Python bereitgestellt <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Die <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> Primitive, und die <code>PKCS7</code> Auffüllfunktion werden immer von den folgenden internen Implementierungen bereitgestellt:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

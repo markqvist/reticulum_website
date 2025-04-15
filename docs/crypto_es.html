@@ -16,11 +16,12 @@
 <li>X22519 para cambios de llaves ECDH</li>
 <li>HKDF para derivación de llaves</li>
 <li>AES-128 en modo CBC</li>
+<li>AES-256 en modo CBC</li>
 <li>HMAC-SHA256 para autenticación de mensajes</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>En la configuración de la instalación por defecto, las primitivas <code>X25519</code>, <code>Ed25519</code> y <code>AES-128-CBC</code> son proporcionadas por <a href="https://www.openssl.org/">OpenSSL</a> (a través del paquete <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Las funciones hash <code>SHA-256</code> y <code>SHA-512</code> las proporciona el paquete estándar de Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Las primitivas <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> y la función de <em>padding</em> <code>PKCS7</code> son siempre proporcionadas por las siguientes implementaciones internas:</p>
+<p>En la configuración de la instalación por defecto, las primitivas <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> y <code>AES-256-CBC</code> son proporcionadas por <a href="https://www.openssl.org/">OpenSSL</a> (a través del paquete <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Las funciones hash <code>SHA-256</code> y <code>SHA-512</code> las proporciona el paquete estándar de Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Las primitivas <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> y la función de <em>padding</em> <code>PKCS7</code> son siempre proporcionadas por las siguientes implementaciones internas:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

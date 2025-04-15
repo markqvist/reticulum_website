@@ -5,11 +5,12 @@ Reticulum 使用了一系列高效、健壮、现代的密码学原语(cryptogra
 - X22519 用于 ECDH 密钥交换
 - HKDF 用于密钥派生
 - AES-128 CBC 模式
+- AES-256 CBC 模式
 - HMAC-SHA256 用于消息认证
 - SHA-256
 - SHA-512
 
-在默认安装下，`X25519`、`Ed25519` 和 `AES-128-CBC` 都由 [OpenSSL](https://www.openssl.org/) 提供(通过 [PyCA/cryptography](https://github.com/pyca/cryptography))。散列函数 `SHA-256` 和 `SHA-512` 由 Python 标准库 [hashlib](https://docs.python.org/3/library/hashlib.html) 提供。`HKDF`、`HMAC`、`Fernet` 原语与 `PKCS7` 填充函数总是由以下内部实现提供：
+在默认安装下，`X25519`、`Ed25519`、`AES-128-CBC` 和 `AES-256-CBC` 都由 [OpenSSL](https://www.openssl.org/) 提供(通过 [PyCA/cryptography](https://github.com/pyca/cryptography))。散列函数 `SHA-256` 和 `SHA-512` 由 Python 标准库 [hashlib](https://docs.python.org/3/library/hashlib.html) 提供。`HKDF`、`HMAC`、`Fernet` 原语与 `PKCS7` 填充函数总是由以下内部实现提供：
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
