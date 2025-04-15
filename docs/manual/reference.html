@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Support Reticulum" href="support.html" />
 
     <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29.dev1"/>
-        <title>API Reference - Reticulum Network Stack 0.9.3 beta documentation</title>
+        <title>API Reference - Reticulum Network Stack 0.9.4 beta documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=189ec851f9bb375a2509b67be1f64f0cf212b702" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -141,7 +141,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 0.9.3 beta documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 0.9.4 beta documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -167,7 +167,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 0.9.3 beta documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 0.9.4 beta documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -408,11 +408,19 @@ for addressable hashes and other purposes. Non-configurable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RNS.Identity.recall">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination_hash</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Identity.recall" title="Permalink to this definition">#</a></dt>
-<dd><p>Recall identity for a destination hash.</p>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_hash</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_identity_hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Identity.recall" title="Permalink to this definition">#</a></dt>
+<dd><p>Recall identity for a destination or identity hash. By default, this function
+will return the identity associated with a given <em>destination</em> hash. As an
+example, if you know the <code class="docutils literal notranslate"><span class="pre">lxmf.delivery</span></code> destination hash of an endpoint,
+this function will return the associated underlying identity. You can also
+search for an identity from a known <em>identity hash</em>, by setting the
+<code class="docutils literal notranslate"><span class="pre">from_identity_hash</span></code> argument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>destination_hash</strong> – Destination hash as <em>bytes</em>.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_hash</strong> – Destination or identity hash as <em>bytes</em>.</p></li>
+<li><p><strong>from_identity_hash</strong> – Whether to search based on identity hash instead of destination hash as <em>bool</em>.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An <a class="reference internal" href="#api-identity"><span class="std std-ref">RNS.Identity</span></a> instance that can be used to create an outgoing <a class="reference internal" href="#api-destination"><span class="std std-ref">RNS.Destination</span></a>, or <em>None</em> if the destination is unknown.</p>

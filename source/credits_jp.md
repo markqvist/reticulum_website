@@ -18,7 +18,7 @@ Reticulumには他にも多くのモジュールやプロジェクトが含ま�
 
 Reticulumのプロトコルデザインおよびリファレンス実装は、2014年から2022年までMark Qvistによって実施されました。
 
-[ReticulumのPythonリファレンス実装](https://github.com/markqvist/reticulum)およびこのウェブサイトは、[MITライセンス](license.html)の下でライセンスされています。継続的な開発をサポートするために、<a href="donate_jp.html">寄付</a>をお願いします。
+[ReticulumのPythonリファレンス実装](https://github.com/markqvist/reticulum)およびこのウェブサイトは、[Reticulumライセンス](license.html)の下でライセンスされています。継続的な開発をサポートするために、<a href="donate_jp.html">寄付</a>をお願いします。
 
 ----------------
 

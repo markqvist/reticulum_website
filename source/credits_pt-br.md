@@ -18,7 +18,7 @@ Uma lista de outros modelos e projetos são parte disso ou utilizado no Reticulu
 
 O design do protocolo e implementação de referência foram desenvolvidos entre 2014 e 2022 por Mark Qvist.
 
-A [implementação Python referencial do Reticulum](https://github.com/markqvist/reticulum) e seu site utilizam a [licença MIT](https://reticulum.network/license.html). Por favor considere uma <a href="donate.html">doação</a>  para ajudar a continuar o projeto.
+A [implementação Python referencial do Reticulum](https://github.com/markqvist/reticulum) e seu site utilizam a [licença Reticulum](https://reticulum.network/license.html). Por favor considere uma <a href="donate.html">doação</a>  para ajudar a continuar o projeto.
 
 ----------------
 

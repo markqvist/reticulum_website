@@ -18,7 +18,7 @@ A number of other modules and projects are either part of, or used by Reticulum.
 
 The protocol design and reference implementation for Reticulum was carried out between 2014 and 2022 by Mark Qvist.
 
-The [Python reference implementation of Reticulum](https://github.com/markqvist/reticulum) and this website is licensed under the [MIT License](license.html). Please <a href="donate.html">donate</a>  to support the continued development.
+The [Python reference implementation of Reticulum](https://github.com/markqvist/reticulum) and this website is licensed under the [Reticulum License](license.html). Please <a href="donate.html">donate</a>  to support the continued development.
 
 ----------------
 

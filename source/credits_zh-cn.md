@@ -18,7 +18,7 @@ Reticulum 用到了一系列模块与项目。在这里，对以下项目的作�
 
 Reticulum 的协议设计与参考实现是由 Mark Qvist 于 2014-2022 进行的。
 
-Reticulum 的 [Python 参考实现](https://github.com/markqvist/reticulum) 以及这个网站均为 [MIT 授权](license.html)。若想支持 Reticulum 的开发，欢迎<a href="donate_zh-cn.html">捐赠</a>。
+Reticulum 的 [Python 参考实现](https://github.com/markqvist/reticulum) 以及这个网站均为 [Reticulum 授权](license.html)。若想支持 Reticulum 的开发，欢迎<a href="donate_zh-cn.html">捐赠</a>。
 
 ----------------
 

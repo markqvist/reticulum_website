@@ -18,7 +18,7 @@ Wiele innych modułów i projektów jest częścią lub jest wykorzystywanych pr
 
 Projekt protokołu i wdrożenie referencyjne dla Reticulum zostało zrealizowane w latach 2014-2022 przez Marka Qvista.
 
-[Implementacja referencji dla języka Python](https://github.com/markqvist/reticulum) oraz ta strona są opubliowanie na [Licencji MIT](license.html). Proszę przekaż <a href="donate_pl.html">darowiznę</a>, żeby wesprzeć dalszy rozwój projektu.
+[Implementacja referencji dla języka Python](https://github.com/markqvist/reticulum) oraz ta strona są opubliowanie na [Licencji Reticulum](license.html). Proszę przekaż <a href="donate_pl.html">darowiznę</a>, żeby wesprzeć dalszy rozwój projektu.
 
 ----------------
 
