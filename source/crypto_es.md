@@ -10,11 +10,11 @@ Reticulum utiliza un conjunto sencillo de primitivas criptográficas eficientes,
 - SHA-256
 - SHA-512
 
-En la configuración de la instalación por defecto, las primitivas `X25519`, `Ed25519`, `AES-128-CBC` y `AES-256-CBC` son proporcionadas por [OpenSSL](https://www.openssl.org/) (a través del paquete [PyCA/cryptography](https://github.com/pyca/cryptography)). Las funciones hash `SHA-256` y `SHA-512` las proporciona el paquete estándar de Python [hashlib](https://docs.python.org/3/library/hashlib.html). Las primitivas `HKDF`, `HMAC`, `Fernet` y la función de *padding* `PKCS7` son siempre proporcionadas por las siguientes implementaciones internas:
+En la configuración de la instalación por defecto, las primitivas `X25519`, `Ed25519`, `AES-128-CBC` y `AES-256-CBC` son proporcionadas por [OpenSSL](https://www.openssl.org/) (a través del paquete [PyCA/cryptography](https://github.com/pyca/cryptography)). Las funciones hash `SHA-256` y `SHA-512` las proporciona el paquete estándar de Python [hashlib](https://docs.python.org/3/library/hashlib.html). Las primitivas `HKDF`, `HMAC`, `Token` y la función de *padding* `PKCS7` son siempre proporcionadas por las siguientes implementaciones internas:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
-- [Fernet.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py)
+- [Token.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py)
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 Reticulum también incluye una implementación completa de todas las primitivas necesarias en Python puro. Si OpenSSL y PyCA no están disponibles en el sistema cuando se inicia Reticulum, éste utilizará en su lugar las primitivas internas de Python puro. Una consecuencia trivial de esto es el rendimiento, ya que el backend de OpenSSL es *mucho* más rápido. Sin embargo, la consecuencia más importante es la pérdida potencial de seguridad al utilizar primitivas que no han sido sometidas a la misma cantidad de escrutinio, pruebas y revisiones que las de OpenSSL.

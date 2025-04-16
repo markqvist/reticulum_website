@@ -21,11 +21,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>デフォルトのインストール構成では、<code>X25519</code>、<code>Ed25519</code>、<code>AES-128-CBC</code>、および<code>AES-256-CBC</code>のプリミティブは<a href="https://www.openssl.org/">OpenSSL</a>（<a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>パッケージを介して）によって提供されます。ハッシュ関数<code>SHA-256</code>および<code>SHA-512</code>は、標準のPython <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>によって提供されています。<code>HKDF</code>、<code>HMAC</code>、<code>Fernet</code>プリミティブ、および<code>PKCS7</code>パディング関数は、常に次の内部実装によって提供されます：</p>
+<p>デフォルトのインストール構成では、<code>X25519</code>、<code>Ed25519</code>、<code>AES-128-CBC</code>、および<code>AES-256-CBC</code>のプリミティブは<a href="https://www.openssl.org/">OpenSSL</a>（<a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>パッケージを介して）によって提供されます。ハッシュ関数<code>SHA-256</code>および<code>SHA-512</code>は、標準のPython <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>によって提供されています。<code>HKDF</code>、<code>HMAC</code>、<code>Token</code>プリミティブ、および<code>PKCS7</code>パディング関数は、常に次の内部実装によって提供されます：</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulumには、すべての必要なプリミティブの純粋なPythonによる完全な実装も含まれています。Reticulumが開始されるときにシステムにOpenSSL＆PyCAが利用できない場合、Reticulumは代わりに内部の純粋なPythonプリミティブを使用します。これの取り決めの一因はパフォーマンスであり、OpenSSLバックエンドが非常に速いことです。しかし、最も重要な結果は、OpenSSLと同じくらいの精査、テスト、およびレビューを受けていないプリミティブを使用することによるセキュリティの潜在的な損失です。</p>

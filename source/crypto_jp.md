@@ -10,11 +10,11 @@ Reticulumは、効率的で強力かつ現代的な暗号プリミティブの�
 - SHA-256
 - SHA-512
 
-デフォルトのインストール構成では、`X25519`、`Ed25519`、`AES-128-CBC`、および`AES-256-CBC`のプリミティブは[OpenSSL](https://www.openssl.org/)（[PyCA/cryptography](https://github.com/pyca/cryptography)パッケージを介して）によって提供されます。ハッシュ関数`SHA-256`および`SHA-512`は、標準のPython [hashlib](https://docs.python.org/3/library/hashlib.html)によって提供されています。`HKDF`、`HMAC`、`Fernet`プリミティブ、および`PKCS7`パディング関数は、常に次の内部実装によって提供されます：
+デフォルトのインストール構成では、`X25519`、`Ed25519`、`AES-128-CBC`、および`AES-256-CBC`のプリミティブは[OpenSSL](https://www.openssl.org/)（[PyCA/cryptography](https://github.com/pyca/cryptography)パッケージを介して）によって提供されます。ハッシュ関数`SHA-256`および`SHA-512`は、標準のPython [hashlib](https://docs.python.org/3/library/hashlib.html)によって提供されています。`HKDF`、`HMAC`、`Token`プリミティブ、および`PKCS7`パディング関数は、常に次の内部実装によって提供されます：
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
-- [Fernet.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py)
+- [Token.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py)
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 Reticulumには、すべての必要なプリミティブの純粋なPythonによる完全な実装も含まれています。Reticulumが開始されるときにシステムにOpenSSL＆PyCAが利用できない場合、Reticulumは代わりに内部の純粋なPythonプリミティブを使用します。これの取り決めの一因はパフォーマンスであり、OpenSSLバックエンドが非常に速いことです。しかし、最も重要な結果は、OpenSSLと同じくらいの精査、テスト、およびレビューを受けていないプリミティブを使用することによるセキュリティの潜在的な損失です。

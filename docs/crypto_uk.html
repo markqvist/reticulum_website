@@ -21,11 +21,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>У стандартній конфігурації установки примітиви <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> і <code>AES-256-CBC</code> надаються <a href="https://www.openssl.org/">OpenSSL</a> (через пакет <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Функції хешування <code>SHA-256</code> і <code>SHA-512</code> надаються стандартною бібліотекою Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Примітиви <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code>, а також функція паддінгу <code>PKCS7</code> завжди надаються наступними внутрішніми імплементаціями:</p>
+<p>У стандартній конфігурації установки примітиви <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> і <code>AES-256-CBC</code> надаються <a href="https://www.openssl.org/">OpenSSL</a> (через пакет <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Функції хешування <code>SHA-256</code> і <code>SHA-512</code> надаються стандартною бібліотекою Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Примітиви <code>HKDF</code>, <code>HMAC</code>, <code>Token</code>, а також функція паддінгу <code>PKCS7</code> завжди надаються наступними внутрішніми імплементаціями:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulum також включає повну імплементацію всіх необхідних примітивів на чистому Python. Якщо OpenSSL і PyCA недоступні на системі під час запуску Reticulum, то замість них будуть використані внутрішні чисто-python примітиви. Легким наслідком цього є продуктивність, причому бекенд OpenSSL працює <em>набагато</em> швидше. Однак найважливіший наслідок полягає в потенційній втраті безпеки через використання примітивів, які не були піддані такій самій перевірці, тестуванню та огляду, як ті, що надаються OpenSSL.</p>

@@ -10,11 +10,11 @@ Reticulum, genel amaçlı CPU'lerde ve mikrodenetleyicilerde kullanılabilen yay
 - SHA-256
 - SHA-512
 
-Varsayılan kurulum yapılandırmasında, `X25519`, `Ed25519`, `AES-128-CBC` ve `AES-256-CBC` temel öğeleri, [OpenSSL](https://www.openssl.org/) (aracılığıyla [PyCA/cryptography](https://github.com/pyca/cryptography) paketi üzerinden) tarafından sağlanır. Karma fonksiyonları `SHA-256` ve `SHA-512`, standart Python [hashlib](https://docs.python.org/3/library/hashlib.html) tarafından sağlanır. `HKDF`, `HMAC`, `Fernet` temel öğeleri ve `PKCS7` dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:
+Varsayılan kurulum yapılandırmasında, `X25519`, `Ed25519`, `AES-128-CBC` ve `AES-256-CBC` temel öğeleri, [OpenSSL](https://www.openssl.org/) (aracılığıyla [PyCA/cryptography](https://github.com/pyca/cryptography) paketi üzerinden) tarafından sağlanır. Karma fonksiyonları `SHA-256` ve `SHA-512`, standart Python [hashlib](https://docs.python.org/3/library/hashlib.html) tarafından sağlanır. `HKDF`, `HMAC`, `Token` temel öğeleri ve `PKCS7` dolgu fonksiyonu her zaman şu içsel uygulamalar tarafından sağlanır:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
-- [Fernet.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py)
+- [Token.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py)
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 Reticulum ayrıca tüm gerekli temel öğelerin saf Python'da tam bir uygulamasını içerir. Reticulum başlatıldığında sistemde OpenSSL ve PyCA kullanılamıyorsa, Reticulum bunun yerine içsel saf Python temel öğelerini kullanacaktır. Bu durumun basit bir sonucu performanstır, çünkü OpenSSL *çok* daha hızlıdır. Ancak, en önemli sonuç, OpenSSL'den daha az inceleme, test ve gözden geçirme görmemiş temellerin kullanılmasıyla güvenlik kaybının potansiyelidir.

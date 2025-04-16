@@ -21,11 +21,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>在默认安装下，<code>X25519</code>、<code>Ed25519</code>、<code>AES-128-CBC</code> 和 <code>AES-256-CBC</code> 都由 <a href="https://www.openssl.org/">OpenSSL</a> 提供(通过 <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>)。散列函数 <code>SHA-256</code> 和 <code>SHA-512</code> 由 Python 标准库 <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> 提供。<code>HKDF</code>、<code>HMAC</code>、<code>Fernet</code> 原语与 <code>PKCS7</code> 填充函数总是由以下内部实现提供：</p>
+<p>在默认安装下，<code>X25519</code>、<code>Ed25519</code>、<code>AES-128-CBC</code> 和 <code>AES-256-CBC</code> 都由 <a href="https://www.openssl.org/">OpenSSL</a> 提供(通过 <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>)。散列函数 <code>SHA-256</code> 和 <code>SHA-512</code> 由 Python 标准库 <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> 提供。<code>HKDF</code>、<code>HMAC</code>、<code>Token</code> 原语与 <code>PKCS7</code> 填充函数总是由以下内部实现提供：</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulum 还包含了所有所需密码学原语的纯 Python 实现。如果 OpenSSL 和 PyCA 在系统上不可用的话，Reticulum 会使用自带的纯 Python 实现。这时，最明显的影响是速度——OpenSSL作为后端会<em>快的多</em>。然而最严重的后果可能是使用这些实现带来的安全性问题，毕竟它们没有经受过与 OpenSSL 同级别的安全审查、测试与评估。</p>

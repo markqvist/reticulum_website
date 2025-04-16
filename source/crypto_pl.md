@@ -10,11 +10,11 @@ Reticulum wykorzystuje prosty zestaw wydajnych, silnych i nowoczesnych prymityw�
 - SHA-256
 - SHA-512
 
-W domyślnej konfiguracji instalacji, prymitywy `X25519`, `Ed25519`, `AES-128-CBC` i `AES-256-CBC` są dostarczone przez [OpenSSL](https://www.openssl.org/) (przez pakiet [PyCA/cryptography](https://github.com/pyca/cryptography)). Funkcja hashu `SHA-256` i `SHA-512` są dostarczone przez standard Pythona [hashlib](https://docs.python.org/3/library/hashlib.html). Prymitywy `HKDF`, `HMAC`, `Fernet` i funkcja padding `PKCS7` są zawsze dostarczane przez następujące wewnętrzne implementacje:
+W domyślnej konfiguracji instalacji, prymitywy `X25519`, `Ed25519`, `AES-128-CBC` i `AES-256-CBC` są dostarczone przez [OpenSSL](https://www.openssl.org/) (przez pakiet [PyCA/cryptography](https://github.com/pyca/cryptography)). Funkcja hashu `SHA-256` i `SHA-512` są dostarczone przez standard Pythona [hashlib](https://docs.python.org/3/library/hashlib.html). Prymitywy `HKDF`, `HMAC`, `Token` i funkcja padding `PKCS7` są zawsze dostarczane przez następujące wewnętrzne implementacje:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)
-- [Fernet.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py)
+- [Token.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py)
 - [PKCS7.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py)
 
 

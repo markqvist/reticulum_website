@@ -21,11 +21,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>En la configuración de la instalación por defecto, las primitivas <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> y <code>AES-256-CBC</code> son proporcionadas por <a href="https://www.openssl.org/">OpenSSL</a> (a través del paquete <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Las funciones hash <code>SHA-256</code> y <code>SHA-512</code> las proporciona el paquete estándar de Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Las primitivas <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> y la función de <em>padding</em> <code>PKCS7</code> son siempre proporcionadas por las siguientes implementaciones internas:</p>
+<p>En la configuración de la instalación por defecto, las primitivas <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> y <code>AES-256-CBC</code> son proporcionadas por <a href="https://www.openssl.org/">OpenSSL</a> (a través del paquete <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a>). Las funciones hash <code>SHA-256</code> y <code>SHA-512</code> las proporciona el paquete estándar de Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Las primitivas <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> y la función de <em>padding</em> <code>PKCS7</code> son siempre proporcionadas por las siguientes implementaciones internas:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulum también incluye una implementación completa de todas las primitivas necesarias en Python puro. Si OpenSSL y PyCA no están disponibles en el sistema cuando se inicia Reticulum, éste utilizará en su lugar las primitivas internas de Python puro. Una consecuencia trivial de esto es el rendimiento, ya que el backend de OpenSSL es <em>mucho</em> más rápido. Sin embargo, la consecuencia más importante es la pérdida potencial de seguridad al utilizar primitivas que no han sido sometidas a la misma cantidad de escrutinio, pruebas y revisiones que las de OpenSSL.</p>

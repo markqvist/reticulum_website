@@ -23,11 +23,11 @@
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>In the default installation configuration, the <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> and <code>AES-256-CBC</code> primitives are provided by <a href="https://www.openssl.org/">OpenSSL</a> (via the <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> package). The hashing functions <code>SHA-256</code> and <code>SHA-512</code> are provided by the standard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. The <code>HKDF</code>, <code>HMAC</code>, <code>Fernet</code> primitives, and the <code>PKCS7</code> padding function are always provided by the following internal implementations:</p>
+<p>In the default installation configuration, the <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> and <code>AES-256-CBC</code> primitives are provided by <a href="https://www.openssl.org/">OpenSSL</a> (via the <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> package). The hashing functions <code>SHA-256</code> and <code>SHA-512</code> are provided by the standard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. The <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> primitives, and the <code>PKCS7</code> padding function are always provided by the following internal implementations:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
-<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Fernet.py">Fernet.py</a></li>
+<li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/Token.py">Token.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/PKCS7.py">PKCS7.py</a></li>
 </ul>
 <p>Reticulum also includes a complete implementation of all necessary primitives in pure Python. If OpenSSL &amp; PyCA are not available on the system when Reticulum is started, Reticulum will instead use the internal pure-python primitives. A trivial consequence of this is performance, with the OpenSSL backend being <em>much</em> faster. The most important consequence however, is the potential loss of security by using primitives that has not seen the same amount of scrutiny, testing and review as those from OpenSSL.</p>
