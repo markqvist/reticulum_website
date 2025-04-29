@@ -1,5 +1,4 @@
 ## Apoya Reticulum
-
 Podes contribuir al desarrollo de sistemas de comunicaciones abiertas, libres y privadas haciendo una donación a través de uno de los siguientes canales:
 
 - Monero<br/>
@@ -7,14 +6,14 @@ Podes contribuir al desarrollo de sistemas de comunicaciones abiertas, libres y 
   84FpY1QbxHcgdseePYNmhTHcrgMX4nFfBYtz2GKYToqHVVhJp8Eaw1Z1EedRnKD19b3B8NiLCGVxzKV17UMmmeEsCrPyA5w
   ```
   <br/><br/>
-- Ethereum<br/>
-  ```
-  0xFDabC71AC4c0C78C95aDDDe3B4FA19d6273c5E73
-  ```
-  <br/><br/>
 - Bitcoin<br/>
   ```
-  35G9uWVzrpJJibzUwpNUQGQNFzLirhrYAH
+  bc1p4a6axuvl7n9hpapfj8sv5reqj8kz6uxa67d5en70vzrttj0fmcusgxsfk5
+  ```
+  <br/><br/>
+- Ethereum<br/>
+  ```
+  0xae89F3B94fC4AD6563F0864a55F9a697a90261ff
   ```
   <br/><br/>
 - Ko-Fi<br/>
