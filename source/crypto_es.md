@@ -4,13 +4,12 @@ Reticulum utiliza un conjunto sencillo de primitivas criptográficas eficientes,
 - Ed25519 para firmas
 - X22519 para cambios de llaves ECDH
 - HKDF para derivación de llaves
-- AES-128 en modo CBC
 - AES-256 en modo CBC
 - HMAC-SHA256 para autenticación de mensajes
 - SHA-256
 - SHA-512
 
-En la configuración de la instalación por defecto, las primitivas `X25519`, `Ed25519`, `AES-128-CBC` y `AES-256-CBC` son proporcionadas por [OpenSSL](https://www.openssl.org/) (a través del paquete [PyCA/cryptography](https://github.com/pyca/cryptography)). Las funciones hash `SHA-256` y `SHA-512` las proporciona el paquete estándar de Python [hashlib](https://docs.python.org/3/library/hashlib.html). Las primitivas `HKDF`, `HMAC`, `Token` y la función de *padding* `PKCS7` son siempre proporcionadas por las siguientes implementaciones internas:
+En la configuración de la instalación por defecto, las primitivas `X25519`, `Ed25519` y `AES-256-CBC` son proporcionadas por [OpenSSL](https://www.openssl.org/) (a través del paquete [PyCA/cryptography](https://github.com/pyca/cryptography)). Las funciones hash `SHA-256` y `SHA-512` las proporciona el paquete estándar de Python [hashlib](https://docs.python.org/3/library/hashlib.html). Las primitivas `HKDF`, `HMAC`, `Token` y la función de *padding* `PKCS7` son siempre proporcionadas por las siguientes implementaciones internas:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)

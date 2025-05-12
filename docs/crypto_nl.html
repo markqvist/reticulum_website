@@ -15,13 +15,12 @@
 <li>Ed25519 voor handtekeningen</li>
 <li>X22519 voor ECDH-sleuteluitwisselingen</li>
 <li>HKDF voor sleutelafleiding</li>
-<li>AES-128 in CBC-modus</li>
 <li>AES-256 in CBC-modus</li>
 <li>HMAC-SHA256 voor berichtauthenticatie</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>In de standaard installatieconfiguratie worden de primitieven <code>X25519</code>, <code>Ed25519</code>, <code>AES-256-CBC</code> en <code>AES-128-CBC</code> geleverd door <a href="https://www.openssl.org/">OpenSSL</a> (via het <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> pakket). De hashfuncties <code>SHA-256</code> and <code>SHA-512</code> worden geleverd door de standaard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. De <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> primitieven en de <code>PKCS7</code> opvullingsfunctie worden altijd geleverd door de volgende interne implementaties:</p>
+<p>In de standaard installatieconfiguratie worden de primitieven <code>X25519</code>, <code>Ed25519</code> en <code>AES-256-CBC</code> geleverd door <a href="https://www.openssl.org/">OpenSSL</a> (via het <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> pakket). De hashfuncties <code>SHA-256</code> and <code>SHA-512</code> worden geleverd door de standaard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. De <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> primitieven en de <code>PKCS7</code> opvullingsfunctie worden altijd geleverd door de volgende interne implementaties:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

@@ -8,13 +8,12 @@ The primitives listed here **are authoritative**. Anything claiming to be Reticu
 - Ed25519 for signatures
 - X22519 for ECDH key exchanges
 - HKDF for key derivation
-- AES-128 in CBC mode
 - AES-256 in CBC mode
 - HMAC-SHA256 for message authentication
 - SHA-256
 - SHA-512
 
-In the default installation configuration, the `X25519`, `Ed25519`, `AES-128-CBC` and `AES-256-CBC` primitives are provided by [OpenSSL](https://www.openssl.org/) (via the [PyCA/cryptography](https://github.com/pyca/cryptography) package). The hashing functions `SHA-256` and `SHA-512` are provided by the standard Python [hashlib](https://docs.python.org/3/library/hashlib.html). The `HKDF`, `HMAC`, `Token` primitives, and the `PKCS7` padding function are always provided by the following internal implementations:
+In the default installation configuration, the `X25519`, `Ed25519` and `AES-256-CBC` primitives are provided by [OpenSSL](https://www.openssl.org/) (via the [PyCA/cryptography](https://github.com/pyca/cryptography) package). The hashing functions `SHA-256` and `SHA-512` are provided by the standard Python [hashlib](https://docs.python.org/3/library/hashlib.html). The `HKDF`, `HMAC`, `Token` primitives, and the `PKCS7` padding function are always provided by the following internal implementations:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)

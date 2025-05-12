@@ -17,13 +17,12 @@
 <li>Ed25519 for signatures</li>
 <li>X22519 for ECDH key exchanges</li>
 <li>HKDF for key derivation</li>
-<li>AES-128 in CBC mode</li>
 <li>AES-256 in CBC mode</li>
 <li>HMAC-SHA256 for message authentication</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>In the default installation configuration, the <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> and <code>AES-256-CBC</code> primitives are provided by <a href="https://www.openssl.org/">OpenSSL</a> (via the <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> package). The hashing functions <code>SHA-256</code> and <code>SHA-512</code> are provided by the standard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. The <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> primitives, and the <code>PKCS7</code> padding function are always provided by the following internal implementations:</p>
+<p>In the default installation configuration, the <code>X25519</code>, <code>Ed25519</code> and <code>AES-256-CBC</code> primitives are provided by <a href="https://www.openssl.org/">OpenSSL</a> (via the <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> package). The hashing functions <code>SHA-256</code> and <code>SHA-512</code> are provided by the standard Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. The <code>HKDF</code>, <code>HMAC</code>, <code>Token</code> primitives, and the <code>PKCS7</code> padding function are always provided by the following internal implementations:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>

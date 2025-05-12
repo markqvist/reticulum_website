@@ -4,13 +4,12 @@ Reticulumは、効率的で強力かつ現代的な暗号プリミティブの�
 - 署名用のEd25519
 - ECDH鍵交換用のX22519
 - 鍵導出用のHKDF
-- CBCモードでのAES-128
 - CBCモードでのAES-256
 - メッセージ認証用のHMAC-SHA256
 - SHA-256
 - SHA-512
 
-デフォルトのインストール構成では、`X25519`、`Ed25519`、`AES-128-CBC`、および`AES-256-CBC`のプリミティブは[OpenSSL](https://www.openssl.org/)（[PyCA/cryptography](https://github.com/pyca/cryptography)パッケージを介して）によって提供されます。ハッシュ関数`SHA-256`および`SHA-512`は、標準のPython [hashlib](https://docs.python.org/3/library/hashlib.html)によって提供されています。`HKDF`、`HMAC`、`Token`プリミティブ、および`PKCS7`パディング関数は、常に次の内部実装によって提供されます：
+デフォルトのインストール構成では、`X25519`、`Ed25519`、および`AES-256-CBC`のプリミティブは[OpenSSL](https://www.openssl.org/)（[PyCA/cryptography](https://github.com/pyca/cryptography)パッケージを介して）によって提供されます。ハッシュ関数`SHA-256`および`SHA-512`は、標準のPython [hashlib](https://docs.python.org/3/library/hashlib.html)によって提供されています。`HKDF`、`HMAC`、`Token`プリミティブ、および`PKCS7`パディング関数は、常に次の内部実装によって提供されます：
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)

@@ -4,13 +4,12 @@ Reticulum maakt gebruik van een eenvoudige reeks efficiënte, sterke en moderne 
 - Ed25519 voor handtekeningen
 - X22519 voor ECDH-sleuteluitwisselingen
 - HKDF voor sleutelafleiding
-- AES-128 in CBC-modus
 - AES-256 in CBC-modus
 - HMAC-SHA256 voor berichtauthenticatie
 - SHA-256
 - SHA-512
 
-In de standaard installatieconfiguratie worden de primitieven `X25519`, `Ed25519`, `AES-256-CBC` en `AES-128-CBC` geleverd door [OpenSSL](https://www.openssl.org/) (via het [PyCA/cryptography](https://github.com/pyca/cryptography) pakket). De hashfuncties `SHA-256` and `SHA-512` worden geleverd door de standaard Python [hashlib](https://docs.python.org/3/library/hashlib.html). De `HKDF`, `HMAC`, `Token` primitieven en de `PKCS7` opvullingsfunctie worden altijd geleverd door de volgende interne implementaties:
+In de standaard installatieconfiguratie worden de primitieven `X25519`, `Ed25519` en `AES-256-CBC` geleverd door [OpenSSL](https://www.openssl.org/) (via het [PyCA/cryptography](https://github.com/pyca/cryptography) pakket). De hashfuncties `SHA-256` and `SHA-512` worden geleverd door de standaard Python [hashlib](https://docs.python.org/3/library/hashlib.html). De `HKDF`, `HMAC`, `Token` primitieven en de `PKCS7` opvullingsfunctie worden altijd geleverd door de volgende interne implementaties:
 
 - [HKDF.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py)
 - [HMAC.py](https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py)

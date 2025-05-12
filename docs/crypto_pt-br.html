@@ -15,13 +15,12 @@
 <li>Ed25519 para assinaturas</li>
 <li>X22519 para trocas de chave ECDH</li>
 <li>HKDF para derivação de chaves</li>
-<li>AES-128 em modo CBC</li>
 <li>AES-256 em modo CBC</li>
 <li>HMAC-SHA256 para autenticação de mensagem</li>
 <li>SHA-256</li>
 <li>SHA-512</li>
 </ul>
-<p>Na configuração de instalação padrão, os primitivos <code>X25519</code>, <code>Ed25519</code>, <code>AES-128-CBC</code> e <code>AES-256-CBC</code> são fornecidos pela <a href="https://www.openssl.org/">OpenSSL</a> (pelo pacote <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> ). As funções de hash <code>SHA-256</code> e <code>SHA-512</code> são fornecidas pela biblioteca Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Os primitivos <code>HKDF</code>, <code>HMAC</code>, <code>Token</code>, e a função de preenchimento <code>PKCS7</code> são sempre fornecidas pelas seguintes implementações internas:</p>
+<p>Na configuração de instalação padrão, os primitivos <code>X25519</code>, <code>Ed25519</code> e <code>AES-256-CBC</code> são fornecidos pela <a href="https://www.openssl.org/">OpenSSL</a> (pelo pacote <a href="https://github.com/pyca/cryptography">PyCA/cryptography</a> ). As funções de hash <code>SHA-256</code> e <code>SHA-512</code> são fornecidas pela biblioteca Python <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a>. Os primitivos <code>HKDF</code>, <code>HMAC</code>, <code>Token</code>, e a função de preenchimento <code>PKCS7</code> são sempre fornecidas pelas seguintes implementações internas:</p>
 <ul>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HKDF.py">HKDF.py</a></li>
 <li><a href="https://github.com/markqvist/Reticulum/blob/master/RNS/Cryptography/HMAC.py">HMAC.py</a></li>
