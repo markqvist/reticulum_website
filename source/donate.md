@@ -16,5 +16,8 @@ You can help support the continued development of open, free and private communi
   0xae89F3B94fC4AD6563F0864a55F9a697a90261ff
   ```
   <br/><br/>
+- Liberapay<br/>
+  <a href="https://liberapay.com/Reticulum/">`https://liberapay.com/Reticulum/`</a>
+  <br/><br/>
 - Ko-Fi<br/>
   <a href="https://ko-fi.com/markqvist">`https://ko-fi.com/markqvist`</a>
