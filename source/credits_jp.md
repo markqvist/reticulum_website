@@ -16,7 +16,7 @@ Reticulumには他にも多くのモジュールやプロジェクトが含ま�
 - [Umsgpack.py](https://github.com/vsergeev/u-msgpack-python) by [Ivan A. Sergeev](https://github.com/vsergeev)
 - [Python](https://www.python.org)
 
-Reticulumのプロトコルデザインおよびリファレンス実装は、2014年から2025年までMark Qvistによって実施されました。
+Reticulumのプロトコルデザインおよびリファレンス実装は、2014年から2022年までMark Qvistによって実施されました。
 
 [ReticulumのPythonリファレンス実装](https://github.com/markqvist/reticulum)およびこのウェブサイトは、[Reticulumライセンス](license.html)の下でライセンスされています。継続的な開発をサポートするために、<a href="donate_jp.html">寄付</a>をお願いします。
 

@@ -16,7 +16,7 @@ Reticulum'a ait birçok diğer modül ve proje ya Reticulum'un bir parçasıdır
 - [Umsgpack.py](https://github.com/vsergeev/u-msgpack-python) by [Ivan A. Sergeev](https://github.com/vsergeev)
 - [Python](https://www.python.org)
 
-Reticulum'un protokol tasarımı ve referans uygulaması, 2014 ile 2025 yılları arasında Mark Qvist tarafından gerçekleştirildi.
+Reticulum'un protokol tasarımı ve referans uygulaması, 2014 ile 2022 yılları arasında Mark Qvist tarafından gerçekleştirildi.
 
 [Reticulum'un Python referans uygulaması](https://github.com/markqvist/reticulum) ve bu web sitesi [Reticulum Lisansı](license.html) altında lisanslanmıştır. Lütfen devam eden geliştirmeyi desteklemek için <a href="donate_tr.html">bağış</a> yapın.
 

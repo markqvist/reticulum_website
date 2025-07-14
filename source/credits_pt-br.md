@@ -16,7 +16,7 @@ Uma lista de outros modelos e projetos são parte disso ou utilizado no Reticulu
 - [Umsgpack.py](https://github.com/vsergeev/u-msgpack-python) por [Ivan A. Sergeev](https://github.com/vsergeev)
 - [Python](https://www.python.org)
 
-O design do protocolo e implementação de referência foram desenvolvidos entre 2014 e 2025 por Mark Qvist.
+O design do protocolo e implementação de referência foram desenvolvidos entre 2014 e 2022 por Mark Qvist.
 
 A [implementação Python referencial do Reticulum](https://github.com/markqvist/reticulum) e seu site utilizam a [licença Reticulum](https://reticulum.network/license.html). Por favor considere uma <a href="donate.html">doação</a>  para ajudar a continuar o projeto.
 
