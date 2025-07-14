@@ -16,7 +16,7 @@ Eine Reihe anderer Module und Projekte sind entweder Teil von Reticulum oder wer
 - [Umsgpack.py](https://github.com/vsergeev/u-msgpack-python) by [Ivan A. Sergeev](https://github.com/vsergeev)
 - [Python](https://www.python.org)
 
-Das Protokolldesign und die Referenzimplementierung für Reticulum wurden zwischen 2014 und 2022 von Mark Qvist durchgeführt.
+Das Protokolldesign und die Referenzimplementierung für Reticulum wurden zwischen 2014 und 2025 von Mark Qvist durchgeführt.
 
 Die [Python Referenzimplementierung von Reticulum](https://github.com/markqvist/reticulum) und diese Website ist lizenziert unter der [Reticulum License](license.html). Bitte <a href="donate_de.html">Spenden</a> sie zur Unterstützung der weiteren Entwicklung.
 

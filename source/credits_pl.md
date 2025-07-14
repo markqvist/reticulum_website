@@ -16,7 +16,7 @@ Wiele innych modułów i projektów jest częścią lub jest wykorzystywanych pr
 - [Umsgpack.py](https://github.com/vsergeev/u-msgpack-python) przez [Ivan A. Sergeev](https://github.com/vsergeev)
 - [Python](https://www.python.org)
 
-Projekt protokołu i wdrożenie referencyjne dla Reticulum zostało zrealizowane w latach 2014-2022 przez Marka Qvista.
+Projekt protokołu i wdrożenie referencyjne dla Reticulum zostało zrealizowane w latach 2014-2025 przez Mark Qvist.
 
 [Implementacja referencji dla języka Python](https://github.com/markqvist/reticulum) oraz ta strona są opubliowanie na [Licencji Reticulum](license.html). Proszę przekaż <a href="donate_pl.html">darowiznę</a>, żeby wesprzeć dalszy rozwój projektu.
 
