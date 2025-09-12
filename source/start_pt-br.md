@@ -2,11 +2,6 @@
 
 A melhor forma de começar com o framework Reticulum depende do que você quer fazer. para detalhes completos e exemplos, olhe na seção [Começo Rápido](manual/gettingstartedfast.html) do [Manual Reticulum](manual/index.html).
 
-## Software Experimental
-
-*Atenção!* Reticulum ainda está em beta, Isso significa que ele atualmente executa bem, muito estável, mesmo assim ainda pode ter bugs críticos e falhas no funcionamento, privacidade ou a segurança do sistema como um todo.
-Utilize o Reticulum se estiver confortável em relação a isso e entenda suas implicações.
-
 ## Comunidade e Ajuda
 
 Se você estiver com problemas ou se algo não estiver funcionando, aqui estão alguns ótimos lugares para pedir ajuda:
