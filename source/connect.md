@@ -38,6 +38,8 @@ You can connect your devices or instances to one or more of these to gain access
 
 Ideally, set up a Reticulum Transport Node that your own devices can reach locally, and then connect that transport node to a couple of public entrypoints. This will provide efficient connections and redundancy in case any of them go down.
 
+A full, up-to-date community edited list of entrypoints can be found [on the Reticulum wiki](https://github.com/markqvist/Reticulum/wiki/Community-Node-List).
+
 {PUBLIC_ENTRYPOINTS}
 
 <p align="right"><a href="docs.html">Next Topic: Read The Manual</a></p>
