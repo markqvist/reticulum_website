@@ -2,6 +2,12 @@ PUBLIC_ENTRYPOINTS = """```
 # These are community-provided public Reticulum
 # entrypoints available over the public Internet.
 
+  [[RNS Testnet BetweenTheBorders]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
+
   [[Spaceman-ygg]]
     type = TCPClientInterface
     enabled = true

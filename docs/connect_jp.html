@@ -8,38 +8,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_jp.html">レチキュラム</a> | <a href="start_jp.html">開始</a> | <a href="hardware_jp.html">ハードウェア</a> | <a href="connect_jp.html">接続する</a> | <a href="docs_jp.html">マニュアル</a> | <a href="crypto_jp.html">暗号</a> | <a href="credits_jp.html">クレジット</a> | <a href="https://github.com/markqvist/reticulum">ソース</a> | <a href="donate_jp.html">寄付</a></div></center></p>
-<h1>パブリックテストネット</h1>
-<p>物理的なネットワークを構築せずに実験を始めたい場合は、パブリックレティキュラムテストネットに参加してください。テストネットはまさにそれであり、テストと実験のための非公式なネットワークです。ほとんどの時間稼働しており、誰でも参加できますが、それは同時にサービスの可用性に対する保証がないことも意味します。</p>
-<p>テストネットは最新のレティキュラムのバージョンを実行しており（公開される前の短い期間でもあることがよくあります）、時折実験的なレティキュラムのバージョンがテストネット上のノードに展開されることがあり、それにより奇妙な動作が発生する可能性があります。それでも怖くない場合は、TCPまたはI2Pを使用してテストネットに参加できます。</p>
-<p>次のいずれかのインターフェースをReticulumの設定ファイルに追加してください：</p>
-<pre><code># Dublin HubへのTCP/IPインターフェース
-  [[RNS Testnet Dublin]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = dublin.connect.reticulum.network
-    target_port = 4965
+<center><div class="top_menu lang_menu">[Deutsch](./connect_de.html) | [English](./connect.html) | [Español](./connect_es.html) | [Nederlands](./connect_nl.html) | [Polski](./connect_pl.html) | [Português](./connect_pt-br.html) | [Türkçe](./connect_tr.html) | [Українська](./connect_uk.html) | [日本語](./connect_jp.html) | [简体中文](./connect_zh-cn.html)</div><div class="top_menu">[レチキュラム](index_jp.html) | [開始](start_jp.html) | [ハードウェア](hardware_jp.html) | [接続する](connect_jp.html) | [マニュアル](docs_jp.html) | [暗号](crypto_jp.html) | [クレジット](credits_jp.html) | [ソース](https://github.com/markqvist/reticulum) | [寄付](donate_jp.html)</div></center>
 
-# BetweenTheBorders HubへのTCP/IPインターフェース（コミュニティ提供）
+<h1>コミュニティ エントリポイント</h1>
+<p>コミュニティによって、Reticulum ネットワークへの公開エントリポイントが多数提供されています。日常的な使用には、テストネットではなくこれらを使用することをお勧めします。</p>
+<p>デバイスまたはインスタンスをこれらの 1 つ以上のエントリポイントに接続して、物理的に接続されている Reticulum ネットワークにアクセスできます。</p>
+<p>理想的には、自分のデバイスがローカルでアクセスできる Reticulum トランスポート ノードを設定し、そのトランスポート ノードをいくつかのパブリック エントリポイントに接続します。これにより、いずれかのエントリポイントがダウンした場合でも、効率的な接続と冗長性が提供されます。</p>
+<pre><code># These are community-provided public Reticulum
+# entrypoints available over the public Internet.
+
   [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
     target_host = reticulum.betweentheborders.com
     target_port = 4242
 
-# I2P Hub Aへのインターフェース
-  [[RNS Testnet I2P Hub A]]
-    type = I2PInterface
-    enabled = yes
-    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
-</code></pre>
-<p>テストネットには<a href="https://github.com/markqvist/nomadnet">Nomad Network</a>ノードおよび<a href="https://github.com/markqvist/lxmf">LXMF</a>伝播ノードも含まれています。</p>
-<h1>コミュニティ エントリポイント</h1>
-<p>コミュニティによって、Reticulum ネットワークへの公開エントリポイントが多数提供されています。日常的な使用には、テストネットではなくこれらを使用することをお勧めします。</p>
-<p>デバイスまたはインスタンスをこれらの 1 つ以上のエントリポイントに接続して、物理的に接続されている Reticulum ネットワークにアクセスできます。</p>
-<p>理想的には、自分のデバイスがローカルでアクセスできる Reticulum トランスポート ノードを設定し、そのトランスポート ノードをいくつかのパブリック エントリポイントに接続します。これにより、いずれかのエントリポイントがダウンした場合でも、効率的な接続と冗長性が提供されます。</p>
-<pre><code># These are community-provided public Reticulum entrypoints
-# served over TCP, and available over the public Internet.
+  [[Spaceman-ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
+    target_port = 4343
 
   [[Sydney RNS]]
     type = TCPClientInterface

@@ -8,38 +8,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<p><center><div class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><div class="top_menu"><a href="index_nl.html">Reticulum</a> | <a href="start_nl.html">Start</a> | <a href="hardware_nl.html">Hardware</a> | <a href="connect_nl.html">Sluit aan</a> | <a href="docs_nl.html">Handleiding</a> | <a href="crypto_nl.html">Kryptografie</a> | <a href="credits_nl.html">Dankwoord</a> | <a href="https://github.com/markqvist/reticulum">Broncode</a> | <a href="donate_nl.html">Doneren</a></div></center></p>
-<h1>Openbaar Testnet</h1>
-<p>Als je gewoon wilt beginnen met experimenteren zonder fysieke netwerken te bouwen, ben je van harte welkom om lid te worden van het Public Reticulum Testnet. Het testnet is precies dat: een informeel netwerk voor testen en experimenteren. Het zal het grootste deel van de tijd actief zijn en iedereen kan meedoen, maar het betekent ook dat er geen garanties zijn voor de beschikbaarheid van de service.</p>
-<p>Het testnet draait de allernieuwste versie van Reticulum (vaak zelfs kort voordat deze publiekelijk wordt vrijgegeven). Soms kunnen experimentele versies van Reticulum worden ingezet op knooppunten op het testnet, wat betekent dat er vreemd gedrag kan optreden. Als dit u allemaal niet afschrikt, kunt u zich via TCP of I2P bij het testnet aansluiten.</p>
-<p>Voeg gewoon een van de volgende interfaces toe aan uw Reticulum-configuratiebestand:</p>
-<pre><code># TCP/IP interface to the Dublin Hub
-  [[RNS Testnet Dublin]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = dublin.connect.reticulum.network
-    target_port = 4965
+<center><div class="top_menu lang_menu">[Deutsch](./connect_de.html) | [English](./connect.html) | [Español](./connect_es.html) | [Nederlands](./connect_nl.html) | [Polski](./connect_pl.html) | [Português](./connect_pt-br.html) | [Türkçe](./connect_tr.html) | [Українська](./connect_uk.html) | [日本語](./connect_jp.html) | [简体中文](./connect_zh-cn.html)</div><div class="top_menu">[Reticulum](index_nl.html) | [Start](start_nl.html) | [Hardware](hardware_nl.html) | [Sluit aan](connect_nl.html) | [Handleiding](docs_nl.html) | [Kryptografie](crypto_nl.html) | [Dankwoord](credits_nl.html) | [Broncode](https://github.com/markqvist/reticulum) | [Doneren](donate_nl.html)</div></center>
 
-# TCP/IP interface to the BetweenTheBorders Hub (door de gemeenschap geleverd)
+<h1>Community Entrypoints</h1>
+<p>De community heeft een aantal openbaar beschikbare entrypoints voor Reticulum-netwerken geleverd. Voor dagelijks gebruik is het raadzaam om deze te gebruiken in plaats van het testnet.</p>
+<p>U kunt uw apparaten of instanties verbinden met een of meer van deze om toegang te krijgen tot alle Reticulum-netwerken waarmee ze fysiek verbonden zijn.</p>
+<p>Idealiter stelt u een Reticulum Transport Node in die uw eigen apparaten lokaal kunnen bereiken en verbindt u die transport node vervolgens met een aantal openbare entrypoints. Dit zorgt voor efficiënte verbindingen en redundantie in het geval dat een van hen uitvalt.</p>
+<pre><code># These are community-provided public Reticulum
+# entrypoints available over the public Internet.
+
   [[RNS Testnet BetweenTheBorders]]
     type = TCPClientInterface
     enabled = yes
     target_host = reticulum.betweentheborders.com
     target_port = 4242
 
-# Interface to I2P Hub A
-  [[RNS Testnet I2P Hub A]]
-    type = I2PInterface
-    enabled = yes
-    peers = g3br23bvx3lq5uddcsjii74xgmn6y5q325ovrkq2zw2wbzbqgbuq.b32.i2p
-</code></pre>
-<p>Het testnet bevat ook een aantal <a href="https://github.com/markqvist/nomadnet">Nomad Network</a> knooppunten en <a href="https://github.com/markqvist/lxmf">LXMF</a> propagatieknooppunten.</p>
-<h1>Community Entrypoints</h1>
-<p>De community heeft een aantal openbaar beschikbare entrypoints voor Reticulum-netwerken geleverd. Voor dagelijks gebruik is het raadzaam om deze te gebruiken in plaats van het testnet.</p>
-<p>U kunt uw apparaten of instanties verbinden met een of meer van deze om toegang te krijgen tot alle Reticulum-netwerken waarmee ze fysiek verbonden zijn.</p>
-<p>Idealiter stelt u een Reticulum Transport Node in die uw eigen apparaten lokaal kunnen bereiken en verbindt u die transport node vervolgens met een aantal openbare entrypoints. Dit zorgt voor efficiënte verbindingen en redundantie in het geval dat een van hen uitvalt.</p>
-<pre><code># These are community-provided public Reticulum entrypoints
-# served over TCP, and available over the public Internet.
+  [[Spaceman-ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
+    target_port = 4343
 
   [[Sydney RNS]]
     type = TCPClientInterface
