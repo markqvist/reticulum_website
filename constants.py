@@ -1,6 +1,12 @@
 PUBLIC_ENTRYPOINTS = """```
-# These are community-provided public Reticulum entrypoints
-# served over TCP, and available over the public Internet.
+# These are community-provided public Reticulum
+# entrypoints available over the public Internet.
+
+  [[Spaceman-ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
+    target_port = 4343
 
   [[Sydney RNS]]
     type = TCPClientInterface
