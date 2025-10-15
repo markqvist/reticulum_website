@@ -14,147 +14,132 @@ PUBLIC_ENTRYPOINTS = """```
     target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
     target_port = 4343
 
-  [[Sydney RNS]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = sydney.reticulum.au
-    target_port = 4242    
-
-  [[dismails TCP Interface]]
+  [[acehoss]]
     type = TCPClientInterface
     interface_enabled = true
-    target_host = rns.dismail.de
-    target_port = 7822
-
-  [[interloper node]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = intr.cx
+    target_host = rns.acehoss.net
     target_port = 4242
-
-  [[noDNS1]]                                                                                                                                                                                    │
-    type = TCPClientInterface                                                                                                                                                                 │
-    interface_enabled = true                                                                                                                                                                  │
-    target_host = 202.61.243.41                                                                                                                                                               │
-    target_port = 4965
-
-  [[The Outpost]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = theoutpost.life
-    target_port = 4242
-
   [[Beleth RNS Hub]]
     type = TCPClientInterface
     interface_enabled = true
     target_host = rns.beleth.net
     target_port = 4242
-
-  [[Rocket Tech Hub]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.rocket-tech.net
-    target_port = 443
-
-  [[SparkN0de]]
+  [[FireZen]]
     type = TCPClientInterface
     interface_enabled = true
-    target_host = aspark.uber.space
-    target_port = 44860
-
-  [[Tidudanka.com]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.tidudanka.com
-    target_port = 37500
-
-  [[quad4net tcp]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
+    target_host = firezen.com
     target_port = 4242
-
-  [[nisa-node]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = nisa.cat
-    target_port = 4242
-
-  [[acehoss]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.acehoss.net
-    target_port = 4242
-
-  [[RNS Testnet StoppedCold]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.stoppedcold.com
-    target_port = 4242
-
-  [[RNS COMSEC-RD]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = 80.78.23.249
-    target_port = 4242
-
-  [[R-Net TCP]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = istanbul.reserve.network
-    target_port = 9034
-
-  [[RNS TCP Node Germany 001]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[RNS TCP Node Germany 002]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 193.26.158.230
-    target_port = 4965
-
-  [[Quortal TCP Node]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = reticulum.qortal.link
-    target_port = 4242
-
-  [[mobilefabrik TCP]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = phantom.mobilefabrik.com
-    target_port = 4242
-
   [[g00n.cloud Hub]]
     type = TCPClientInterface
-    enabled = true
+    interface_enabled = true
     target_host = dfw.us.g00n.cloud
     target_port = 6969
-
+  [[interloper node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = intr.cx
+    target_port = 4242
+  [[Jon's Node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.jlamothe.net
+    target_port = 4242
+  [[mobilefabrik TCP]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = phantom.mobilefabrik.com
+    target_port = 4242
+  [[noDNS1]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 202.61.243.41
+    target_port = 4965
+  [[noDNS2]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 193.26.158.230
+    target_port = 4965
+  [[NomadNode SEAsia TCP]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.jaykayenn.net
+    target_port = 4242
+  [[ON6ZQ]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.on6zq.be
+    target_port = 4965
+  [[quad4net tcp]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.quad4.io
+    target_port = 4242
+  [[Quortal TCP Node]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.qortal.link
+    target_port = 4242
+  [[R-Net TCP]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = istanbul.reserve.network
+    target_port = 9034
+  [[RNS bnZ-NODE01]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = node01.rns.bnz.se
+    target_port = 4242
+  [[RNS COMSEC-RD]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 80.78.23.249
+    target_port = 4242
+  [[RNS HAM RADIO]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 135.125.238.229
+    target_port = 4242
+  [[RNS Testnet StoppedCold]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = rns.stoppedcold.com
+    target_port = 4242
   [[RNS_Transport_US-East]]
     type = TCPClientInterface
     interface_enabled = true
     target_host = 45.77.109.86
     target_port = 4965
-
-  [[rothbard_RNS_transport_ZA]]
+  [[rtclm.de]]
     type = TCPClientInterface
-    enabled = true
-    target_host = rothbard.lab.networks.deavmi.assigned.network
+    interface_enabled = true
+    target_host = rtclm.de
     target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_ygg]]
+  [[SparkN0de]]
     type = TCPClientInterface
-    enabled = true
-    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
+    interface_enabled = true
+    target_host = aspark.uber.space
+    target_port = 44860
+  [[Sydney RNS]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = sydney.reticulum.au
     target_port = 4242
+  [[Tidudanka.com]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = reticulum.tidudanka.com
+    target_port = 37500
+
+# Community-provided I2P and Yggdrasil entrypoints
 
   [[rothbard_RNS_transport_ZA_i2p]]
     type = I2PInterface
     enabled = true
     peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
+  [[rothbard_RNS_transport_ZA_ygg]]
+    type = TCPClientInterface
+    enabled = true
+    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
+    target_port = 4242
 ```
 """
