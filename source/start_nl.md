@@ -1,9 +1,6 @@
 # Begin
 De beste manier om aan de slag te gaan met de Reticulum Network Stack hangt af van wat jij wilt doen. Voor volledige details en voorbeelden, kijk eens naar de sectie [Snel aan de slag](manual/gettingstartedfast.html) van de [Reticulum Manual](manual/index.html).
 
-## Experimentele software
-*Let op!* Reticulum is nog steeds in bèta. Dit betekent dat, hoewel het al heel goed werkt en zeer stabiel is, er nog steeds kritieke bugs of tekortkomingen kunnen zijn in het gedrag, de privacy of de veiligheid van het systeem als geheel. Gebruik Reticulum als u zich hier prettig bij voelt en de implicaties begrijpt.
-
 ## Hulp van de gemeenschap
 
 Als u problemen ondervindt of als iets niet werkt, zijn hier enkele goede plaatsen waar u om hulp kunt vragen:
