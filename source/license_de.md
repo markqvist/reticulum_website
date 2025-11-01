@@ -1,23 +1,31 @@
 ```
-MIT Lizenz
+Reticulum License
 
-Copyright (c) 2016-2024 Mark Qvist / unsigned.io
+Copyright (c) 2016-2025 Mark Qvist
 
-Hiermit wird jeder Person, die eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erwirbt, die kostenlose Erlaubnis erteilt
-dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erhält, das Recht
-der Software ohne Einschränkung zu handeln, einschließlich und ohne Einschränkung der Rechte
-zu nutzen, zu kopieren, zu modifizieren, zusammenzuführen, zu veröffentlichen, zu vertreiben, zu unterlizenzieren und/oder zu verkaufen
-der Software zu nutzen, zu kopieren, zu modifizieren, zu veröffentlichen, zu vertreiben, zu unterlizenzieren und/oder zu verkaufen, und
-zu erlauben, dies zu tun, vorbehaltlich der folgenden Bedingungen:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Der obige Copyright-Hinweis und dieser Genehmigungshinweis müssen in allen Kopien oder wesentlichen Teilen der Software enthalten sein.
-Kopien oder wesentlichen Teilen der Software enthalten sein.
+- The Software shall not be used in any kind of system which includes amongst
+  its functions the ability to purposefully do harm to human beings.
 
-DIE SOFTWARE WIRD OHNE MÄNGELGEWÄHR UND OHNE JEGLICHE AUSDRÜCKLICHE ODER
-STILLSCHWEIGEND, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GARANTIE DER MARKTGÄNGIGKEIT,
-EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. IN KEINEM FALL SIND DIE
-DIE AUTOREN ODER URHEBERRECHTSINHABER FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER ANDERE
-HAFTUNG, SEI ES AUS VERTRAG, UNERLAUBTER HANDLUNG ODER ANDERWEITIG, DIE SICH AUS,
-AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER DEM SONSTIGEN UMGANG MIT DER
+- The Software shall not be used, directly or indirectly, in the creation of
+  an artificial intelligence, machine learning or language model training
+  dataset, including but not limited to any use that contributes to the
+  training or development of such a model or algorithm.
+
+- The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```

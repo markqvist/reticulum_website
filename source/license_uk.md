@@ -1,22 +1,31 @@
 ```
-MIT Ліцензія
+Reticulum License
 
-Авторські права (c) 2016-2024 Mark Qvist / unsigned.io
+Copyright (c) 2016-2025 Mark Qvist
 
-Цим надається безкоштовна ліцензія будь-якій особі, яка отримає копію
-цього програмного забезпечення та супутніх документаційних файлів ("Програмне забезпечення"), використовувати
-Програмне забезпечення без обмежень, зокрема, але не обмежуючись правами
-на використання, копіювання, модифікацію, об'єднання, публікацію, розповсюдження, надання ліцензії, і/або продаж
-копій Програмного забезпечення, а також дозволяти особам, яким надається це Програмне забезпечення, робити це, за умови дотримання наступних умов:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Усі копії або суттєві частини цього Програмного забезпечення повинні містити
-вище зазначене повідомлення про авторські права та це повідомлення про дозвіл.
+- The Software shall not be used in any kind of system which includes amongst
+  its functions the ability to purposefully do harm to human beings.
 
-ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ "ЯК Є", БЕЗ ЯКОЇ-НЕБУДЬ ГАРАНТІЇ, ВИРАЖЕНОЇ АБО
-НЕВИРАЖЕНОЇ, ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ГАРАНТІЯМИ ПРОДОВЖУВАННЯ,
-ПРИДАТНІСТЬ ДЛЯ ПЕВНОЇ МЕТИ ТА НЕПОРУШЕННЯ ПРАВ. В ЖОДНОМУ ВИПАДКУ
-АВТОРИ АБО ВОЛОДІЛІ РОБОТОМ НЕ НЕСУТЬ ВІДПОВІДАЛЬНІСТЬ ЗА ЯКІ-БУДЬ
-СКАРГИ, ШКОДИ АБО ІНШІ ЗОБОВ'ЯЗАННЯ, ЯК У РАМКАХ ДОГОВОРУ, ДЕЛІКТУ АБО ІНШОГО, ЩО ВИНИКАЮТЬ З,
-АБО У ЗВ'ЯЗКУ З ПРОГРАМНИМ ЗАБЕЗПЕЧЕННЯМ, ЙОГО ВИКОРИСТАННЯМ АБО ІНШИМИ ДІЯМИ У
-ПОРОДЖЕННІ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ.
+- The Software shall not be used, directly or indirectly, in the creation of
+  an artificial intelligence, machine learning or language model training
+  dataset, including but not limited to any use that contributes to the
+  training or development of such a model or algorithm.
+
+- The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
