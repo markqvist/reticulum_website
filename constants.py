@@ -32,10 +32,10 @@ PUBLIC_ENTRYPOINTS = """```
     target_host = intr.cx
     target_port = 4242
 
-  [[noDNS1]]                                                                                                                                                                                    │
-    type = TCPClientInterface                                                                                                                                                                 │
-    interface_enabled = true                                                                                                                                                                  │
-    target_host = 202.61.243.41                                                                                                                                                               │
+  [[noDNS1]]
+    type = TCPClientInterface
+    interface_enabled = true
+    target_host = 202.61.243.41
     target_port = 4965
 
   [[The Outpost]]

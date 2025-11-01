@@ -2,3 +2,4 @@ build.env
 ./build/*
 ./build
 build
+__pycache__
