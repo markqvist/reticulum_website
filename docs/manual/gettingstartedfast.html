@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Getting Started Fast - Reticulum Network Stack 1.0.1 documentation</title>
+        <title>Getting Started Fast - Reticulum Network Stack 1.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.0.1 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.0.3 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.0.1 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.0.3 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -274,7 +274,7 @@ of your system with a command like <code class="docutils literal notranslate"><s
 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pamac</span> <span class="pre">install</span> <span class="pre">python-pip</span></code> or similar.</p>
 <p>You can also dowload the Reticulum release wheels from GitHub, or other release channels,
 and install them offline using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>./rns-1.0.1-py3-none-any.whl
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>./rns-1.0.2-py3-none-any.whl
 </pre></div>
 </div>
 <p>On platforms that limit user package installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you may need to manually
@@ -372,8 +372,8 @@ the Nomad Network program.</p>
 <section id="meshchat">
 <h3>MeshChat<a class="headerlink" href="#meshchat" title="Link to this heading">¶</a></h3>
 <p>The <a class="reference external" href="https://github.com/liamcottle/reticulum-meshchat">Reticulum MeshChat</a> application
-is a user-friendly LXMF client for macOS and Windows, that also includes voice call
-functionality, and a range of other interesting functions.</p>
+is a user-friendly LXMF client for Linux, macOS and Windows, that also includes a Nomad Network
+page browser and other interesting functionality.</p>
 <a class="reference external image-reference" href="_images/meshchat_1.webp"><img alt="_images/meshchat_1.webp" class="align-center" src="_images/meshchat_1.webp" />
 </a>
 <p>Reticulum MeshChat is of course also compatible with Sideband and Nomad Network, or
@@ -422,12 +422,15 @@ and <a class="reference internal" href="interfaces.html#interfaces-main"><span c
 </section>
 <section id="connecting-reticulum-instances-over-the-internet">
 <h2>Connecting Reticulum Instances Over the Internet<a class="headerlink" href="#connecting-reticulum-instances-over-the-internet" title="Link to this heading">¶</a></h2>
-<p>Reticulum currently offers two interfaces suitable for connecting instances over the Internet: <a class="reference internal" href="interfaces.html#interfaces-tcps"><span class="std std-ref">TCP</span></a>
+<p>Reticulum currently offers three interfaces suitable for connecting instances over the Internet: <a class="reference internal" href="interfaces.html#interfaces-backbone"><span class="std std-ref">Backbone</span></a>, <a class="reference internal" href="interfaces.html#interfaces-tcps"><span class="std std-ref">TCP</span></a>
 and <a class="reference internal" href="interfaces.html#interfaces-i2p"><span class="std std-ref">I2P</span></a>. Each interface offers a different set of features, and Reticulum
 users should carefully choose the interface which best suites their needs.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">TCPServerInterface</span></code> allows users to host an instance accessible over TCP/IP. This
 method is generally faster, lower latency, and more energy efficient than using <code class="docutils literal notranslate"><span class="pre">I2PInterface</span></code>,
 however it also leaks more data about the server host.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BackboneInterface</span></code> is a very fast and efficient interface type available on POSIX operating
+systems, designed to handle many hundreds of connections simultaneously with low memory, processing
+and I/O overhead. It is fully compatible with the TCP-based interface types.</p>
 <p>TCP connections reveal the IP address of both your instance and the server to anyone who can
 inspect the connection. Someone could use this information to determine your location or identity. Adversaries
 inspecting your packets may be able to record packet metadata like time of transmission and packet size.
@@ -1037,7 +1040,7 @@ All other available modules will still be loaded when needed.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=292eb321"></script>
+</div><script src="_static/documentation_options.js?v=baaebd52"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
