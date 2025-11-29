@@ -2,11 +2,6 @@
 La mejor manera de empezar a usar el protocolo Reticulum depende de qué
 quieras hacer. Para más detalles y ejemplos, consulte la sección [Empezar rapidito](manual/gettingstartedfast.html) del [Manual de Reticulum](manual/index.html).
 
-## Software experimental
-**¡A saber!** Reticulum todavía está en fase beta. Esto significa que, aunque ya funciona muy bien y es muy estable, es muy
-posible que todavía haya errores o fallos críticos en el comportamiento, la privacidad o la seguridad del sistema en su conjunto.
-Utilice Reticulum si se siente cómodo con esto y comprende las implicaciones.
-
 ## Comunidad y Soporte
 
 Si estás teniendo algún problema o algo no está funcionando, estos son algunos excelentes lugares para pedir ayuda:

@@ -1,9 +1,6 @@
 # Hoş Geldiniz
 Reticulum Ağı ile başlamanın en iyi yolu, ne yapmak istediğinize bağlıdır. Tam detaylar ve örnekler için [Hızlı Başlangıç](manual/gettingstartedfast.html) bölümüne [Reticulum Kılavuzu](manual/index.html)'nda göz atın.
 
-## Deneysel Yazılım
-*Dikkat!* Reticulum hala beta aşamasındadır. Şu an çok iyi çalışsa ve çok stabil olsa da, sistemde genel olarak kritik hatalar veya eksiklikler olabilir. Reticulum'u kullanıyorsanız buna rahatlıkla uyum sağlıyorsanız ve sonuçların ne anlama geldiğini anlıyorsanız kullanın.
-
 ## Topluluk ve Destek
 Eğer sorun yaşarsanız veya bir şey çalışmıyorsa, yardım istemek için harika yerler şunlar:
 
