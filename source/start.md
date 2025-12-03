@@ -10,7 +10,7 @@ you want to do. For full details and examples, have a look at the [Getting Start
 If you are having trouble, or if something is not working, here are some great places to ask for help:
 
 - The [discussion forum](https://github.com/markqvist/Reticulum/discussions) on GitHub
-- The [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) at `#reticulum:matrix.org`
+- The [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) at `#reticulum:matrix.org` and the [Reticulum Matrix Space](https://matrix.to/#/#rns:matrix.org).
 - The [Reticulum subreddit](https://reddit.com/r/reticulum)
 
 ## Installation
