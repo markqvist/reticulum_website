@@ -10,7 +10,6 @@
 
 - [Reticulum Github 讨论区](https://github.com/markqvist/Reticulum/discussions)
 - [Reticulum Matrix 群组](https://matrix.to/#/#reticulum:matrix.org)（`#reticulum:matrix.org`）
-- [Reticulum Reddit 讨论版](https://reddit.com/r/reticulum)
 
 ## 安装
 安装 Reticulum 及其相关工具最简单的方式是使用 pip：

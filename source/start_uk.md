@@ -10,7 +10,6 @@
 
 - [Форум обговорень](https://github.com/markqvist/Reticulum/discussions) на GitHub
 - [Канал Reticulum у Matrix](https://matrix.to/#/#reticulum:matrix.org) на `#reticulum:matrix.org`
-- [Subreddit Reticulum](https://reddit.com/r/reticulum)
 
 ## Встановлення
 Для встановлення Reticulum та супутніх утиліт на вашу систему найпростішим способом є використання pip:

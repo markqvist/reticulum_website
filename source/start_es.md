@@ -13,7 +13,6 @@ Si estás teniendo algún problema o algo no está funcionando, estos son alguno
 
 - El [foro de discusión](https://github.com/markqvist/Reticulum/discussions) en Github
 - El [Canal de Reticulum en Matrix](https://matrix.to/#/#reticulum:matrix.org) en `#reticulum:matrix.org`
-- El [Subreddit de Reticulum](https://reddit.com/r/reticulum)
 
 ## Instalación
 Para instalar reticulum y utilidades relacionadas, la forma más fácil es usando pip:

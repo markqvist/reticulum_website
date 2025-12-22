@@ -9,7 +9,6 @@ Eğer sorun yaşarsanız veya bir şey çalışmıyorsa, yardım istemek için h
 
 - [GitHub'daki tartışma forumu](https://github.com/markqvist/Reticulum/discussions)
 - `#reticulum:matrix.org` üzerinden [Reticulum Matrix Kanalı](https://matrix.to/#/#reticulum:matrix.org)
-- [Reticulum subreddit'i](https://reddit.com/r/reticulum)
 
 ## Kurulum
 Sisteminize Reticulum'u ve ilgili araçları kurmanın en kolay yolu `pip` kullanmaktır:

@@ -10,7 +10,6 @@ Als u problemen ondervindt of als iets niet werkt, zijn hier enkele goede plaats
 
 - Het [discussieforum](https://github.com/markqvist/Reticulum/discussions) op GitHub
 - Het [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) op `#reticulum:matrix.org`
-- De [Reticulum-subreddit](https://reddit.com/r/reticulum)
 
 ## Installatie
 Om Reticulum en gerelateerde hulpprogramma's op uw systeem te installeren, is de eenvoudigste manier via pip:

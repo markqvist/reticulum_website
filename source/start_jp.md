@@ -9,7 +9,6 @@ Reticulum Network Stackを始める最良の方法は、行いたいことによ
 
 - GitHubの[discussion forum](https://github.com/markqvist/Reticulum/discussions)
 - [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org)の`#reticulum:matrix.org`
-- [Reticulum subreddit](https://reddit.com/r/reticulum)
 
 ## インストール
 システムにReticulumおよび関連ユーティリティをインストールする最も簡単な方法は、pipを使用することです：

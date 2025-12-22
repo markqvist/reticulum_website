@@ -13,7 +13,6 @@ Se você estiver com problemas ou se algo não estiver funcionando, aqui estão 
 
 - O [fórum de discussão](https://github.com/markqvist/Reticulum/discussions) no GitHub
 - O canal da [Matrix do Retículum](https://matrix.to/#/#reticulum:matrix.org) em `#reticulum:matrix.org`
-- O [subreddit Reticulum](https://reddit.com/r/reticulum)
 
 ## Instalação
 

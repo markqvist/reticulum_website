@@ -11,7 +11,6 @@ Jeśli masz problemy lub coś nie działa, oto kilka świetnych miejsc, w który
 
 - [Forum dyskusyjne](https://github.com/markqvist/Reticulum/discussions) na GitHubie
 - Kanał [Matrix Reticulum](https://matrix.to/#/#reticulum:matrix.org) pod `#reticulum:matrix.org`
-- [Subreddit Reticulum](https://reddit.com/r/reticulum)
 
 ## Instalacja
 Najprostszym sposobem, żeby zainstalować Reticulum i powiązane narzędzia jest przy wykorzystanie pip:

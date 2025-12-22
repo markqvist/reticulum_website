@@ -10,7 +10,6 @@ Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gu
 
 - Das [Diskussionsforum](https://github.com/markqvist/Reticulum/discussions) auf GitHub
 - Der [Reticulum-Matrixkanal](https://matrix.to/#/#reticulum:matrix.org) bei `#reticulum:matrix.org`
-- Der [Reticulum-Subreddit](https://reddit.com/r/reticulum)
 
 ## Installation
 Der einfachste Weg, Reticulum und zugehörige Dienstprogramme auf Ihrem System zu installieren, ist über pip:
