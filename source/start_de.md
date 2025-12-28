@@ -2,9 +2,6 @@
 Wie Sie am besten mit dem Reticulum Network Stack beginnen, hängt davon ab, was
 Sie durchführen möchten. Ausführliche Informationen und Beispiele finden Sie im Abschnitt [Schneller Einstieg](manual/gettingstartedfast.html) des [Reticulum-Handbuchs](manual/index.html).
 
-## Experimentelle Software
-*Bitte beachten Sie!* Reticulum befindet sich noch im Beta-Stadium. Das bedeutet, dass es zwar bereits sehr gut funktioniert und sehr stabil ist, es aber durchaus noch kritische Fehler oder Schwachstellen im Verhalten, im Datenschutz oder in der Sicherheit des gesamten Systems geben kann. Verwenden Sie Reticulum nur, wenn Sie damit einverstanden sind und die Auswirkungen verstehen.
-
 ## Gemeinschaft & Unterstützung
 Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gute Stellen, an denen Sie um Hilfe bitten können:
 

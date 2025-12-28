@@ -2,12 +2,9 @@
 The best way to get started with the Reticulum Network Stack depends on what
 you want to do. For full details and examples, have a look at the [Getting Started Fast](manual/gettingstartedfast.html) section of the [Reticulum Manual](manual/index.html).
 
-## Experimental Software
-*Please Know!* Reticulum is still in beta. This means, that while it already works very well, and is very stable, there could very well still be critical bugs or flaws in the behaviour, privacy or security of the system as a whole. Use Reticulum if you are comfortable with this, and understand the implications.
-
 ## Community & Support
 
-If you are having trouble, or if something is not working, here are some great places to ask for help:
+If you are having trouble, or if something is not working, here are some great places to search or ask for help:
 
 - The [discussion forum](https://github.com/markqvist/Reticulum/discussions) on GitHub
 - The [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) at `#reticulum:matrix.org`
