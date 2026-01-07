@@ -11,168 +11,23 @@
 <center>
 <p><span class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><span class="top_menu"><a href="index.html">Reticulum</a> | <a href="start.html">Start</a> | <a href="hardware.html">Hardware</a> | <a href="connect.html">Connect</a> | <a href="docs.html">Manual</a> | <a href="crypto.html">Cryptography</a> | <a href="credits.html">Credits</a> | <a href="https://github.com/markqvist/reticulum">Source</a> | <a href="donate.html">Donate</a></div></p>
 </center>
-<h1>Community Entrypoints</h1>
-<p>A number of publicly available entrypoints to Reticulum networks have been provided by the community. For everyday use, it is recommended to use these instead of the testnet.</p>
-<p>You can connect your devices or instances to one or more of these to gain access to any Reticulum networks they are physically connected to.</p>
-<p>Ideally, set up a Reticulum Transport Node that your own devices can reach locally, and then connect that transport node to a couple of public entrypoints. This will provide efficient connections and redundancy in case any of them go down.</p>
-<pre><code># These are community-provided public Reticulum
-# entrypoints available over the public Internet.
-
-  [[RNS Testnet BetweenTheBorders]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.betweentheborders.com
-    target_port = 4242
-
-  [[Spaceman-ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
-    target_port = 4343
-
-  [[Sydney RNS]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = sydney.reticulum.au
-    target_port = 4242    
-
-  [[dismails TCP Interface]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.dismail.de
-    target_port = 7822
-
-  [[interloper node]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = intr.cx
-    target_port = 4242
-
-  [[noDNS1]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[The Outpost]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = theoutpost.life
-    target_port = 4242
-
-  [[Beleth RNS Hub]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.beleth.net
-    target_port = 4242
-
-  [[Rocket Tech Hub]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.rocket-tech.net
-    target_port = 443
-
-  [[SparkN0de]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = aspark.uber.space
-    target_port = 44860
-
-  [[Tidudanka.com]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.tidudanka.com
-    target_port = 37500
-
-  [[quad4net tcp]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
-    target_port = 4242
-
-  [[nisa-node]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = nisa.cat
-    target_port = 4242
-
-  [[acehoss]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.acehoss.net
-    target_port = 4242
-
-  [[RNS Testnet StoppedCold]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.stoppedcold.com
-    target_port = 4242
-
-  [[RNS COMSEC-RD]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = 80.78.23.249
-    target_port = 4242
-
-  [[R-Net TCP]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = istanbul.reserve.network
-    target_port = 9034
-
-  [[RNS TCP Node Germany 001]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[RNS TCP Node Germany 002]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 193.26.158.230
-    target_port = 4965
-
-  [[Quortal TCP Node]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = reticulum.qortal.link
-    target_port = 4242
-
-  [[mobilefabrik TCP]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = phantom.mobilefabrik.com
-    target_port = 4242
-
-  [[g00n.cloud Hub]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = dfw.us.g00n.cloud
-    target_port = 6969
-
-  [[RNS_Transport_US-East]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 45.77.109.86
-    target_port = 4965
-
-  [[rothbard_RNS_transport_ZA]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = rothbard.lab.networks.deavmi.assigned.network
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_i2p]]
-    type = I2PInterface
-    enabled = true
-    peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
-</code></pre>
+<h1>Bootstrapping Connectivity</h1>
+<p>Reticulum is not a service you subscribe to, nor is it a single global network you “join”. It is a <em>networking stack</em>; a toolkit for building communications systems that align with your specific values, requirements, and operational environment. The way you choose to connect to other Reticulum peers is entirely your own choice.</p>
+<p>When you first start using Reticulum, you need a way to obtain connectivity with the peers you want to communicate with - the process of <em>bootstrapping connectivity</em>. Once you have obtained one or more valid interface definitions, you can add them to the <code>[interfaces]</code> section of your Reticulum configuration.</p>
+<p>This page provides the most basic overview, but to fully understand the flexibility and options available for bootstrapping connectivity, read the <a href="manual/gettingstartedfast.html#creating-a-network-with-reticulum">Bootstrapping Connectivity</a> section of the manual.</p>
+<h2>Connect to the Distributed Backbone</h2>
+<p>A global, distributed backbone of Reticulum Transport Nodes is being run by volunteers from around the world. This network constitutes a heterogenous collection of both public and private nodes that form an uncoordinated, voluntary inter-networking backbone that currently provides global transport and internetworking capabilities for Reticulum.</p>
+<p>A good place to find interface definitions for bootstrapping connectivity are community-run websites like <a href="https://directory.rns.recipes/">directory.rns.recipes</a> and <a href="https://rmap.world/">rmap.world</a>.</p>
+<p>Reticulum encourages the approach of <em>organic growth</em>. Instead of relying on permanent static connections to distant servers, you can use temporary bootstrap connections to continously <em>discover</em> more relevant or local infrastructure. Once discovered, your system can automatically form stronger, more direct links to these peers, and discard the temporary bootstrap links. This results in a web of connections that are geographically relevant, resilient and efficient.</p>
+<h2>Build Personal Infrastructure</h2>
+<p>We strongly encourage everyone, even home users, to think in terms of building <strong>personal infrastructure</strong>. Don’t connect every phone, tablet, and computer in your house directly to a public internet gateway. Instead, repurpose an old computer, a Raspberry Pi, or a supported router to act as your own, personal <strong>Transport Node</strong>:</p>
+<ul>
+<li>Your local Transport Node sits in your home, connected to your WiFi and perhaps a radio interface (like an RNode).</li>
+<li>You configure this node with a <code>bootstrap_only</code> interface (perhaps a TCP tunnel to a wider network) and enable interface discovery.</li>
+<li>While you sleep, work, or cook, your node listens to the network. It discovers other local community members, validates their Network Identities, and automatically establishes direct links.</li>
+<li>Your personal devices now connect to your <em>local</em> node, which is integrated into a living, breathing local mesh. Your traffic flows through local paths provided by other real people in the community rather than bouncing off a distant server.</li>
+</ul>
+<p><strong>Don’t wait for others to build the networks you want to see</strong>. Every network is important, perhaps even most so those that support individual families and persons. Once enough of this personal, local infrastructure exist, connecting them directly to each other, without traversing the public Internet, becomes inevitable.</p>
 <p align="right"><a href="docs.html">Next Topic: Read The Manual</a></p>
 </body>
 </html>

@@ -11,168 +11,23 @@
 <center>
 <p><span class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><span class="top_menu"><a href="index_zh-cn.html">Reticulum</a> | <a href="start_zh-cn.html">开始使用</a> | <a href="hardware_zh-cn.html">硬件要求</a> | <a href="connect_zh-cn.html">连接</a> | <a href="docs_zh-cn.html">阅读手册</a> | <a href="crypto_zh-cn.html">密码学</a> | <a href="credits_zh-cn.html">致谢</a> | <a href="https://github.com/markqvist/reticulum">源代码</a> | <a href="donate_zh-cn.html">支持开发</a></div></p>
 </center>
-<h1>社区入口点</h1>
-<p>社区提供了许多可公开访问的 Reticulum 网络入口点。对于日常使用，建议使用这些入口点而不是测试网。</p>
-<p>您可以将设备或实例连接到其中一个或多个入口点，以访问它们物理连接的任何 Reticulum 网络。</p>
-<p>理想情况下，设置一个您自己的设备可以在本地访问的 Reticulum 传输节点，然后将该传输节点连接到几个公共入口点。这将提供有效的连接和冗余，以防其中任何一个出现故障。</p>
-<pre><code># These are community-provided public Reticulum
-# entrypoints available over the public Internet.
-
-  [[RNS Testnet BetweenTheBorders]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.betweentheborders.com
-    target_port = 4242
-
-  [[Spaceman-ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
-    target_port = 4343
-
-  [[Sydney RNS]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = sydney.reticulum.au
-    target_port = 4242    
-
-  [[dismails TCP Interface]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.dismail.de
-    target_port = 7822
-
-  [[interloper node]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = intr.cx
-    target_port = 4242
-
-  [[noDNS1]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[The Outpost]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = theoutpost.life
-    target_port = 4242
-
-  [[Beleth RNS Hub]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.beleth.net
-    target_port = 4242
-
-  [[Rocket Tech Hub]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.rocket-tech.net
-    target_port = 443
-
-  [[SparkN0de]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = aspark.uber.space
-    target_port = 44860
-
-  [[Tidudanka.com]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.tidudanka.com
-    target_port = 37500
-
-  [[quad4net tcp]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
-    target_port = 4242
-
-  [[nisa-node]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = nisa.cat
-    target_port = 4242
-
-  [[acehoss]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.acehoss.net
-    target_port = 4242
-
-  [[RNS Testnet StoppedCold]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.stoppedcold.com
-    target_port = 4242
-
-  [[RNS COMSEC-RD]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = 80.78.23.249
-    target_port = 4242
-
-  [[R-Net TCP]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = istanbul.reserve.network
-    target_port = 9034
-
-  [[RNS TCP Node Germany 001]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[RNS TCP Node Germany 002]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 193.26.158.230
-    target_port = 4965
-
-  [[Quortal TCP Node]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = reticulum.qortal.link
-    target_port = 4242
-
-  [[mobilefabrik TCP]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = phantom.mobilefabrik.com
-    target_port = 4242
-
-  [[g00n.cloud Hub]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = dfw.us.g00n.cloud
-    target_port = 6969
-
-  [[RNS_Transport_US-East]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 45.77.109.86
-    target_port = 4965
-
-  [[rothbard_RNS_transport_ZA]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = rothbard.lab.networks.deavmi.assigned.network
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_i2p]]
-    type = I2PInterface
-    enabled = true
-    peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
-</code></pre>
+<h1>引导连接</h1>
+<p>Reticulum 不是您订阅的服务，也不是您"加入"的单一全球网络。它是一个<em>网络协议栈</em>；一个用于构建符合您的特定价值观、需求和操作环境的通信系统的工具包。您选择连接到其他 Reticulum 节点的方式完全由您自己决定。</p>
+<p>当您首次开始使用 Reticulum 时，您需要一种方法来与您想要通信的节点建立连接——这就是<em>引导连接</em>的过程。一旦您获得了一个或多个有效的接口定义，就可以将它们添加到 Reticulum 配置文件的 <code>[interfaces]</code> 部分。</p>
+<p>本页面提供了最基本的概述，但要充分理解引导连接的灵活性和可用选项，请阅读手册中的<a href="manual/gettingstartedfast.html#creating-a-network-with-reticulum">引导连接</a>部分。</p>
+<h2>连接到分布式主干网络</h2>
+<p>由来自世界各地的志愿者正在运行着一个全球性的 Reticulum 传输节点分布式主干网络。该网络由公共和私有节点组成的异构集合，形成了一个非协调的、自愿的互联网络主干，目前为 Reticulum 提供全球传输和互联能力。</p>
+<p>寻找引导连接的接口定义的好去处是社区运营的网站，如 <a href="https://directory.rns.recipes/">directory.rns.recipes</a> 和 <a href="https://rmap.world/">rmap.world</a>。</p>
+<p>Reticulum 鼓励<em>有机增长</em>的方法。与其依赖到远程服务器的永久静态连接，您可以使用临时引导连接来持续<em>发现</em>更相关或本地的基础设施。一旦发现，您的系统可以自动与这些节点建立更强、更直接的链接，并丢弃临时引导链接。这会形成一个地理位置相关、有弹性且高效的连接网络。</p>
+<h2>构建个人基础设施</h2>
+<p>我们强烈鼓励每个人，即使是家庭用户，也要从构建<strong>个人基础设施</strong>的角度思考。不要将家中的每部手机、平板电脑和计算机直接连接到公共互联网网关。相反，可以重新利用一台旧计算机、Raspberry Pi 或支持的路由器，使其作为您自己的、个人的<strong>传输节点</strong>：</p>
+<ul>
+<li>您的本地传输节点位于您的家中，连接到您的 WiFi，或许还连接到一个无线电接口（如 RNode）。</li>
+<li>您可以使用 <code>bootstrap_only</code> 接口（可能是到更广泛网络的 TCP 隧道）配置此节点，并启用接口发现。</li>
+<li>当您睡觉、工作或做饭时，您的节点会监听网络。它会发现其他本地社区成员，验证他们的网络身份，并自动建立直接链接。</li>
+<li>您的个人设备现在连接到您的<em>本地</em>节点，该节点已集成到一个充满活力的本地网格网络中。您的流量通过社区中其他真人提供的本地路径流动，而不是从远程服务器反弹。</li>
+</ul>
+<p><strong>不要等待他人来构建您希望看到的网络</strong>。每个网络都很重要，也许那些支持个人和家庭网络的尤为重要。一旦存在足够的这种个人、本地基础设施，将它们直接相互连接，而无需穿越公共互联网，就会变得不可避免。</p>
 <p align="right"><a href="docs_zh-cn.html">下一个主题：阅读手册</a></p>
 </body>
 </html>

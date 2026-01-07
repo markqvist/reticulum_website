@@ -11,168 +11,23 @@
 <center>
 <p><span class="top_menu lang_menu"><a href="./connect_de.html">Deutsch</a> | <a href="./connect.html">English</a> | <a href="./connect_es.html">Español</a> | <a href="./connect_nl.html">Nederlands</a> | <a href="./connect_pl.html">Polski</a> | <a href="./connect_pt-br.html">Português</a> | <a href="./connect_tr.html">Türkçe</a> | <a href="./connect_uk.html">Українська</a> | <a href="./connect_jp.html">日本語</a> | <a href="./connect_zh-cn.html">简体中文</a></div><span class="top_menu"><a href="index_jp.html">レチキュラム</a> | <a href="start_jp.html">開始</a> | <a href="hardware_jp.html">ハードウェア</a> | <a href="connect_jp.html">接続する</a> | <a href="docs_jp.html">マニュアル</a> | <a href="crypto_jp.html">暗号</a> | <a href="credits_jp.html">クレジット</a> | <a href="https://github.com/markqvist/reticulum">ソース</a> | <a href="donate_jp.html">寄付</a></div></p>
 </center>
-<h1>コミュニティ エントリポイント</h1>
-<p>コミュニティによって、Reticulum ネットワークへの公開エントリポイントが多数提供されています。日常的な使用には、テストネットではなくこれらを使用することをお勧めします。</p>
-<p>デバイスまたはインスタンスをこれらの 1 つ以上のエントリポイントに接続して、物理的に接続されている Reticulum ネットワークにアクセスできます。</p>
-<p>理想的には、自分のデバイスがローカルでアクセスできる Reticulum トランスポート ノードを設定し、そのトランスポート ノードをいくつかのパブリック エントリポイントに接続します。これにより、いずれかのエントリポイントがダウンした場合でも、効率的な接続と冗長性が提供されます。</p>
-<pre><code># These are community-provided public Reticulum
-# entrypoints available over the public Internet.
-
-  [[RNS Testnet BetweenTheBorders]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.betweentheborders.com
-    target_port = 4242
-
-  [[Spaceman-ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 201:e73a:61ee:ca68:4bc5:99d5:fd70:ded1
-    target_port = 4343
-
-  [[Sydney RNS]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = sydney.reticulum.au
-    target_port = 4242    
-
-  [[dismails TCP Interface]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.dismail.de
-    target_port = 7822
-
-  [[interloper node]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = intr.cx
-    target_port = 4242
-
-  [[noDNS1]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[The Outpost]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = theoutpost.life
-    target_port = 4242
-
-  [[Beleth RNS Hub]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = rns.beleth.net
-    target_port = 4242
-
-  [[Rocket Tech Hub]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.rocket-tech.net
-    target_port = 443
-
-  [[SparkN0de]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = aspark.uber.space
-    target_port = 44860
-
-  [[Tidudanka.com]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = reticulum.tidudanka.com
-    target_port = 37500
-
-  [[quad4net tcp]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.quad4.io
-    target_port = 4242
-
-  [[nisa-node]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = nisa.cat
-    target_port = 4242
-
-  [[acehoss]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.acehoss.net
-    target_port = 4242
-
-  [[RNS Testnet StoppedCold]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = rns.stoppedcold.com
-    target_port = 4242
-
-  [[RNS COMSEC-RD]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = 80.78.23.249
-    target_port = 4242
-
-  [[R-Net TCP]]
-    type = TCPClientInterface
-    enabled = yes
-    target_host = istanbul.reserve.network
-    target_port = 9034
-
-  [[RNS TCP Node Germany 001]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 202.61.243.41
-    target_port = 4965
-
-  [[RNS TCP Node Germany 002]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 193.26.158.230
-    target_port = 4965
-
-  [[Quortal TCP Node]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = reticulum.qortal.link
-    target_port = 4242
-
-  [[mobilefabrik TCP]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = phantom.mobilefabrik.com
-    target_port = 4242
-
-  [[g00n.cloud Hub]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = dfw.us.g00n.cloud
-    target_port = 6969
-
-  [[RNS_Transport_US-East]]
-    type = TCPClientInterface
-    interface_enabled = true
-    target_host = 45.77.109.86
-    target_port = 4965
-
-  [[rothbard_RNS_transport_ZA]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = rothbard.lab.networks.deavmi.assigned.network
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_ygg]]
-    type = TCPClientInterface
-    enabled = true
-    target_host = 200:73eb:2e4:14be:aac7:90b3:784b:71a3
-    target_port = 4242
-
-  [[rothbard_RNS_transport_ZA_i2p]]
-    type = I2PInterface
-    enabled = true
-    peers = guuahj7pyb6ksmjv2bqrjg4cs2wou6cor3ivsi6crntqbzsxnbna.b32.i2p
-</code></pre>
+<h1>接続のブートストラップ</h1>
+<p>Reticulumはサブスクリプション（加入）サービスではなく、「参加する」単一のグローバルネットワークでもありません。Reticulumは<em>ネットワークスタック</em>であり、あなたの特定の価値観、要件、運用環境に合致した通信システムを構築するためのツールキットです。他のReticulumピアに接続する方法を選択することは、完全にあなた自身の選択です。</p>
+<p>Reticulumの使用を開始する際は、通信したいピアとの接続を確立する方法が必要です——これが<em>接続のブートストラップ</em>というプロセスです。1つ以上の有効なインターフェース定義を取得したら、それらをReticulum設定ファイルの<code>[interfaces]</code>セクションに追加できます。</p>
+<p>このページでは最も基本的な概要を提供していますが、接続のブートストラップで利用可能な柔軟性とオプションを完全に理解するには、マニュアルの<a href="manual/gettingstartedfast.html#creating-a-network-with-reticulum">接続のブートストラップ</a>セクションをお読みください。</p>
+<h2>分散バックボーンに接続する</h2>
+<p>世界中のボランティアによって運営されている、Reticulumトランスポートノードのグローバルな分散バックボーンが存在します。このネットワークは、パブリックおよびプライベートノードの異種の集合体で構成されており、現在Reticulumにグローバルなトランスポート機能とインターネット接続機能を提供する、調整のないボランティアベースのインターネットワーキングバックボーンを形成しています。</p>
+<p>接続のブートストラップ用のインターフェース定義を見つけるのに適した場所として、<a href="https://directory.rns.recipes/">directory.rns.recipes</a>や<a href="https://rmap.world/">rmap.world</a>のようなコミュニティ運営のウェブサイトがあります。</p>
+<p>Reticulumは<em>有機的な成長</em>というアプローチを推奨しています。遠方のサーバーへの永続的な静的接続に依存する代わりに、一時的なブートストラップ接続を使用して、より関連性の高いローカルなインフラストラクチャを継続的に<em>発見</em>できます。発見されると、あなたのシステムはこれらのピアとより強力で直接的なリンクを自動的に形成し、一時的なブートストラップリンクを破棄します。その結果、地理的に関連性があり、回復力が高く、効率的な接続のウェブが形成されます。</p>
+<h2>パーソナルインフラストラクチャを構築する</h2>
+<p>私たちはすべての人、ホームユーザーであっても、<strong>パーソナルインフラストラクチャ</strong>の構築という視点で考えることを強くお勧めします。自宅のすべての携帯電話、タブレット、コンピューターをパブリックインターネットゲートウェイに直接接続しないでください。代わりに、古いコンピューター、Raspberry Pi、または対応ルーターを再利用して、あなた独自のパーソナルな<strong>トランスポートノード</strong>として機能させましょう：</p>
+<ul>
+<li>あなたのローカルトランスポートノードは自宅に設置され、WiFi、そしておそらく無線インターフェース（RNodeなど）に接続されています。</li>
+<li>このノードを<code>bootstrap_only</code>インターフェース（おそらくより広いネットワークへのTCPトンネル）で設定し、インターフェースディスカバリーを有効にします。</li>
+<li>あなたが眠っている間、仕事をしている間、または料理をしている間、あなたのノードはネットワークをリッスンします。他のローカルコミュニティメンバーを発見し、そのネットワークアイデンティティを検証し、自動的に直接リンクを確立します。</li>
+<li>あなたのパーソナルデバイスは、生きている、呼吸しているローカルメッシュネットワークに統合されている<em>ローカル</em>ノードに接続するようになります。あなたのトラフィックは、遠方のサーバーでバウンスするのではなく、コミュニティの他の実際の人々によって提供されるローカルパスを通じて流れます。</li>
+</ul>
+<p><strong>あなたが見たいネットワークを他者が構築するのを待ってはいけません</strong>。すべてのネットワークは重要です。おそらく、個人や家族を支えるネットワークこそが最も重要です。十分なこのようなパーソナルでローカルなインフラストラクチャが存在すれば、パブリックインターネットを経由することなく、それらを直接相互に接続することは避けられなくなります。</p>
 <p align="right"><a href="docs_jp.html">次のトピック：マニュアルを読む</a></p>
 </body>
 </html>
