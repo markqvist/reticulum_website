@@ -1,5 +1,4 @@
 # Reticulum
-<a href="zen.html">Zen of Reticulum</a>
 
 Reticulum is the cryptography-based networking stack for building local and wide-area networks with readily available hardware. Reticulum can continue to operate even in adverse conditions with very high latency and extremely low bandwidth.
 
