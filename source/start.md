@@ -1,6 +1,9 @@
 # Get Started
-The best way to get started with the Reticulum Network Stack depends on what
-you want to do. For full details and examples, have a look at the [Getting Started Fast](manual/gettingstartedfast.html) section of the [Reticulum Manual](manual/index.html).
+The best way to get started with the Reticulum Network Stack depends on what you want to do.
+
+To understand the foundational philosophy and goals of this system, read the [Zen of Reticulum](zenofreticulum.html).
+
+For full details and examples, have a look at the [Getting Started Fast](manual/gettingstartedfast.html) section of the [Reticulum Manual](manual/index.html).
 
 ## Community & Support
 

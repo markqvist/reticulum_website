@@ -25,8 +25,9 @@ document_end = """
 </html>
 """
 
-langs_md = """<span class="top_menu lang_menu">{LANGS}</div>"""
-menu_md = """<span class="top_menu">[{RETICULUM}](index{LANG_EXT}.html) | [{START}](start{LANG_EXT}.html) | [{HARDWARE}](hardware{LANG_EXT}.html) | [{TESTNET}](connect{LANG_EXT}.html) | [{MANUAL}](docs{LANG_EXT}.html) | [{CRYPTO}](crypto{LANG_EXT}.html) | [{CREDITS}](credits{LANG_EXT}.html) | [{SOURCE}](https://github.com/markqvist/reticulum) | [{DONATE}](donate{LANG_EXT}.html)</div>"""
+langs_md = """<span class="top_menu lang_menu">{LANGS}</span>"""
+menu_md = """<span class="top_menu">[{RETICULUM}](index{LANG_EXT}.html) | [{START}](start{LANG_EXT}.html) | [{HARDWARE}](hardware{LANG_EXT}.html) | [{TESTNET}](connect{LANG_EXT}.html) | [{MANUAL}](docs{LANG_EXT}.html) | [{CRYPTO}](crypto{LANG_EXT}.html) | [{CREDITS}](credits{LANG_EXT}.html) | [{SOURCE}](https://github.com/markqvist/reticulum) | [{DONATE}](donate{LANG_EXT}.html)</span><br/>
+"""
 
 primary_lang = "en"
 langs = [
