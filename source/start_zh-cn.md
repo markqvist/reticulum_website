@@ -1,13 +1,6 @@
 # 开始使用
 开始使用 Reticulum 的第一步是看看自己想用它做什么。如果你想了解完整的细节或是参照一些例子，请参阅[Reticulum 手册](manual/index.html)的[快速开始](manual/gettingstartedfast.html)部分。
 
-## 社区与支持
-
-如果你遇到了问题，又或是有些东西不工作，以下是一些寻求帮助的好地方：
-
-- [Reticulum Github 讨论区](https://github.com/markqvist/Reticulum/discussions)
-- [Reticulum Matrix 群组](https://matrix.to/#/#reticulum:matrix.org)（`#reticulum:matrix.org`）
-
 ## 安装
 安装 Reticulum 及其相关工具最简单的方式是使用 pip：
 

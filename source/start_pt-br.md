@@ -2,13 +2,6 @@
 
 A melhor forma de começar com o framework Reticulum depende do que você quer fazer. para detalhes completos e exemplos, olhe na seção [Começo Rápido](manual/gettingstartedfast.html) do [Manual Reticulum](manual/index.html).
 
-## Comunidade e Ajuda
-
-Se você estiver com problemas ou se algo não estiver funcionando, aqui estão alguns ótimos lugares para pedir ajuda:
-
-- O [fórum de discussão](https://github.com/markqvist/Reticulum/discussions) no GitHub
-- O canal da [Matrix do Retículum](https://matrix.to/#/#reticulum:matrix.org) em `#reticulum:matrix.org`
-
 ## Instalação
 
 Para instalar o Reticulum e utilitários relacionados no seu sistema, a forma mais fácil é via pip:

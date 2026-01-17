@@ -1,12 +1,6 @@
 # Hoş Geldiniz
 Reticulum Ağı ile başlamanın en iyi yolu, ne yapmak istediğinize bağlıdır. Tam detaylar ve örnekler için [Hızlı Başlangıç](manual/gettingstartedfast.html) bölümüne [Reticulum Kılavuzu](manual/index.html)'nda göz atın.
 
-## Topluluk ve Destek
-Eğer sorun yaşarsanız veya bir şey çalışmıyorsa, yardım istemek için harika yerler şunlar:
-
-- [GitHub'daki tartışma forumu](https://github.com/markqvist/Reticulum/discussions)
-- `#reticulum:matrix.org` üzerinden [Reticulum Matrix Kanalı](https://matrix.to/#/#reticulum:matrix.org)
-
 ## Kurulum
 Sisteminize Reticulum'u ve ilgili araçları kurmanın en kolay yolu `pip` kullanmaktır:
 

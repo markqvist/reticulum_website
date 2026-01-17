@@ -5,13 +5,6 @@ To understand the foundational philosophy and goals of this system, read the [Ze
 
 For full details and examples, have a look at the [Getting Started Fast](manual/gettingstartedfast.html) section of the [Reticulum Manual](manual/index.html).
 
-## Community & Support
-
-If you are having trouble, or if something is not working, here are some great places to search or ask for help:
-
-- The [discussion forum](https://github.com/markqvist/Reticulum/discussions) on GitHub
-- The [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) at `#reticulum:matrix.org`
-
 ## Installation
 To install Reticulum and related utilities on your system, the easiest way is via pip:
 

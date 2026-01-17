@@ -1,13 +1,6 @@
 # Begin
 De beste manier om aan de slag te gaan met de Reticulum Network Stack hangt af van wat jij wilt doen. Voor volledige details en voorbeelden, kijk eens naar de sectie [Snel aan de slag](manual/gettingstartedfast.html) van de [Reticulum Manual](manual/index.html).
 
-## Hulp van de gemeenschap
-
-Als u problemen ondervindt of als iets niet werkt, zijn hier enkele goede plaatsen waar u om hulp kunt vragen:
-
-- Het [discussieforum](https://github.com/markqvist/Reticulum/discussions) op GitHub
-- Het [Reticulum Matrix Channel](https://matrix.to/#/#reticulum:matrix.org) op `#reticulum:matrix.org`
-
 ## Installatie
 Om Reticulum en gerelateerde hulpprogramma's op uw systeem te installeren, is de eenvoudigste manier via pip:
 

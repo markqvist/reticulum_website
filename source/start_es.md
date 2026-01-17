@@ -2,13 +2,6 @@
 La mejor manera de empezar a usar el protocolo Reticulum depende de qué
 quieras hacer. Para más detalles y ejemplos, consulte la sección [Empezar rapidito](manual/gettingstartedfast.html) del [Manual de Reticulum](manual/index.html).
 
-## Comunidad y Soporte
-
-Si estás teniendo algún problema o algo no está funcionando, estos son algunos excelentes lugares para pedir ayuda:
-
-- El [foro de discusión](https://github.com/markqvist/Reticulum/discussions) en Github
-- El [Canal de Reticulum en Matrix](https://matrix.to/#/#reticulum:matrix.org) en `#reticulum:matrix.org`
-
 ## Instalación
 Para instalar reticulum y utilidades relacionadas, la forma más fácil es usando pip:
 

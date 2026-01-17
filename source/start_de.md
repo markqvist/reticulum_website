@@ -2,12 +2,6 @@
 Wie Sie am besten mit dem Reticulum Network Stack beginnen, hängt davon ab, was
 Sie durchführen möchten. Ausführliche Informationen und Beispiele finden Sie im Abschnitt [Schneller Einstieg](manual/gettingstartedfast.html) des [Reticulum-Handbuchs](manual/index.html).
 
-## Gemeinschaft & Unterstützung
-Wenn Sie Probleme haben oder etwas nicht funktioniert, finden Sie hier einige gute Stellen, an denen Sie um Hilfe bitten können:
-
-- Das [Diskussionsforum](https://github.com/markqvist/Reticulum/discussions) auf GitHub
-- Der [Reticulum-Matrixkanal](https://matrix.to/#/#reticulum:matrix.org) bei `#reticulum:matrix.org`
-
 ## Installation
 Der einfachste Weg, Reticulum und zugehörige Dienstprogramme auf Ihrem System zu installieren, ist über pip:
 
