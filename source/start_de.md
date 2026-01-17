@@ -53,6 +53,6 @@ Unabhängig davon, wie Reticulum installiert und gestartet wird, lädt es extern
 ## Leistung
 Reticulum zielt auf einen *sehr* großen nutzbaren Leistungsbereich ab, gibt aber der Funktionalität und Leistung Vorrang auf Medien mit geringer Bandbreite. Ziel ist es, einen dynamischen Leistungsbereich von 250 Bit pro Sekunde bis zu 1 Gigabit pro Sekunde auf normaler Hardware bereitzustellen.
 
-Derzeit liegt der nutzbare Leistungsbereich bei etwa 150 Bit pro Sekunde bis 40 Megabit pro Sekunde, wobei schnellere physische Medien nicht gesättigt sind. Eine über das derzeitige Niveau hinausgehende Leistung ist für künftige Upgrades vorgesehen, hat aber keine hohe Priorität, solange das Leitungsformat und die API noch nicht festgelegt sind.
+Derzeit liegt der nutzbare Leistungsbereich bei etwa 150 Bit pro Sekunde bis 1200 Megabit pro Sekunde, wobei schnellere physische Medien nicht gesättigt sind. Eine über das derzeitige Niveau hinausgehende Leistung ist für künftige Upgrades vorgesehen, hat aber keine hohe Priorität, solange das Leitungsformat und die API noch nicht festgelegt sind.
 
 <p align="right"><a href="hardware_de.html">Nächstes Thema: Unterstützte Hardware</a></p>

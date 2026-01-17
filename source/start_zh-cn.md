@@ -51,6 +51,6 @@ Reticulum 附带了用于管理网络、查看状态与信息等用途的一系�
 ## 性能
 Reticulum 的可用性能范围*非常广*，但是会优先保证低带宽媒介的可用性与性能。Reticulum 的目标是提供一个 250 bps 到 1 Gbps(普通硬件条件下)的性能区间。
 
-目前可用的性能区间是 150 bps 到 40 Mbps。更快的连接无法被充分利用。未来，Reticulum 可能会升级性能，但直到有线格式(wire format)和 API 完全稳定之前，性能的提升都不会是优先事项。
+目前可用的性能区间是 150 bps 到 1200 Mbps。更快的连接无法被充分利用。未来，Reticulum 可能会升级性能，但直到有线格式(wire format)和 API 完全稳定之前，性能的提升都不会是优先事项。
 
 <p align="right"><a href="hardware_zh-cn.html">下一个主题: 硬件支持</a></p>

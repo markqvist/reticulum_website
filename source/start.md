@@ -56,6 +56,6 @@ No matter how Reticulum is installed and started, it will load external dependen
 ## Performance
 Reticulum targets a *very* wide usable performance envelope, but prioritises functionality and performance over low-bandwidth mediums. The goal is to provide a dynamic performance envelope from 250 bits per second, to 1 gigabit per second on normal hardware.
 
-Currently, the usable performance envelope is approximately 150 bits per second to 40 megabits per second, with physical mediums faster than that not being saturated. Performance beyond the current level is intended for future upgrades, but not highly prioritised until the wire format and API has been locked in.
+Currently, the usable performance envelope is approximately 150 bits per second to 1200 megabits per second, with physical mediums faster than that not being saturated. Performance beyond the current level is intended for future upgrades, but not highly prioritised until the wire format and API has been locked in.
 
 <p align="right"><a href="hardware.html">Next Topic: Supported Hardware</a></p>

@@ -61,6 +61,6 @@ Independientemente de cómo se instale e inicie Reticulum, éste cargará las de
 
 Reticulum busca cubrir un amplio rango de desempeño utilizable pero prioriza la funcionalidad y el desempeño sobre medios de baja capacidad de ancho de banda. El objetivo es ofrecer un entorno de desempeño dinámico que va desde 250 bit por segundo hasta 1 giga bit por segundo en hardware normal.
 
-Actualmente, el rango de desempeño utilizable está aproximadamente en 150 bit por segundo a 40 mega bits por segundo, mientras que los medios físicos más rápidos no están saturados. El desempeño superior a este nivel se reserva para actualizaciones futuras, pero no es prioritario hasta que los formatos de cable y API hayan sido establecidos.
+Actualmente, el rango de desempeño utilizable está aproximadamente en 150 bit por segundo a 1200 mega bits por segundo, mientras que los medios físicos más rápidos no están saturados. El desempeño superior a este nivel se reserva para actualizaciones futuras, pero no es prioritario hasta que los formatos de cable y API hayan sido establecidos.
 
 <p align="right"><a href="hardware_es.html">Próximo Tema: Hardware soportado</a></p>

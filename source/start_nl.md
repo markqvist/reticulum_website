@@ -52,6 +52,6 @@ Ongeacht hoe Reticulum is geïnstalleerd en gestart, het zal alleen externe afha
 ## Prestatie
 Reticulum streeft naar een *zeer* breed bruikbaar prestatiebereik, maar geeft prioriteit aan functionaliteit en prestaties boven mediums met een lage bandbreedte. Het doel is om een dynamisch prestatiebereik te bieden van 250 bits per seconde tot 1 gigabit per seconde op normale hardware.
 
-Momenteel bedraagt het bruikbare prestatiebereik ongeveer 150 bits per seconde tot 40 megabits per seconde, waarbij fysieke media sneller dan dat niet verzadigd zijn. Prestaties boven het huidige niveau zijn bedoeld voor toekomstige upgrades, maar krijgen geen hoge prioriteit totdat het draadformaat en de API zijn vergrendeld.
+Momenteel bedraagt het bruikbare prestatiebereik ongeveer 150 bits per seconde tot 1200 megabits per seconde, waarbij fysieke media sneller dan dat niet verzadigd zijn. Prestaties boven het huidige niveau zijn bedoeld voor toekomstige upgrades, maar krijgen geen hoge prioriteit totdat het draadformaat en de API zijn vergrendeld.
 
 <p align="right"><a href="hardware_nl.html">Volgend onderwerp: ondersteunde hardware</a></p>
