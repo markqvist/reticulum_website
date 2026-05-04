@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Using Reticulum on Your System - Reticulum Network Stack 1.2.1 documentation</title>
+        <title>Using Reticulum on Your System - Reticulum Network Stack 1.2.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.2.1 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.2.2 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.2.1 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.2.2 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -222,6 +222,7 @@
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">Communications Hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interfaces.html">Configuring Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="networks.html">Building Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Using Git Over Reticulum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support.html">Support Reticulum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Code Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Reticulum License</a></li>
@@ -852,198 +853,14 @@ options:
 </section>
 <section id="the-rngit-utility">
 <h3>The rngit Utility<a class="headerlink" href="#the-rngit-utility" title="Link to this heading">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> utility provides full Git repository hosting and interaction over Reticulum. It allows you to host Git repositories on Reticulum nodes, and to interact with remote repositories using standard Git commands through the <code class="docutils literal notranslate"><span class="pre">rns://</span></code> URL scheme.</p>
-<p>The system consists of two parts: The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> node that hosts repositories, and the <code class="docutils literal notranslate"><span class="pre">git-remote-rns</span></code> helper that enables Git to communicate with rngit nodes. As soon as you have RNS installed on your system, you can transparently use Git with Reticulum-hosted repositories just like any other type of remote. Git over Reticulum uses URLs in the following format: <code class="docutils literal notranslate"><span class="pre">rns://DESTINATION_HASH/group/repo</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> utility provides full Git repository hosting and interaction over Reticulum, as well as many other useful features for software development, collaboration and publishing. It allows you to host Git repositories on Reticulum nodes, interact with remote repositories using standard Git commands through the <code class="docutils literal notranslate"><span class="pre">rns://</span></code> URL scheme, and to publish software releases.</p>
+<p>The system consists of two parts: The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> node that hosts and manages repositories, and the <code class="docutils literal notranslate"><span class="pre">git-remote-rns</span></code> helper that enables Git to communicate with rngit nodes. As soon as you have RNS installed on your system, you can transparently use Git with Reticulum-hosted repositories just like any other type of remote. Git over Reticulum uses URLs in the following format: <code class="docutils literal notranslate"><span class="pre">rns://DESTINATION_HASH/group/repo</span></code>.</p>
 <p>If you set a branch to track a Reticulum remote as the default upstream, you can simply use <code class="docutils literal notranslate"><span class="pre">git</span></code> as you normally would; all commands work transparently and as expected.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>The rngit program is a new addition to RNS!</strong> This functionality was introduced in RNS 1.2.0. While great care has been taken to design a secure, but highly configurable and flexible permission system for allowing many users to interact with many different repositories on a single node, <code class="docutils literal notranslate"><span class="pre">rngit</span></code> has not been tested extensively in the wild! Be careful when hosting repositories, especially if they are public or semi-public.</p>
 </div>
-<p><strong>Usage Examples</strong></p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">rngit</span></code> to start a repository node:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit
-
-[Notice] Starting Reticulum Git Node...
-[Notice] Reticulum Git Node listening on &lt;0d7334d411d00120cbad24edf355fdd2&gt;
-</pre></div>
-</div>
-<p>On the first run, <code class="docutils literal notranslate"><span class="pre">rngit</span></code> will create a default configuration file. You will then need to edit this, to point to your repository locations, configure access permissions, and perform any other necessary configuration.</p>
-<p>View your identity and destination hashes:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit --print-identity
-
-Git Peer Identity         : &lt;959e10e5efc1bd9d97a4083babe51dea&gt;
-Repository Node Identity  : &lt;153cb870b4665b8c1c348896292b0bad&gt;
-Repositories Destination  : &lt;0d7334d411d00120cbad24edf355fdd2&gt;
-</pre></div>
-</div>
-<p>If the page server is enabled, the output will also include the Nomad Network destination hash.</p>
-<p>You can run <code class="docutils literal notranslate"><span class="pre">rngit</span></code> in service mode with logging to file:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit -s
-</pre></div>
-</div>
-<p>Clone a repository from a remote <code class="docutils literal notranslate"><span class="pre">rngit</span></code> node:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git clone rns://50824b711717f97c2fb1166ceddd5ea9/public/myrepo
-</pre></div>
-</div>
-<p>Add a Reticulum remote to an existing repository:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git remote add some_remote rns://50824b711717f97c2fb1166ceddd5ea9/public/myrepo
-</pre></div>
-</div>
-<p>Push changes to the Reticulum remote:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git push some_remote master
-</pre></div>
-</div>
-<p>Get changes from a remote repository:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git pull rns_remote master
-</pre></div>
-</div>
-<p><strong>Repository Structure</strong></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> node organizes repositories into groups. Each group is a directory containing bare Git repositories. The repository path format is <code class="docutils literal notranslate"><span class="pre">group_name/repo_name</span></code>. For example, a repository at <code class="docutils literal notranslate"><span class="pre">/var/git/public/myrepo</span></code> would be accessible as <code class="docutils literal notranslate"><span class="pre">public/myrepo</span></code> via the URL <code class="docutils literal notranslate"><span class="pre">rns://DESTINATION_HASH/public/myrepo</span></code>.</p>
-<p><strong>Configuration</strong></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> node configuration file is located at <code class="docutils literal notranslate"><span class="pre">~/.rngit/config</span></code> (or <code class="docutils literal notranslate"><span class="pre">/etc/rngit/config</span></code> for system-wide installations). The default configuration includes:</p>
-<ul class="simple">
-<li><p>Repository group paths defining where to find bare repositories</p></li>
-<li><p>Access permissions for groups and individual repositories</p></li>
-<li><p>Announce intervals for network visibility</p></li>
-<li><p>Optional statistics recording for repository activity</p></li>
-</ul>
-<p>Access permissions can be configured at the group level in the config file, or per-repository using <code class="docutils literal notranslate"><span class="pre">.allowed</span></code> files. Permissions use the format <code class="docutils literal notranslate"><span class="pre">permission:target</span></code> where permission is <code class="docutils literal notranslate"><span class="pre">r</span></code> (read), <code class="docutils literal notranslate"><span class="pre">w</span></code> (write), <code class="docutils literal notranslate"><span class="pre">rw</span></code> (read/write), <code class="docutils literal notranslate"><span class="pre">c</span></code> (create) or <code class="docutils literal notranslate"><span class="pre">s</span></code> (stats) and target is <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>, or a specific identity hash.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">s</span></code> (stats) permission allows viewing repository activity statistics, including views, fetches and pushes over time. To enable statistics recording, set <code class="docutils literal notranslate"><span class="pre">record_stats</span> <span class="pre">=</span> <span class="pre">yes</span></code> in the <code class="docutils literal notranslate"><span class="pre">[rngit]</span></code> section of the configuration file. You can also exclude specific identities from statistics by adding their hashes to <code class="docutils literal notranslate"><span class="pre">stats_ignore_identities</span></code>.</p>
-<p>Repository-specific <code class="docutils literal notranslate"><span class="pre">.allowed</span></code> files can be static text files or executable scripts that output permission rules to stdout. A <code class="docutils literal notranslate"><span class="pre">group.allowed</span></code> file in a repository group directory applies to all repositories within that group.</p>
-<p><strong>All Command-Line Options (rngit)</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: rngit.py [-h] [--config CONFIG] [--rnsconfig RNSCONFIG] [-s] [-i] [-v]
-                [-q] [--version]
-
-Reticulum Git Repository Node
-
-options:
-  -h, --help            show this help message and exit
-  --config CONFIG       path to alternative config directory
-  --rnsconfig RNSCONFIG
-                        path to alternative Reticulum config directory
-  -p, --print-identity  print identity and destination info and exit
-  -s, --service         rngit is running as a service and should log to file
-  -i, --interactive     drop into interactive shell after initialisation
-  -v, --verbose         increase verbosity
-  -q, --quiet           decrease verbosity
-  --version             show program&#39;s version number and exit
-</pre></div>
-</div>
-<p><strong>All Command-Line Options (git-remote-rns)</strong></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">git-remote-rns</span></code> helper is automatically invoked by Git when interacting with <code class="docutils literal notranslate"><span class="pre">rns://</span></code> URLs. It is not typically run directly by users, but accepts the following environment variables for configuration:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">RNGIT_CONFIG</span></code> - Path to alternative client configuration directory</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RNS_CONFIG</span></code> - Path to alternative Reticulum configuration directory</p></li>
-</ul>
-<p>The client configuration file is located at <code class="docutils literal notranslate"><span class="pre">~/.rngit/client_config</span></code> and allows adjusting parameters such as the reference batch size for transfers.</p>
-<p><strong>Serving Pages Over Nomad Network</strong></p>
-<p>In addition to providing Git repository access via the Git remote helper protocol, <code class="docutils literal notranslate"><span class="pre">rngit</span></code> can also run a <a class="reference external" href="https://github.com/markqvist/nomadnet">Nomad Network</a> compatible page node. This allows users to browse repository information, view file contents, inspect commit history and access repository statistics through any Nomad Network client.</p>
-<p>When enabled, the page node provides a complete interface to your repositories, with automatic Markdown to Micron conversion, syntax-highlighted code browsing, and detailed commit, diff and statistics views.</p>
-<p><strong>Enabling the Git Page Node</strong></p>
-<p>To enable the page node, add the following to your <code class="docutils literal notranslate"><span class="pre">~/.rngit/config</span></code> file:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[pages]
-serve_nomadnet = yes
-</pre></div>
-</div>
-<p>When the page node is enabled, <code class="docutils literal notranslate"><span class="pre">rngit</span></code> will listen on a Nomad Network node destination in addition to the Git repository destination. You can view the destination hash by running:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit --print-identity
-
-Git Peer Identity         : &lt;959e10e5efc1bd9d97a4083babe51dea&gt;
-Repository Node Identity  : &lt;153cb870b4665b8c1c348896292b0bad&gt;
-Repositories Destination  : &lt;0d7334d411d00120cbad24edf355fdd2&gt;
-Nomad Network Destination : &lt;50824b711717f97c2fb1166ceddd5ea9&gt;
-</pre></div>
-</div>
-<p><strong>Accessing Repository Pages</strong></p>
-<p>Once the page server is running, you can access it from any Nomad Network client by connecting to the Nomad Network destination. The page node provides the following views:</p>
-<ul class="simple">
-<li><p><strong>Front Page</strong> - Lists all repository groups accessible to your identity</p></li>
-<li><p><strong>Group Page</strong> - Shows all repositories within a group</p></li>
-<li><p><strong>Repository Page</strong> - Displays repository overview, description and README</p></li>
-<li><p><strong>File Browser</strong> - Browse directory trees and view file contents</p></li>
-<li><p><strong>Commits View</strong> - View commit history with pagination</p></li>
-<li><p><strong>Commit Details</strong> - Detailed commit information with file changes and diffs</p></li>
-<li><p><strong>Refs View</strong> - List branches and tags</p></li>
-<li><p><strong>Statistics</strong> - Activity charts showing views, fetches and pushes over time</p></li>
-</ul>
-<p>All pages respect the same permission system used for Git access. If an identity does not have read access to a repository, they will not be able to view its pages.</p>
-<p><strong>Syntax Highlighting</strong></p>
-<p>If the <code class="docutils literal notranslate"><span class="pre">pygments</span></code> Python module is installed on your system, the page server will automatically apply syntax highlighting to code files. The highlighting supports a wide range of programming languages and uses a color theme optimized for terminal display.</p>
-<p>To enable syntax highlighting, install pygments:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install pygments
-</pre></div>
-</div>
-<p><strong>Markdown &amp; Micron Support</strong></p>
-<p>README files and other Markdown documents are automatically converted to Micron markup for display in Nomad Network clients. You can also write your README files directly in Micron, in which case they will display and render as such in any Nomad Network client. The file browser also supports viewing both rendered and raw Markdown and Micron documents.</p>
-<p>Code blocks in Markdown can include language hints for syntax highlighting:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```python
-def hello_world():
-    print(&quot;Hello, Reticulum!&quot;)
-```
-</pre></div>
-</div>
-<p><strong>Customizing Templates</strong></p>
-<p>The page server uses a template system that allows complete customization of the generated pages. Templates are stored in the <code class="docutils literal notranslate"><span class="pre">~/.rngit/templates/</span></code> directory as Micron files.</p>
-<p>The following template files are supported:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base.mu</span></code> - Base template wrapping all pages (must include <code class="docutils literal notranslate"><span class="pre">{PAGE_CONTENT}</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">front.mu</span></code> - Front page listing all groups</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group.mu</span></code> - Group page listing repositories</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">repo.mu</span></code> - Repository overview page</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tree.mu</span></code> - File browser pages</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blob.mu</span></code> - File content display</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">commits.mu</span></code> - Commit history listing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">commit.mu</span></code> - Individual commit detail page</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">refs.mu</span></code> - Branches and tags listing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stats.mu</span></code> - Statistics page</p></li>
-</ul>
-<p>Templates can include the following variables:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">{PAGE_CONTENT}</span></code> - The main content of the page (required)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{NODE_NAME}</span></code> - The configured node name</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{NAVIGATION}</span></code> - Breadcrumb navigation links</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{VERSION}</span></code> - The rngit version number</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{GEN_TIME}</span></code> - Page generation time</p></li>
-</ul>
-<p><strong>Dynamic Templates</strong></p>
-<p>Templates can be made executable to generate dynamic content. If a template file has the executable bit set, it will be executed and its stdout used as the template content.</p>
-<p><strong>Icon Sets</strong></p>
-<p>By default, the page server uses Nerd Font icons. If you prefer simpler icons or your terminal does not support Nerd Fonts, you can enable Unicode icons instead:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[pages]
-serve_nomadnet = yes
-unicode_icons = yes
-</pre></div>
-</div>
-<p><strong>Repository Statistics</strong></p>
-<p>When statistics recording is enabled (see the <code class="docutils literal notranslate"><span class="pre">record_stats</span></code> configuration option), the page server can display activity charts for each repository. The statistics page shows:</p>
-<ul class="simple">
-<li><p>Total and peak views, fetches and pushes</p></li>
-<li><p>Daily activity charts over a 90-day period</p></li>
-<li><p>Combined activity visualization</p></li>
-</ul>
-<p>To view statistics, a user must have the <code class="docutils literal notranslate"><span class="pre">s</span></code> (stats) permission for the repository. See the Access Configuration section for details on setting permissions.</p>
-<p><strong>Repository Thanks</strong></p>
-<p>The page server includes a “Thanks” feature that allows users to express appreciation for a repository. On each repository page, a “Thanks” link is displayed showing the current thanks count. Clicking this link registers a thank you for the repository.</p>
-<p><strong>Configuration Example</strong></p>
-<p>A complete page server configuration might look like this:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[rngit]
-node_name = My Git Server
-announce_interval = 360
-record_stats = yes
-
-[repositories]
-public = /var/git/public
-internal = /var/git/internal
-
-[access]
-public = r:all
-internal = rw:9710b86ba12c42d1d8f30f74fe509286
-
-[pages]
-serve_nomadnet = yes
-unicode_icons = no
-</pre></div>
-</div>
+<p>For the full documentation on the <cite>rngit</cite> system, see the <a class="reference internal" href="git.html#git-main"><span class="std std-ref">Using Git Over Reticulum</span></a> chapter of this manual.</p>
 </section>
 <section id="the-rnx-utility">
 <h3>The rnx Utility<a class="headerlink" href="#the-rnx-utility" title="Link to this heading">¶</a></h3>
@@ -1818,7 +1635,7 @@ systemctl --user enable rnsd.service
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=ca842793"></script>
+</div><script src="_static/documentation_options.js?v=fd7cadf9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
