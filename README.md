@@ -2,7 +2,7 @@
 
 This is the source code for the Reticulum website currently reachable at [https://reticulum.network/](https://reticulum.network/).
 
-## Add new translation
+## Add New Translation
 
 Execute the `add_new_translation.sh` script:
 
