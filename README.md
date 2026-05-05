@@ -4,8 +4,10 @@ This is the source code for the Reticulum website currently reachable at [https:
 
 ## Add new translation
 
-Execute the `add_new_translation.sh` script and follow the instructions
+Execute the `add_new_translation.sh` script:
 
 ```bash
 bash add_new_translation.sh
 ```
+
+Then follow the instructions.
