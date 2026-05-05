@@ -692,7 +692,7 @@ If you set a branch to track a Reticulum remote as the default upstream, you can
 .. warning::
    **The rngit program is a new addition to RNS!** This functionality was introduced in RNS 1.2.0. While great care has been taken to design a secure, but highly configurable and flexible permission system for allowing many users to interact with many different repositories on a single node, ``rngit`` has not been tested extensively in the wild! Be careful when hosting repositories, especially if they are public or semi-public.
 
-For the full documentation on the `rngit` system, see the :ref:`Using Git Over Reticulum<git-main>` chapter of this manual.
+For the full documentation on the `rngit` system, see the :ref:`Git Over Reticulum<git-main>` chapter of this manual.
 
 
 The rnx Utility
