@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Reticulum Network Stack 1.2.5 documentation</title>
+        <title>Reticulum Network Stack 1.2.8 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">Reticulum Network Stack 1.2.5 documentation</div></a>
+      <a href="#"><div class="brand">Reticulum Network Stack 1.2.8 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.2.5 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.2.8 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -525,12 +525,53 @@ to participate in the development of Reticulum itself.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">Git Over Reticulum</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="git.html#the-rngit-utility">The rngit Utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#repository-structure">Repository Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#serving-pages-over-nomad-network">Serving Pages Over Nomad Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#formatting-syntax-highlighting">Formatting &amp; Syntax Highlighting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#customizing-templates">Customizing Templates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#release-management">Release Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html#work-documents">Work Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#repository-creation-management">Repository Creation &amp; Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#creating-empty-repositories">Creating Empty Repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#forking-repositories">Forking Repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#mirroring-repositories">Mirroring Repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#automatic-mirror-synchronization">Automatic Mirror Synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#manual-synchronization">Manual Synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#git-configuration-parameters">Git Configuration Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#repository-structure">Repository Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#permissions">Permissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#permission-types">Permission Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#permission-hierarchy">Permission Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#configuration-methods">Configuration Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#work-document-permissions">Work Document Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#creator-permissions">Creator Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#permission-examples">Permission Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#permission-short-forms">Permission Short Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#permission-configuration-locations">Permission Configuration Locations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#identity-destination-aliases">Identity &amp; Destination Aliases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#serving-pages-over-nomad-network">Serving Pages Over Nomad Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#enabling-the-git-page-node">Enabling the Git Page Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#accessing-repository-pages">Accessing Repository Pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#formatting-syntax-highlighting">Formatting &amp; Syntax Highlighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#customizing-templates">Customizing Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#repository-statistics">Repository Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#configuration-example">Configuration Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#release-management">Release Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#the-release-workflow">The Release Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#release-storage-structure">Release Storage &amp; Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#command-line-interaction">Command-Line Interaction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git.html#work-documents">Work Documents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git.html#working-with-work-documents">Working With Work Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#proposing-work-documents">Proposing Work Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#state-management">State Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html#managing-work-document-permissions">Managing Work Document Permissions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="support.html">Support Reticulum</a><ul>
@@ -643,7 +684,7 @@ to participate in the development of Reticulum itself.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=36f53d34"></script>
+</div><script src="_static/documentation_options.js?v=4d6f9085"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
