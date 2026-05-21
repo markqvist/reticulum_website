@@ -817,6 +817,42 @@ You can fetch individual artifacts from a release by specifying the artifact nam
 
 This downloads only the specified artifact and verifies its signature against the manifest. If a file already exists locally, ``rngit`` verifies it against the manifest signature and skips the download if valid, making it safe to run the command multiple times. When fetching releases, ``rngit release`` will only download files that are missing or invalid according to the manifest. This means that partially completed release fetches can be continued later, if interrupted.
 
+**Pattern Matching for Artifacts**
+
+When fetching selective artifacts, you are not limited to exact names or the ``all`` keyword. You can use shell-style wildcard patterns to match multiple artifacts flexibly. This is particularly useful for selecting platform-specific builds, version ranges, or file types without specifying each file individually.
+
+.. tip::
+   When using pattern matching, make sure to enclose the target specification in quotes. Otherwise,
+   your shell will probably interpret it as a shell expansion pattern *before* it is passed as an
+   argument to ``rngit``!
+
+The pattern matching supports standard Unix wildcards:
+
+- ``*`` matches any sequence of characters (including empty)
+- ``?`` matches any single character
+- ``[seq]`` matches any character in *seq* (for example ``[0-9]`` or ``[abc]``)
+- ``[!seq]`` matches any character not in *seq*
+
+For example, to fetch all wheel files for Python 3 across any platform:
+
+.. code:: text
+
+  $ rngit release rns://remote_node/public/myrepo fetch "1.2.0:*-py3-*.whl"
+
+To fetch a specific patch version when you know the major and minor version:
+
+.. code:: text
+
+  $ rngit release rns://remote_node/public/myrepo fetch "1.2.0:myapp-1.2.?-linux-x86_64.tar.gz"
+
+Or to retrieve all source archives:
+
+.. code:: text
+
+  $ rngit release rns://remote_node/public/myrepo fetch "1.2.0:source_*.tgz"
+
+If your pattern contains no wildcard characters, it must match an artifact name exactly, which is useful for fetching single, specific artifacts. When a pattern matches multiple artifacts, all matched files are fetched and verified. If no artifacts match the pattern, the fetch aborts with an error indicating no matches were found.
+
 **Offline Verification**
 
 Because the release manifest contains embedded signatures, you can verify the integrity of release artifacts offline, without connecting to the repository node. The ``rnid`` and ``rngit`` utilities can validate artifact signatures against ``.rsg`` and manifest files.

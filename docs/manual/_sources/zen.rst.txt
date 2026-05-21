@@ -210,8 +210,8 @@ This is not about "dropping out" of society. It is about building a substrate on
 
 **Consider:**
 
-- **The Old Way:** "My connection is slow. I should call my ISP and complain."
-- **The Zen Way:** "The path is noisy. I will adjust the antenna or find a better route."
+- **The Old Way:** *"My connection is slow. I should call my ISP and complain."*
+- **The Zen Way:** *"The path is noisy. I will adjust the antenna or find a better route."*
 
 By taking ownership of the infrastructure, you take ownership of your voice. You stop shouting into someone else's megaphone and start building your own. The network is no longer something that happens to you; it is something you make happen.
 

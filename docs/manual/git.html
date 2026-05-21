@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Git Over Reticulum - Reticulum Network Stack 1.2.9 documentation</title>
+        <title>Git Over Reticulum - Reticulum Network Stack 1.3.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.2.9 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.3.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.2.9 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.3.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -918,6 +918,34 @@ unicode_icons = yes
 </pre></div>
 </div>
 <p>This downloads only the specified artifact and verifies its signature against the manifest. If a file already exists locally, <code class="docutils literal notranslate"><span class="pre">rngit</span></code> verifies it against the manifest signature and skips the download if valid, making it safe to run the command multiple times. When fetching releases, <code class="docutils literal notranslate"><span class="pre">rngit</span> <span class="pre">release</span></code> will only download files that are missing or invalid according to the manifest. This means that partially completed release fetches can be continued later, if interrupted.</p>
+<p><strong>Pattern Matching for Artifacts</strong></p>
+<p>When fetching selective artifacts, you are not limited to exact names or the <code class="docutils literal notranslate"><span class="pre">all</span></code> keyword. You can use shell-style wildcard patterns to match multiple artifacts flexibly. This is particularly useful for selecting platform-specific builds, version ranges, or file types without specifying each file individually.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When using pattern matching, make sure to enclose the target specification in quotes. Otherwise,
+your shell will probably interpret it as a shell expansion pattern <em>before</em> it is passed as an
+argument to <code class="docutils literal notranslate"><span class="pre">rngit</span></code>!</p>
+</div>
+<p>The pattern matching supports standard Unix wildcards:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> matches any sequence of characters (including empty)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">?</span></code> matches any single character</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[seq]</span></code> matches any character in <em>seq</em> (for example <code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> or <code class="docutils literal notranslate"><span class="pre">[abc]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[!seq]</span></code> matches any character not in <em>seq</em></p></li>
+</ul>
+<p>For example, to fetch all wheel files for Python 3 across any platform:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release rns://remote_node/public/myrepo fetch &quot;1.2.0:*-py3-*.whl&quot;
+</pre></div>
+</div>
+<p>To fetch a specific patch version when you know the major and minor version:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release rns://remote_node/public/myrepo fetch &quot;1.2.0:myapp-1.2.?-linux-x86_64.tar.gz&quot;
+</pre></div>
+</div>
+<p>Or to retrieve all source archives:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release rns://remote_node/public/myrepo fetch &quot;1.2.0:source_*.tgz&quot;
+</pre></div>
+</div>
+<p>If your pattern contains no wildcard characters, it must match an artifact name exactly, which is useful for fetching single, specific artifacts. When a pattern matches multiple artifacts, all matched files are fetched and verified. If no artifacts match the pattern, the fetch aborts with an error indicating no matches were found.</p>
 <p><strong>Offline Verification</strong></p>
 <p>Because the release manifest contains embedded signatures, you can verify the integrity of release artifacts offline, without connecting to the repository node. The <code class="docutils literal notranslate"><span class="pre">rnid</span></code> and <code class="docutils literal notranslate"><span class="pre">rngit</span></code> utilities can validate artifact signatures against <code class="docutils literal notranslate"><span class="pre">.rsg</span></code> and manifest files.</p>
 <p><strong>For individual files:</strong></p>
@@ -1446,7 +1474,7 @@ options:
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=e917149c"></script>
+</div><script src="_static/documentation_options.js?v=1f29e9d3"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
