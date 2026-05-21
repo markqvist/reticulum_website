@@ -956,7 +956,7 @@ argument to <code class="docutils literal notranslate"><span class="pre">rngit</
 <p>This validates that the artifact file matches the signature created during the release process. Combined with the manifest’s own signature, this provides end-to-end verification from the original release creation to the final installation.</p>
 <p><strong>For a complete release:</strong></p>
 <p>Ensure the release manifest is located in the same directory as the release artifacts, then run:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release myapp-1.2.0.rsm --offline
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release myapp-1.2.0.rsm fetch --offline
 </pre></div>
 </div>
 <p>This will load the manifest, and verify all files currently on-disk, but will not attempt to fetch the latest release manifest from the origin, or update local files to match it.</p>

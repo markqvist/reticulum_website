@@ -873,7 +873,7 @@ Ensure the release manifest is located in the same directory as the release arti
 
 .. code:: text
 
-  $ rngit release myapp-1.2.0.rsm --offline
+  $ rngit release myapp-1.2.0.rsm fetch --offline
 
 This will load the manifest, and verify all files currently on-disk, but will not attempt to fetch the latest release manifest from the origin, or update local files to match it.
 
