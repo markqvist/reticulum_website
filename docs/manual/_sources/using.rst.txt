@@ -1316,7 +1316,7 @@ To see all identities currently blackholed on your local instance, use the ``-b`
 Automated List Sourcing
 =======================
 
-Manually blocking identities is effective for immediate threats, but maintaining an up-to-date blocklist for a large network is impractical. Reticulum supports **automated list sourcing**, allowing your node to subscribe to blackhole lists maintained by trusted peers, or a central authority you manage yourself.
+Manually blocking identities is effective for immediate threats and annoyances, but maintaining an up-to-date blocklist across many nodes on a large network is impractical. Reticulum supports **automated list sourcing**, allowing your node to subscribe to blackhole lists maintained by trusted peers, or a central authority you manage yourself.
 
 .. warning::
    **Verify Before Subscribing!** Subscribing to a blackhole source is a powerful action that grants that source the ability to dictate who you can communicate with. Before adding a source to your configuration, verify that the maintainer aligns with your usage policy and values. Blindly subscribing to untrusted lists could inadvertently block legitimate peers or essential services.
@@ -1333,6 +1333,9 @@ To enable automated sourcing, add the ``blackhole_sources`` option to the ``[ret
   ...
   # Automatically fetch blackhole lists from these trusted sources
   blackhole_sources = 521c87a83afb8f29e4455e77930b973b, 68a4aa91ac350c4087564e8a69f84e86
+
+  # Optional update interval, defaults to one hour
+  blackhole_update_interval = 60
   ...
 
 **How It Works**

@@ -2,51 +2,38 @@
 Getting Started Fast
 ********************
 
-The best way to get started with the Reticulum Network Stack depends on what
-you want to do. This guide will outline sensible starting paths for different
-scenarios.
+The best way to get started with the Reticulum Network Stack depends on what you want to do. This guide will outline sensible starting paths for different scenarios.
 
 
 Standalone Reticulum Installation
 =================================
-If you simply want to install Reticulum and related utilities on a system,
-the easiest way is via the ``pip`` package manager:
+If you simply want to install Reticulum and related utilities on a system, the easiest way is via the ``pip`` package manager:
 
 .. code:: shell
 
    pip install rns
 
-If you do not already have pip installed, you can install it using the package manager
-of your system with a command like ``sudo apt install python3-pip``,
-``sudo pamac install python-pip`` or similar.
+If you do not already have pip installed, you can install it using the package manager of your system with a command like ``sudo apt install python3-pip``, ``sudo pamac install python-pip`` or similar.
 
-You can also dowload the Reticulum release wheels from GitHub, or other release channels,
-and install them offline using ``pip``:
+You can also dowload the Reticulum release wheels from GitHub, or other release channels, and install them offline using ``pip``:
 
 .. code:: shell
 
    pip install ./rns-1.1.2-py3-none-any.whl
 
-On platforms that limit user package installation via ``pip``, you may need to manually
-allow this using the ``--break-system-packages`` command line flag when installing. This
-will not actually break any packages, unless you have installed Reticulum directly via
-your operating system's package manager.
+On platforms that limit user package installation via ``pip``, you may need to manually allow this using the ``--break-system-packages`` command line flag when installing. This will not actually break any packages, unless you have installed Reticulum directly via your operating system's package manager.
 
 .. code:: shell
 
   pip install rns --break-system-packages
 
-For more detailed installation instructions, please see the
-:ref:`Platform-Specific Install Notes<install-guides>` section.
+For more detailed installation instructions, please see the :ref:`Platform-Specific Install Notes<install-guides>` section.
 
-After installation is complete, it might be helpful to refer to the
-:ref:`Using Reticulum on Your System<using-main>` chapter.
+After installation is complete, it might be helpful to refer to the :ref:`Using Reticulum on Your System<using-main>` chapter.
 
 Resolving Dependency & Installation Issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-On some platforms, there may not be binary packages available for all dependencies, and
-``pip`` installation may fail with an error message. In these cases, the issue can usually
-be resolved by installing the development essentials packages for your platform:
+On some platforms, there may not be binary packages available for all dependencies, and ``pip`` installation may fail with an error message. In these cases, the issue can usually be resolved by installing the development essentials packages for your platform:
 
 .. code:: shell
 
@@ -59,69 +46,38 @@ be resolved by installing the development essentials packages for your platform:
     # Fedora
     sudo dnf groupinstall "Development Tools" "Development Libraries"
 
-With the base development packages installed, ``pip`` should be able to compile any missing
-dependencies from source, and complete installation even on platforms that don't have pre-
-compiled packages available.
+With the base development packages installed, ``pip`` should be able to compile any missing dependencies from source, and complete installation even on platforms that don't have pre-compiled packages available.
 
 Try Using a Reticulum-based Program
-=============================================
+===================================
 
-If you simply want to try using a program built with Reticulum, a :ref:`range of different
-programs <software-main>` exist that allow basic communication and a various other useful functions,
-even over extremely low-bandwidth Reticulum networks.
+If you simply want to try using a program built with Reticulum, a :ref:`range of different programs <software-main>` exist that allow basic communication and a various other useful functions, even over extremely low-bandwidth Reticulum networks.
 
 
 Using the Included Utilities
-=============================================
-Reticulum comes with a range of included utilities that make it easier to
-manage your network, check connectivity and make Reticulum available to other
-programs on your system.
+============================
+Reticulum comes with a range of included utilities that make it easier to manage your network, check connectivity and make Reticulum available to other programs on your system.
 
-You can use ``rnsd`` to run Reticulum as a background or foreground service,
-and the ``rnstatus``, ``rnpath`` and ``rnprobe`` utilities to view and query
-network status and connectivity.
+You can use ``rnsd`` to run Reticulum as a background or foreground service, and the ``rnstatus``, ``rnpath`` and ``rnprobe`` utilities to view and query network status and connectivity.
 
-To learn more about these utility programs, have a look at the
-:ref:`Using Reticulum on Your System<using-main>` chapter of this manual.
+To learn more about these utility programs, have a look at the :ref:`Using Reticulum on Your System<using-main>` chapter of this manual.
 
 
 Creating a Network With Reticulum
-=============================================
-To create a network, you will need to specify one or more *interfaces* for
-Reticulum to use. This is done in the Reticulum configuration file, which by
-default is located at ``~/.reticulum/config``. You can get an example
-configuration file with all options via ``rnsd --exampleconfig``.
+=================================
+To create a network, you will need to specify one or more *interfaces* for Reticulum to use. This is done in the Reticulum configuration file, which by default is located at ``~/.reticulum/config``. You can get an example configuration file with all options via ``rnsd --exampleconfig``.
 
-When Reticulum is started for the first time, it will create a default
-configuration file, with one active interface. This default interface uses
-your existing Ethernet and WiFi networks (if any), and only allows you to
-communicate with other Reticulum peers within your local broadcast domains.
+When Reticulum is started for the first time, it will create a default configuration file, with one active interface. This default interface uses your existing Ethernet and WiFi networks (if any), and only allows you to communicate with other Reticulum peers within your local broadcast domains.
 
-To communicate further, you will have to add one or more interfaces. The default
-configuration includes a number of examples, ranging from using TCP over the
-internet, to LoRa and Packet Radio interfaces.
+To communicate further, you will have to add one or more interfaces. The default configuration includes a number of examples, ranging from using TCP over the internet, to LoRa and Packet Radio interfaces.
 
-With Reticulum, you only need to configure what interfaces you want to communicate
-over. There is no need to configure address spaces, subnets, routing tables,
-or other things you might be used to from other network types.
+With Reticulum, you only need to configure what interfaces you want to communicate over. There is no need to configure address spaces, subnets, routing tables, or other things you might be used to from other network types.
 
-Once Reticulum knows which interfaces it should use, it will automatically
-discover topography and configure transport of data to any destinations it
-knows about.
+Once Reticulum knows which interfaces it should use, it will automatically discover topography and configure transport of data to any destinations it knows about.
 
-In situations where you already have an established WiFi or Ethernet network, and
-many devices that want to utilise the same external Reticulum network paths (for example over
-LoRa), it will often be sufficient to let one system act as a Reticulum gateway, by
-adding any external interfaces to the configuration of this system, and then enabling transport on it. Any
-other device on your local WiFi will then be able to connect to this wider Reticulum
-network just using the default (:ref:`AutoInterface<interfaces-auto>`) configuration.
+In situations where you already have an established WiFi or Ethernet network, and many devices that want to utilise the same external Reticulum network paths (for example over LoRa), it will often be sufficient to let one system act as a Reticulum gateway, by adding any external interfaces to the configuration of this system, and then enabling transport on it. Any other device on your local WiFi will then be able to connect to this wider Reticulum network just using the default (:ref:`AutoInterface<interfaces-auto>`) configuration.
 
-Possibly, the examples in the config file are enough to get you started. If
-you want more information, you can read the :ref:`Building Networks<networks-main>`
-and :ref:`Interfaces<interfaces-main>` chapters of this manual, but most importantly,
-start with reading the next section, :ref:`Bootstrapping Connectivity<bootstrapping-connectivity>`,
-as this provides the most essential understanding of how to ensure reliable
-connectivity with a minimum of maintenance.
+Possibly, the examples in the config file are enough to get you started. If you want more information, you can read the :ref:`Building Networks<networks-main>` and :ref:`Interfaces<interfaces-main>` chapters of this manual, but most importantly, start with reading the next section, :ref:`Bootstrapping Connectivity<bootstrapping-connectivity>`, as this provides the most essential understanding of how to ensure reliable connectivity with a minimum of maintenance.
 
 
 .. _bootstrapping-connectivity:
@@ -216,20 +172,13 @@ As a good starting point, you can find interface definitions for connecting your
 Hosting Public Entrypoints
 ==========================
 
-If you want to help build a strong global interconnection backbone, you can host a public (or private) entry-point to a Reticulum network over the
-Internet. This section offers some helpful pointers. Once you have set up your public entrypoint, it is a great idea to :ref:`make it discoverable over Reticulum<interfaces-discoverable>`.
+If you want to help build a strong global interconnection backbone, you can host a public (or private) entry-point to a Reticulum network over the Internet. This section offers some helpful pointers. Once you have set up your public entrypoint, it is a great idea to :ref:`make it discoverable over Reticulum<interfaces-discoverable>`.
 
 You will need a machine, physical or virtual with a public IP address, that can be reached by other devices on the Internet.
 
-The most efficient and performant way to host a connectable entry-point supporting many
-users is to use the ``BackboneInterface``. This interface type is fully compatible with
-the ``TCPClientInterface`` and ``TCPServerInterface`` types, but much faster and uses
-less system resources, allowing your device to handle thousands of connections even on
-small systems.
+The most efficient and performant way to host a connectable entry-point supporting many users is to use the ``BackboneInterface``. This interface type is fully compatible with the ``TCPClientInterface`` and ``TCPServerInterface`` types, but much faster and uses less system resources, allowing your device to handle thousands of connections even on small systems.
 
-It is also important to set your connectable interface to ``gateway`` mode, since this
-will greatly improve network convergence time and path resolution for anyone connecting
-to your entry-point.
+It is also important to set your connectable interface to ``gateway`` mode, since this will greatly improve network convergence time and path resolution for anyone connecting to your entry-point.
 
 .. code:: ini
 
@@ -251,8 +200,7 @@ to your entry-point.
     announce_rate_penalty = 3600
     announce_rate_grace = 6
 
-If instead you want to make a private entry-point from the Internet, you can use the
-:ref:`IFAC name and passphrase options<interfaces-options>` to secure your interface with a network name and passphrase.
+If instead you want to make a private entry-point from the Internet, you can use the :ref:`IFAC name and passphrase options<interfaces-options>` to secure your interface with a network name and passphrase.
 
 .. code:: ini
 
@@ -268,132 +216,79 @@ If instead you want to make a private entry-point from the Internet, you can use
     network_name = private_ret
     passphrase = 2owjajquafIanPecAc
 
-If you are hosting an entry-point on an operating system that does not support
-``BackboneInterface``, you can use ``TCPServerInterface`` instead, although it will
-not be as performant.
+If you are hosting an entry-point on an operating system that does not support ``BackboneInterface``, you can use ``TCPServerInterface`` instead, although it will not be as performant.
 
 
 Connecting Reticulum Instances Over the Internet
 ================================================
-Reticulum currently offers three interfaces suitable for connecting instances over the Internet: :ref:`Backbone<interfaces-backbone>`, :ref:`TCP<interfaces-tcps>`
-and :ref:`I2P<interfaces-i2p>`. Each interface offers a different set of features, and Reticulum
-users should carefully choose the interface which best suites their needs.
+Reticulum currently offers three interfaces suitable for connecting instances over the Internet: :ref:`Backbone<interfaces-backbone>`, :ref:`TCP<interfaces-tcps>` and :ref:`I2P<interfaces-i2p>`. Each interface offers a different set of features, and Reticulum users should carefully choose the interface which best suites their needs.
 
-The ``TCPServerInterface`` allows users to host an instance accessible over TCP/IP. This
-method is generally faster, lower latency, and more energy efficient than using ``I2PInterface``,
-however it also leaks more data about the server host.
+The ``TCPServerInterface`` allows users to host an instance accessible over TCP/IP. This method is generally faster, lower latency, and more energy efficient than using ``I2PInterface``, however it also leaks more data about the server host.
 
-The ``BackboneInterface`` is a very fast and efficient interface type available on POSIX operating
-systems, designed to handle thousands of connections simultaneously with low memory, processing
-and I/O overhead. It is fully compatible with the TCP-based interface types.
+The ``BackboneInterface`` is a very fast and efficient interface type available on POSIX operating systems, designed to handle thousands of connections simultaneously with low memory, processing and I/O overhead. It is fully compatible with the TCP-based interface types.
 
-TCP connections reveal the IP address of both your instance and the server to anyone who can
-inspect the connection. Someone could use this information to determine your location or identity. Adversaries
-inspecting your packets may be able to record packet metadata like time of transmission and packet size.
-Even though Reticulum encrypts traffic, TCP does not, so an adversary may be able to use
-packet inspection to learn that a system is running Reticulum, and what other IP addresses connect to it.
-Hosting a publicly reachable instance over TCP also requires a publicly reachable IP address,
-which most Internet connections don't offer anymore.
+TCP connections reveal the IP address of both your instance and the server to anyone who can inspect the connection. Someone could use this information to determine your location or identity. Adversaries inspecting your packets may be able to record packet metadata like time of transmission and packet size. Even though Reticulum encrypts traffic, TCP does not, so an adversary may be able to use packet inspection to learn that a system is running Reticulum, and what other IP addresses connect to it. Hosting a publicly reachable instance over TCP also requires a publicly reachable IP address, which most Internet connections don't offer anymore.
 
-The ``I2PInterface`` routes messages through the `Invisible Internet Protocol
-(I2P) <https://geti2p.net/en/>`_. To use this interface, users must also run an I2P daemon in
-parallel to ``rnsd``. For always-on I2P nodes it is recommended to use `i2pd <https://i2pd.website/>`_.
+The ``I2PInterface`` routes messages through the `Invisible Internet Protocol (I2P) <https://geti2p.net/en/>`_. To use this interface, users must also run an I2P daemon in parallel to ``rnsd``. For always-on I2P nodes it is recommended to use `i2pd <https://i2pd.website/>`_.
 
-By default, I2P will encrypt and mix all traffic sent over the Internet, and
-hide both the sender and receiver Reticulum instance IP addresses. Running an I2P node
-will also relay other I2P user's encrypted packets, which will use extra
-bandwidth and compute power, but also makes timing attacks and other forms of
-deep-packet-inspection much more difficult.
+By default, I2P will encrypt and mix all traffic sent over the Internet, and hide both the sender and receiver Reticulum instance IP addresses. Running an I2P node will also relay other I2P user's encrypted packets, which will use extra bandwidth and compute power, but also makes timing attacks and other forms of deep-packet-inspection much more difficult.
 
 I2P also allows users to host globally available Reticulum instances from non-public IP's and behind firewalls and NAT.
 
-In general it is recommended to use an I2P node if you want to host a publicly accessible
-instance, while preserving anonymity. If you care more about performance, and a slightly
-easier setup, use TCP.
+In general it is recommended to use an I2P node if you want to host a publicly accessible instance, while preserving anonymity. If you care more about performance, and a slightly easier setup, use TCP.
 
 Adding Radio Interfaces
 =======================
-Once you have Reticulum installed and working, you can add radio interfaces with
-any compatible hardware you have available. Reticulum supports a wide range of radio
-hardware, and if you already have any available, it is very likely that it will
-work with Reticulum. For information on how to configure this, see the
-:ref:`Interfaces<interfaces-main>` section of this manual.
+Once you have Reticulum installed and working, you can add radio interfaces with any compatible hardware you have available. Reticulum supports a wide range of radio hardware, and if you already have any available, it is very likely that it will work with Reticulum. For information on how to configure this, see the :ref:`Interfaces<interfaces-main>` section of this manual.
 
-If you do not already have transceiver hardware available, you can easily and
-cheaply build an :ref:`RNode<rnode-main>`, which is a general-purpose long-range
-digital radio transceiver, that integrates easily with Reticulum.
+If you do not already have transceiver hardware available, you can easily and cheaply build an :ref:`RNode<rnode-main>`, which is a general-purpose long-range digital radio transceiver, that integrates easily with Reticulum.
 
-To build one yourself requires installing a custom firmware on a supported LoRa
-development board with an auto-install script or web-based flasher.
-Please see the :ref:`Communications Hardware<hardware-main>` chapter for a guide.
-If you prefer purchasing a ready-made unit, you can refer to the
-:ref:`list of suppliers<rnode-suppliers>`. 
+To build one yourself requires installing a custom firmware on a supported LoRa development board with an auto-install script or web-based flasher. Please see the :ref:`Communications Hardware<hardware-main>` chapter for a guide. If you prefer purchasing a ready-made unit, you can refer to the :ref:`list of suppliers<rnode-suppliers>`. 
 
-Other radio-based hardware interfaces are being developed and made available by
-the broader Reticulum community. You can find more information on such topics
-over Reticulum-based information sharing systems.
+Other radio-based hardware interfaces are being developed and made available by the broader Reticulum community. You can find more information on such topics over Reticulum-based information sharing systems.
 
-If you have communications hardware that is not already supported by any of the
-:ref:`existing interface types<interfaces-main>`, it is easy to write (and potentially
-publish) a :ref:`custom interface module<interfaces-custom>` that makes it compatible with Reticulum.
+If you have communications hardware that is not already supported by any of the :ref:`existing interface types<interfaces-main>`, it is easy to write (and potentially publish) a :ref:`custom interface module<interfaces-custom>` that makes it compatible with Reticulum.
 
 
 Creating and Using Custom Interfaces
 ====================================
 
-While Reticulum includes a flexible and broad range of built-in interfaces, these
-will not cover every conceivable type of communications hardware that Reticulum
-can potentially use to communicate.
+While Reticulum includes a flexible and broad range of built-in interfaces, these will not cover every conceivable type of communications hardware that Reticulum can potentially use to communicate.
 
-It is therefore possible to easily write your own interface modules, that can be
-loaded at run-time and used on-par with any of the built-in interface types.
+It is therefore possible to easily write your own interface modules, that can be loaded at run-time and used on-par with any of the built-in interface types.
 
-For more information on this subject, and code examples to build on, please see
-the :ref:`Configuring Interfaces<interfaces-main>` chapter.
+For more information on this subject, and code examples to build on, please see the :ref:`Configuring Interfaces<interfaces-main>` chapter.
 
 
 Develop a Program with Reticulum
-===========================================
-If you want to develop programs that use Reticulum, the easiest way to get
-started is to install the latest release of Reticulum via pip:
+================================
+If you want to develop programs that use Reticulum, the easiest way to get started is to install the latest release of Reticulum via pip:
 
 .. code::
 
    pip install rns
 
-The above command will install Reticulum and dependencies, and you will be
-ready to import and use RNS in your own programs. The next step will most
-likely be to look at some :ref:`Example Programs<examples-main>`.
+The above command will install Reticulum and dependencies, and you will be ready to import and use RNS in your own programs. The next step will most likely be to look at some :ref:`Example Programs<examples-main>`.
 
-The entire Reticulum API is documented in the :ref:`API Reference<api-main>`
-chapter of this manual. Before diving in, it's probably a good idea to read
-this manual in full, but at least start with the :ref:`Understanding Reticulum<understanding-main>` chapter.
+The entire Reticulum API is documented in the :ref:`API Reference<api-main>` chapter of this manual. Before diving in, it's probably a good idea to read this manual in full, but at least start with the :ref:`Understanding Reticulum<understanding-main>` chapter.
 
 
 .. _install-guides:
 
 Platform-Specific Install Notes
-==============================================
+===============================
 
-Some platforms require a slightly different installation procedure, or have
-various quirks that are worth being aware of. These are listed here.
+Some platforms require a slightly different installation procedure, or have various quirks that are worth being aware of. These are listed here.
 
 Android
-^^^^^^^^^^^^^^^^^^^^^^^^
-Reticulum can be used on Android in different ways. The easiest way to get
-started is using an app like `Sideband <https://unsigned.io/sideband>`_.
+^^^^^^^
+Reticulum can be used on Android in different ways. The easiest way to get started is using an app like `Sideband <https://unsigned.io/sideband>`_.
 
-For more control and features, you can use Reticulum and related programs via
-the `Termux app <https://termux.com/>`_, at the time of writing available on
-`F-droid <https://f-droid.org>`_.
+For more control and features, you can use Reticulum and related programs via the `Termux app <https://termux.com/>`_, at the time of writing available on `F-droid <https://f-droid.org>`_.
 
-Termux is a terminal emulator and Linux environment for Android based devices,
-which includes the ability to use many different programs and libraries,
-including Reticulum.
+Termux is a terminal emulator and Linux environment for Android based devices, which includes the ability to use many different programs and libraries, including Reticulum.
 
-To use Reticulum within the Termux environment, you will need to install
-``python`` and the ``python-cryptography`` library using ``pkg``, the package-manager
-build into Termux. After that, you can use ``pip`` to install Reticulum.
+To use Reticulum within the Termux environment, you will need to install ``python`` and the ``python-cryptography`` library using ``pkg``, the package-manager build into Termux. After that, you can use ``pip`` to install Reticulum.
 
 From within Termux, execute the following:
 
@@ -412,9 +307,7 @@ From within Termux, execute the following:
     # Install Reticulum
     pip install rns
 
-If for some reason the ``python-cryptography`` package is not available for
-your platform via the Termux package manager, you can attempt to build it
-locally on your device using the following command:
+If for some reason the ``python-cryptography`` package is not available for your platform via the Termux package manager, you can attempt to build it locally on your device using the following command:
 
 .. code:: shell
 
@@ -441,16 +334,12 @@ locally on your device using the following command:
     # Reticulum and any related software
     pip install rns
 
-It is also possible to include Reticulum in apps compiled and distributed as
-Android APKs. A detailed tutorial and example source code will be included
-here at a later point. Until then you can use the `Sideband source code <https://github.com/markqvist/sideband>`_ as an example and starting point.
+It is also possible to include Reticulum in apps compiled and distributed as Android APKs. A detailed tutorial and example source code will be included here at a later point. Until then you can use the `Sideband source code <https://github.com/markqvist/sideband>`_ as an example and starting point.
 
 
 ARM64
-^^^^^^^^^^^^^^^^^^^^^^^^
-On some architectures, including ARM64, not all dependencies have precompiled
-binaries. On such systems, you may need to install ``python3-dev`` (or similar) before
-installing Reticulum or programs that depend on Reticulum.
+^^^^^
+On some architectures, including ARM64, not all dependencies have precompiled binaries. On such systems, you may need to install ``python3-dev`` (or similar) before installing Reticulum or programs that depend on Reticulum.
 
 .. code:: shell
 
@@ -466,12 +355,8 @@ on your system locally.
 
 
 Debian Bookworm
-^^^^^^^^^^^^^^^^^^^^^^^^
-On versions of Debian released after April 2023, it is no longer possible by default
-to use ``pip`` to install packages onto your system. Unfortunately, you will need to
-use the replacement ``pipx`` command instead, which places installed packages in an
-isolated environment. This should not negatively affect Reticulum, but will not work
-for including and using Reticulum in your own scripts and programs.
+^^^^^^^^^^^^^^^
+On versions of Debian released after April 2023, it is no longer possible by default to use ``pip`` to install packages onto your system. Unfortunately, you will need to use the replacement ``pipx`` command instead, which places installed packages in an isolated environment. This should not negatively affect Reticulum, but will not work for including and using Reticulum in your own scripts and programs.
 
 .. code:: shell
 
@@ -484,42 +369,30 @@ for including and using Reticulum in your own scripts and programs.
     # Install Reticulum
     pipx install rns
 
-Alternatively, you can restore normal behaviour to ``pip`` by creating or editing
-the configuration file located at ``~/.config/pip/pip.conf``, and adding the
-following section:
+Alternatively, you can restore normal behaviour to ``pip`` by creating or editing the configuration file located at ``~/.config/pip/pip.conf``, and adding the following section:
 
 .. code:: ini
 
     [global]
     break-system-packages = true
 
-For a one-shot installation of Reticulum, without globally enabling the ``break-system-packages``
-option, you can use the following command:
+For a one-shot installation of Reticulum, without globally enabling the ``break-system-packages`` option, you can use the following command:
 
 .. code:: shell
 
     pip install rns --break-system-packages
 
 .. note::
-   The ``--break-system-packages`` directive is a somewhat misleading choice
-   of words. Setting it will of course not break any system packages, but will simply
-   allow installing ``pip`` packages user- and system-wide. While this *could* in rare
-   cases lead to version conflicts, it does not generally pose any problems, especially
-   not in the case of installing Reticulum.
+   The ``--break-system-packages`` directive is a somewhat misleading choice of words. Setting it will of course not break any system packages, but will simply allow installing ``pip`` packages user- and system-wide. While this *could* in rare cases lead to version conflicts, it does not generally pose any problems, especially not in the case of installing Reticulum.
 
 
 MacOS
-^^^^^^^^^^^^^^^^^^^^^^^^^
-To install Reticulum on macOS, you will need to have Python and the ``pip`` package
-manager installed.
+^^^^^
+To install Reticulum on macOS, you will need to have Python and the ``pip`` package manager installed.
 
-Systems running macOS can vary quite widely in whether or not Python is pre-installed,
-and if it is, which version is installed, and whether the ``pip`` package manager is
-also installed and set up. If in doubt, you can `download and install <https://www.python.org/downloads/>`_
-Python manually.
+Systems running macOS can vary quite widely in whether or not Python is pre-installed, and if it is, which version is installed, and whether the ``pip`` package manager is also installed and set up. If in doubt, you can `download and install <https://www.python.org/downloads/>`_ Python manually.
 
-When Python and ``pip`` is available on your system, simply open a terminal window
-and use one of the following commands:
+When Python and ``pip`` is available on your system, simply open a terminal window and use one of the following commands:
 
 .. code:: shell
 
@@ -531,16 +404,9 @@ and use one of the following commands:
    pip3 install rns --break-system-packages
 
 .. note::
-   The ``--break-system-packages`` directive is a somewhat misleading choice
-   of words. Setting it will of course not break any system packages, but will simply
-   allow installing ``pip`` packages user- and system-wide. While this *could* in rare
-   cases lead to version conflicts, it does not generally pose any problems, especially
-   not in the case of installing Reticulum.
+   The ``--break-system-packages`` directive is a somewhat misleading choice of words. Setting it will of course not break any system packages, but will simply allow installing ``pip`` packages user- and system-wide. While this *could* in rare cases lead to version conflicts, it does not generally pose any problems, especially not in the case of installing Reticulum.
 
-Additionally, some version combinations of macOS and Python require you to
-manually add your installed ``pip`` packages directory to your `PATH` environment
-variable, before you can use installed commands in your terminal. Usually, adding
-the following line to your shell init script (for example ``~/.zshrc``) will be enough:
+Additionally, some version combinations of macOS and Python require you to manually add your installed ``pip`` packages directory to your `PATH` environment variable, before you can use installed commands in your terminal. Usually, adding the following line to your shell init script (for example ``~/.zshrc``) will be enough:
 
 .. code:: shell
 
@@ -550,20 +416,13 @@ Adjust Python version and shell init script location according to your system.
 
 
 OpenWRT
-^^^^^^^^^^^^^^^^^^^^^^^^^
-On OpenWRT systems with sufficient storage and memory, you can install
-Reticulum and related utilities using the `opkg` package manager and `pip`.
+^^^^^^^
+On OpenWRT systems with sufficient storage and memory, you can install Reticulum and related utilities using the `opkg` package manager and `pip`.
 
 .. note::
+   At the time of releasing this manual, work is underway to create pre-built Reticulum packages for OpenWRT, with full configuration, service and ``uci`` integration. Please see the `feed-reticulum <https://github.com/gretel/feed-reticulum>`_ and `reticulum-openwrt <https://github.com/gretel/reticulum-openwrt>`_ repositories for more information.
 
-   At the time of releasing this manual, work is underway to create pre-built
-   Reticulum packages for OpenWRT, with full configuration, service
-   and ``uci`` integration. Please see the `feed-reticulum <https://github.com/gretel/feed-reticulum>`_
-   and `reticulum-openwrt <https://github.com/gretel/reticulum-openwrt>`_
-   repositories for more information.
-
-To install Reticulum on OpenWRT, first log into a command line session, and
-then use the following instructions:
+To install Reticulum on OpenWRT, first log into a command line session, and then use the following instructions:
 
 .. code:: shell
 
@@ -577,30 +436,15 @@ then use the following instructions:
    rnsd -vvv
 
 .. note::
-   
-   The above instructions have been verified and tested on OpenWRT 21.02 only.
-   It is likely that other versions may require slightly altered installation
-   commands or package names. You will also need enough free space in your
-   overlay FS, and enough free RAM to actually run Reticulum and any related
-   programs and utilities.
+   The above instructions have been verified and tested on OpenWRT 21.02 only. It is likely that other versions may require slightly altered installation commands or package names. You will also need enough free space in your overlay FS, and enough free RAM to actually run Reticulum and any related programs and utilities.
 
-Depending on your device configuration, you may need to adjust firewall rules
-for Reticulum connectivity to and from your device to work. Until proper
-packaging is ready, you will also need to manually create a service or startup
-script to automatically laucnh Reticulum at boot time.
+Depending on your device configuration, you may need to adjust firewall rules for Reticulum connectivity to and from your device to work. Until proper packaging is ready, you will also need to manually create a service or startup script to automatically laucnh Reticulum at boot time.
 
-Please also note that the `AutoInterface` requires link-local IPv6 addresses
-to be enabled for any Ethernet and WiFi devices you intend to use. If ``ip a``
-shows an address starting with ``fe80::`` for the device in question,
-``AutoInterface`` should work for that device.
+Please also note that the `AutoInterface` requires link-local IPv6 addresses to be enabled for any Ethernet and WiFi devices you intend to use. If ``ip a`` shows an address starting with ``fe80::`` for the device in question, ``AutoInterface`` should work for that device.
 
 Raspberry Pi
-^^^^^^^^^^^^^^^^^^^^^^^^^
-It is currently recommended to use a 64-bit version of the Raspberry Pi OS
-if you want to run Reticulum on Raspberry Pi computers, since 32-bit versions
-don't always have packages available for some dependencies. If Python and the
-`pip` package manager is not already installed, do that first, and then
-install Reticulum using `pip`.
+^^^^^^^^^^^^
+It is currently recommended to use a 64-bit version of the Raspberry Pi OS if you want to run Reticulum on Raspberry Pi computers, since 32-bit versions don't always have packages available for some dependencies. If Python and the `pip` package manager is not already installed, do that first, and then install Reticulum using `pip`.
 
 .. code:: shell
 
@@ -611,22 +455,14 @@ install Reticulum using `pip`.
    pip install rns --break-system-packages
 
 .. note::
-   The ``--break-system-packages`` directive is a somewhat misleading choice
-   of words. Setting it will of course not break any system packages, but will simply
-   allow installing ``pip`` packages user- and system-wide. While this *could* in rare
-   cases lead to version conflicts, it does not generally pose any problems, especially
-   not in the case of installing Reticulum.
+   The ``--break-system-packages`` directive is a somewhat misleading choice of words. Setting it will of course not break any system packages, but will simply allow installing ``pip`` packages user- and system-wide. While this *could* in rare cases lead to version conflicts, it does not generally pose any problems, especially not in the case of installing Reticulum.
 
-While it is possible to install and run Reticulum on 32-bit Rasperry Pi OSes,
-it will require manually configuring and installing required build dependencies,
-and is not detailed in this manual.
+While it is possible to install and run Reticulum on 32-bit Rasperry Pi OSes, it will require manually configuring and installing required build dependencies, and is not detailed in this manual.
 
 
 RISC-V
-^^^^^^^^^^^^^^^^^^^^^^^^
-On some architectures, including RISC-V, not all dependencies have precompiled
-binaries. On such systems, you may need to install ``python3-dev`` (or similar) before
-installing Reticulum or programs that depend on Reticulum.
+^^^^^^
+On some architectures, including RISC-V, not all dependencies have precompiled binaries. On such systems, you may need to install ``python3-dev`` (or similar) before installing Reticulum or programs that depend on Reticulum.
 
 .. code:: shell
 
@@ -637,17 +473,12 @@ installing Reticulum or programs that depend on Reticulum.
    # Install Reticulum
    python3 -m pip install rns
 
-With these packages installed, ``pip`` will be able to build any missing dependencies
-on your system locally.
+With these packages installed, ``pip`` will be able to build any missing dependencies on your system locally.
 
 
 Ubuntu Lunar
-^^^^^^^^^^^^^^^^^^^^^^^^
-On versions of Ubuntu released after April 2023, it is no longer possible by default
-to use ``pip`` to install packages onto your system. Unfortunately, you will need to
-use the replacement ``pipx`` command instead, which places installed packages in an
-isolated environment. This should not negatively affect Reticulum, but will not work
-for including and using Reticulum in your own scripts and programs.
+^^^^^^^^^^^^
+On versions of Ubuntu released after April 2023, it is no longer possible by default to use ``pip`` to install packages onto your system. Unfortunately, you will need to use the replacement ``pipx`` command instead, which places installed packages in an isolated environment. This should not negatively affect Reticulum, but will not work for including and using Reticulum in your own scripts and programs.
 
 .. code:: shell
 
@@ -660,42 +491,29 @@ for including and using Reticulum in your own scripts and programs.
     # Install Reticulum
     pipx install rns
 
-Alternatively, you can restore normal behaviour to ``pip`` by creating or editing
-the configuration file located at ``~/.config/pip/pip.conf``, and adding the
-following section:
+Alternatively, you can restore normal behaviour to ``pip`` by creating or editing the configuration file located at ``~/.config/pip/pip.conf``, and adding the following section:
 
 .. code:: text
 
     [global]
     break-system-packages = true
 
-For a one-shot installation of Reticulum, without globally enabling the ``break-system-packages``
-option, you can use the following command:
+For a one-shot installation of Reticulum, without globally enabling the ``break-system-packages`` option, you can use the following command:
 
 .. code:: text
 
     pip install rns --break-system-packages
 
 .. note::
-   The ``--break-system-packages`` directive is a somewhat misleading choice
-   of words. Setting it will of course not break any system packages, but will simply
-   allow installing ``pip`` packages user- and system-wide. While this *could* in rare
-   cases lead to version conflicts, it does not generally pose any problems, especially
-   not in the case of installing Reticulum.
+   The ``--break-system-packages`` directive is a somewhat misleading choice of words. Setting it will of course not break any system packages, but will simply allow installing ``pip`` packages user- and system-wide. While this *could* in rare cases lead to version conflicts, it does not generally pose any problems, especially not in the case of installing Reticulum.
 
 Windows
-^^^^^^^^^^^^^^^^^^^^^^^^^
-On Windows operating systems, the easiest way to install Reticulum is by using the
-``pip`` package manager from the command line (either the command prompt or Windows
-Powershell).
+^^^^^^^
+On Windows operating systems, the easiest way to install Reticulum is by using the ``pip`` package manager from the command line (either the command prompt or Windows Powershell).
 
-If you don't already have Python installed, `download and install Python <https://www.python.org/downloads/>`_.
-At the time of publication of this manual, the recommended version is `Python 3.12.7 <https://www.python.org/downloads/release/python-3127>`_.
+If you don't already have Python installed, `download and install Python <https://www.python.org/downloads/>`_. At the time of publication of this manual, the recommended version is `Python 3.12.7 <https://www.python.org/downloads/release/python-3127>`_.
 
-**Important!** When asked by the installer, make sure to add the Python program to
-your PATH environment variables. If you don't do this, you will not be able to
-use the ``pip`` installer, or run the included Reticulum utility programs (such as
-``rnsd`` and ``rnstatus``) from the command line.
+**Important!** When asked by the installer, make sure to add the Python program to your PATH environment variables. If you don't do this, you will not be able to use the ``pip`` installer, or run the included Reticulum utility programs (such as ``rnsd`` and ``rnstatus``) from the command line.
 
 After installing Python, open the command prompt or Windows Powershell, and type:
 
@@ -703,11 +521,10 @@ After installing Python, open the command prompt or Windows Powershell, and type
 
    pip install rns
 
-You can now use Reticulum and all included utility programs directly from your
-preferred command line interface.
+You can now use Reticulum and all included utility programs directly from your preferred command line interface.
 
 Pure-Python Reticulum
-==============================================
+=====================
 
 .. warning::
    If you use the ``rnspure`` package to run Reticulum on systems that
@@ -715,17 +532,6 @@ Pure-Python Reticulum
    important that you read and understand the :ref:`Cryptographic Primitives <understanding-primitives>`
    section of this manual.
 
-In some rare cases, and on more obscure system types, it is not possible to
-install one or more dependencies. In such situations,
-you can use the ``rnspure`` package instead of the ``rns`` package, or use ``pip``
-with the ``--no-dependencies`` command-line option. The ``rnspure``
-package requires no external dependencies for installation. Please note that the
-actual contents of the ``rns`` and ``rnspure`` packages are *completely identical*.
-The only difference is that the ``rnspure`` package lists no dependencies required
-for installation.
+In some rare cases, and on more obscure system types, it is not possible to install one or more dependencies. In such situations, you can use the ``rnspure`` package instead of the ``rns`` package, or use ``pip`` with the ``--no-dependencies`` command-line option. The ``rnspure`` package requires no external dependencies for installation. Please note that the actual contents of the ``rns`` and ``rnspure`` packages are *completely identical*. The only difference is that the ``rnspure`` package lists no dependencies required for installation.
 
-No matter how Reticulum is installed and started, it will load external dependencies
-only if they are *needed* and *available*. If for example you want to use Reticulum
-on a system that cannot support ``pyserial``, it is perfectly possible to do so using
-the `rnspure` package, but Reticulum will not be able to use serial-based interfaces.
-All other available modules will still be loaded when needed.
+No matter how Reticulum is installed and started, it will load external dependencies only if they are *needed* and *available*. If for example you want to use Reticulum on a system that cannot support ``pyserial``, it is perfectly possible to do so using the `rnspure` package, but Reticulum will not be able to use serial-based interfaces. All other available modules will still be loaded when needed.

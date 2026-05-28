@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Git Over Reticulum - Reticulum Network Stack 1.3.0 documentation</title>
+        <title>Git Over Reticulum - Reticulum Network Stack 1.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.3.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.3.2 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.3.0 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.3.2 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -946,20 +946,30 @@ argument to <code class="docutils literal notranslate"><span class="pre">rngit</
 </pre></div>
 </div>
 <p>If your pattern contains no wildcard characters, it must match an artifact name exactly, which is useful for fetching single, specific artifacts. When a pattern matches multiple artifacts, all matched files are fetched and verified. If no artifacts match the pattern, the fetch aborts with an error indicating no matches were found.</p>
-<p><strong>Offline Verification</strong></p>
+</section>
+<section id="offline-verification">
+<h3>Offline Verification<a class="headerlink" href="#offline-verification" title="Link to this heading">¶</a></h3>
 <p>Because the release manifest contains embedded signatures, you can verify the integrity of release artifacts offline, without connecting to the repository node. The <code class="docutils literal notranslate"><span class="pre">rnid</span></code> and <code class="docutils literal notranslate"><span class="pre">rngit</span></code> utilities can validate artifact signatures against <code class="docutils literal notranslate"><span class="pre">.rsg</span></code> and manifest files.</p>
+<p><strong>Using a release manifest:</strong></p>
+<p>Ensure the release manifest is located in the same directory as the release artifacts, then run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Verify all artifacts in the manifest
+$ rngit release myapp-1.2.0.rsm verify
+
+# Or, verify only specific artifacts
+$ rngit release myapp-1.2.0.rsm verify &quot;latest:*.whl&quot;
+</pre></div>
+</div>
+<p>This will load the manifest, and verify all files currently on-disk, but will not attempt to fetch the latest release manifest from the origin, or update local files to match it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">verify</span></code> operation is functionally equivalent to using the <code class="docutils literal notranslate"><span class="pre">fetch</span></code> operation with the <code class="docutils literal notranslate"><span class="pre">--offline</span></code> flag, and they can be used interchangably.</p>
+</div>
 <p><strong>For individual files:</strong></p>
 <p>Ensure the <code class="docutils literal notranslate"><span class="pre">.rsg</span></code> signature is located in the same directory as the release artifact, then run:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rnid -V myapp-1.2.0.tar.gz
 </pre></div>
 </div>
 <p>This validates that the artifact file matches the signature created during the release process. Combined with the manifest’s own signature, this provides end-to-end verification from the original release creation to the final installation.</p>
-<p><strong>For a complete release:</strong></p>
-<p>Ensure the release manifest is located in the same directory as the release artifacts, then run:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rngit release myapp-1.2.0.rsm fetch --offline
-</pre></div>
-</div>
-<p>This will load the manifest, and verify all files currently on-disk, but will not attempt to fetch the latest release manifest from the origin, or update local files to match it.</p>
 </section>
 <section id="creating-signed-releases">
 <span id="git-release-create"></span><h3>Creating Signed Releases<a class="headerlink" href="#creating-signed-releases" title="Link to this heading">¶</a></h3>
@@ -967,7 +977,7 @@ argument to <code class="docutils literal notranslate"><span class="pre">rngit</
 <ol class="arabic simple">
 <li><p>Generates an Ed25519 signature for each artifact file using your identity’s signing key</p></li>
 <li><p>Creates <code class="docutils literal notranslate"><span class="pre">.rsg</span></code> signature files alongside each artifact in your distribution directory</p></li>
-<li><p>Constructs a signed release manifest (<code class="docutils literal notranslate"><span class="pre">manifest.rsm</span></code>) containing metadata, an artifact list, and embedded signatures</p></li>
+<li><p>Constructs a signed <code class="docutils literal notranslate"><span class="pre">manifest.rsm</span></code> release manifest containing metadata, an artifact list, and embedded signatures</p></li>
 <li><p>Transmits both artifacts, signatures and manifest to the remote node specified as release origin</p></li>
 </ol>
 <p>As an example, to create and publish a release from all files in the folder named <code class="docutils literal notranslate"><span class="pre">dist</span></code>, simply run:</p>
@@ -1346,6 +1356,89 @@ options:
 </div>
 </section>
 </section>
+<section id="commit-signing">
+<span id="git-commit-signing"></span><h2>Commit Signing<a class="headerlink" href="#commit-signing" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">rngit</span></code> system includes <code class="docutils literal notranslate"><span class="pre">rngcs</span></code>, a Git commit signing and validation shim that enables commit signing and validation using Reticulum identities. By hooking into Git’s SSH-based signing format, commits can be signed and verified using Reticulum identity keys directly.</p>
+<p>Unlike traditional GPG and SSH-based commit signing, which relies on centralized keyservers, cumbersome co-signing procedures or manual per-signer setup, Reticulum commit signing uses self-contained RSG signatures, that can be deterministically resolved to Reticulum identity hashes.</p>
+<p>This enables offline verification with no external infrastructure. The signature itself contains everything needed to cryptographically verify the signer’s Reticulum identity and that the commit was signed correctly by the claimed identity.</p>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h3>
+<p>Before you can sign commits, you need a Reticulum identity with a private key. If you don’t already have one, you can generate it using <code class="docutils literal notranslate"><span class="pre">rnid</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ rnid -g ~/.rngit/client_identity
+
+New identity &lt;1a54d64db7e8beca6f2c6cd17b0cb479&gt; written to /home/user/.rngit/client_identity
+</pre></div>
+</div>
+<p>The identity file must contain the private key to be usable for signing. The corresponding Reticulum identity hash will be used as the commit author identity.</p>
+</section>
+<section id="id1">
+<h3>Configuration<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Git must be configured to use SSH-format signatures with the <code class="docutils literal notranslate"><span class="pre">rngcs</span></code> signing shim, which is included in RNS. You can configure this either globally or per-repository.</p>
+<p><strong>Global Configuration</strong></p>
+<p>Enabling Reticulum commit signing for all repositories is as simple as:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git config --global gpg.format ssh
+$ git config --global gpg.ssh.program rngcs
+$ git config --global gpg.ssh.allowedsignersfile none
+$ git config --global user.signingKey ~/.rngit/client_identity
+</pre></div>
+</div>
+<p>With this configuration, all commits you sign with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-S</span></code> will use your Reticulum identity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gpg.ssh.allowedsignersfile</span></code> configuration key <strong>must</strong> be <em>set</em> for <code class="docutils literal notranslate"><span class="pre">git</span></code> to allow invoking the signing and verification shim. It is not actually used by <code class="docutils literal notranslate"><span class="pre">rngcs</span></code>, and can be set to an arbitrary value. All validation operations happen exclusively based on the information in the embedded RSG data.</p>
+</div>
+<p><strong>Per-Repository Configuration</strong></p>
+<p>To enable signing only for a specific repository:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ cd /path/to/repository
+$ git config --local gpg.format ssh
+$ git config --local gpg.ssh.program rngcs
+$ git config --local gpg.ssh.allowedsignersfile none
+$ git config --local user.signingKey ~/.rngit/client_identity
+</pre></div>
+</div>
+<p>This is useful when you want to use different identities for different projects, or when only specific repositories require signed commits.</p>
+</section>
+<section id="author-identity-binding">
+<h3>Author Identity Binding<a class="headerlink" href="#author-identity-binding" title="Link to this heading">¶</a></h3>
+<p>For the signature to be valid, the Git author email <strong>must</strong> match the Reticulum identity hash of the signing key. You can configure this using a command like the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git config --global user.email &quot;1a54d64db7e8beca6f2c6cd17b0cb479&quot;
+</pre></div>
+</div>
+<p>When <code class="docutils literal notranslate"><span class="pre">rngcs</span></code> verifies a commit, it extracts both the Git author field of the signed commit message and the signer identity from the RSG signature, ensuring they match. This binding is necessary to prevent identity spoofing. If someone crafts a commit with your identity hash in the author field but signs with a different key, verification will fail.</p>
+</section>
+<section id="signing-commits">
+<h3>Signing Commits<a class="headerlink" href="#signing-commits" title="Link to this heading">¶</a></h3>
+<p>Once configured, sign commits using the standard Git <code class="docutils literal notranslate"><span class="pre">-S</span></code> flag:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git commit -S -m &quot;Refactored module&quot;
+
+[master 8f7e6d5] Refactored module
+</pre></div>
+</div>
+<p>This will create a self-contained RSG-formatted signature, encode the RSG payload using base64, and wrap it in an ASCII-armored SSH-formatted signature block. The signature is then stored in the commit object’s signature header and includes:</p>
+<ul class="simple">
+<li><p>The SHA256 hash of the commit content</p></li>
+<li><p>The signer’s Reticulum identity hash</p></li>
+<li><p>The signer’s public key</p></li>
+<li><p>The actual signature of the complete envelope</p></li>
+</ul>
+</section>
+<section id="validating-commit-signatures">
+<h3>Validating Commit Signatures<a class="headerlink" href="#validating-commit-signatures" title="Link to this heading">¶</a></h3>
+<p>Commits are automatically validated when using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--show-signature</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">--show-signature</span></code>. The <code class="docutils literal notranslate"><span class="pre">rngcs</span></code> shim handles all verification operations. If any step fails, verification fails and Git displays an error.</p>
+<p>To view signature information for commits, use Git’s standard <code class="docutils literal notranslate"><span class="pre">--show-signature</span></code> option:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git log --show-signature
+
+commit 8f7e6d5c8f7e6d5c8f7e6d5c8f7e6d5c8f7e6d5
+Good &quot;git&quot; signature for commit, signed with Reticulum Identity key &lt;1a54d64db7e8beca6f2c6cd17b0cb479&gt;
+Author: Developer &lt;1a54d64db7e8beca6f2c6cd17b0cb479&gt;
+Date:   Mon Jan 15 09:30:00 2026 +0100
+
+    Refactored module
+</pre></div>
+</div>
+<p>The output shows whether the commit signature is valid, and whether the author field matches the signing identity.</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -1446,6 +1539,7 @@ options:
 </li>
 <li><a class="reference internal" href="#verified-releases">Verified Releases</a><ul>
 <li><a class="reference internal" href="#obtaining-verified-releases">Obtaining Verified Releases</a></li>
+<li><a class="reference internal" href="#offline-verification">Offline Verification</a></li>
 <li><a class="reference internal" href="#creating-signed-releases">Creating Signed Releases</a></li>
 </ul>
 </li>
@@ -1463,6 +1557,14 @@ options:
 <li><a class="reference internal" href="#cryptographic-attribution">Cryptographic Attribution</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#commit-signing">Commit Signing</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#id1">Configuration</a></li>
+<li><a class="reference internal" href="#author-identity-binding">Author Identity Binding</a></li>
+<li><a class="reference internal" href="#signing-commits">Signing Commits</a></li>
+<li><a class="reference internal" href="#validating-commit-signatures">Validating Commit Signatures</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1474,7 +1576,7 @@ options:
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=1f29e9d3"></script>
+</div><script src="_static/documentation_options.js?v=8ca9e7a0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
