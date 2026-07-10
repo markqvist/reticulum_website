@@ -11,8 +11,8 @@ website:
 	cp assets/css/* build/css/
 	cp assets/gfx/* build/gfx/
 	cp -r ../../Reticulum/docs/manual/* build/manual/
-	cp -r ../../Reticulum/docs/Reticulum\ Manual.pdf build/manual/
-	cp -r ../../Reticulum/docs/Reticulum\ Manual.epub build/manual/
+	cp -r ../../dist_archive/Reticulum\ Manual.pdf build/manual/
+	cp -r ../../dist_archive/Reticulum\ Manual.epub build/manual/
 
 docsfolder:
 	@mkdir -p ./docs
