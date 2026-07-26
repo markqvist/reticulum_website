@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Configuring Interfaces - Reticulum Network Stack 1.4.0 documentation</title>
+        <title>Configuring Interfaces - Reticulum Network Stack 1.4.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.4.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.4.2 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.4.0 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.4.2 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -1335,8 +1335,18 @@ someone is actually using them. An example of this could
 be a radio interface serving a wide area, where users are
 expected to connect momentarily, use the network, and then
 disappear again.</p></li>
+<li><p>See the <a class="reference internal" href="#interfaces-modes"><span class="std std-ref">Interface Modes</span></a> section
+below for a reference on additional modes.</p></li>
 </ul>
 </div></blockquote>
+</li>
+<li><div class="line-block">
+<div class="line">The <code class="docutils literal notranslate"><span class="pre">gravity</span></code> option specifies the pathing affinity of an interface.
+If not set specifically, and unless otherwise configured by
+<code class="docutils literal notranslate"><span class="pre">default_gravity</span></code> or <code class="docutils literal notranslate"><span class="pre">autoconnect_interface_gravity</span></code>,
+it defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Positive values increase pathing affinity,
+and negative values decrease it.</div>
+</div>
 </li>
 <li><div class="line-block">
 <div class="line">The <code class="docutils literal notranslate"><span class="pre">outgoing</span></code> option sets whether an interface is allowed
@@ -1424,6 +1434,12 @@ that this controls <em>announce propagation</em>; even if announces
 do not propagate out when received, paths to destinations on
 <code class="docutils literal notranslate"><span class="pre">internal</span></code> mode interfaces may still be resolvable by means
 of path requests.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">To allow an interface that would <em>otherwise not</em> propagate
+announces to <code class="docutils literal notranslate"><span class="pre">internal</span></code> mode interfaces to do so, you can
+configure the <code class="docutils literal notranslate"><span class="pre">announces_to_internal</span></code> option to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</div>
 </div>
 </li>
 </ul>
@@ -1851,7 +1867,7 @@ interface basis under the relevant interface configuration section.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=9172181d"></script>
+</div><script src="_static/documentation_options.js?v=02f2166e"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
