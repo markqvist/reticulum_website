@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>Using Reticulum on Your System - Reticulum Network Stack 1.4.2 documentation</title>
+        <title>Using Reticulum on Your System - Reticulum Network Stack 1.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.4.2 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.5.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.4.2 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.5.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -558,8 +558,8 @@ Reticulum Transport Instance &lt;5245a8efe1788c6a1cd36144a270e13b&gt; running
 </pre></div>
 </div>
 <p><strong>All Command-Line Options</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: rnstatus [-h] [--config CONFIG] [--version] [-a] [-A]
-                [-l] [-t] [-s SORT] [-r] [-j] [-R hash] [-i path]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: rnstatus [-h] [--config CONFIG] [--version] [-a] [-A] [-P] [-l]
+                [-B] [-b] [-t] [-q] [-s SORT] [-r] [-j] [-R hash] [-i path]
                 [-w seconds] [-d] [-D] [-m] [-I seconds] [-v] [filter]
 
 Reticulum Network Stack Status
@@ -573,10 +573,14 @@ options:
   --version             show program&#39;s version number and exit
   -a, --all             show all interfaces
   -A, --announce-stats  show announce stats
+  -P, --pr-stats        show path request stats
   -l, --link-stats      show link stats
+  -B, --burst           only show interfaces with active bursts
+  -b, --blocked-ips     show blocked IPs per interface
   -t, --totals          display traffic totals
+  -q, --queues          display queue stats
   -s, --sort SORT       sort interfaces by [rate, traffic, rx, tx, rxs, txs,
-                                            announces, arx, atx, held]
+                        announces, arx, atx, prx, ptx, held]
   -r, --reverse         reverse sorting
   -j, --json            output in JSON format
   -R hash               transport identity hash of remote instance to get status from
@@ -1640,7 +1644,7 @@ systemctl --user enable rnsd.service
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=02f2166e"></script>
+</div><script src="_static/documentation_options.js?v=e0a75244"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

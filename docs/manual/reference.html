@@ -7,7 +7,7 @@
         <link rel="prefetch" href="_static/rns_logo_512.png" as="image">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25.dev1 -->
-        <title>API Reference - Reticulum Network Stack 1.4.2 documentation</title>
+        <title>API Reference - Reticulum Network Stack 1.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Reticulum Network Stack 1.4.2 documentation</div></a>
+      <a href="index.html"><div class="brand">Reticulum Network Stack 1.5.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -204,7 +204,7 @@
     <img class="sidebar-logo" src="_static/rns_logo_512.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Reticulum Network Stack 1.4.2 documentation</span>
+  <span class="sidebar-brand-text">Reticulum Network Stack 1.5.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -335,10 +335,59 @@ alterations should be made on a per-interface basis instead.</p>
 to successfully establish links. Currently 5 bits per second.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RNS.Reticulum.DEFAULT_PER_HOP_TIMEOUT">
+<span class="sig-name descname"><span class="pre">DEFAULT_PER_HOP_TIMEOUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#RNS.Reticulum.DEFAULT_PER_HOP_TIMEOUT" title="Link to this definition">¶</a></dt>
+<dd><p>The default per-hop timeout value used in various timeout calculations.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="RNS.Reticulum.get_instance">
 <em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Reticulum.get_instance" title="Link to this definition">¶</a></dt>
-<dd><p>Return the currently running Reticulum instance</p>
+<dd><p>Returns the currently running Reticulum instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RNS.Reticulum.get_first_hop_timeout">
+<span class="sig-name descname"><span class="pre">get_first_hop_timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Reticulum.get_first_hop_timeout" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a best-effort estimate of a reasonable minimum
+<em>first-hop</em> timeout value for a given destination hash.
+If a path is known, this calculation takes the next-hop
+interface’s bitrate into account. If no path is currently
+known, returns <code class="docutils literal notranslate"><span class="pre">DEFAULT_PER_HOP_TIMEOUT</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>destination</strong> – A destination hash, as <em>bytes</em>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>First-hop timeout, in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RNS.Reticulum.get_lowest_interface_bitrate">
+<span class="sig-name descname"><span class="pre">get_lowest_interface_bitrate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Reticulum.get_lowest_interface_bitrate" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the bitrate of the slowest currently online
+interface, or None if no online interface bitrate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Lowest online interface bitrate in bits per second, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RNS.Reticulum.get_medium_path_timeout">
+<span class="sig-name descname"><span class="pre">get_medium_path_timeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RNS.Reticulum.get_medium_path_timeout" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an estimate of a reasonable minimum path request timeout covering
+a full round trip for an MTU on the slowest currently online interface
+plus per hop grace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timeout in seconds or 0 if it’s unknown.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2337,7 +2386,11 @@ will announce it.</p>
 <li><a class="reference internal" href="#RNS.Reticulum.LINK_MTU_DISCOVERY"><code class="docutils literal notranslate"><span class="pre">LINK_MTU_DISCOVERY</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.ANNOUNCE_CAP"><code class="docutils literal notranslate"><span class="pre">ANNOUNCE_CAP</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.MINIMUM_BITRATE"><code class="docutils literal notranslate"><span class="pre">MINIMUM_BITRATE</span></code></a></li>
+<li><a class="reference internal" href="#RNS.Reticulum.DEFAULT_PER_HOP_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">DEFAULT_PER_HOP_TIMEOUT</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.get_instance"><code class="docutils literal notranslate"><span class="pre">get_instance()</span></code></a></li>
+<li><a class="reference internal" href="#RNS.Reticulum.get_first_hop_timeout"><code class="docutils literal notranslate"><span class="pre">get_first_hop_timeout()</span></code></a></li>
+<li><a class="reference internal" href="#RNS.Reticulum.get_lowest_interface_bitrate"><code class="docutils literal notranslate"><span class="pre">get_lowest_interface_bitrate()</span></code></a></li>
+<li><a class="reference internal" href="#RNS.Reticulum.get_medium_path_timeout"><code class="docutils literal notranslate"><span class="pre">get_medium_path_timeout()</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.should_use_implicit_proof"><code class="docutils literal notranslate"><span class="pre">should_use_implicit_proof()</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.transport_enabled"><code class="docutils literal notranslate"><span class="pre">transport_enabled()</span></code></a></li>
 <li><a class="reference internal" href="#RNS.Reticulum.link_mtu_discovery"><code class="docutils literal notranslate"><span class="pre">link_mtu_discovery()</span></code></a></li>
@@ -2535,7 +2588,7 @@ will announce it.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=02f2166e"></script>
+</div><script src="_static/documentation_options.js?v=e0a75244"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

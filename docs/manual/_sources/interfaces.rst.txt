@@ -998,6 +998,9 @@ When ``discoverable`` is enabled, a variety of additional options become availab
 ``discovery_name``
   A human-readable name for the interface. This name will be displayed to users on remote systems when they list discovered interfaces. If not specified, the interface name (the section header) will be used.
 
+``discovery_lxmf_address``
+  An optional LXMF address for contacting the operator of this interface. The address will be displayed to users on remote systems when they view details for discovered interfaces. Useful for getting in touch with other operators to interconnect networks with and coordinating network coverage.
+
 ``announce_interval``
   The interval in minutes between successive discovery announces for this interface. Default is 360 minutes (6 hours). For stable, long-running infrastructure, higher intervals (12 to 22 hours) are usually sufficient and reduce network load. Minimum allowed value is 5 minutes (but expect to have your announces throttled if using intervals below one hour).
 
@@ -1568,3 +1571,33 @@ but all the parameters are exposed for configuration if needed.
 All of the above settings can be configured both as instance-wide defaults
 under the ``[reticulum]`` section of the configuration file, or on a per-
 interface basis under the relevant interface configuration section.
+
+
+Tuning Ingress Queues
+=====================
+
+Reticulum uses separate, prioritized queues for processing inbound packets. The default four queues are drained in the following order:
+
+ 1. Data and general traffic
+
+ 2. Announces
+
+ 3. Path requests
+
+ 4. Ingress-limited traffic
+
+You can tune the queue sizes from the defaults, for example if you're running a setup where you want to simply drop most traffic from ingress-limited interfaces. The queue sizes are configured in the ``[reticulum]`` section of the config
+
+ * | The ``qlen_in_data`` option sets the maximum size of the data
+     queue. Defaults to ``4096``.
+
+ * | The ``qlen_in_announce`` option sets the maximum size of the announce
+     queue. Defaults to ``256``.
+
+ * | The ``qlen_in_pr`` option sets the maximum size of the path request
+     queue. Defaults to ``256``.
+
+ * | The ``qlen_in_il`` option sets the maximum size of the ingress limiter
+     queue. Defaults to ``128``.
+
+If an inbound packet arrives and its target queue is full, the packet is dropped. Reticulum will always completely drain higher-priority queues before starting to drain a lower-priority one. As an example, the ingress limiter queue will only start draining once all other queues are empty.

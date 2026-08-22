@@ -337,8 +337,8 @@ Filter output to only show some interfaces:
 
 .. code:: text
 
-  usage: rnstatus [-h] [--config CONFIG] [--version] [-a] [-A]
-                  [-l] [-t] [-s SORT] [-r] [-j] [-R hash] [-i path]
+  usage: rnstatus [-h] [--config CONFIG] [--version] [-a] [-A] [-P] [-l]
+                  [-B] [-b] [-t] [-q] [-s SORT] [-r] [-j] [-R hash] [-i path]
                   [-w seconds] [-d] [-D] [-m] [-I seconds] [-v] [filter]
 
   Reticulum Network Stack Status
@@ -352,10 +352,14 @@ Filter output to only show some interfaces:
     --version             show program's version number and exit
     -a, --all             show all interfaces
     -A, --announce-stats  show announce stats
+    -P, --pr-stats        show path request stats
     -l, --link-stats      show link stats
+    -B, --burst           only show interfaces with active bursts
+    -b, --blocked-ips     show blocked IPs per interface
     -t, --totals          display traffic totals
+    -q, --queues          display queue stats
     -s, --sort SORT       sort interfaces by [rate, traffic, rx, tx, rxs, txs,
-                                              announces, arx, atx, held]
+                          announces, arx, atx, prx, ptx, held]
     -r, --reverse         reverse sorting
     -j, --json            output in JSON format
     -R hash               transport identity hash of remote instance to get status from
