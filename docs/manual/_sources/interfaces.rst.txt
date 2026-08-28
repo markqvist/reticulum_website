@@ -1589,15 +1589,15 @@ Reticulum uses separate, prioritized queues for processing inbound packets. The 
 You can tune the queue sizes from the defaults, for example if you're running a setup where you want to simply drop most traffic from ingress-limited interfaces. The queue sizes are configured in the ``[reticulum]`` section of the config
 
  * | The ``qlen_in_data`` option sets the maximum size of the data
-     queue. Defaults to ``4096``.
+     queue. Defaults to ``1024``.
 
  * | The ``qlen_in_announce`` option sets the maximum size of the announce
-     queue. Defaults to ``256``.
+     queue. Defaults to ``128``.
 
  * | The ``qlen_in_pr`` option sets the maximum size of the path request
-     queue. Defaults to ``256``.
+     queue. Defaults to ``128``.
 
  * | The ``qlen_in_il`` option sets the maximum size of the ingress limiter
-     queue. Defaults to ``128``.
+     queue. Defaults to ``8``.
 
 If an inbound packet arrives and its target queue is full, the packet is dropped. Reticulum will always completely drain higher-priority queues before starting to drain a lower-priority one. As an example, the ingress limiter queue will only start draining once all other queues are empty.
