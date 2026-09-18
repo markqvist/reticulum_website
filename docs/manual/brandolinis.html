@@ -832,10 +832,12 @@ the scaffolding of not one but two ports - <code class="docutils literal notrans
 being the reference’s companion messaging protocol - together with a daemon scaffold and
 a 233-line founding document, <code class="docutils literal notranslate"><span class="pre">docs/build-ethos.md</span></code>. That document declares the project’s
 goal as a “performance-focused drop-in-replacement for rnsd” and its governing principle
-as: “Port the contract, not the implementation.” It further states, in the project’s own
-words, that fidelity is owed to the reference “at exactly two boundaries”: “the wire” and
-“the behaviour”.</p></li>
-<li><p><strong>Continuous alignment to the reference.</strong> 506 commits reference RNS or Reticulum
+as: “Port the contract, not the implementation.” It further states directly to the
+machine-loop, that <strong>“You owe the reference fidelity at exactly two boundaries:
+The wire… The behavior. … Between those two boundaries, the model is yours”</strong>.
+At this point, the very first commit, effectively the whole of the implementation design
+and any relevant decisions are handed over to the LLM.</p></li>
+<li><p><strong>Continuous ingestion from the reference.</strong> 506 commits reference RNS or Reticulum
 source behaviour; the word “parity” appears in 49 commit messages. Commits cite the reference
 implementation’s own source locations (for example <code class="docutils literal notranslate"><span class="pre">Transport.py:1367</span></code>) when correcting
 their own divergences and mistakes.</p></li>
@@ -844,8 +846,8 @@ record shows a “crypto adapter - vetted primitives, byte-exact vs RNS 1.3.1”
 implementation matching the reference’s packet header layout. The project’s own
 validation apparatus decodes wire vectors using the reference implementation’s own
 packet parser, and the interop suite consists of real, stock-RNS peer nodes - that is,
-the reference itself, used as the ground truth against which this project’s output is
-checked, and committed as accepted verified after 48 hours of the project’s recorded start.</p></li>
+the reference source itself, used as the ground truth against which this LLM output is
+checked, and committed as accepted and verified after 48 hours of the project’s recorded start.</p></li>
 <li><p><strong>The marketing mismatch.</strong> The same record that documents all of the above describes the
 project, publicly, as “a ground-up implementation of Reticulum” - while declining, on its
 website, to link to the reference implementation at all: the entire tree mentions the
@@ -943,27 +945,23 @@ candidate for later” (<code class="docutils literal notranslate"><span class="
 <ul class="simple">
 <li><p><strong>Provenance and attribution.</strong> Fails: The fake “ground-up” origin story; zero reference links
 on the website; a single well-hidden link in the README; a license file reading
-“Copyright (c) 2026 The Prns Authors” over work directly generated from the licensed reference;
+<code class="docutils literal notranslate"><span class="pre">Copyright</span> <span class="pre">(c)</span> <span class="pre">2026</span> <span class="pre">The</span> <span class="pre">Prns</span> <span class="pre">Authors</span></code> over work directly generated from the licensed reference;
 no original copyright or permission notice anywhere.</p></li>
 <li><p><strong>Agency and answerability.</strong> Fails on every criterion of <a class="reference internal" href="#brandolinis-assistance-versus-substitution"><span class="std std-ref">Assistance Versus Machine Substitution</span></a>:
-unauthored scope, uniform generation, discovery by regeneration, laundered provenance,
+Unauthored scope, uniform generation, discovery by regeneration, laundered provenance,
 authorship by assignment.</p></li>
-<li><p><strong>Engineering reality.</strong> Fails: The benchmark apparatus above; interop demonstrated only
-against a pinned, outdated reference version (RNS 1.4.2; some published suites against
-1.4.0) over loopback, with the project’s own result tables documenting interop failures
-with stock RNS; the reference version itself drifts across the project’s publication history
-while the marketing claims current parity; a nonstandard “turbo” sub-GHz mode invented for shared spectrum,
-in a codebase whose own history shows it had not yet correctly understood the
-reference’s duty-cycle accounting when the invention was layered on; vendored prebuilt
-binaries and a republished fork of an upstream crate (<code class="docutils literal notranslate"><span class="pre">nrf-softdevice</span> <span class="pre">0.1.0-prns.1</span></code>)
-with no verifiable provenance; committed WASM bundles.</p></li>
-<li><p><strong>Network citizenship.</strong> Fails: Invented spectrum behaviour, and compatibility claims
+<li><p><strong>Engineering.</strong> Fails: The benchmark apparatus above; interop demonstrated only
+against a pinned, outdated reference version over loopback while the marketing claims current
+parity, interop failures with stock RNS; vendored prebuilt binaries and a republished fork
+of an upstream crate (<code class="docutils literal notranslate"><span class="pre">nrf-softdevice</span> <span class="pre">0.1.0-prns.1</span></code>) with no verifiable provenance;
+committed WASM bundles.</p></li>
+<li><p><strong>Network behaviour.</strong> Fails: Invented spectrum behaviour and compatibility claims
 about third-party applications of the reference ecosystem (Sideband, NomadNet, MeshChat)
 that are not established by any evidence.</p></li>
 <li><p><strong>Monetary and influence signals.</strong> The marketing apparatus - website before protocol,
-day-three twelve-language marketing, false benchmark headlines, “audited” claims - is the
-conformal surface described in <a class="reference internal" href="#brandolinis-evaluating"><span class="std std-ref">Evaluating A Reticulum Implementation</span></a>:
-the surface is where this project invested.</p></li>
+day-three twelve-language marketing, false benchmark headlines, “audited” and “formal proof”
+claims - the conformal surface described in <a class="reference internal" href="#brandolinis-evaluating"><span class="std std-ref">Evaluating A Reticulum Implementation</span></a>:
+is where this project invested.</p></li>
 </ul>
 </section>
 <section id="licensing-analysis">
@@ -1059,7 +1057,7 @@ is not the last resort of the wronged; it is the standard reflex of the exposed.
 <p>None of the “arguments” engages the answers given repeatedly, and extensively. That is the point, and the strategy. The arguments are not produced for the purpose of being engaged; they are produced for the purpose of <em>being repeated</em> - the same wine, poured into new bottles, on a cycle. Each cycle is short, cheap to produce, and (thanks to freely available fluent text generation) now nearly effortless. The intended audience is not the community, which has heard it all before. The intended audience is the newcomer, who has not.</p>
 </section>
 <section id="the-method-of-madness">
-<span id="brandolinis-the-method"></span><h3>The Method, of Madness<a class="headerlink" href="#the-method-of-madness" title="Link to this heading">¶</a></h3>
+<span id="brandolinis-the-method"></span><h3>The Method of Madness<a class="headerlink" href="#the-method-of-madness" title="Link to this heading">¶</a></h3>
 <p>The method behind the pattern is consistent and simple enough to be described precisely:</p>
 <p><strong>Bullshit asymmetry</strong></p>
 <p>Producing a fluent, plausibly-sourced smear is now the work of minutes. Refuting it to the standard this manual demands is the work of days, and the refuted smear is replaced by the next one within the week. This asymmetry isn’t just a fine point of the campaign; <strong>it is the campaign</strong>. The goal is exhaustion - the slow conversion of the community’s time and attention from building to defending.</p>
@@ -1168,8 +1166,9 @@ what the fake “movement” cannot do, no matter how fluent and smooth its prod
 </section>
 <section id="health-is-a-property-of-the-whole">
 <span id="brandolinis-property-of-the-whole"></span><h3>Health Is A Property Of The Whole<a class="headerlink" href="#health-is-a-property-of-the-whole" title="Link to this heading">¶</a></h3>
-<p>A network is not made healthy by the excellence of any single part. It is made healthy by the behaviour of every part on the shared medium, and how they interact. And the shared medium is the point. When your node transmits, it transmits into the same spectrum, the same line, the same time, the same mathematical address space, the same bandwidth that its neighbours depend on. Duty cycles, channel etiquette, retry behaviour, announce discipline: These are not private performance details. They are the terms of coexistence, and they bind every member as tightly as the protocol itself.</p>
-<p>This is why the health of the network cannot be certified by any single project’s claims, and why the evaluation framework of <a class="reference internal" href="#brandolinis-evaluating"><span class="std std-ref">Evaluating A Reticulum Implementation</span></a> includes respectful citizenship as a core category. A node that is a bad neighbour - that invents its own channel behaviour on shared spectrum, that announces without discipline, that spawns tens of thousands of links to scrape the network, that floods and retries without mercy - is a hazard to every node that shares its medium, regardless of how well its “creator” imagines its own code to work in isolation. On a shared medium, “my software works” is not a complete sentence. The complete sentence is “my software works <em>and coexists</em>”. A network’s health deteriorates with its worst-behaved member, and every member has a responsibility to not be <em>that</em> member. There is no final, technical solution for this; the solutions are human.</p>
+<p>A network is not made healthy by the excellence of any single part. It is made healthy by the behaviour of every part on the shared medium, and how they interact. And the shared medium is the point. When your node transmits, it transmits into the same spectrum, the same line, the same time, the same mathematical address space, the same bandwidth that its neighbours depend on.</p>
+<p>The network cannot be certified by any single project’s claims. A node that is a bad neighbour, that invents its own channel behaviour on shared spectrum, that announces without discipline, that spawns tens of thousands of links to scrape the network, that floods and retries without mercy, is a hazard to every node that shares its medium, regardless of how well its “creator” imagines its own code to work in isolation.</p>
+<p>On a shared medium, “my software works” is not a complete sentence. The complete sentence is “my software works <em>and coexists</em>”. A network’s health deteriorates with its worst-behaved member, and every member has a responsibility to not be <em>that</em> member. There is no final, technical solution for this; the solutions are human.</p>
 </section>
 <section id="a-history-of-what-works">
 <span id="brandolinis-history-of-what-works"></span><h3>A History Of What Works<a class="headerlink" href="#a-history-of-what-works" title="Link to this heading">¶</a></h3>
@@ -1189,10 +1188,10 @@ what the fake “movement” cannot do, no matter how fluent and smooth its prod
 </section>
 <section id="the-place-of-new-implementations">
 <span id="brandolinis-place-of-new"></span><h3>The Place Of New Implementations<a class="headerlink" href="#the-place-of-new-implementations" title="Link to this heading">¶</a></h3>
-<p>The future of the network includes more implementations - and they are welcome. This chapter is not an argument against implementing Reticulum. The protocol is public domain, by design, and the network is made stronger by genuine diversity: More <em>good</em> implementations, honestly made, mean more resilience, more experimentation, more people who understand the protocol deeply <em>because they have built it themselves</em>. That is the goal: <strong>For people to understand and own the technology they rely on</strong>. Not to spew out a 637,000 line rust port that fills no meaningful gap or purpose.</p>
+<p>The future of the network includes more implementations - and they are welcome. This chapter is not an argument against implementing Reticulum. The protocol is public domain, by design, and the network is made stronger by genuine diversity: More <em>good</em> implementations, honestly made, mean more resilience, more experimentation, more people who understand the protocol deeply <em>because they have built it themselves</em>. That is the goal: <strong>For people to understand and own the technology they rely on</strong>. Not to spew out 600,000 line rust ports that fills no meaningful gap or purpose.</p>
 <p>What the ecosystem needs, from every implementation, is the ordinary floor that <a class="reference internal" href="#brandolinis-evaluating"><span class="std std-ref">Evaluating A Reticulum Implementation</span></a> establishes, and that the reference has met for over a decade: A human who made it and answers for it; provenance disclosed; attribution given; benchmarks honest or absent; interop demonstrated against the real network; code a human can read. And it needs the one thing that costs nothing and changes everything: <strong>Honest labeling</strong>.</p>
 <p>An experimental implementation that says, plainly, as the first thing a user sees: “This is in-progress, experimental, do not depend on it yet, but help if you can”, that is a gift to the ecosystem. It contributes, it invites participation, and it protects users.</p>
-<p>The opposite, the polished “drop-in replacement” with fabricated measurements and laundered authorship, does damage far beyond its own users: It dissuades the honest developers who might have built <em>the real thing</em>, because the polished slop persuades them the work is already done. That dissuasion is one of the quietest and most expensive harms in this entire affair, and the antidote is honesty at every project’s door.</p>
+<p>The opposite, the polished “drop-in replacement”, does damage far beyond its own users: It dissuades the honest developers who might have built <em>the real thing</em>, because the polished slop persuades them the work is already done. That dissuasion is one of the quietest and most expensive harms in this entire affair, and the antidote is honesty at every project’s door.</p>
 </section>
 <section id="expanding-the-commons">
 <span id="brandolinis-expanding-commons"></span><h3>Expanding The Commons<a class="headerlink" href="#expanding-the-commons" title="Link to this heading">¶</a></h3>
@@ -1208,9 +1207,6 @@ community’s only verification at scale, and every link in it is a <em>person</
 <li><p><strong>Be a good neighbour.</strong> Respect the shared mediums. Do not invent new behaviour in our
 shared space and call it progress. The network belongs to its other members as much as
 to you.</p></li>
-<li><p><strong>Measure honestly, or not at all.</strong> An unfudged measurement is worth more than a headline.
-If you compare, compare against reality - stock, current, real - and publish the methodology
-first. That way, we can <em>all</em> learn and improve.</p></li>
 <li><p><strong>Verify against the network.</strong> Compatibility is a property demonstrated with actual nodes,
 on actual media, against the actual current protocol, over a period of <em>years</em>, not 48 hours.
 And not a claim pinned to an old snapshot over loopback.</p></li>
@@ -1363,7 +1359,7 @@ defended.</p></li>
 <li><a class="reference internal" href="#presentation-elongated">Presentation, Elongated</a></li>
 <li><a class="reference internal" href="#headcount">Headcount</a></li>
 <li><a class="reference internal" href="#recycled-wine-fermenting">Recycled Wine, Fermenting</a></li>
-<li><a class="reference internal" href="#the-method-of-madness">The Method, of Madness</a></li>
+<li><a class="reference internal" href="#the-method-of-madness">The Method of Madness</a></li>
 <li><a class="reference internal" href="#a-persistent-but-fragile-triad">A Persistent, But Fragile Triad</a></li>
 <li><a class="reference internal" href="#what-the-pattern-is-not">What The Pattern Is Not</a></li>
 <li><a class="reference internal" href="#intent-consequence">Intent &amp; Consequence</a></li>
