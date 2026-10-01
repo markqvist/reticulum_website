@@ -46,7 +46,7 @@ Reticulumの機能についてすぐに理解したい場合は、以下のリ�
 
 どのようにReticulumがインストールおよび起動されても、外部依存関係は*必要*かつ*利用可能*な場合のみ読み込まれます。例えば、[pyserial](https://github.com/pyserial/pyserial)をサポートしないシステムでReticulumを使用したい場合、`rnspure`パッケージを使用しても問題ありませんが、Reticulumはシリアルベースのインターフェースを使用できません。それ以外の利用可能なモジュールは、必要に応じて引き続き読み込まれます。
 
-**注意！** [PyCA/cryptography](https://github.com/pyca/cryptography)をサポートしないシステムで`rnspure`パッケージを使用してReticulumを実行する場合は、このサイトの[暗号プリミティブ](crypto.html)セクションを読み、理解することが重要です。
+**注意！** [PyCA/cryptography](https://github.com/pyca/cryptography)をサポートしないシステムで`rnspure`パッケージを使用してReticulumを実行する場合は、このサイトの[暗号プリミティブ](crypto_jp.html)セクションを読み、理解することが重要です。
 
 ## パフォーマンス
 Reticulumは*非常に*広範なパフォーマンスエンベロープを対象としていますが、低帯域幅のメディアに対する機能性とパフォーマンスを優先します。目標は、通常のハードウェアで250ビット/秒から1ギガビット/秒までの動的なパフォーマンス範囲を提供することです。

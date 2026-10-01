@@ -18,7 +18,7 @@ Reticulum, herhangi bir ağ yığınının çözdüğü aynı problemleri çöze
 - Reticulum'da adres alanı üzerinde merkezi kontrol yoktur. İhtiyaç duyulduğunda herkes, ihtiyaçları doğrultusunda istedikleri kadar adresi tahsis edebilir.
 - Reticulum, uçtan uca bağlantıyı sağlar. Yeni oluşturulan adresler, birkaç saniye ila birkaç dakika içinde küresel olarak ulaşılabilir hale gelir.
 - Adresler *bağımsız* ve *taşınabilirdir*. Bir adres oluşturulduktan sonra, fiziksel olarak başka bir yere taşınabilir ve erişilebilirliğini sürdürebilir.
-- Tüm iletişim, [güçlü, modern şifreleme](crypto.html) ile varsayılan olarak güvence altına alınmıştır.
+- Tüm iletişim, [güçlü, modern şifreleme](crypto_tr.html) ile varsayılan olarak güvence altına alınmıştır.
 - Tüm şifreleme anahtarları geçici olup, iletişim varsayılan olarak forward secrecy sunar.
 - Reticulum ağlarında şifresiz bağlantılar kurmak mümkün değildir.
 - Ağın herhangi bir hedefine şifresiz paket göndermek mümkün değildir.

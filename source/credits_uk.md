@@ -18,7 +18,7 @@ Reticulum може існувати тільки завдяки великій �
 
 Проєктування протоколу та його референс-імплементація для Reticulum здійснювались з 2014 по 2022 рік Mark Qvist.
 
-[Python референс-імплементація Reticulum](https://github.com/markqvist/reticulum) та цей вебсайт ліцензовані за умовами [Reticulum License](license.html). Будь ласка, <a href="donate.html">пожертвуйте</a>, щоб підтримати подальший розвиток.
+[Python референс-імплементація Reticulum](https://github.com/markqvist/reticulum) та цей вебсайт ліцензовані за умовами [Reticulum License](license_uk.html). Будь ласка, <a href="donate_uk.html">пожертвуйте</a>, щоб підтримати подальший розвиток.
 
 ----------------
 
