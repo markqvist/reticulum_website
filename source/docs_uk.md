@@ -3,5 +3,5 @@
 
 Ви також можете [завантажити інструкцію Reticulum у форматі PDF](manual/Reticulum%20Manual.pdf) або в [форматі EPUB](manual/Reticulum%20Manual.epub).
 
-<p align="right"><a href="crypto.html">Наступна тема: Криптографічні примітиви</a></p>
+<p align="right"><a href="crypto_uk.html">Наступна тема: Криптографічні примітиви</a></p>
 

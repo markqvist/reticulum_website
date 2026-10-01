@@ -49,7 +49,7 @@ A instalação do pacote padrão `rns` requer as dependências listadas abaixo. 
 
 Em alguns sistemas ou em raros casos, pode não ser possível instalar ou até compilar um ou mais dos módulos acima. Em tais situações, você pode utilizar o pacote `rnspure` no lugar, que não irá pedir dependências externas para instalação. Note que o conteúdo dos pacotes `rns` e `rnspure` é idêntico. A única diferença são as listas do pacote `rnspure` que não requerem dependências para instalação.
 
-Não importa como o Reticulum é instalado ou iniciado, ele vai carregar as dependências externas apenas caso forem necessárias ou disponíveis. Se por exemplo você quer utilizar o Reticulum em um sistema que não suporta o [pyserial](https://github.com/pyserial/pyserial), é perfeitamente possível utilizar o pacote rnspure, mas o Reticulum em sistemas que não suportam a [PyCA/cryptography](https://github.com/pyca/cryptography), é importante que você leia e entenda a seção de [Criptografia](crypto.html) neste site.
+Não importa como o Reticulum é instalado ou iniciado, ele vai carregar as dependências externas apenas caso forem necessárias ou disponíveis. Se por exemplo você quer utilizar o Reticulum em um sistema que não suporta o [pyserial](https://github.com/pyserial/pyserial), é perfeitamente possível utilizar o pacote rnspure, mas o Reticulum em sistemas que não suportam a [PyCA/cryptography](https://github.com/pyca/cryptography), é importante que você leia e entenda a seção de [Criptografia](crypto_pt-br.html) neste site.
 
 ## Desempenho
 

@@ -18,7 +18,7 @@ Eine Reihe anderer Module und Projekte sind entweder Teil von Reticulum oder wer
 
 Das Protokolldesign und die Referenzimplementierung für Reticulum wurden zwischen 2014 und 2022 von Mark Qvist durchgeführt.
 
-Die [Python Referenzimplementierung von Reticulum](https://github.com/markqvist/reticulum) und diese Website ist lizenziert unter der [Reticulum License](license.html). Bitte <a href="donate_de.html">Spenden</a> sie zur Unterstützung der weiteren Entwicklung.
+Die [Python Referenzimplementierung von Reticulum](https://github.com/markqvist/reticulum) und diese Website ist lizenziert unter der [Reticulum License](license_de.html). Bitte <a href="donate_de.html">Spenden</a> sie zur Unterstützung der weiteren Entwicklung.
 
 ----------------
 

@@ -48,7 +48,7 @@ Daha sıra dışı sistemlerde ve bazı nadir durumlarda yukarıdaki modüllerde
 
 Reticulum nasıl kurulup başlatılırsa başlatsın, dış bağımlılıkları sadece *gerektiğinde* ve *uygunsa* yükler. Örneğin, [pyserial](https://github.com/pyserial/pyserial) desteklemeyen bir sistemde Reticulum'u kullanmak istiyorsanız, bunu `rnspure` paketi kullanarak yapabilirsiniz, ancak Reticulum seri tabanlı arayüzleri kullanamayacaktır. Diğer tüm kullanılabilir modüller, ihtiyaç duyulduğunda yine yüklenecektir.
 
-**Lütfen Dikkat Edin!** `rnspure` paketini [PyCA/cryptography](https://github.com/pyca/cryptography)'yi desteklemeyen sistemlerde Reticulum'u çalıştırmak istiyorsanız, bu sitenin [Şifreleme Temelleri](crypto.html) bölümünü okumanız gerekmektedir.
+**Lütfen Dikkat Edin!** `rnspure` paketini [PyCA/cryptography](https://github.com/pyca/cryptography)'yi desteklemeyen sistemlerde Reticulum'u çalıştırmak istiyorsanız, bu sitenin [Şifreleme Temelleri](crypto_tr.html) bölümünü okumanız gerekmektedir.
 
 ## Performans
 Reticulum, çok geniş bir kullanılabilir performans aralığına yönelik olup, düşük bant genişliği ortamlarında işlevselliği ve performansı önceliklendirir. Hedef, normal donanımda 250 bit/s'den 1 gigabit/s'ye dinamik bir performans aralığı sağlamaktır.

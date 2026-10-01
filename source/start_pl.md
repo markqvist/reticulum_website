@@ -48,7 +48,7 @@ Na bardziej nietypowych systemach, w niektórych rzadkich przypadkach, może nie
 
 Bez względu na to, jak Reticulum jest zainstalowane i uruchomione, załaduje zewnętrzne zależności tylko wtedy, gdy są one *potrzebne* i *dostępne*. Jeśli na przykład chcesz używać Reticulum na systemie, który nie może obsługiwać [pyserial](https://github.com/pyserial/pyserial), jest to całkowicie możliwe przy użyciu pakietu rnspure, ale Reticulum nie będzie w stanie korzystać z interfejsów opartych na portach szeregowych. Wszystkie inne dostępne moduły będą nadal ładowane w razie potrzeby.
 
-**Uwaga!** Jeśli używasz pakietu rnspure do uruchomienia Reticulum na systemach, które nie wspierają [PyCA/cryptography](https://github.com/pyca/cryptography), ważne jest, abyś przeczytał i zrozumiał sekcję [Prymitywy Kryptograficzne](crypto.html) na tej stronie.
+**Uwaga!** Jeśli używasz pakietu rnspure do uruchomienia Reticulum na systemach, które nie wspierają [PyCA/cryptography](https://github.com/pyca/cryptography), ważne jest, abyś przeczytał i zrozumiał sekcję [Prymitywy Kryptograficzne](crypto_pl.html) na tej stronie.
 
 ## Wydajność
 Reticulum celuje w *bardzo* szeroki zakres wydajności użytkowej, ale priorytetowo traktuje funkcjonalność i wydajność w stosunku do mediów o niskiej przepustowości. Celem jest zapewnienie dynamicznej wydajności od 250 bitów na sekundę do 1 gigabita na sekundę na normalnym sprzęcie.
